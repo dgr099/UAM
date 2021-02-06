@@ -1,0 +1,11 @@
+<map id="include/npc.h" name="include/npc.h">
+<area shape="rect" id="node2" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="331,80,442,107"/>
+<area shape="rect" id="node5" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="474,229,561,256"/>
+<area shape="rect" id="node9" href="$npc__test_8h.html" title="It declares the tests for the Npc module. " alt="" coords="605,80,733,107"/>
+<area shape="rect" id="node10" href="$npc__test_8c.html" title="test to see if set works correctly " alt="" coords="667,155,773,181"/>
+<area shape="rect" id="node3" href="$game__managment_8h.html" title="Library to manage the load os spaces. " alt="" coords="294,155,479,181"/>
+<area shape="rect" id="node6" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="5,155,171,181"/>
+<area shape="rect" id="node8" href="$link_8c.html" title="It implements the link interface. " alt="" coords="195,155,269,181"/>
+<area shape="rect" id="node4" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="331,229,443,256"/>
+<area shape="rect" id="node7" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="29,229,147,256"/>
+</map>

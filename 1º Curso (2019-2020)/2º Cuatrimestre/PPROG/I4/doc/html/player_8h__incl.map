@@ -1,0 +1,6 @@
+<map id="include/player.h" name="include/player.h">
+<area shape="rect" id="node2" href="$types_8h.html" title="It defines common types. " alt="" coords="47,229,170,256"/>
+<area shape="rect" id="node3" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="65,80,208,107"/>
+<area shape="rect" id="node4" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="245,155,353,181"/>
+<area shape="rect" id="node6" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="95,155,221,181"/>
+</map>

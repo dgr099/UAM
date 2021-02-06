@@ -1,0 +1,9 @@
+<map id="src/player_test.c" name="src/player_test.c">
+<area shape="rect" id="node5" href="$player_8h.html" title="It defines the player interface for each command. " alt="" coords="222,80,348,107"/>
+<area shape="rect" id="node10" href="$test_8h_source.html" title="../include/test.h" alt="" coords="372,80,484,107"/>
+<area shape="rect" id="node11" href="$player__test_8h.html" title="It declares the tests for the player module. " alt="" coords="508,80,662,107"/>
+<area shape="rect" id="node6" href="$types_8h.html" title="It defines common types. " alt="" coords="157,304,280,331"/>
+<area shape="rect" id="node7" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="164,155,307,181"/>
+<area shape="rect" id="node8" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="44,229,152,256"/>
+<area shape="rect" id="node9" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="228,229,353,256"/>
+</map>

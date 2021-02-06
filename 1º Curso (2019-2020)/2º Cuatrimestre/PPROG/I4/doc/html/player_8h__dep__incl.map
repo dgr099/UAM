@@ -1,0 +1,10 @@
+<map id="include/player.h" name="include/player.h">
+<area shape="rect" id="node2" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="124,80,235,107"/>
+<area shape="rect" id="node5" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="5,229,92,256"/>
+<area shape="rect" id="node9" href="$player__test_8c.html" title="test to see if player works correctly " alt="" coords="259,80,377,107"/>
+<area shape="rect" id="node3" href="$game__managment_8h.html" title="Library to manage the load os spaces. " alt="" coords="87,155,272,181"/>
+<area shape="rect" id="node6" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="395,155,561,181"/>
+<area shape="rect" id="node8" href="$link_8c.html" title="It implements the link interface. " alt="" coords="297,155,371,181"/>
+<area shape="rect" id="node4" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="123,229,235,256"/>
+<area shape="rect" id="node7" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="419,229,537,256"/>
+</map>
