@@ -1,0 +1,12 @@
+<map id="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/src/link.c" name="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/src/link.c">
+<area shape="rect" id="node5" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="380,124,503,151"/>
+<area shape="rect" id="node7" href="$types_8h.html" title="It defines common types. " alt="" coords="505,423,628,449"/>
+<area shape="rect" id="node14" href="$link_8h.html" title="It defines the link interface for each command. " alt="" coords="646,199,757,225"/>
+<area shape="rect" id="node6" href="$command_8h.html" title="It implements the command interpreter. " alt="" coords="141,348,288,375"/>
+<area shape="rect" id="node8" href="$space_8h.html" title="It defines a space. " alt="" coords="379,273,504,300"/>
+<area shape="rect" id="node10" href="$player_8h.html" title="It defines the player interface for each command. " alt="" coords="496,199,621,225"/>
+<area shape="rect" id="node12" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="312,348,437,375"/>
+<area shape="rect" id="node13" href="$dice_8h.html" title="It defines the dice interface for each command. " alt="" coords="73,199,188,225"/>
+<area shape="rect" id="node9" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="513,348,621,375"/>
+<area shape="rect" id="node11" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="529,273,671,300"/>
+</map>

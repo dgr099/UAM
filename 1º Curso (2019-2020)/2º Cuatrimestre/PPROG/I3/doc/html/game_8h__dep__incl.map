@@ -1,0 +1,8 @@
+<map id="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/game.h" name="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/game.h">
+<area shape="rect" id="node2" href="$game__reader_8h.html" title="Library to manage the load os spaces. " alt="" coords="131,124,325,195"/>
+<area shape="rect" id="node4" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="224,243,419,313"/>
+<area shape="rect" id="node5" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="400,124,595,195"/>
+<area shape="rect" id="node7" href="$link_8c.html" title="It implements the link interface. " alt="" coords="619,124,813,195"/>
+<area shape="rect" id="node3" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="5,243,200,313"/>
+<area shape="rect" id="node6" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="443,243,637,313"/>
+</map>
