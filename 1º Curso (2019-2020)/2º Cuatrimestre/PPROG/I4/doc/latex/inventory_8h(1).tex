@@ -1,0 +1,365 @@
+\hypertarget{inventory_8h}{}\section{include/inventory.h File Reference}
+\label{inventory_8h}\index{include/inventory.\+h@{include/inventory.\+h}}
+
+
+It defines the inventory interface for each command.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/object.\+h\char`\"{}}\newline
+Include dependency graph for inventory.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{inventory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inventory_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}
+\begin{DoxyCompactList}\small\item\em A type definition for a inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{inventory_8h_a84f90137d8559068d8292b8d10c675a1}{inventory\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id, int max)
+\begin{DoxyCompactList}\small\item\em Create the inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}{inventory\+\_\+destroy} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Destroy the inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a4f3b96537e64ffc63731555e116c3adb}{inventory\+\_\+add} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Add the object to the inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a348efe95855b9ecad72ea3b6bf1ce8c4}{inventory\+\_\+dell} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Delete the object of the inventory. \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{inventory_8h_a6a1f9cdbffc20d4283f09635c98ffb83}{inventory\+\_\+get\+\_\+inside} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Return the set of the inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a7da45e3f52165fd1e3a51c95aa6f78f8}{inventory\+\_\+is\+\_\+object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em check if the object is in inventory \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}{inventory\+\_\+get\+\_\+max} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em return the max number of objects of an inventory \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a31ce870d22db2381928f052c77b28288}{inventory\+\_\+is\+\_\+full} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em check if the inventory is full \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a5be8b836d5bb5a948aab616ef404b1cd}{inventory\+\_\+is\+\_\+emty} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em check if the inventory is empty \end{DoxyCompactList}\item 
+void \hyperlink{inventory_8h_ad5b213ff8ab4ee5f6654cfe9d0107ea2}{inventory\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Print the inventory and on a file given. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{inventory_8h_ae8ad5fa7c6e871a8fe03f6e7a54b05cc}{inventory\+\_\+get\+\_\+id} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inv)
+\begin{DoxyCompactList}\small\item\em Print the inventory and on a file given. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the inventory interface for each command. 
+
+\begin{DoxyAuthor}{Author}
+Diego Grande Camarero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}\label{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}} 
+\index{inventory.\+h@{inventory.\+h}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{Inventory}{Inventory}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}}
+
+
+
+A type definition for a inventory. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inventory_8h_a4f3b96537e64ffc63731555e116c3adb}\label{inventory_8h_a4f3b96537e64ffc63731555e116c3adb}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+add@{inventory\+\_\+add}}
+\index{inventory\+\_\+add@{inventory\+\_\+add}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+add()}{inventory\_add()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Add the object to the inventory. 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+{\em id} & The object id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there was no problem, E\+R\+R\+OR if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a84f90137d8559068d8292b8d10c675a1}\label{inventory_8h_a84f90137d8559068d8292b8d10c675a1}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+create@{inventory\+\_\+create}}
+\index{inventory\+\_\+create@{inventory\+\_\+create}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+create()}{inventory\_create()}}
+{\footnotesize\ttfamily \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}$\ast$ inventory\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Create the inventory. 
+
+inventory\+\_\+create Create a new inventory
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id of the inventory \\
+\hline
+{\em max} & max number of objects it will contain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new inventory that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a348efe95855b9ecad72ea3b6bf1ce8c4}\label{inventory_8h_a348efe95855b9ecad72ea3b6bf1ce8c4}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+dell@{inventory\+\_\+dell}}
+\index{inventory\+\_\+dell@{inventory\+\_\+dell}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+dell()}{inventory\_dell()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+dell (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Delete the object of the inventory. 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+{\em id} & id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there was no problem, E\+R\+R\+OR if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}\label{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+destroy@{inventory\+\_\+destroy}}
+\index{inventory\+\_\+destroy@{inventory\+\_\+destroy}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+destroy()}{inventory\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+Destroy the inventory. 
+
+inventory\+\_\+destroy Destroy the inventory
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if the inventory has been destroyed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_ae8ad5fa7c6e871a8fe03f6e7a54b05cc}\label{inventory_8h_ae8ad5fa7c6e871a8fe03f6e7a54b05cc}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+id@{inventory\+\_\+get\+\_\+id}}
+\index{inventory\+\_\+get\+\_\+id@{inventory\+\_\+get\+\_\+id}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+get\+\_\+id()}{inventory\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} inventory\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inv }\end{DoxyParamCaption})}
+
+
+
+Print the inventory and on a file given. 
+
+\begin{DoxyDate}{Date}
+14-\/05-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoiria Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inv} & pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the inventory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a6a1f9cdbffc20d4283f09635c98ffb83}\label{inventory_8h_a6a1f9cdbffc20d4283f09635c98ffb83}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+inside@{inventory\+\_\+get\+\_\+inside}}
+\index{inventory\+\_\+get\+\_\+inside@{inventory\+\_\+get\+\_\+inside}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+get\+\_\+inside()}{inventory\_get\_inside()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ inventory\+\_\+get\+\_\+inside (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+Return the set of the inventory. 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there was no problem, E\+R\+R\+OR if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}\label{inventory_8h_aac41dfbea9df9fcfbbebfec318ddd636}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+max@{inventory\+\_\+get\+\_\+max}}
+\index{inventory\+\_\+get\+\_\+max@{inventory\+\_\+get\+\_\+max}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+get\+\_\+max()}{inventory\_get\_max()}}
+{\footnotesize\ttfamily int inventory\+\_\+get\+\_\+max (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+return the max number of objects of an inventory 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the max number of objects of an inventory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a5be8b836d5bb5a948aab616ef404b1cd}\label{inventory_8h_a5be8b836d5bb5a948aab616ef404b1cd}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+emty@{inventory\+\_\+is\+\_\+emty}}
+\index{inventory\+\_\+is\+\_\+emty@{inventory\+\_\+is\+\_\+emty}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+emty()}{inventory\_is\_emty()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+emty (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+check if the inventory is empty 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case that the inventory is empty, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a31ce870d22db2381928f052c77b28288}\label{inventory_8h_a31ce870d22db2381928f052c77b28288}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+full@{inventory\+\_\+is\+\_\+full}}
+\index{inventory\+\_\+is\+\_\+full@{inventory\+\_\+is\+\_\+full}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+full()}{inventory\_is\_full()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+check if the inventory is full 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case that the inventory is full, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a7da45e3f52165fd1e3a51c95aa6f78f8}\label{inventory_8h_a7da45e3f52165fd1e3a51c95aa6f78f8}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+object@{inventory\+\_\+is\+\_\+object}}
+\index{inventory\+\_\+is\+\_\+object@{inventory\+\_\+is\+\_\+object}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+object()}{inventory\_is\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+check if the object is in inventory 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & Pointer to the inventory \\
+\hline
+{\em id} & Id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object is in the inventory, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_ad5b213ff8ab4ee5f6654cfe9d0107ea2}\label{inventory_8h_ad5b213ff8ab4ee5f6654cfe9d0107ea2}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+print@{inventory\+\_\+print}}
+\index{inventory\+\_\+print@{inventory\+\_\+print}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+print()}{inventory\_print()}}
+{\footnotesize\ttfamily void inventory\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{inventory }\end{DoxyParamCaption})}
+
+
+
+Print the inventory and on a file given. 
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Pointer to the file \\
+\hline
+{\em inventory} & pointer to the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

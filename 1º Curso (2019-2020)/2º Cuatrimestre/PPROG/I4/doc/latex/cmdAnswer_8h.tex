@@ -1,0 +1,278 @@
+\hypertarget{cmdAnswer_8h}{}\section{include/cmd\+Answer.h File Reference}
+\label{cmdAnswer_8h}\index{include/cmd\+Answer.\+h@{include/cmd\+Answer.\+h}}
+
+
+It implements the command answer interpreter.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+Include dependency graph for cmd\+Answer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{cmdAnswer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cmdAnswer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cmdAnswer_8h_a7c213cc89d01ec9cdbaa3356698a86ce}{M\+A\+X\+\_\+\+E\+R\+R\+OR}~10
+\begin{DoxyCompactList}\small\item\em A macro that stores the number of diferents error. \end{DoxyCompactList}\item 
+\#define \hyperlink{cmdAnswer_8h_a4cbdbe9b7f8e2757f49434127d9f1cb3}{M\+A\+X\+\_\+F}~10
+\begin{DoxyCompactList}\small\item\em A macro that stores the number of diferents strings that can be stored in ok/error answer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__CmdAnswer}{\+\_\+\+Cmd\+Answer} \hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer}
+\begin{DoxyCompactList}\small\item\em A type definition for a Cmd\+Answer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$ \hyperlink{cmdAnswer_8h_a1060fe8d4fa50e08f9a1975c208e42dd}{Cmd\+Answer\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em used to init a cmd answer \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{cmdAnswer_8h_a53f58deeb35680f5cf8318b2e9f10ac4}{Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda)
+\begin{DoxyCompactList}\small\item\em used to add new error level \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{cmdAnswer_8h_aff0b290312039ac103ca26e4ff012676}{Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda, char $\ast$awns, int n)
+\begin{DoxyCompactList}\small\item\em used to add new error level \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{cmdAnswer_8h_ae2f6b32f70c00153f1021742429697d5}{Cmd\+Answer\+\_\+add\+\_\+ok} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda, char $\ast$awns)
+\begin{DoxyCompactList}\small\item\em used to add ok answer \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{cmdAnswer_8h_a956b3d7840bef4e02065388b7a0ef735}{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda, int n)
+\begin{DoxyCompactList}\small\item\em used to get a random error at n level \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{cmdAnswer_8h_a00ccc559db69fe2139632aa7a9572c97}{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda)
+\begin{DoxyCompactList}\small\item\em used to get a random ok answer \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{cmdAnswer_8h_a8bc1491448c8ec2b4ebc2491223f74d3}{Cmd\+Answer\+\_\+destroy} (\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$cmda)
+\begin{DoxyCompactList}\small\item\em used to destroy releasing their memory \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the command answer interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Cerrato Sanchez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cmdAnswer_8h_a7c213cc89d01ec9cdbaa3356698a86ce}\label{cmdAnswer_8h_a7c213cc89d01ec9cdbaa3356698a86ce}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!M\+A\+X\+\_\+\+E\+R\+R\+OR@{M\+A\+X\+\_\+\+E\+R\+R\+OR}}
+\index{M\+A\+X\+\_\+\+E\+R\+R\+OR@{M\+A\+X\+\_\+\+E\+R\+R\+OR}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+E\+R\+R\+OR}{MAX\_ERROR}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+E\+R\+R\+OR~10}
+
+
+
+A macro that stores the number of diferents error. 
+
+Details. \mbox{\Hypertarget{cmdAnswer_8h_a4cbdbe9b7f8e2757f49434127d9f1cb3}\label{cmdAnswer_8h_a4cbdbe9b7f8e2757f49434127d9f1cb3}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!M\+A\+X\+\_\+F@{M\+A\+X\+\_\+F}}
+\index{M\+A\+X\+\_\+F@{M\+A\+X\+\_\+F}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+F}{MAX\_F}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+F~10}
+
+
+
+A macro that stores the number of diferents strings that can be stored in ok/error answer. 
+
+Details. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}\label{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer@{Cmd\+Answer}}
+\index{Cmd\+Answer@{Cmd\+Answer}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer}{CmdAnswer}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__CmdAnswer}{\+\_\+\+Cmd\+Answer} \hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer}}
+
+
+
+A type definition for a Cmd\+Answer. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cmdAnswer_8h_aff0b290312039ac103ca26e4ff012676}\label{cmdAnswer_8h_aff0b290312039ac103ca26e4ff012676}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at@{Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at}}
+\index{Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at@{Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at()}{CmdAnswer\_add\_error\_at()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Cmd\+Answer\+\_\+add\+\_\+error\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda,  }\item[{char $\ast$}]{awns,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+used to add new error level 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Daniel Cerrato Sanchez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer in which you want to add a new error level \\
+\hline
+{\em awns} & the awnser you want to add \\
+\hline
+{\em n} & the level of the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cmdAnswer_8h_a53f58deeb35680f5cf8318b2e9f10ac4}\label{cmdAnswer_8h_a53f58deeb35680f5cf8318b2e9f10ac4}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error@{Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error}}
+\index{Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error@{Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error()}{CmdAnswer\_add\_new\_error()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Cmd\+Answer\+\_\+add\+\_\+new\+\_\+error (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda }\end{DoxyParamCaption})}
+
+
+
+used to add new error level 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Daniel Cerrato Sanchez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer in which you want to add a new error level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cmdAnswer_8h_ae2f6b32f70c00153f1021742429697d5}\label{cmdAnswer_8h_ae2f6b32f70c00153f1021742429697d5}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+add\+\_\+ok@{Cmd\+Answer\+\_\+add\+\_\+ok}}
+\index{Cmd\+Answer\+\_\+add\+\_\+ok@{Cmd\+Answer\+\_\+add\+\_\+ok}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+add\+\_\+ok()}{CmdAnswer\_add\_ok()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Cmd\+Answer\+\_\+add\+\_\+ok (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda,  }\item[{char $\ast$}]{awns }\end{DoxyParamCaption})}
+
+
+
+used to add ok answer 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer in which you want to add a new ok answer \\
+\hline
+{\em awns} & the new correct awnser that you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cmdAnswer_8h_a8bc1491448c8ec2b4ebc2491223f74d3}\label{cmdAnswer_8h_a8bc1491448c8ec2b4ebc2491223f74d3}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+destroy@{Cmd\+Answer\+\_\+destroy}}
+\index{Cmd\+Answer\+\_\+destroy@{Cmd\+Answer\+\_\+destroy}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+destroy()}{CmdAnswer\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Cmd\+Answer\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda }\end{DoxyParamCaption})}
+
+
+
+used to destroy releasing their memory 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Diego Grande Camarero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer that you want to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cmdAnswer_8h_a956b3d7840bef4e02065388b7a0ef735}\label{cmdAnswer_8h_a956b3d7840bef4e02065388b7a0ef735}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error@{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error}}
+\index{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error@{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error()}{CmdAnswer\_get\_random\_error()}}
+{\footnotesize\ttfamily char$\ast$ Cmd\+Answer\+\_\+get\+\_\+random\+\_\+error (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+used to get a random error at n level 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Daniel Cerrato Sanchez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer which contains the errors \\
+\hline
+{\em n} & the level of the error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the random error at level n 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cmdAnswer_8h_a00ccc559db69fe2139632aa7a9572c97}\label{cmdAnswer_8h_a00ccc559db69fe2139632aa7a9572c97}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok@{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok}}
+\index{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok@{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok()}{CmdAnswer\_get\_random\_ok()}}
+{\footnotesize\ttfamily char$\ast$ Cmd\+Answer\+\_\+get\+\_\+random\+\_\+ok (\begin{DoxyParamCaption}\item[{\hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer} $\ast$}]{cmda }\end{DoxyParamCaption})}
+
+
+
+used to get a random ok answer 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Diego Grande Camarero 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmda} & the cmd answer which contains the errors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the random ok answer 
+\end{DoxyReturn}
+rdok=$\ast$cmda-\/$>$ok\+\_\+awnsers\mbox{[}j\mbox{]}; \mbox{\Hypertarget{cmdAnswer_8h_a1060fe8d4fa50e08f9a1975c208e42dd}\label{cmdAnswer_8h_a1060fe8d4fa50e08f9a1975c208e42dd}} 
+\index{cmd\+Answer.\+h@{cmd\+Answer.\+h}!Cmd\+Answer\+\_\+init@{Cmd\+Answer\+\_\+init}}
+\index{Cmd\+Answer\+\_\+init@{Cmd\+Answer\+\_\+init}!cmd\+Answer.\+h@{cmd\+Answer.\+h}}
+\subsubsection{\texorpdfstring{Cmd\+Answer\+\_\+init()}{CmdAnswer\_init()}}
+{\footnotesize\ttfamily \hyperlink{cmdAnswer_8h_a2e704274c270f99c8eaf383d11982d03}{Cmd\+Answer}$\ast$ Cmd\+Answer\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+used to init a cmd answer 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Daniel Cerrato Sanchez
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+a new cmd 
+\end{DoxyReturn}

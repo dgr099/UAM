@@ -1,0 +1,317 @@
+\hypertarget{command_8c}{}\section{src/command.c File Reference}
+\label{command_8c}\index{src/command.\+c@{src/command.\+c}}
+
+
+It implements the command interpreter.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/game\+\_\+managment.\+h\char`\"{}}\newline
+Include dependency graph for command.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{command_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Command}{\+\_\+\+Command}
+\begin{DoxyCompactList}\small\item\em The command structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8c_a25a96480a40811cf60e301f6d050fee3}{command\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em initialitates the structure command command\+\_\+init \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8c_a3bb1dc14827ec48c5e358d02cd909bc5}{command\+\_\+get\+\_\+user\+\_\+input} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em get the principal command and the argument \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} \hyperlink{command_8c_ad35081cca7cf7ff3161e48beb3a34624}{command\+\_\+get\+\_\+principalcmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em get the command \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8c_a3392110efd7b39066a8aa5e6b4864ea8}{command\+\_\+get\+\_\+argument} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em get an argument \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{command_8c_a7df71b69fa875de1b55df0174545807b}{command\+\_\+destroy} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em free the strcture command \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{command_8c_ae06b30b8f869f7236ce1abe8b5167b8d}{command\+\_\+set\+\_\+principalcmd} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} command)
+\begin{DoxyCompactList}\small\item\em set an especific command \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{command_8c_a136c02c30eaf3dbaadcde50750ccafdc}{command\+\_\+set\+\_\+argument} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd, char $\ast$argument)
+\begin{DoxyCompactList}\small\item\em set an especific argument \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{command_8c_ab28a732878a02cf27db4fd57c6d68daa}{command\+\_\+set\+\_\+status} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd, char $\ast$status)
+\begin{DoxyCompactList}\small\item\em set an especific status \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8c_a228fde7cd02041d88322fd5c676f1302}{command\+\_\+get\+\_\+status} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em get an especific status \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{command_8c_a464d0d851d33660f38485669bf66a8ac}{cmd\+\_\+to\+\_\+str} \mbox{[}\hyperlink{command_8h_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}\mbox{]}\mbox{[}\hyperlink{command_8h_a8d93932dcdc527c13e06b688b68c7ffc}{N\+\_\+\+C\+M\+DT}\mbox{]} = \{\{\char`\"{}\char`\"{}, \char`\"{}no command\char`\"{}\}, \{\char`\"{}\char`\"{}, \char`\"{}unknown\char`\"{}\}, \{\char`\"{}e\char`\"{}, \char`\"{}exit\char`\"{}\}, \{\char`\"{}t\char`\"{}, \char`\"{}take\char`\"{}\}, \{\char`\"{}d\char`\"{}, \char`\"{}drop\char`\"{}\}, \{\char`\"{}rl\char`\"{}, \char`\"{}roll\char`\"{}\}, \{\char`\"{}m\char`\"{}, \char`\"{}move\char`\"{}\}, \{\char`\"{}i\char`\"{}, \char`\"{}inspect\char`\"{}\}, \{\char`\"{}tn\char`\"{}, \char`\"{}turnon\char`\"{}\}, \{\char`\"{}tf\char`\"{}, \char`\"{}turnoff\char`\"{}\}, \{\char`\"{}o\char`\"{}, \char`\"{}open\char`\"{}\}, \{\char`\"{}s\char`\"{}, \char`\"{}save\char`\"{}\}, \{\char`\"{}lo\char`\"{}, \char`\"{}load\char`\"{}\}, \{\char`\"{}tl\char`\"{}, \char`\"{}talk\char`\"{}\}, \{\char`\"{}a\char`\"{}, \char`\"{}accuse\char`\"{}\}, \{\char`\"{}n\char`\"{}, \char`\"{}next\char`\"{}\}, \{\char`\"{}b\char`\"{}, \char`\"{}back\char`\"{}\}, \{\char`\"{}r\char`\"{}, \char`\"{}right\char`\"{}\}, \{\char`\"{}l\char`\"{}, \char`\"{}left\char`\"{}\}\}
+\begin{DoxyCompactList}\small\item\em matrix of commands \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the command interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{command_8c_a7df71b69fa875de1b55df0174545807b}\label{command_8c_a7df71b69fa875de1b55df0174545807b}} 
+\index{command.\+c@{command.\+c}!command\+\_\+destroy@{command\+\_\+destroy}}
+\index{command\+\_\+destroy@{command\+\_\+destroy}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+destroy()}{command\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} command\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+free the strcture command 
+
+command\+\_\+destroy
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a3392110efd7b39066a8aa5e6b4864ea8}\label{command_8c_a3392110efd7b39066a8aa5e6b4864ea8}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+argument@{command\+\_\+get\+\_\+argument}}
+\index{command\+\_\+get\+\_\+argument@{command\+\_\+get\+\_\+argument}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+argument()}{command\_get\_argument()}}
+{\footnotesize\ttfamily char$\ast$ command\+\_\+get\+\_\+argument (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+get an argument 
+
+command\+\_\+get\+\_\+argument
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the argument 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_ad35081cca7cf7ff3161e48beb3a34624}\label{command_8c_ad35081cca7cf7ff3161e48beb3a34624}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+principalcmd@{command\+\_\+get\+\_\+principalcmd}}
+\index{command\+\_\+get\+\_\+principalcmd@{command\+\_\+get\+\_\+principalcmd}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+principalcmd()}{command\_get\_principalcmd()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} command\+\_\+get\+\_\+principalcmd (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+get the command 
+
+command\+\_\+get\+\_\+principalcmd
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the command 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a228fde7cd02041d88322fd5c676f1302}\label{command_8c_a228fde7cd02041d88322fd5c676f1302}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+status@{command\+\_\+get\+\_\+status}}
+\index{command\+\_\+get\+\_\+status@{command\+\_\+get\+\_\+status}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+status()}{command\_get\_status()}}
+{\footnotesize\ttfamily char$\ast$ command\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+get an especific status 
+
+command\+\_\+get\+\_\+status
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if there is an error, otherwise return the status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a3bb1dc14827ec48c5e358d02cd909bc5}\label{command_8c_a3bb1dc14827ec48c5e358d02cd909bc5}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}}
+\index{command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+user\+\_\+input()}{command\_get\_user\_input()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}$\ast$ command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+get the principal command and the argument 
+
+command\+\_\+get\+\_\+user\+\_\+input
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure and file to log \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the structure command 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a25a96480a40811cf60e301f6d050fee3}\label{command_8c_a25a96480a40811cf60e301f6d050fee3}} 
+\index{command.\+c@{command.\+c}!command\+\_\+init@{command\+\_\+init}}
+\index{command\+\_\+init@{command\+\_\+init}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+init()}{command\_init()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}$\ast$ command\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialitates the structure command command\+\_\+init 
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the structure command 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a136c02c30eaf3dbaadcde50750ccafdc}\label{command_8c_a136c02c30eaf3dbaadcde50750ccafdc}} 
+\index{command.\+c@{command.\+c}!command\+\_\+set\+\_\+argument@{command\+\_\+set\+\_\+argument}}
+\index{command\+\_\+set\+\_\+argument@{command\+\_\+set\+\_\+argument}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+set\+\_\+argument()}{command\_set\_argument()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} command\+\_\+set\+\_\+argument (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd,  }\item[{char $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+set an especific argument 
+
+command\+\_\+set\+\_\+argument
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+{\em argument} & the argument we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_ae06b30b8f869f7236ce1abe8b5167b8d}\label{command_8c_ae06b30b8f869f7236ce1abe8b5167b8d}} 
+\index{command.\+c@{command.\+c}!command\+\_\+set\+\_\+principalcmd@{command\+\_\+set\+\_\+principalcmd}}
+\index{command\+\_\+set\+\_\+principalcmd@{command\+\_\+set\+\_\+principalcmd}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+set\+\_\+principalcmd()}{command\_set\_principalcmd()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} command\+\_\+set\+\_\+principalcmd (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd,  }\item[{\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command}}]{command }\end{DoxyParamCaption})}
+
+
+
+set an especific command 
+
+command\+\_\+set\+\_\+principalcmd
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+{\em command} & the command we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_ab28a732878a02cf27db4fd57c6d68daa}\label{command_8c_ab28a732878a02cf27db4fd57c6d68daa}} 
+\index{command.\+c@{command.\+c}!command\+\_\+set\+\_\+status@{command\+\_\+set\+\_\+status}}
+\index{command\+\_\+set\+\_\+status@{command\+\_\+set\+\_\+status}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+set\+\_\+status()}{command\_set\_status()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} command\+\_\+set\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{cmd,  }\item[{char $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+set an especific status 
+
+command\+\_\+set\+\_\+status
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the command structure \\
+\hline
+{\em status} & the status we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{command_8c_a464d0d851d33660f38485669bf66a8ac}\label{command_8c_a464d0d851d33660f38485669bf66a8ac}} 
+\index{command.\+c@{command.\+c}!cmd\+\_\+to\+\_\+str@{cmd\+\_\+to\+\_\+str}}
+\index{cmd\+\_\+to\+\_\+str@{cmd\+\_\+to\+\_\+str}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+to\+\_\+str}{cmd\_to\_str}}
+{\footnotesize\ttfamily cmd\+\_\+to\+\_\+str = \{\{\char`\"{}\char`\"{}, \char`\"{}no command\char`\"{}\}, \{\char`\"{}\char`\"{}, \char`\"{}unknown\char`\"{}\}, \{\char`\"{}e\char`\"{}, \char`\"{}exit\char`\"{}\}, \{\char`\"{}t\char`\"{}, \char`\"{}take\char`\"{}\}, \{\char`\"{}d\char`\"{}, \char`\"{}drop\char`\"{}\}, \{\char`\"{}rl\char`\"{}, \char`\"{}roll\char`\"{}\}, \{\char`\"{}m\char`\"{}, \char`\"{}move\char`\"{}\}, \{\char`\"{}i\char`\"{}, \char`\"{}inspect\char`\"{}\}, \{\char`\"{}tn\char`\"{}, \char`\"{}turnon\char`\"{}\}, \{\char`\"{}tf\char`\"{}, \char`\"{}turnoff\char`\"{}\}, \{\char`\"{}o\char`\"{}, \char`\"{}open\char`\"{}\}, \{\char`\"{}s\char`\"{}, \char`\"{}save\char`\"{}\}, \{\char`\"{}lo\char`\"{}, \char`\"{}load\char`\"{}\}, \{\char`\"{}tl\char`\"{}, \char`\"{}talk\char`\"{}\}, \{\char`\"{}a\char`\"{}, \char`\"{}accuse\char`\"{}\}, \{\char`\"{}n\char`\"{}, \char`\"{}next\char`\"{}\}, \{\char`\"{}b\char`\"{}, \char`\"{}back\char`\"{}\}, \{\char`\"{}r\char`\"{}, \char`\"{}right\char`\"{}\}, \{\char`\"{}l\char`\"{}, \char`\"{}left\char`\"{}\}\}}
+
+
+
+matrix of commands 
+
+Details. 

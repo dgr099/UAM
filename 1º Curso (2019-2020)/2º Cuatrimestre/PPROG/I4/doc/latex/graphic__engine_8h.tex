@@ -1,0 +1,228 @@
+\hypertarget{graphic__engine_8h}{}\section{include/graphic\+\_\+engine.h File Reference}
+\label{graphic__engine_8h}\index{include/graphic\+\_\+engine.\+h@{include/graphic\+\_\+engine.\+h}}
+
+
+It defines a textual graphic engine.  
+
+
+{\ttfamily \#include \char`\"{}../include/game.\+h\char`\"{}}\newline
+Include dependency graph for graphic\+\_\+engine.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphic__engine_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{graphic__engine_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Graphic__engine}{\+\_\+\+Graphic\+\_\+engine} \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}
+\begin{DoxyCompactList}\small\item\em A type definition for a graphic engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ \hyperlink{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}{graphic\+\_\+engine\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em create graphic engine \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}{graphic\+\_\+engine\+\_\+destroy} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge)
+\begin{DoxyCompactList}\small\item\em destroy graphic engine \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a06241143501ef0b88082933fb5fd5b0b}{graphic\+\_\+engine\+\_\+paint\+\_\+game} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em paint the game \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}{graphic\+\_\+engine\+\_\+write\+\_\+command} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em write the command \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a1434353adc00dbe4e351a3af57fb3fe8}{graphic\+\_\+engine\+\_\+paint\+\_\+intro} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$f)
+\begin{DoxyCompactList}\small\item\em paint the intro \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8h_a7082fc33231792ba9590fb2e558b5c45}{graphic\+\_\+engine\+\_\+paint\+\_\+end} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$f)
+\begin{DoxyCompactList}\small\item\em paint the end \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a textual graphic engine. 
+
+\begin{DoxyAuthor}{Author}
+Instructors of P\+P\+R\+OG, David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}\label{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!Graphic\+\_\+engine@{Graphic\+\_\+engine}}
+\index{Graphic\+\_\+engine@{Graphic\+\_\+engine}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{Graphic\+\_\+engine}{Graphic\_engine}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Graphic__engine}{\+\_\+\+Graphic\+\_\+engine} \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}}
+
+
+
+A type definition for a graphic engine. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}\label{graphic__engine_8h_a8c3d9abe7282bee1d77d23ea80a4bdec}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+create@{graphic\+\_\+engine\+\_\+create}}
+\index{graphic\+\_\+engine\+\_\+create@{graphic\+\_\+engine\+\_\+create}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+create()}{graphic\_engine\_create()}}
+{\footnotesize\ttfamily \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}$\ast$ graphic\+\_\+engine\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create graphic engine 
+
+graphic\+\_\+engine\+\_\+create
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the address of the graphic engine created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}\label{graphic__engine_8h_a5a5eac4ef2033c5ad71aa6895f362f79}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+destroy@{graphic\+\_\+engine\+\_\+destroy}}
+\index{graphic\+\_\+engine\+\_\+destroy@{graphic\+\_\+engine\+\_\+destroy}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+destroy()}{graphic\_engine\_destroy()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge }\end{DoxyParamCaption})}
+
+
+
+destroy graphic engine 
+
+graphic\+\_\+engine\+\_\+destroy
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8h_a7082fc33231792ba9590fb2e558b5c45}\label{graphic__engine_8h_a7082fc33231792ba9590fb2e558b5c45}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+paint\+\_\+end@{graphic\+\_\+engine\+\_\+paint\+\_\+end}}
+\index{graphic\+\_\+engine\+\_\+paint\+\_\+end@{graphic\+\_\+engine\+\_\+paint\+\_\+end}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+paint\+\_\+end()}{graphic\_engine\_paint\_end()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+paint\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+paint the end 
+
+graphic\+\_\+engine\+\_\+paint\+\_\+intro
+
+\begin{DoxyDate}{Date}
+5-\/05-\/2020 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & pointer to graphic\+\_\+engine \\
+\hline
+{\em game} & pointer to game structure \\
+\hline
+{\em f} & file with the intro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8h_a06241143501ef0b88082933fb5fd5b0b}\label{graphic__engine_8h_a06241143501ef0b88082933fb5fd5b0b}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+paint\+\_\+game@{graphic\+\_\+engine\+\_\+paint\+\_\+game}}
+\index{graphic\+\_\+engine\+\_\+paint\+\_\+game@{graphic\+\_\+engine\+\_\+paint\+\_\+game}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+paint\+\_\+game()}{graphic\_engine\_paint\_game()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+paint\+\_\+game (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+paint the game 
+
+graphic\+\_\+engine\+\_\+paint\+\_\+game
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & pointer to graphic\+\_\+engine \\
+\hline
+{\em game} & pointer to game structure \\
+\hline
+{\em file} & pointer to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8h_a1434353adc00dbe4e351a3af57fb3fe8}\label{graphic__engine_8h_a1434353adc00dbe4e351a3af57fb3fe8}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+paint\+\_\+intro@{graphic\+\_\+engine\+\_\+paint\+\_\+intro}}
+\index{graphic\+\_\+engine\+\_\+paint\+\_\+intro@{graphic\+\_\+engine\+\_\+paint\+\_\+intro}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+paint\+\_\+intro()}{graphic\_engine\_paint\_intro()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+paint\+\_\+intro (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+paint the intro 
+
+graphic\+\_\+engine\+\_\+paint\+\_\+intro
+
+\begin{DoxyDate}{Date}
+5-\/05-\/2020 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & pointer to graphic\+\_\+engine \\
+\hline
+{\em game} & pointer to game structure \\
+\hline
+{\em f} & file with the intro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}\label{graphic__engine_8h_a112605879db4582a6d9cd6c12bd0e90c}} 
+\index{graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}!graphic\+\_\+engine\+\_\+write\+\_\+command@{graphic\+\_\+engine\+\_\+write\+\_\+command}}
+\index{graphic\+\_\+engine\+\_\+write\+\_\+command@{graphic\+\_\+engine\+\_\+write\+\_\+command}!graphic\+\_\+engine.\+h@{graphic\+\_\+engine.\+h}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+write\+\_\+command()}{graphic\_engine\_write\_command()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+write the command 
+
+graphic\+\_\+engine\+\_\+write\+\_\+command
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

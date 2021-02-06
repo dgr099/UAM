@@ -1,0 +1,195 @@
+\hypertarget{dice__test_8h}{}\section{include/dice\+\_\+test.h File Reference}
+\label{dice__test_8h}\index{include/dice\+\_\+test.\+h@{include/dice\+\_\+test.\+h}}
+
+
+It declares the tests for the command module.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{dice__test_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{dice__test_8h_afd8e7b7e3963ce0b48e40a7dcd4fb4b1}{test1\+\_\+dice\+\_\+create} ()
+\item 
+void \hyperlink{dice__test_8h_a3eacb7c8e4140ce2083d9705937f5106}{test2\+\_\+dice\+\_\+create} ()
+\item 
+void \hyperlink{dice__test_8h_a60f25d1250ef29f731d5e688fe989557}{test1\+\_\+dice\+\_\+roll} ()
+\item 
+void \hyperlink{dice__test_8h_a6c0509c7a5effe89212b9d786d9fc30c}{test2\+\_\+dice\+\_\+roll} ()
+\item 
+void \hyperlink{dice__test_8h_ab5b06d8e4cc2530d644b753d78a63314}{test3\+\_\+dice\+\_\+roll} ()
+\item 
+void \hyperlink{dice__test_8h_a3e678dfcb1adf09a85eb2e145088d053}{test1\+\_\+dice\+\_\+get\+\_\+last} ()
+\item 
+void \hyperlink{dice__test_8h_a5f15e643f69bfe582f6ffd548b92f846}{test2\+\_\+dice\+\_\+get\+\_\+last} ()
+\item 
+void \hyperlink{dice__test_8h_a80cc6894dcbee3feacca7da1b3cc82a3}{test3\+\_\+dice\+\_\+get\+\_\+last} ()
+\item 
+void \hyperlink{dice__test_8h_acfd69ccf21566f11ea0ccb8cc2f592ab}{test4\+\_\+dice\+\_\+get\+\_\+last} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It declares the tests for the command module. 
+
+It declares the tests for the dice module.
+
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/06-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Daniel Cerrato Sánchez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/06-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dice__test_8h_afd8e7b7e3963ce0b48e40a7dcd4fb4b1}\label{dice__test_8h_afd8e7b7e3963ce0b48e40a7dcd4fb4b1}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test1\+\_\+dice\+\_\+create@{test1\+\_\+dice\+\_\+create}}
+\index{test1\+\_\+dice\+\_\+create@{test1\+\_\+dice\+\_\+create}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test1\+\_\+dice\+\_\+create()}{test1\_dice\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+dice\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000079}{Test}]Test the dice creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An id, a maximum value and a minimum value in integer value as parameters, the maximum is greater than the minimum 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A non-\/null pointer to the created die 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a3e678dfcb1adf09a85eb2e145088d053}\label{dice__test_8h_a3e678dfcb1adf09a85eb2e145088d053}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test1\+\_\+dice\+\_\+get\+\_\+last@{test1\+\_\+dice\+\_\+get\+\_\+last}}
+\index{test1\+\_\+dice\+\_\+get\+\_\+last@{test1\+\_\+dice\+\_\+get\+\_\+last}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test1\+\_\+dice\+\_\+get\+\_\+last()}{test1\_dice\_get\_last()}}
+{\footnotesize\ttfamily void test1\+\_\+dice\+\_\+get\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000084}{Test}]Test the function to get the last value taken with the given \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a non-\/\+N\+U\+LL pointer with the correct fields, after having thrown 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be greater than or equal to the minimum value entered 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a60f25d1250ef29f731d5e688fe989557}\label{dice__test_8h_a60f25d1250ef29f731d5e688fe989557}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test1\+\_\+dice\+\_\+roll@{test1\+\_\+dice\+\_\+roll}}
+\index{test1\+\_\+dice\+\_\+roll@{test1\+\_\+dice\+\_\+roll}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test1\+\_\+dice\+\_\+roll()}{test1\_dice\_roll()}}
+{\footnotesize\ttfamily void test1\+\_\+dice\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000081}{Test}]Test the function to get a value from the dice \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a non-\/\+N\+U\+LL pointer with the correct fields 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be greater than or equal to the minimum value entered 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a3eacb7c8e4140ce2083d9705937f5106}\label{dice__test_8h_a3eacb7c8e4140ce2083d9705937f5106}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test2\+\_\+dice\+\_\+create@{test2\+\_\+dice\+\_\+create}}
+\index{test2\+\_\+dice\+\_\+create@{test2\+\_\+dice\+\_\+create}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test2\+\_\+dice\+\_\+create()}{test2\_dice\_create()}}
+{\footnotesize\ttfamily void test2\+\_\+dice\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000080}{Test}]Test the dice creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An id, a maximum value and a minimum value in integer value as parameters, the minimum is greater than the maximum 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A null pointer to the created die 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a5f15e643f69bfe582f6ffd548b92f846}\label{dice__test_8h_a5f15e643f69bfe582f6ffd548b92f846}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test2\+\_\+dice\+\_\+get\+\_\+last@{test2\+\_\+dice\+\_\+get\+\_\+last}}
+\index{test2\+\_\+dice\+\_\+get\+\_\+last@{test2\+\_\+dice\+\_\+get\+\_\+last}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test2\+\_\+dice\+\_\+get\+\_\+last()}{test2\_dice\_get\_last()}}
+{\footnotesize\ttfamily void test2\+\_\+dice\+\_\+get\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000085}{Test}]Test the function to get the last value taken with the given \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a non-\/\+N\+U\+LL pointer with the correct fields, after having thrown 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be less than or equal to the maximum value entered 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a6c0509c7a5effe89212b9d786d9fc30c}\label{dice__test_8h_a6c0509c7a5effe89212b9d786d9fc30c}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test2\+\_\+dice\+\_\+roll@{test2\+\_\+dice\+\_\+roll}}
+\index{test2\+\_\+dice\+\_\+roll@{test2\+\_\+dice\+\_\+roll}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test2\+\_\+dice\+\_\+roll()}{test2\_dice\_roll()}}
+{\footnotesize\ttfamily void test2\+\_\+dice\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000082}{Test}]Test the function to get a value from the dice \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a non-\/\+N\+U\+LL pointer with the correct fields 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be less than or equal to the maximum value entered 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_a80cc6894dcbee3feacca7da1b3cc82a3}\label{dice__test_8h_a80cc6894dcbee3feacca7da1b3cc82a3}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test3\+\_\+dice\+\_\+get\+\_\+last@{test3\+\_\+dice\+\_\+get\+\_\+last}}
+\index{test3\+\_\+dice\+\_\+get\+\_\+last@{test3\+\_\+dice\+\_\+get\+\_\+last}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test3\+\_\+dice\+\_\+get\+\_\+last()}{test3\_dice\_get\_last()}}
+{\footnotesize\ttfamily void test3\+\_\+dice\+\_\+get\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000086}{Test}]Test the function to get the last value taken with the given \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a non-\/\+N\+U\+LL pointer with the correct fields, without having thrown 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be 0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_ab5b06d8e4cc2530d644b753d78a63314}\label{dice__test_8h_ab5b06d8e4cc2530d644b753d78a63314}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test3\+\_\+dice\+\_\+roll@{test3\+\_\+dice\+\_\+roll}}
+\index{test3\+\_\+dice\+\_\+roll@{test3\+\_\+dice\+\_\+roll}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test3\+\_\+dice\+\_\+roll()}{test3\_dice\_roll()}}
+{\footnotesize\ttfamily void test3\+\_\+dice\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000083}{Test}]Test the function to get a value from the dice \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a pointer to N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be -\/1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{dice__test_8h_acfd69ccf21566f11ea0ccb8cc2f592ab}\label{dice__test_8h_acfd69ccf21566f11ea0ccb8cc2f592ab}} 
+\index{dice\+\_\+test.\+h@{dice\+\_\+test.\+h}!test4\+\_\+dice\+\_\+get\+\_\+last@{test4\+\_\+dice\+\_\+get\+\_\+last}}
+\index{test4\+\_\+dice\+\_\+get\+\_\+last@{test4\+\_\+dice\+\_\+get\+\_\+last}!dice\+\_\+test.\+h@{dice\+\_\+test.\+h}}
+\subsubsection{\texorpdfstring{test4\+\_\+dice\+\_\+get\+\_\+last()}{test4\_dice\_get\_last()}}
+{\footnotesize\ttfamily void test4\+\_\+dice\+\_\+get\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000087}{Test}]Test the function to get the last value taken with the given \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The die is a pointer to N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be -\/1 
+\end{DoxyPostcond}
