@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/Users/eps/Desktop/P2_e1_GMM_DGR
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Vi0dIm960`9E5lhbYRYU0g0
+Z1 04 7 8 work alumips practica 1
+Z2 04 9 8 work alumipstb practica 1
+=1-02004c4f4f50-5e5f6d32-26-c10
+Z3 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z4 OL;O;10.2e;57
+R0
+!s110 1583312178
+T_opt1
+VN9ZJa2<5::EVn>jSN>FQe3
+R1
+=1-02004c4f4f50-5e5f6baf-59-274
+R3
+n@_opt1
+R4
+R0
+!s110 1583311791
+T_opt2
+!s110 1583313803
+Vc`;L8a3?V`eC7bKo4]6kT2
+R2
+=1-02004c4f4f50-5e5f738a-239-910
+R3
+n@_opt2
+R4
+R0
+Ealumips
+Z5 w1583313702
+Z6 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 dC:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM
+Z10 8C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPS.vhd
+Z11 FC:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPS.vhd
+l0
+L21
+V5I3MbGLahMU7_j8BiOljl0
+!s100 fdOh;>`52CzU^DJJEML9W2
+Z12 OP;C;10.4a;61
+33
+Z13 !s110 1583331029
+!i10b 1
+Z14 !s108 1583331029.000000
+Z15 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPS.vhd|
+Z16 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPS.vhd|
+!i113 1
+Z17 o-work work -2008 -explicit -O0
+Z18 tExplicit 1
+Apractica
+R6
+R7
+R8
+DEx4 work 7 alumips 0 22 5I3MbGLahMU7_j8BiOljl0
+l33
+L31
+V=V[=Q]mbIWZXA]@oNbOEf3
+!s100 :j_NmFeT2aA@UCecHlcz33
+R12
+33
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ealumipstb
+Z19 w1580316928
+R6
+R7
+R8
+R9
+Z20 8C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd
+Z21 FC:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd
+l0
+L23
+VL<NZH^HY>]hVjCBD3c]3H2
+!s100 ^@=UQ>:Ah:U:?K2kgMcD;0
+R12
+33
+R13
+!i10b 1
+R14
+Z22 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd|
+Z23 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd|
+!i113 1
+R17
+R18
+Apractica
+R6
+R7
+R8
+DEx4 work 9 alumipstb 0 22 L<NZH^HY>]hVjCBD3c]3H2
+l167
+L26
+V8@>:8MSQDoI5l6X@5FN<f1
+!s100 dC^=bieji:@S<RI;CS]631
+R12
+33
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18

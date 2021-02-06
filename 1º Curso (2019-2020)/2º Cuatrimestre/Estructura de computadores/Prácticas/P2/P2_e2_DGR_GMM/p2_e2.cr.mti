@@ -1,0 +1,28 @@
+C:/Users/eps/Desktop/EC/P2_e2_DGR_GMM/ALUMIPSTb.vhd {1 {vcom -work work -2008 -explicit -vopt {C:\Users\eps\Desktop\EC\P2_e2_DGR_GMM\ALUMIPSTb.vhd}
+Model Technology ModelSim SE-64 vcom 10.2e Compiler 2014.06 Jun 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPSTb
+-- Compiling architecture Practica of ALUMIPSTb
+
+} {} {}} C:/Users/eps/Desktop/EC/P2_e2_DGR_GMM/ALUMIPS.vhd {1 {vcom -work work -2008 -explicit -vopt {C:\Users\eps\Desktop\EC\P2_e2_DGR_GMM\ALUMIPS.vhd}
+Model Technology ModelSim SE-64 vcom 10.2e Compiler 2014.06 Jun 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPS
+-- Compiling architecture Practica of ALUMIPS
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e2_DGR_GMM/ALUMIPSTb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPSTb
+-- Compiling architecture Practica of ALUMIPSTb
+
+} {} {}}

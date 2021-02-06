@@ -1,0 +1,56 @@
+{C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemProgSuma
+-- Compiling architecture Simple of MemProgSuma
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroSumaTb
+-- Compiling architecture Test of MicroSumaTb
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPS
+-- Compiling architecture Practica of ALUMIPS
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSuma.vhd} {0 {vcom -work work -2008 -explicit -stats=none {C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroSuma
+-- Compiling architecture Practica of MicroSuma
+** Error (suppressible): C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(66): (vcom-1141) Identifier "RegMIPS" does not identify a component declaration.
+
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(69): Component instantiation statement must have a label.
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(76): Illegal sequential statement.
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(76): near "if": syntax error
+** Warning: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(81): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+
+** Warning: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(71): (vcom-1272) Length of expected is 16; length of actual is 2.
+
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd(83): VHDL Compiler exiting
+
+} {11.0 14.0 18.0 19.0} {}}

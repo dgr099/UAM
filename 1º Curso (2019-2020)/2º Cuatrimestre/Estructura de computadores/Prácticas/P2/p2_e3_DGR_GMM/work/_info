@@ -1,0 +1,215 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Ealumips
+Z0 w1583313702
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM
+Z5 8C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd
+Z6 FC:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd
+l0
+L21
+V5I3MbGLahMU7_j8BiOljl0
+!s100 fdOh;>`52CzU^DJJEML9W2
+Z7 OP;C;10.4a;61
+33
+Z8 !s110 1583334996
+!i10b 1
+Z9 !s108 1583334996.000000
+Z10 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd|
+Z11 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/ALUMIPS.vhd|
+!i113 1
+Z12 o-work work -2008 -explicit -O0
+Z13 tExplicit 1
+Apractica
+R1
+R2
+R3
+DEx4 work 7 alumips 0 22 5I3MbGLahMU7_j8BiOljl0
+l33
+L31
+V=V[=Q]mbIWZXA]@oNbOEf3
+!s100 :j_NmFeT2aA@UCecHlcz33
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ememprogsuma
+Z14 w1580314504
+R1
+R2
+R3
+R4
+Z15 8C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd
+Z16 FC:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd
+l0
+L20
+VE>L`AQUXLNNjTe24NRKkW0
+!s100 :<@13?FD9GL]276;7iUXH0
+R7
+33
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd|
+Z18 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MemProgSUMA.vhd|
+!i113 1
+R12
+R13
+Asimple
+R1
+R2
+R3
+DEx4 work 11 memprogsuma 0 22 E>L`AQUXLNNjTe24NRKkW0
+l29
+L27
+V<M[bLGW8D@L9QL>`ZN?KU1
+!s100 Agio<k0DK8?;Y0WeQaRI91
+R7
+33
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Emicrosuma
+Z19 w1583334990
+R1
+R2
+R3
+R4
+Z20 8C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd
+Z21 FC:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd
+l0
+L19
+VC6;7c8O:cldd^Tk19?W@l2
+!s100 8KEK:En4n=fbS@nLlJOnL1
+R7
+33
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd|
+Z23 !s107 C:\Users\DGR\Desktop\universidad\estructura de computadores\p2_e3_DGR_GMM\MicroSuma.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 9 microsuma 0 22 C6;7c8O:cldd^Tk19?W@l2
+l63
+L28
+V`JgTgP?2h2Sz46V:CE@=Y1
+!s100 g5KiQzOXdYTITN?hY5o:C1
+R7
+33
+!s110 1583331972
+!i10b 1
+!s108 1583331972.000000
+R22
+R23
+!i113 1
+R12
+R13
+Emicrosumatb
+Z24 w1580315204
+R1
+R2
+R3
+R4
+Z25 8C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd
+Z26 FC:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd
+l0
+L19
+VJCmBQcRXCO@<_z9U7Z8CX2
+!s100 [5>AhV8T0]izCo;zgGNHG2
+R7
+33
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd|
+Z28 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/MicroSumaTb.vhd|
+!i113 1
+R12
+R13
+Atest
+R1
+R2
+R3
+Z29 DEx4 work 11 microsumatb 0 22 JCmBQcRXCO@<_z9U7Z8CX2
+l58
+L22
+Z30 V]EFeVI_ai^3R2TCWWj7Ah2
+Z31 !s100 >]`XCHUm_WZk43d2jD:<I1
+R7
+33
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Eregsmips
+Z32 w1582167806
+R1
+R2
+R3
+R4
+Z33 8C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd
+Z34 FC:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd
+l0
+L20
+VYD>Cf@b_@DcUnY[KHBCgi0
+!s100 FOhWQG@alQcIG<UNmO9?a2
+R7
+33
+R8
+!i10b 1
+Z35 !s108 1583334995.000000
+Z36 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd|
+Z37 !s107 C:/Users/DGR/Desktop/universidad/estructura de computadores/p2_e3_DGR_GMM/RegsMIPS.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 8 regsmips 0 22 YD>Cf@b_@DcUnY[KHBCgi0
+l47
+L34
+V=8CacQ1?VTMCK@4ad<bg^2
+!s100 RZBok@?P71Z<VZmi^<W3c1
+R7
+33
+R8
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R12
+R13

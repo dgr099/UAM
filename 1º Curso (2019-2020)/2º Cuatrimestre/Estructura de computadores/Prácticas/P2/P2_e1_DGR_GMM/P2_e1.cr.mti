@@ -1,0 +1,40 @@
+{C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e1_DGR_GMM/RegsMIPSTb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e1_DGR_GMM/RegsMIPSTb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPSTb
+-- Compiling architecture Practica of RegsMIPSTb
+
+} {} {}} C:/Users/eps/Desktop/P2_e1_GMM_DGR/RegsMIPS.vhd {1 {vcom -work work -2008 -explicit -vopt {C:\Users\eps\Desktop\P2_e1_GMM_DGR\RegsMIPS.vhd}
+Model Technology ModelSim SE-64 vcom 10.2e Compiler 2014.06 Jun 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+
+} {} {}} {C:/Users/DGR/Desktop/universidad/estructura de computadores/P2_e1_DGR_GMM/RegsMIPS.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\DGR\Desktop\universidad\estructura de computadores\P2_e1_DGR_GMM\RegsMIPS.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\P2_e1_DGR_GMM\RegsMIPS.vhd(56): (vcom-1441) Process(ALL) is not defined for this version of the language.
+
+** Error: C:\Users\DGR\Desktop\universidad\estructura de computadores\P2_e1_DGR_GMM\RegsMIPS.vhd(84): VHDL Compiler exiting
+
+} {9.0 10.0 11.0 12.0} {}} C:/Users/eps/Desktop/P2_e1_GMM_DGR/RegsMIPSTb.vhd {1 {vcom -work work -2008 -explicit -vopt C:/Users/eps/Desktop/P2_e1_GMM_DGR/RegsMIPSTb.vhd
+Model Technology ModelSim SE-64 vcom 10.2e Compiler 2014.06 Jun 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPSTb
+-- Compiling architecture Practica of RegsMIPSTb
+
+} {} {}}
