@@ -1,0 +1,75 @@
+\hypertarget{test_8h}{}\section{include/test.h File Reference}
+\label{test_8h}\index{include/test.\+h@{include/test.\+h}}
+
+
+It defines a test.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test_8h_a66290957baed5df3930ada4cb8caccf1}\label{test_8h_a66290957baed5df3930ada4cb8caccf1}} 
+\#define {\bfseries K\+R\+ED}~\char`\"{}\textbackslash{}x1B\mbox{[}31m\char`\"{}
+\item 
+\mbox{\Hypertarget{test_8h_ac081c83b067273757f7a2e54a5957d41}\label{test_8h_ac081c83b067273757f7a2e54a5957d41}} 
+\#define {\bfseries K\+G\+RN}~\char`\"{}\textbackslash{}x1B\mbox{[}32m\char`\"{}
+\item 
+\mbox{\Hypertarget{test_8h_a897b10d246533c95ba86cb79f92e465a}\label{test_8h_a897b10d246533c95ba86cb79f92e465a}} 
+\#define {\bfseries K\+Y\+EL}~\char`\"{}\textbackslash{}x1B\mbox{[}33m\char`\"{}
+\item 
+\mbox{\Hypertarget{test_8h_a32036c94dbb166a3f874b7efc169841f}\label{test_8h_a32036c94dbb166a3f874b7efc169841f}} 
+\#define {\bfseries K\+C\+YN}~\char`\"{}\textbackslash{}x1B\mbox{[}36m\char`\"{}
+\item 
+\mbox{\Hypertarget{test_8h_ab702106cf3b3e96750b6845ded4e0299}\label{test_8h_ab702106cf3b3e96750b6845ded4e0299}} 
+\#define {\bfseries R\+E\+S\+ET}~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}
+\item 
+\#define {\bfseries P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT}(x)
+\item 
+\mbox{\Hypertarget{test_8h_a4a5b9a0026e80b1cfbfbbc3fa700ed31}\label{test_8h_a4a5b9a0026e80b1cfbfbbc3fa700ed31}} 
+\#define {\bfseries P\+R\+I\+N\+T\+\_\+\+P\+A\+S\+S\+E\+D\+\_\+\+P\+E\+R\+C\+E\+N\+T\+A\+GE}~printf(\char`\"{}Tests passed \%d\%\%\textbackslash{}n\char`\"{}, ((\+\_\+\+\_\+test\+\_\+passed $\ast$ 100) / \+\_\+\+\_\+test\+\_\+counter))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a test. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test_8h_a6c00863b1d44e38839b1f4b49d04f403}\label{test_8h_a6c00863b1d44e38839b1f4b49d04f403}} 
+\index{test.\+h@{test.\+h}!P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT@{P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT}}
+\index{P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT@{P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT}!test.\+h@{test.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT}{PRINT\_TEST\_RESULT}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+LT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{\(\backslash\)
+    \_\_test\_counter++;\(\backslash\)
+    \_\_pass = (x);\(\backslash\)
+    \_\_test\_passed = (\_\_pass)? \_\_test\_passed + 1 : \_\_test\_passed;\(\backslash\)
+    printf(KYEL \textcolor{stringliteral}{"%s"} RESET \textcolor{stringliteral}{" line "}  \textcolor{stringliteral}{"%d "} KCYN \textcolor{stringliteral}{"%s"} RESET \textcolor{stringliteral}{": %s\(\backslash\)n"}, \(\backslash\)
+       \_\_FILE\_\_, \_\_LINE\_\_ , \_\_FUNCTION\_\_, \(\backslash\)
+       ((!\_\_pass) ? KRED \textcolor{stringliteral}{"NOT PASS"} RESET : KGRN \textcolor{stringliteral}{"PASS"} RESET));    \(\backslash\)
+  \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
