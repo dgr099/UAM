@@ -1,0 +1,29 @@
+<map id="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/types.h" name="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/types.h">
+<area shape="rect" id="node2" href="$command_8h.html" title="It implements the command interpreter. " alt="" coords="179,124,373,195"/>
+<area shape="rect" id="node9" href="$link_8c.html" title="It implements the link interface. " alt="" coords="2180,599,2375,669"/>
+<area shape="rect" id="node10" href="$command__test_8c.html" title="test to see if dice works correctly " alt="" coords="5,243,200,313"/>
+<area shape="rect" id="node11" href="$dice_8h.html" title="It defines the dice interface for each command. " alt="" coords="496,124,691,195"/>
+<area shape="rect" id="node12" href="$dice_8c.html" title="It implements the die interface. " alt="" coords="595,243,789,313"/>
+<area shape="rect" id="node14" href="$space_8h.html" title="It defines a space. " alt="" coords="1251,243,1445,313"/>
+<area shape="rect" id="node16" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="1157,124,1352,195"/>
+<area shape="rect" id="node17" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="1571,243,1765,313"/>
+<area shape="rect" id="node18" href="$player_8h.html" title="It defines the player interface for each command. " alt="" coords="1397,361,1592,432"/>
+<area shape="rect" id="node22" href="$set_8c.html" title="It implements the set interface. " alt="" coords="813,243,1008,313"/>
+<area shape="rect" id="node24" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="1639,124,1833,195"/>
+<area shape="rect" id="node25" href="$object_8c.html" title="add, load, and get spaces " alt="" coords="2059,243,2253,313"/>
+<area shape="rect" id="node27" href="$link_8h.html" title="It defines the link interface for each command. " alt="" coords="2315,361,2509,432"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="1052,480,1247,551"/>
+<area shape="rect" id="node5" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="371,717,565,788"/>
+<area shape="rect" id="node4" href="$game__reader_8h.html" title="Library to manage the load os spaces. " alt="" coords="1027,599,1221,669"/>
+<area shape="rect" id="node6" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="1329,717,1524,788"/>
+<area shape="rect" id="node7" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="808,599,1003,669"/>
+<area shape="rect" id="node8" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="808,717,1003,788"/>
+<area shape="rect" id="node13" href="$dice__test_8c.html" title="test to see if dice works correctly " alt="" coords="376,243,571,313"/>
+<area shape="rect" id="node15" href="$space__test_8c.html" title="It tests space module. " alt="" coords="1077,361,1272,432"/>
+<area shape="rect" id="node23" href="$set__test_8c.html" title="test to see if set works correctly " alt="" coords="1032,243,1227,313"/>
+<area shape="rect" id="node20" href="$inventory_8c.html" title="It implements the inventory interpreter. " alt="" coords="1616,361,1811,432"/>
+<area shape="rect" id="node21" href="$inventory__test_8c.html" title="test to see if inventory works correctly " alt="" coords="1835,361,2029,432"/>
+<area shape="rect" id="node19" href="$player__test_8c.html" title="test to see if player works correctly " alt="" coords="1464,480,1659,551"/>
+<area shape="rect" id="node26" href="$object__test_8c.html" title="test to see if object works correctly " alt="" coords="1840,243,2035,313"/>
+<area shape="rect" id="node28" href="$link__test_8c.html" title="test to see if links works correctly " alt="" coords="2315,480,2509,551"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="include/test.h" name="include/test.h">
+<area shape="rect" id="node2" href="$command__test_8c.html" title="test to see if dice works correctly " alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$dice__test_8c.html" title="test to see if dice works correctly " alt="" coords="171,80,279,107"/>
+<area shape="rect" id="node4" href="$inventory__test_8c.html" title="test to see if inventory works correctly " alt="" coords="303,80,441,107"/>
+<area shape="rect" id="node5" href="$link__test_8c.html" title="test to see if links works correctly " alt="" coords="465,80,569,107"/>
+<area shape="rect" id="node6" href="$object__test_8c.html" title="test to see if object works correctly " alt="" coords="594,80,713,107"/>
+<area shape="rect" id="node7" href="$player__test_8c.html" title="test to see if player works correctly " alt="" coords="737,80,855,107"/>
+<area shape="rect" id="node8" href="$set__test_8c.html" title="test to see if set works correctly " alt="" coords="879,80,982,107"/>
+<area shape="rect" id="node9" href="$space__test_8c.html" title="It tests space module. " alt="" coords="1006,80,1125,107"/>
+</map>
