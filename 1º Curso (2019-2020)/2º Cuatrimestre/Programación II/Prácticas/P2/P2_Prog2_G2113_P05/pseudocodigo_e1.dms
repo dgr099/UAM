@@ -1,0 +1,36 @@
+*/***********************************
+*     PSEUDOCÓDIGO EJERCICIO 1      *
+*   *
+*             PAREJA 5              *
+***********************************/*
+
+Status reverseWords (String strout, String strin)
+
+	stack = stack_init()
+	if stack == NULL :
+		return ERROR
+	
+	palabra = split_string(strin, separador)
+
+	while palabra <> NULL :
+
+		top = string_size(palabra)
+
+		for i = 0 while i <> top :
+			if	stack_push(stack, palabra[i]) == ERROR :
+				stack_free(stack)
+				return ERROR
+			i = i + 1
+
+		while stack_is_empty(stack) <> TRUE :
+			car = stack_pop(stack)
+			strout[z] = car
+			free(car)
+			z = z+1
+		if	palabra = strtok(NULL, separador) <> NULL :
+     			strout[z]=' '
+     			z= z+1
+
+	stack_free(stack)
+
+	return OK
