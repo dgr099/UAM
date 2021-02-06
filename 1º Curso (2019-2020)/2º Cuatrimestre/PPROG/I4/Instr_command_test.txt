@@ -1,0 +1,33 @@
+no se que estoy poniendo
+
+e
+exit
+t
+take 2
+take 2
+i space
+inspect object
+m n
+move south
+n next
+next
+b
+back
+r
+right
+l
+left da igual
+rl
+roll
+d Pep
+drop Pep
+tn O
+turnon O
+tf O
+turnoff O
+open LNK with O
+o lnk
+tl with Pep
+talk with Jhon
+a Pep
+accuse P

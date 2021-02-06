@@ -1,0 +1,80 @@
+/*PRESS_ANY_KEY*/
+talk with Inspector Kate Beckett
+talk with Inspector Kate Beckett
+talk with Inspector Kate Beckett
+next
+next
+talk with Butler Alfred
+talk with Butler Alfred
+talk with Butler Alfred
+back
+move e
+take AG
+talk with Gardener Eduardo
+talk with Gardener Eduardo
+talk with Gardener Eduardo
+left
+move w
+take AX
+move e
+move s
+move e
+take K1
+open Lnk_6-7 with K1
+next
+turnon L7
+inspect space
+inspect P1
+back
+move w
+move w
+take CL
+move s
+turnon L9
+inspect P2
+turnoff L9
+right
+turnon CL
+move u
+right
+talk with Mr. Stark
+talk with Mr. Stark
+talk with Mr. Stark
+left
+move w
+talk with Wednesday Adamms
+talk with Wednesday Adamms
+talk with Wednesday Adamms
+inspect P4
+move e
+move s
+drop K1
+take PL
+move n
+move d
+move d
+open Lnk_16-19 with PL
+drop PL
+move e
+talk with Chef Hannibal
+talk with Chef Hannibal
+talk with Chef Hannibal
+take K2
+move w
+left
+inspect space
+inspect P5
+move e
+open Lnk_16-20 with AX
+next
+inspect space
+drop AG
+take P6
+inspect P6
+back
+move u
+move u
+open Lnk_11-13 with K2
+move n
+inspect P3
+accuse Butler Alfred

@@ -1,0 +1,104 @@
+#s:1|Entry|-1|-1|1|-1|-1|-1|0|   __  |  I oI |  I__I |Entrance to the Cameo family mansion |garden's door open. The Inspector Kate Beckett is waiting for you.|
+#s:2|Garden|1|2|4|3|-1|-1|0|       |       |/\/\/\ |Principal Garden |straight road to the door|
+#s:3|Garden|-1|-1|-1|2|-1|-1|0|       |       |/\/\/\ |Right Garden |beatiful garden, also there is a swimming pool. Here is the gardener. |
+#s:4|Garden|-1|3|-1|-1|-1|-1|0|       |       |/\/\/\ |Left Garden |confortable place.there are here many different fruit trees.|  
+#s:5|Hall|4|5|6|7|-1|-1|0|       |       |       |Hall|incredible hall. It's huge. It has a lot of paintings on its walls. Here is the butler.|
+#s:6|Living room|-1|-1|8|5|-1|-1|0|  ___  | _I I_ |I_____I|Living room|small and confortable living room. There is nobody here.|       
+#s:7|Library|8|-1|-1|-1|-1|-1|0|____M_ |I B  I |I____I |Library|library, the biggest I have seen ever inside a house. It looks like that is something between the books. I should inspect it|
+#s:8|Dinning room|-1|7|9|-1|-1|-1|0|  I_I_I|    I  |    I  |Dinning room|dinning room, there are a large table with some candles on it and a lot of chairs.|
+#s:9|Kitchen|9|10|-1|-1|-1|-1|0| mmmm  | I__I  |       |Kitchen |kitchen too normal for this mansion.|
+#s:10|Stairs|6|-1|-1|10|11|16|0|    ___|   _I I|  I___I|Stairs |spiral stairs, there are two ways: going upstairs or downstairs. Also, I can go to the hall and the kitchen.|
+#s:11|First floor stairs|13|12|15|14|-1|11|0|    ___|   _I I|  I___I|First floor stairs|spiral stairs, I can only go downstairs or visit the bedrooms. There is a big picture of the children but it has a graffity on the boy's face, who had painted it?|
+#s:12|Office|-1|-1|-1|12|-1|-1|0|  _____|  I o I|  -----|Owner's office|office, it looks like a very important business office, there are a lot of books and pictures of the owner.|
+#s:13|Son's room|-1|-1|13|-1|-1|-1|0| m_____| I____I|       |Son's bedroom|macabre scene, here was the murder for sure. There is blood everywhere. The boy's corpse is still there.|
+#s:14|Daugther's room|-1|14|-1|-1|-1|-1|0| m_____| I____I|       |Daugther's bedroom|is a pretty normal room, all I can see here is the little woman. She is sitting at her desk, quiet, very quiet.|
+#s:15|Bathroom|15|-1|-1|-1|-1|-1|0|__     |I   I__|I_____I|Family bathroom|big bathroom. It's so clean that I'm seeing myself on the floor.|
+#s:16|Stairs|18|17|20|19|16|-1|0|    ___|   _I I|  I___I|Lower floor stairs|hall, the hall of this floor, I can go to four rooms from here. Which one should I visit first?|
+#s:17|Chef's room|-1|-1|-1|17|-1|-1|0| m_____| I____I|       |Chef's bedroom|little bedroom. Here is the chef. Something is shining below the bed, I should inspect it.|
+#s:18|Gardener's room|-1|-1|18|-1|-1|-1|0| m_____| I____I|       |Gardener's bedroom|little bedroom, but is a nice room. It's decorated with a lot of types of plants.|
+#s:19|Butler's room|-1|19|-1|-1|-1|-1|0| m_____| I____I|       |Butler's bedroom|little bedroom. There is nobody here. There is a wardrobe, I should inspect it.|
+#s:20|Bathroom|20|-1|-1|-1|-1|-1|0|__     |I   I__|I_____I|Service bathroom|little bathroom. It hasn't many things, the basics. There is something inside the bath. I should inspect it.|
+
+
+#o:1|L1|1|lanterns. There is one on each side of the fence gate|0|0|-1|1|1|-1|-1|
+#o:2|L2|2|lampposts. They are making a row on each side of the road|0|0|-1|1|1|-1|-1|
+#o:3|L3|3|lampposts. They are white and look great with the pool|0|0|-1|1|1|-1|-1|
+#o:4|L4|4|lanterns. They are hanging from the branches of the trees. Very beautiful|0|0|-1|1|1|-1|-1|
+#o:25|AG|3|Gloves for axe. They will help me if I want to take an axe|1|0|-1|-1|-1|-1|-1|
+#o:5|AX|4|steel axe. It could help me later. It might open a door|1|0|20|0|0|25|24|
+#o:6|L5|5|hanging lamp. It's a huge lamp hanging from the ceiling|0|0|-1|1|1|-1|-1|
+#o:7|L6|6|fireplace. It has been turned on recently, the fire is warm|0|0|-1|1|1|-1|-1|
+#o:8|K1|6|library key. A small key. It has a label with the word "library"|1|0|8|0|0|-1|-1|
+#o:9|L7|7|lamps, It's the only thing I can light from the objects here|0|0|-1|1|0|-1|-1|
+#o:10|P1|7|a bloody cloth. It must be of the murderer or it may be related to the case|1|1|-1|0|0|-1|-1|
+#o:11|L8|8|lamps. They must be of any collection. They are hanging from the walls|0|0|-1|1|1|-1|-1|
+#o:12|CL|8|candle and a lighter. It could help me if there is any room without illumination. I just have to turn it on.|1|0|-1|1|0|-1|-1|
+#o:13|L9|9|light bulbs. There are three here, but they are too simple compared with the others lights of the house|0|0|-1|1|0|-1|-1|
+#o:14|P2|9|Cooking pot with "Ratatouille". This is a complicated recipe. I know that to make this recipe you have to be alert all the time and it isn't burned, the chef had done a good job.|1|0|-1|0|0|-1|-1|
+#o:15|PB|11|paint bottle. The paint is dry|1|0|-1|0|0|-1|-1|
+#o:16|L10|12|lamps. There are some of them on the walls of the office. They illuminate different.|0|0|-1|1|1|-1|-1|
+#o:17|P3|13|Asterix's body. The wound seems too big to be done with a knife, I wonder what it would have been|0|0|-1|0|0|-1|-1|
+#o:18|P4|14|break monoculum. It might be from the butler|1|0|-1|0|0|-1|-1|
+#o:19|PL|15|picklock. It could open a door, I should take it|1|0|19|0|0|-1|-1|
+#o:20|K2|17|owner's keys. There are some keys.|1|0|13|0|0|-1|-1|
+#o:21|L11|18|flower lamp. It's a lamp with the shape of a beautiful flower|0|0|-1|1|1|-1|-1|
+#o:22|WR|19|wardrobe. It contains a lot of equal suits. There is one different, I should inspect it, is P5|0|0|-1|0|0|-1|-1|
+#o:23|P5|19|bloody suit. One of the suits of the butler is cover with blood. It must be related with the murder|0|1|-1|0|0|-1|-1|
+#o:24|P6|20|plant scissors. They might have done a serious wound. They have dried blood spots.|1|1|-1|0|0|-1|5|
+
+
+
+#n:1|Inspector Kate Beckett|1|3|How are you, Inspector Gadget? Thanks for coming early, there has been a homicide at the mansion.|They have assured me that the murderer is still here, it must have been some member of the house. Visit the rooms to know them. |We need you to solve the case. Accuse someone when you have solved the case. Good luck. |0|Tall woman with brown hair   and blue eyes. Your faithful partner since you entered to the police force. |
+#n:2|Gardener Eduardo|3|3|I love take care of the plants, they listen to me at least, not like that damn kid that is always treats me as a dumb. |I'm sorry Inspector, but I wasn't inside the house when everything happened. |I wonder where are my scissors, I have to cut the plants, I think I used them this morning. This little woman had to take them, she is worse than her brother, she is always stealing from me and the rest. Damn kid.|0|The gardener of the house, he is a bit pale, that is      strange being someone who is everyday sunbathing. |
+#n:3|Butler Alfred|5|3|I wasn't near of the child, Inspector, so I can't tell you too much about what happened. All I know is that I was looking for my monoculum. |This kid... I don't want his dead but he treats these people very badly. Finally, he has found an enemy. |I don't want to say this but... his sister and him were always arguing too much lately... |1|The butler of the house. He's wearing a beautiful black   suit. I wonder if he will    have more equal to that... I guess so, it's his work      outfit.|
+#n:4|Mr. Stark|12|3|You must be the inspector, do you like my house? I beg you to catch the killer.|I've lost my house keys, luckily I have a copy of them, but the murderer needed the keys because my son always close his door.|I don't want to blame anyone, but my daugther and the butler are the ones who are able to take them.|0|The mansion owner. He seems  serious and calm in spite of his son dead. He wears a nice suit, it's clear that it's  better than the butler's.|
+#n:5|Wednesday Adamms|14|3|one, two, Freddy comes for you... three, four, close the door... five, six, take the crucifix...|About my brother? I'm sorry, I don't know what happened, all I know is that I hate him.| Have you heard? The butler has lost his monoculum, he looks really weird without it. JiJiJi|0|The little sister of the     deceased. Eh... I don't want to say this about this little girl but she looks so scary, why is she singing that?|
+#n:6|Chef Hannibal|17|3|I'm sorry, Inspector, I don't know anyhing. I was just cooking the favourite dish of Mr. Stark when everything happened.|So, what do I think about the little man? He never approved of my dishes, even when I was more careful. He had enough enmity with all of us, furthermore with the butler, but suprisingly this one was ver dear to him.|I should go back to the kitchen, the dinner has been prepared for a long time. One of us can't eat already, but the others still need it.|0|The chef of the house eh? I  don't know why but his smile gives me chills. He reminds  me of someone, but I don't   rememeber.|
+
+
+#p:1|Inspector Gadget|1|4|
+
+
+#l:1|Lnk_1-2|1|2|0|
+#l:2|Lnk_2-3|2|3|0|
+#l:3|Lnk_2-4|2|4|0|
+#l:4|Lnk_2-5|2|5|0|
+#l:5|Lnk_5-6|5|6|0|
+#l:6|Lnk_5-10|5|10|0|
+#l:7|Lnk_5-8|5|8|0|
+#l:8|Lnk_6-7|6|7|1|
+#l:9|Lnk_8-9|8|9|0|
+#l:10|Lnk_9-10|9|10|0|
+#l:11|Lnk_10-11|10|11|0|
+#l:12|Lnk_11-12|11|12|0|
+#l:13|Lnk_11-13|11|13|1|
+#l:14|Lnk_11-14|11|14|0|
+#l:15|Lnk_11-15|11|15|0|
+#l:16|Lnk_10-16|10|16|0|
+#l:17|Lnk_16-17|16|17|0|
+#l:18|Lnk_16-18|16|18|0|
+#l:19|Lnk_16-19|16|19|1|
+#l:20|Lnk_16-20|16|20|1|
+
+
+#ca:3|0|ERROR, Can you repeat?|0|ERROR, I did not understand you|0|ERROR, I don't know what you mean|
+#ca:2|0|ERROR, no game|0|ERROR, no game|3|OK, leaving the game|OK, until next time!|OK, see you soon|
+#ca:25|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the object name|1|ERROR, What do you want to take?|1|ERROR, I'm missing info|2|ERROR, the object doesn't exist|2|ERROR, you can't invent a new object|2|ERROR, that object exists?|3|ERROR, the object is not in this space|3|ERROR, I don't see that object|3|ERROR; that object is not here|4|ERROR, the backpack is full|4|ERROR, Wow, I have no place to store it|4|ERROR, what a pity, it dont fit in the inventory|4|ERROR, my pockets are full|5|ERROR, the object is too heavy|5|ERROR, the object cannot be moved|5|ERROR, the object is immovable|5|ERROR, I can't seem to move it|6|ERROR, the [obj_name] is incompatible with [obj_name]|6|ERROR,I can't take [obj_name] if I have [obj_name]|6|ERROR, I shouldn't take [obj_name] if I have [obj_name]|7|ERROR, I should have [obj_name] first|7|ERROR, I need [obj_name] before|7|ERROR, I still cant take it, fisrt I need [obj_name]|3|OK, stored in the backpack|OK, I will keep it|OK, it may be interesting to have it|
+#ca:12|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the object name|1|ERROR, I don't know what to drop|1|ERROR, what I should drop?|1|ERROR, missing the object name|2|ERROR, you can't drop an object that you don't own|2|ERROR, that object is not in my inventory|2|ERROR, that object is not within my reach|3|ERROR, there is not enough space to leave it here|3|ERROR, there are already too many objects here|3|ERROR, there is no place to leave another object|3|OK, nice, I feel lighter|OK, now I have more space the backpack|OK, Thank God my back was hurting| 
+#ca:3|0|ERROR, no dice|0|ERROR, no dice structure|0|ERROR, where is the dice?|3|OK, rolling the dice|OK, I hope I'm lucky in this roll|OK, let's try our luck|
+#ca:16|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, need to specify the direction|1|ERROR, I don't know which direction to move|1|ERROR, I should go back, right... I don't know|1|ERROR, I do not know where to go|2|ERROR, I don't see anything on the [direction]|2|there is nothing on the [direction]|2|ERROR, I can't go [direction]|2|ERROR, no [direction] space|3|ERROR, the [link] is closed|3|ERROR, The [link] is closed, so you cannot go in this direction|3|ERROR, shit I can not pass through [link]|3|ERROR, I will have to open [link] before going there|4|ERROR, I don't understand you|4|ERROR, I don't know what you mean|2|OK, let's go|OK, I'm going there|
+#ca:20|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the argument|1|ERROR, what should I inspect?|1|ERROR, I don't know what to inspect|2|ERROR, it's too dark to inspect|2|ERROR, I can't see anything|2|ERROR, Maybe if I light up the space I will see something|2|ERROR, I would have to light the area|3|ERROR, I don't see anything special|3|ERROR, the space has no description|4|ERROR, that object does not exist|4|ERROR, I don't think that object exists|4|ERROR, I'm sorry to tell you that, that object doesn't exist|5|ERROR, Object not found in space or inventory|5|ERROR, the object is not within my reach|5|ERROR, I don't know where that object will be|6|ERROR, I don't know what to tell you about the object|6|ERROR, the object has not description|6|ERROR, I do not know what it is|3|OK, is a [description], is [atr]|OK, observing it I can see a [description], is [atr]|OK, looking at it I realize that is a [description], is [atr]|
+#ca:12|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, the [obj_name] doesn't exist|1|ERROR, [obj_name] is not real|2|ERROR, [obj_name] is not within your reach|2|ERROR, [obj_name] it is mot in your inventory or in the space|2|ERROR, I can't turn on the [obj_name] if I don't know where it is|3|ERROR, I'm not able to turn it on|3|ERROR, I can't turn it on|3|ERROR, the object cannot be turned on|4|ERROR, [obj_name] is already on|4|ERROR,  How can I turn on [obj_name] if it already is?|3|OK, turning it on|OK, I'll turn it on right away|OK, it's already on|
+#ca:12|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, the [obj_name] doesn't exist|1|ERROR, [obj_name] is not real|2|ERROR, [obj_name] is not within your reach|2|ERROR, [obj_name] it is mot in your inventory or in the space|2|ERROR, I can't turn off the [obj_name] if I doff't know where it is|3|ERROR, I'm not able to turn it off|3|ERROR, I can't turn it off|3|ERROR, the object cannot be turned off|4|ERROR, [obj_name] is already off|4|ERROR,  How can I turn off [obj_name] if it already is?|3|OK, turning it off|OK, I'll turn it off right away|OK, it's already off|
+#ca:26|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the first argument|1|ERROR, missing the link name|1|ERROR, I don't know what you want to open|2|ERROR, I don't know what you mean|2|ERROR, incorrect sintaxis|2|ERROR, try to say open [link] with [obj]|3|ERROR, no object name|3|ERROR, missing second argument|4|ERROR, the object doesn't exist|4|ERROR, the object is not real|5|ERROR, the object is not in your inventory|5|ERROR, you don't own the object|5|ERROR, you can't use an object you don't have|6|ERROR, the link doesn't exist|6|ERROR, I don't know where is that link|7|ERROR, the link is not within my reach|7|ERROR, the link is not close enough|7|ERROR, the link is too far|8|ERROR, the link is already open|8|ERROR, I can't open a link not closed|8|ERROR, I can't open it if it was already open|9|ERROR, the object does not serve to open this link|9|ERROR, I can't open that link with this object|9|ERROR, the object does not enter through the lock|3|OK, Now I can pass without problems|OK, the link is already open|OK, opening the link|
+#ca:8|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the argument|1|ERROR, I don't know where you want to save the game|1|ERROR, you need to specify where to save the game|2|ERROR, problems saving the game|2|ERROR, unexpected failure in saving|2|ERROR, an unexpected error has occurred|3|OK, the game is already saved|OK, you can load the saved game with the load command|OK, your progress has been saved|
+#ca:8|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing the argument|1|ERROR, I don't know where the progress to load is saved|1|ERROR, you need to specify which save you want to load|2|ERROR, problems loading the game|2|ERROR, unexpected failure in loading|2|ERROR, an unexpected error has occurred|3|OK, the game is in the save point|OK, you can continue playing from the save point|OK, let's continue the game|
+#ca:16|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, missing elements|1|ERROR, missing arguments|1|ERROR, no arguments|1|ERROR, I'm missing info|2|ERROR, incorrect sintaxis|2|ERROR, I don't understand you|2|ERROR, try saying talk with npc_name|2|ERROR, I don't know what you mean|3|ERROR, there is no such person|3|ERROR, I don't know anyone with that name|3|ERROR, I think you have confused their name|4|ERROR, it's too far to talk|4|ERROR, to talk to him I have to be close to him|4|ERROR, that person is not here|0|
+#ca:7|0|ERROR, no game|0|ERROR, no game structure|1|ERROR, I don't know who you want to accuse|1|ERROR, missing to specify the accused, remember to use the full name|2|ERROR, you can't accuse a person who doesn't exist|2|ERROR, I don't know anyone with that name, remember to use the full name|2|ERROR, I can't accuse him if he're not among the suspects|2|OK, let's go for him|OK, he is being detained for his crimes|
+
+#t:There are 13 commands you can use: / -move/m [direction]: directions: up/u, down/d, north/n, south/s, west/w or east/e; -exit/e:just this, be sure that you have save the game; -take/t [object]: write the characters of an object you see on the map; -drop/d [object]:once you have taken an object; -roll/rl: it  hasn't utility; -inspect/i space/[object]: you can find some hide objects or read the description of the space or an object; -turnon/tn/turnoff/tf [object]: you could turn on/off some luminous objects, the whole space will be iluminated if an object is on; -open/o [door] with [object]:every door is namedLnk_[space1]-[space2] where space1 is the actualspace and space2 is an space you want to access;-save/s/load/l [filename]: you could save/load  the game in the file named FILENAME; -talk/twith [npc]: NPC's have 3 dialogues;    -accuse/a[npc_name]: you could accuse wherever you are, but be careful, if you fail you lose. / Good luck.|
+#e: [pl] was sent to jail. / The next day it was shown to be [dew]. / The story is the  following: The girl was bored of painting the picture of the stairs, so she decided to steal the butler's monoculum and the Mr.Starks's keys. / In the afternoon, the butler realized that it had been stolen and he thougth it had been the boy, as another of his constant pranks. / While the chef was cooking the dinner and Mr.Stark was in his office, the butler stole the gardener's scissors and Mr.Stark's keys from the girl. / He entered the kid's room and killed him, fed up with his jokes. / So he quickly hid the evidence and closed as much as he could. / But when he was in the library, my partner came and didn't give him time to run away.|
+
+
+
+
