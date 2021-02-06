@@ -1,0 +1,395 @@
+\hypertarget{link_8c}{}\section{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.0/src/link.c File Reference}
+\label{link_8c}\index{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/link.\+c@{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/link.\+c}}
+
+
+It implements the link interface.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/link.\+h\char`\"{}}\newline
+Include dependency graph for link.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Link}{\+\_\+\+Link}
+\begin{DoxyCompactList}\small\item\em The link structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}{link\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Create the link, initialite the variables of the link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a6c7a3bd7a856288c377edbcd045912e6}{link\+\_\+set\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em set the name of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a0f3653e949a03e7cac22d2503f8dc6f4}{link\+\_\+set\+\_\+id1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the id1 of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_af3f534402173518ac4fb4880dad3f746}{link\+\_\+set\+\_\+id2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the id2 of a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a7e7cd0c8f7c159bf689db53ee87e1bec}{link\+\_\+set\+\_\+open} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, int open)
+\begin{DoxyCompactList}\small\item\em set if the link is closed (1) or open (0) \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_aff9d8ce68a82447a78449fda68f9e755}{link\+\_\+destory} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em destroy a link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}{link\+\_\+get\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em returns the id of the link that recive \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{link_8c_a9747ee8201a323e112e67bdeacbc90d8}{link\+\_\+get\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em returns the name of the link that recive \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_ad39f5441c13abcb0fce07a81674b04ba}{link\+\_\+get\+\_\+id1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em returns the id1 of the link that recive \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a2079fe643f883e3dcc3c47f9fde4852b}{link\+\_\+get\+\_\+id2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em returns the id2 of the link that recive \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{link_8c_a9fab05d77f8cd191a6675ccc6b9d585b}{link\+\_\+is\+\_\+open} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em returns True in case that the link is open, False otherwise \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a7e0c894d83dbccbf58579b21fd565bb3}{link\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em prints the information of a link \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the link interface. 
+
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}\label{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}} 
+\index{link.\+c@{link.\+c}!link\+\_\+create@{link\+\_\+create}}
+\index{link\+\_\+create@{link\+\_\+create}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+create()}{link\_create()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ link\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Create the link, initialite the variables of the link. 
+
+link\+\_\+create
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the new link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the link created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_aff9d8ce68a82447a78449fda68f9e755}\label{link_8c_aff9d8ce68a82447a78449fda68f9e755}} 
+\index{link.\+c@{link.\+c}!link\+\_\+destory@{link\+\_\+destory}}
+\index{link\+\_\+destory@{link\+\_\+destory}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+destory()}{link\_destory()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+destory (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+destroy a link 
+
+link\+\_\+destroy
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link we want to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}\label{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}}
+\index{link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id()}{link\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+returns the id of the link that recive 
+
+link\+\_\+get\+\_\+id
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link of which you want to know their id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the link that it recive 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_ad39f5441c13abcb0fce07a81674b04ba}\label{link_8c_ad39f5441c13abcb0fce07a81674b04ba}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+id1@{link\+\_\+get\+\_\+id1}}
+\index{link\+\_\+get\+\_\+id1@{link\+\_\+get\+\_\+id1}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id1()}{link\_get\_id1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id1 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+returns the id1 of the link that recive 
+
+link\+\_\+get\+\_\+id1
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link of which you want to know their id1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id1 of the link that it recives 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a2079fe643f883e3dcc3c47f9fde4852b}\label{link_8c_a2079fe643f883e3dcc3c47f9fde4852b}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+id2@{link\+\_\+get\+\_\+id2}}
+\index{link\+\_\+get\+\_\+id2@{link\+\_\+get\+\_\+id2}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id2()}{link\_get\_id2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id2 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+returns the id2 of the link that recive 
+
+link\+\_\+get\+\_\+id2
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link of which you want to know their id2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id2 of the link that it recives 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a9747ee8201a323e112e67bdeacbc90d8}\label{link_8c_a9747ee8201a323e112e67bdeacbc90d8}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}}
+\index{link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+name()}{link\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ link\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+returns the name of the link that recive 
+
+link\+\_\+get\+\_\+name
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link of which you want to know their name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the name of the link that it recives 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a9fab05d77f8cd191a6675ccc6b9d585b}\label{link_8c_a9fab05d77f8cd191a6675ccc6b9d585b}} 
+\index{link.\+c@{link.\+c}!link\+\_\+is\+\_\+open@{link\+\_\+is\+\_\+open}}
+\index{link\+\_\+is\+\_\+open@{link\+\_\+is\+\_\+open}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+is\+\_\+open()}{link\_is\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} link\+\_\+is\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+returns True in case that the link is open, False otherwise 
+
+link\+\_\+is\+\_\+open
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link of which you want to know if its open or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True in case that the link is open, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a7e0c894d83dbccbf58579b21fd565bb3}\label{link_8c_a7e0c894d83dbccbf58579b21fd565bb3}} 
+\index{link.\+c@{link.\+c}!link\+\_\+print@{link\+\_\+print}}
+\index{link\+\_\+print@{link\+\_\+print}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+print()}{link\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+prints the information of a link 
+
+link\+\_\+print
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link we want to print \\
+\hline
+{\em f} & the file in which we want to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a0f3653e949a03e7cac22d2503f8dc6f4}\label{link_8c_a0f3653e949a03e7cac22d2503f8dc6f4}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+id1@{link\+\_\+set\+\_\+id1}}
+\index{link\+\_\+set\+\_\+id1@{link\+\_\+set\+\_\+id1}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+id1()}{link\_set\_id1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+id1 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the id1 of a link 
+
+link\+\_\+set\+\_\+id1
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link in which we want to set the id1 \\
+\hline
+{\em id} & the id1 we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_af3f534402173518ac4fb4880dad3f746}\label{link_8c_af3f534402173518ac4fb4880dad3f746}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+id2@{link\+\_\+set\+\_\+id2}}
+\index{link\+\_\+set\+\_\+id2@{link\+\_\+set\+\_\+id2}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+id2()}{link\_set\_id2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+id2 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the id2 of a link 
+
+link\+\_\+set\+\_\+id1
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link in which we want to set the id2 \\
+\hline
+{\em id} & the id2 we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a6c7a3bd7a856288c377edbcd045912e6}\label{link_8c_a6c7a3bd7a856288c377edbcd045912e6}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}}
+\index{link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+name()}{link\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+set the name of a link 
+
+link\+\_\+set\+\_\+name
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link in which we want to set the name \\
+\hline
+{\em name} & the name we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a7e7cd0c8f7c159bf689db53ee87e1bec}\label{link_8c_a7e7cd0c8f7c159bf689db53ee87e1bec}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+open@{link\+\_\+set\+\_\+open}}
+\index{link\+\_\+set\+\_\+open@{link\+\_\+set\+\_\+open}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+open()}{link\_set\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{int}]{open }\end{DoxyParamCaption})}
+
+
+
+set if the link is closed (1) or open (0) 
+
+link\+\_\+set\+\_\+open
+
+\begin{DoxyDate}{Date}
+17-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & the link in which we want to set the id1 \\
+\hline
+{\em open} & if the link is open (0), otherwise 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}

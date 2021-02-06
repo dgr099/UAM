@@ -1,0 +1,193 @@
+\hypertarget{dice_8c}{}\section{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.0/src/dice.c File Reference}
+\label{dice_8c}\index{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/dice.\+c@{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/dice.\+c}}
+
+
+It implements the die interface.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/dice.\+h\char`\"{}}\newline
+Include dependency graph for dice.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dice_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Dice}{\+\_\+\+Dice}
+\begin{DoxyCompactList}\small\item\em The die structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$ \hyperlink{dice_8c_a6f5f18873cfd3e4da81b40e33c7cf637}{dice\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id, int max, int min)
+\begin{DoxyCompactList}\small\item\em Create a dice. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{dice_8c_a2c673e593f984c182dc6dde3f6dcfd59}{dice\+\_\+destroy} (\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$dice)
+\begin{DoxyCompactList}\small\item\em free a dice \end{DoxyCompactList}\item 
+int \hyperlink{dice_8c_ab1ad7da98578cf2db3c70daffccfb944}{dice\+\_\+roll} (\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$dice)
+\begin{DoxyCompactList}\small\item\em roll a dice \end{DoxyCompactList}\item 
+int \hyperlink{dice_8c_a2bfe1653c086f66149ba8fc3f3b52017}{dice\+\_\+get\+\_\+last} (\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$dice)
+\begin{DoxyCompactList}\small\item\em get the last roll value \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{dice_8c_adc188c44ee8d1058c574f08ac39b5c6b}{dice\+\_\+print} (\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$dice)
+\begin{DoxyCompactList}\small\item\em print a dice \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the die interface. 
+
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dice_8c_a6f5f18873cfd3e4da81b40e33c7cf637}\label{dice_8c_a6f5f18873cfd3e4da81b40e33c7cf637}} 
+\index{dice.\+c@{dice.\+c}!dice\+\_\+create@{dice\+\_\+create}}
+\index{dice\+\_\+create@{dice\+\_\+create}!dice.\+c@{dice.\+c}}
+\subsubsection{\texorpdfstring{dice\+\_\+create()}{dice\_create()}}
+{\footnotesize\ttfamily \hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice}$\ast$ dice\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id,  }\item[{int}]{max,  }\item[{int}]{min }\end{DoxyParamCaption})}
+
+
+
+Create a dice. 
+
+dice\+\_\+create Create a dice with a specific Id, max and min
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the new dice \\
+\hline
+{\em max} & the maximum of the dice \\
+\hline
+{\em min} & the minimum of the dice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new dice that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dice_8c_a2c673e593f984c182dc6dde3f6dcfd59}\label{dice_8c_a2c673e593f984c182dc6dde3f6dcfd59}} 
+\index{dice.\+c@{dice.\+c}!dice\+\_\+destroy@{dice\+\_\+destroy}}
+\index{dice\+\_\+destroy@{dice\+\_\+destroy}!dice.\+c@{dice.\+c}}
+\subsubsection{\texorpdfstring{dice\+\_\+destroy()}{dice\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} dice\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$}]{dice }\end{DoxyParamCaption})}
+
+
+
+free a dice 
+
+dice\+\_\+destroy free a especific dice
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dice} & a dice that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dice_8c_a2bfe1653c086f66149ba8fc3f3b52017}\label{dice_8c_a2bfe1653c086f66149ba8fc3f3b52017}} 
+\index{dice.\+c@{dice.\+c}!dice\+\_\+get\+\_\+last@{dice\+\_\+get\+\_\+last}}
+\index{dice\+\_\+get\+\_\+last@{dice\+\_\+get\+\_\+last}!dice.\+c@{dice.\+c}}
+\subsubsection{\texorpdfstring{dice\+\_\+get\+\_\+last()}{dice\_get\_last()}}
+{\footnotesize\ttfamily int dice\+\_\+get\+\_\+last (\begin{DoxyParamCaption}\item[{\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$}]{dice }\end{DoxyParamCaption})}
+
+
+
+get the last roll value 
+
+dice\+\_\+get\+\_\+last
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dice} & a dice that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if there is an error, otherwise return the last roll value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dice_8c_adc188c44ee8d1058c574f08ac39b5c6b}\label{dice_8c_adc188c44ee8d1058c574f08ac39b5c6b}} 
+\index{dice.\+c@{dice.\+c}!dice\+\_\+print@{dice\+\_\+print}}
+\index{dice\+\_\+print@{dice\+\_\+print}!dice.\+c@{dice.\+c}}
+\subsubsection{\texorpdfstring{dice\+\_\+print()}{dice\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} dice\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$}]{dice }\end{DoxyParamCaption})}
+
+
+
+print a dice 
+
+dice\+\_\+print print a especific dice
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dice} & a dice which you want to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if there is an error, otherwise return the number of the roll 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dice_8c_ab1ad7da98578cf2db3c70daffccfb944}\label{dice_8c_ab1ad7da98578cf2db3c70daffccfb944}} 
+\index{dice.\+c@{dice.\+c}!dice\+\_\+roll@{dice\+\_\+roll}}
+\index{dice\+\_\+roll@{dice\+\_\+roll}!dice.\+c@{dice.\+c}}
+\subsubsection{\texorpdfstring{dice\+\_\+roll()}{dice\_roll()}}
+{\footnotesize\ttfamily int dice\+\_\+roll (\begin{DoxyParamCaption}\item[{\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$}]{dice }\end{DoxyParamCaption})}
+
+
+
+roll a dice 
+
+dice\+\_\+roll roll a especific dice
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dice} & a dice which you want to roll \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if there is an error, otherwise return the number of the roll 
+\end{DoxyReturn}

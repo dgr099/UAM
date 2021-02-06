@@ -1,0 +1,886 @@
+\hypertarget{game_8h}{}\section{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.0/include/game.h File Reference}
+\label{game_8h}\index{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/include/game.\+h@{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/include/game.\+h}}
+
+
+It defines the game interface for each command.  
+
+
+{\ttfamily \#include \char`\"{}../include/command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/dice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/link.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{game_8h_acdc7844fbd4d45737d4aa56834d37829}{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}~10
+\begin{DoxyCompactList}\small\item\em A macro that stores the maximum objects of a game. \end{DoxyCompactList}\item 
+\#define \hyperlink{game_8h_a660ed1ec8604982002a0d6eced0e0367}{M\+A\+X\+\_\+\+L\+I\+N\+KS}~400
+\begin{DoxyCompactList}\small\item\em A macro that stores the maximum links of a game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Game}{\+\_\+\+Game} \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}
+\begin{DoxyCompactList}\small\item\em A type definition for a game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$ \hyperlink{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}{game\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Create the game, initialite the variables of the game. \end{DoxyCompactList}\item 
+\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$ \hyperlink{game_8h_a0e225eaf98598147fdfba6fed2ea8f02}{game\+\_\+create\+\_\+from\+\_\+file} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Create the game from a file. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_a8711cf50c2cef44e064da433807e252a}{game\+\_\+update} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} command, char $\ast$argument)
+\begin{DoxyCompactList}\small\item\em update the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_a0736924a1235c0e6fe9b6d91c2a12af8}{game\+\_\+destroy} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em free the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{game_8h_aa6efe0650af110bbd84e742cc8046d93}{game\+\_\+is\+\_\+over} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em check if the game is over \end{DoxyCompactList}\item 
+void \hyperlink{game_8h_a33a5ed8937423f8c012df3cedad4fa4c}{game\+\_\+print\+\_\+data} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em print the game data \end{DoxyCompactList}\item 
+\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{game_8h_a69d94da9d27b542d3ebdeb8b60f1f2dc}{game\+\_\+get\+\_\+space} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em get the space \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} \hyperlink{game_8h_ac6c33f046d4854d4357ca95428a41281}{game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em get the last command of the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_ae5ad86de0a92d9eccb234948458da7f1}{game\+\_\+add\+\_\+space} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em add a space in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_a83b86a040470f67786d912f45efc9eb8}{game\+\_\+get\+\_\+object\+\_\+location} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object)
+\begin{DoxyCompactList}\small\item\em get the location of an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_ad2dfd865e2bd2c545a15d33f4d1cf3ae}{game\+\_\+get\+\_\+space\+\_\+id\+\_\+at} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, int position)
+\begin{DoxyCompactList}\small\item\em return the id of an space form their position \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_a9597a8e456aa74db536e87d56f56c3b4}{game\+\_\+add\+\_\+object} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em add a new object to the game \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{game_8h_a2ecf68dd442c912c2b0da3c3dd9fef9e}{game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em return the name of an object from his id \end{DoxyCompactList}\item 
+void \hyperlink{game_8h_a81ff7aff49ff47a7a16a88df4ae06956}{game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$names)
+\begin{DoxyCompactList}\small\item\em save a string with the name of all objects of an space in the names argument \end{DoxyCompactList}\item 
+void \hyperlink{game_8h_ab6154c70ef6dd43b0dc7089d6f363974}{game\+\_\+get\+\_\+objects\+\_\+location} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$names)
+\begin{DoxyCompactList}\small\item\em save a string with the name of all objects of the game and their locations in the names argument \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{game_8h_a89c667c3db1a1afe426c264a742d373c}{game\+\_\+get\+\_\+last\+\_\+argument} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em get the argument insert by the user \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{game_8h_a0622ea04a0e30e49f51ed4c83257bee5}{game\+\_\+get\+\_\+last\+\_\+command} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em get the comand insert by the user \end{DoxyCompactList}\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{game_8h_af46efd507d797aec6da90d08aa592e32}{game\+\_\+get\+\_\+player} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em get the player of the game \end{DoxyCompactList}\item 
+\hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice} $\ast$ \hyperlink{game_8h_ab32e231181826f82db6c6d161d2eb647}{game\+\_\+get\+\_\+dice} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em get the dice of the game \end{DoxyCompactList}\item 
+void \hyperlink{game_8h_ab13626a54ff51e2300a82f5c6ebd6ec7}{game\+\_\+get\+\_\+player\+\_\+objects} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$names)
+\begin{DoxyCompactList}\small\item\em get the player objects of the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_ade0d25f267771b1f9b27fcc0383e93b8}{game\+\_\+set\+\_\+player} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em set the player of the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game_8h_a4691bee17d5784ad6eb257dfbb252c27}{game\+\_\+add\+\_\+link} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em add a link to the game \end{DoxyCompactList}\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{game_8h_a34824b782ef05dcca98e83546b321ebf}{game\+\_\+get\+\_\+link\+\_\+at\+\_\+id} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em return a link pointer from their id \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_ab08e136689431b2c932cfcac2131c51a}{game\+\_\+get\+\_\+south} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em returns the id of the souther link of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_a19a5cd5f4230efccff68d10af5af40e8}{game\+\_\+get\+\_\+north} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em returns the id of the north link of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_a23b7636aa7306962aaf1358697cabd76}{game\+\_\+get\+\_\+east} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em returns the id of the east link of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{game_8h_ad86395a448cc3e6100cdcef36427d840}{game\+\_\+get\+\_\+west} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em returns the id of the west link of the space \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the game interface for each command. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG, David Garitagoitia Romero y José Manuel García Giráldez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game_8h_a660ed1ec8604982002a0d6eced0e0367}\label{game_8h_a660ed1ec8604982002a0d6eced0e0367}} 
+\index{game.\+h@{game.\+h}!M\+A\+X\+\_\+\+L\+I\+N\+KS@{M\+A\+X\+\_\+\+L\+I\+N\+KS}}
+\index{M\+A\+X\+\_\+\+L\+I\+N\+KS@{M\+A\+X\+\_\+\+L\+I\+N\+KS}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+L\+I\+N\+KS}{MAX\_LINKS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+I\+N\+KS~400}
+
+
+
+A macro that stores the maximum links of a game. 
+
+Details. \mbox{\Hypertarget{game_8h_acdc7844fbd4d45737d4aa56834d37829}\label{game_8h_acdc7844fbd4d45737d4aa56834d37829}} 
+\index{game.\+h@{game.\+h}!M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS@{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}}
+\index{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS@{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS}{MAX\_OBJECTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+TS~10}
+
+
+
+A macro that stores the maximum objects of a game. 
+
+Details. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}\label{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}} 
+\index{game.\+h@{game.\+h}!Game@{Game}}
+\index{Game@{Game}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{Game}{Game}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Game}{\+\_\+\+Game} \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}}
+
+
+
+A type definition for a game. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a4691bee17d5784ad6eb257dfbb252c27}\label{game_8h_a4691bee17d5784ad6eb257dfbb252c27}} 
+\index{game.\+h@{game.\+h}!game\+\_\+add\+\_\+link@{game\+\_\+add\+\_\+link}}
+\index{game\+\_\+add\+\_\+link@{game\+\_\+add\+\_\+link}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+link()}{game\_add\_link()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+link (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+add a link to the game 
+
+game\+\_\+add\+\_\+link
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em link} & the link that we want to add to the game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, E\+R\+R\+OR otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a9597a8e456aa74db536e87d56f56c3b4}\label{game_8h_a9597a8e456aa74db536e87d56f56c3b4}} 
+\index{game.\+h@{game.\+h}!game\+\_\+add\+\_\+object@{game\+\_\+add\+\_\+object}}
+\index{game\+\_\+add\+\_\+object@{game\+\_\+add\+\_\+object}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+object()}{game\_add\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+add a new object to the game 
+
+game\+\_\+add\+\_\+object
+
+\begin{DoxyDate}{Date}
+01-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em object} & the addres to the object that we want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ae5ad86de0a92d9eccb234948458da7f1}\label{game_8h_ae5ad86de0a92d9eccb234948458da7f1}} 
+\index{game.\+h@{game.\+h}!game\+\_\+add\+\_\+space@{game\+\_\+add\+\_\+space}}
+\index{game\+\_\+add\+\_\+space@{game\+\_\+add\+\_\+space}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+space()}{game\_add\_space()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+add a space in the game 
+
+game\+\_\+add\+\_\+space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the game in which we will add the space \\
+\hline
+{\em space} & the space which will be add in the game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}\label{game_8h_a1cdbe3f06b9bf49eb5e334a22ad3b2b9}} 
+\index{game.\+h@{game.\+h}!game\+\_\+create@{game\+\_\+create}}
+\index{game\+\_\+create@{game\+\_\+create}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+create()}{game\_create()}}
+{\footnotesize\ttfamily \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}$\ast$ game\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the game, initialite the variables of the game. 
+
+Game interface implementation game\+\_\+create
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the game created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a0e225eaf98598147fdfba6fed2ea8f02}\label{game_8h_a0e225eaf98598147fdfba6fed2ea8f02}} 
+\index{game.\+h@{game.\+h}!game\+\_\+create\+\_\+from\+\_\+file@{game\+\_\+create\+\_\+from\+\_\+file}}
+\index{game\+\_\+create\+\_\+from\+\_\+file@{game\+\_\+create\+\_\+from\+\_\+file}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+create\+\_\+from\+\_\+file()}{game\_create\_from\_file()}}
+{\footnotesize\ttfamily \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game}$\ast$ game\+\_\+create\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Create the game from a file. 
+
+game\+\_\+create\+\_\+from\+\_\+file
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file we will use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a0736924a1235c0e6fe9b6d91c2a12af8}\label{game_8h_a0736924a1235c0e6fe9b6d91c2a12af8}} 
+\index{game.\+h@{game.\+h}!game\+\_\+destroy@{game\+\_\+destroy}}
+\index{game\+\_\+destroy@{game\+\_\+destroy}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+destroy()}{game\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+free the game 
+
+game\+\_\+destroy
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & a game that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ab32e231181826f82db6c6d161d2eb647}\label{game_8h_ab32e231181826f82db6c6d161d2eb647}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+dice@{game\+\_\+get\+\_\+dice}}
+\index{game\+\_\+get\+\_\+dice@{game\+\_\+get\+\_\+dice}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+dice()}{game\_get\_dice()}}
+{\footnotesize\ttfamily \hyperlink{dice_8h_a5910ae86cf402855269700abd23e3976}{Dice}$\ast$ game\+\_\+get\+\_\+dice (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+get the dice of the game 
+
+game\+\_\+get\+\_\+player
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the addres of the dice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a23b7636aa7306962aaf1358697cabd76}\label{game_8h_a23b7636aa7306962aaf1358697cabd76}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+east@{game\+\_\+get\+\_\+east}}
+\index{game\+\_\+get\+\_\+east@{game\+\_\+get\+\_\+east}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+east()}{game\_get\_east()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+east (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+returns the id of the east link of the space 
+
+game\+\_\+get\+\_\+east
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em space} & the space we want to know about its east link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the east link of the space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a89c667c3db1a1afe426c264a742d373c}\label{game_8h_a89c667c3db1a1afe426c264a742d373c}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+last\+\_\+argument@{game\+\_\+get\+\_\+last\+\_\+argument}}
+\index{game\+\_\+get\+\_\+last\+\_\+argument@{game\+\_\+get\+\_\+last\+\_\+argument}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+last\+\_\+argument()}{game\_get\_last\_argument()}}
+{\footnotesize\ttfamily char$\ast$ game\+\_\+get\+\_\+last\+\_\+argument (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+get the argument insert by the user 
+
+game\+\_\+get\+\_\+last\+\_\+argument
+
+\begin{DoxyDate}{Date}
+05-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the argument 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a0622ea04a0e30e49f51ed4c83257bee5}\label{game_8h_a0622ea04a0e30e49f51ed4c83257bee5}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+last\+\_\+command@{game\+\_\+get\+\_\+last\+\_\+command}}
+\index{game\+\_\+get\+\_\+last\+\_\+command@{game\+\_\+get\+\_\+last\+\_\+command}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+last\+\_\+command()}{game\_get\_last\_command()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}$\ast$ game\+\_\+get\+\_\+last\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+get the comand insert by the user 
+
+game\+\_\+get\+\_\+last\+\_\+command
+
+\begin{DoxyDate}{Date}
+02-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the command 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ac6c33f046d4854d4357ca95428a41281}\label{game_8h_ac6c33f046d4854d4357ca95428a41281}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command@{game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command}}
+\index{game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command@{game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command()}{game\_get\_last\_principal\_command()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+get the last command of the game 
+
+game\+\_\+get\+\_\+last\+\_\+principal\+\_\+command
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the game from which we will get the information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+game-\/$>$last\+\_\+cmd the last command 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a34824b782ef05dcca98e83546b321ebf}\label{game_8h_a34824b782ef05dcca98e83546b321ebf}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+link\+\_\+at\+\_\+id@{game\+\_\+get\+\_\+link\+\_\+at\+\_\+id}}
+\index{game\+\_\+get\+\_\+link\+\_\+at\+\_\+id@{game\+\_\+get\+\_\+link\+\_\+at\+\_\+id}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+link\+\_\+at\+\_\+id()}{game\_get\_link\_at\_id()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ game\+\_\+get\+\_\+link\+\_\+at\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+return a link pointer from their id 
+
+game\+\_\+get\+\_\+link\+\_\+at\+\_\+id
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em id} & the id of the link we want to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the link that have that id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a19a5cd5f4230efccff68d10af5af40e8}\label{game_8h_a19a5cd5f4230efccff68d10af5af40e8}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+north@{game\+\_\+get\+\_\+north}}
+\index{game\+\_\+get\+\_\+north@{game\+\_\+get\+\_\+north}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+north()}{game\_get\_north()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+north (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+returns the id of the north link of the space 
+
+game\+\_\+get\+\_\+north
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em space} & the space we want to know about its north link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the north link of the space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a83b86a040470f67786d912f45efc9eb8}\label{game_8h_a83b86a040470f67786d912f45efc9eb8}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+object\+\_\+location@{game\+\_\+get\+\_\+object\+\_\+location}}
+\index{game\+\_\+get\+\_\+object\+\_\+location@{game\+\_\+get\+\_\+object\+\_\+location}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+object\+\_\+location()}{game\_get\_object\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+object\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{object }\end{DoxyParamCaption})}
+
+
+
+get the location of an object 
+
+game\+\_\+get\+\_\+object\+\_\+location
+
+\begin{DoxyDate}{Date}
+09-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em object} & the object which we want to know the id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+space\+\_\+get\+\_\+id(game-\/$>$spaces\mbox{[}i\mbox{]}) the id of the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a2ecf68dd442c912c2b0da3c3dd9fef9e}\label{game_8h_a2ecf68dd442c912c2b0da3c3dd9fef9e}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id@{game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id}}
+\index{game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id@{game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id()}{game\_get\_object\_name\_at\_id()}}
+{\footnotesize\ttfamily const char$\ast$ game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+return the name of an object from his id 
+
+game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+id
+
+\begin{DoxyDate}{Date}
+01-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em id} & the id of the object that we want to know his name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if there is an error, otherwise return the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ab6154c70ef6dd43b0dc7089d6f363974}\label{game_8h_ab6154c70ef6dd43b0dc7089d6f363974}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+objects\+\_\+location@{game\+\_\+get\+\_\+objects\+\_\+location}}
+\index{game\+\_\+get\+\_\+objects\+\_\+location@{game\+\_\+get\+\_\+objects\+\_\+location}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+objects\+\_\+location()}{game\_get\_objects\_location()}}
+{\footnotesize\ttfamily void game\+\_\+get\+\_\+objects\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{names }\end{DoxyParamCaption})}
+
+
+
+save a string with the name of all objects of the game and their locations in the names argument 
+
+game\+\_\+get\+\_\+objects\+\_\+location
+
+\begin{DoxyDate}{Date}
+01-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em names} & the addres of an string in which the names of the objects and their location will be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a81ff7aff49ff47a7a16a88df4ae06956}\label{game_8h_a81ff7aff49ff47a7a16a88df4ae06956}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space@{game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space}}
+\index{game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space@{game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space()}{game\_get\_objects\_name\_at\_space()}}
+{\footnotesize\ttfamily void game\+\_\+get\+\_\+objects\+\_\+name\+\_\+at\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{names }\end{DoxyParamCaption})}
+
+
+
+save a string with the name of all objects of an space in the names argument 
+
+game\+\_\+get\+\_\+object\+\_\+name\+\_\+at\+\_\+space
+
+\begin{DoxyDate}{Date}
+01-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & the space that you want to recive their objects name \\
+\hline
+{\em game} & the strcture game we initialite \\
+\hline
+{\em names} & the addres of an string in which the names will be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_af46efd507d797aec6da90d08aa592e32}\label{game_8h_af46efd507d797aec6da90d08aa592e32}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+player@{game\+\_\+get\+\_\+player}}
+\index{game\+\_\+get\+\_\+player@{game\+\_\+get\+\_\+player}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+player()}{game\_get\_player()}}
+{\footnotesize\ttfamily \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}$\ast$ game\+\_\+get\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+get the player of the game 
+
+game\+\_\+get\+\_\+player
+
+\begin{DoxyDate}{Date}
+14-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the addres of the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ab13626a54ff51e2300a82f5c6ebd6ec7}\label{game_8h_ab13626a54ff51e2300a82f5c6ebd6ec7}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+player\+\_\+objects@{game\+\_\+get\+\_\+player\+\_\+objects}}
+\index{game\+\_\+get\+\_\+player\+\_\+objects@{game\+\_\+get\+\_\+player\+\_\+objects}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+player\+\_\+objects()}{game\_get\_player\_objects()}}
+{\footnotesize\ttfamily void game\+\_\+get\+\_\+player\+\_\+objects (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{names }\end{DoxyParamCaption})}
+
+
+
+get the player objects of the game 
+
+game\+\_\+get\+\_\+player\+\_\+objects
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em names} & the string in which the objects will be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ab08e136689431b2c932cfcac2131c51a}\label{game_8h_ab08e136689431b2c932cfcac2131c51a}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+south@{game\+\_\+get\+\_\+south}}
+\index{game\+\_\+get\+\_\+south@{game\+\_\+get\+\_\+south}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+south()}{game\_get\_south()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+south (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+returns the id of the souther link of the space 
+
+game\+\_\+get\+\_\+south
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em space} & the space we want to know about its south link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the south link of the space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a69d94da9d27b542d3ebdeb8b60f1f2dc}\label{game_8h_a69d94da9d27b542d3ebdeb8b60f1f2dc}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+space@{game\+\_\+get\+\_\+space}}
+\index{game\+\_\+get\+\_\+space@{game\+\_\+get\+\_\+space}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+space()}{game\_get\_space()}}
+{\footnotesize\ttfamily \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}$\ast$ game\+\_\+get\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+get the space 
+
+game\+\_\+get\+\_\+space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the game from which we will get the information \\
+\hline
+{\em id} & the id of the space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the game spaces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ad2dfd865e2bd2c545a15d33f4d1cf3ae}\label{game_8h_ad2dfd865e2bd2c545a15d33f4d1cf3ae}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+space\+\_\+id\+\_\+at@{game\+\_\+get\+\_\+space\+\_\+id\+\_\+at}}
+\index{game\+\_\+get\+\_\+space\+\_\+id\+\_\+at@{game\+\_\+get\+\_\+space\+\_\+id\+\_\+at}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+space\+\_\+id\+\_\+at()}{game\_get\_space\_id\_at()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+space\+\_\+id\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+return the id of an space form their position 
+
+game\+\_\+get\+\_\+space\+\_\+id\+\_\+at
+
+\begin{DoxyDate}{Date}
+6-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em position} & the position of the space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+\_\+\+ID if there is an error, otherwise return the id of the space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ad86395a448cc3e6100cdcef36427d840}\label{game_8h_ad86395a448cc3e6100cdcef36427d840}} 
+\index{game.\+h@{game.\+h}!game\+\_\+get\+\_\+west@{game\+\_\+get\+\_\+west}}
+\index{game\+\_\+get\+\_\+west@{game\+\_\+get\+\_\+west}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+get\+\_\+west()}{game\_get\_west()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} game\+\_\+get\+\_\+west (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+returns the id of the west link of the space 
+
+game\+\_\+get\+\_\+west
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em space} & the space we want to know about its west link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id of the west link of the space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_aa6efe0650af110bbd84e742cc8046d93}\label{game_8h_aa6efe0650af110bbd84e742cc8046d93}} 
+\index{game.\+h@{game.\+h}!game\+\_\+is\+\_\+over@{game\+\_\+is\+\_\+over}}
+\index{game\+\_\+is\+\_\+over@{game\+\_\+is\+\_\+over}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+is\+\_\+over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+check if the game is over 
+
+game\+\_\+is\+\_\+over
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & a game that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns F\+A\+L\+SE if the game is still going on and OK if the game is actually over 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a33a5ed8937423f8c012df3cedad4fa4c}\label{game_8h_a33a5ed8937423f8c012df3cedad4fa4c}} 
+\index{game.\+h@{game.\+h}!game\+\_\+print\+\_\+data@{game\+\_\+print\+\_\+data}}
+\index{game\+\_\+print\+\_\+data@{game\+\_\+print\+\_\+data}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+print\+\_\+data()}{game\_print\_data()}}
+{\footnotesize\ttfamily void game\+\_\+print\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+print the game data 
+
+game\+\_\+print\+\_\+data
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & a game that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ade0d25f267771b1f9b27fcc0383e93b8}\label{game_8h_ade0d25f267771b1f9b27fcc0383e93b8}} 
+\index{game.\+h@{game.\+h}!game\+\_\+set\+\_\+player@{game\+\_\+set\+\_\+player}}
+\index{game\+\_\+set\+\_\+player@{game\+\_\+set\+\_\+player}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+set\+\_\+player()}{game\_set\_player()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+set\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+set the player of the game 
+
+game\+\_\+set\+\_\+player
+
+\begin{DoxyDate}{Date}
+13-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the strcture game we initialite \\
+\hline
+{\em player} & the addres of the player we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, E\+R\+R\+OR otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a8711cf50c2cef44e064da433807e252a}\label{game_8h_a8711cf50c2cef44e064da433807e252a}} 
+\index{game.\+h@{game.\+h}!game\+\_\+update@{game\+\_\+update}}
+\index{game\+\_\+update@{game\+\_\+update}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+update()}{game\_update()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command}}]{command,  }\item[{char $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+update the game 
+
+game\+\_\+update
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & a game that has been created before \\
+\hline
+{\em command} & call to the structure cmd \\
+\hline
+{\em argument} & the argument of the cmd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}

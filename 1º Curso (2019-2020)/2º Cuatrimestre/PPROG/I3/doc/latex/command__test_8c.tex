@@ -1,0 +1,836 @@
+\hypertarget{command__test_8c}{}\section{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.0/src/command\+\_\+test.c File Reference}
+\label{command__test_8c}\index{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/command\+\_\+test.\+c@{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/command\+\_\+test.\+c}}
+
+
+test to see if dice works correctly  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/command\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+Include dependency graph for command\+\_\+test.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{command__test_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{command__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}~45
+\begin{DoxyCompactList}\small\item\em maximum number of test \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{command__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em the main function of dice\+\_\+test main \end{DoxyCompactList}\item 
+void \hyperlink{command__test_8c_af91aeb3bc73f994f5214b8954f3c4797}{test1\+\_\+command\+\_\+init} ()
+\item 
+void \hyperlink{command__test_8c_a084363877b09c47c4167fb675ba0a6c5}{test2\+\_\+command\+\_\+init} ()
+\item 
+void \hyperlink{command__test_8c_a1d44a3ed59cc78359d6c8c0d720347e1}{test3\+\_\+command\+\_\+init} ()
+\item 
+void \hyperlink{command__test_8c_a6367528b38336d716e765ea2d57f6d8c}{test4\+\_\+command\+\_\+init} ()
+\item 
+void \hyperlink{command__test_8c_a4e6817b2faaa57ed732eb9a68e671ef1}{test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a2f897a338775789b9e1b0b8a8647fd85}{test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a7e2613ae40c77091d31e9dd549c5d848}{test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a0485be612e6f281fe6e5b4dc778e2b72}{test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_aa9706a5391086cfb6daf56613b55b351}{test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a1fd80f6afee487d3aa0386b22e85ac38}{test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_aaacb4bcd77193d1e88615373040ea9a5}{test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a3c00c13f79566dca26966f011cdcb9b5}{test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_af037a9eb46fd5e7700ec1f0760a5b9ec}{test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_aba7be3a0f6ef3e6717088a21d32e9a21}{test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_ae492f21ffdf46fc9380339f397f12675}{test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_ab42210ac5001729f927be902384c51c6}{test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd} ()
+\item 
+void \hyperlink{command__test_8c_a86c724b0ce8b1a19b138fb1cb5dd84e3}{test1\+\_\+command\+\_\+set\+\_\+status} ()
+\item 
+void \hyperlink{command__test_8c_a67ea36686a450269ef95eace71e78867}{test2\+\_\+command\+\_\+set\+\_\+status} ()
+\item 
+void \hyperlink{command__test_8c_a5c554b37bf888c3077aa310982cedf14}{test3\+\_\+command\+\_\+set\+\_\+status} ()
+\item 
+void \hyperlink{command__test_8c_a88a8e8dddaca55194bd73c4d6796ec9b}{test1\+\_\+command\+\_\+set\+\_\+argument} ()
+\item 
+void \hyperlink{command__test_8c_a66f78c148ff91ffcbaa521f00d208a75}{test2\+\_\+command\+\_\+set\+\_\+argument} ()
+\item 
+void \hyperlink{command__test_8c_a69324b158668120d802451ce7c951d9e}{test3\+\_\+command\+\_\+set\+\_\+argument} ()
+\item 
+void \hyperlink{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}{test1\+\_\+command\+\_\+destroy} ()
+\item 
+void \hyperlink{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}{test2\+\_\+command\+\_\+destroy} ()
+\item 
+void \hyperlink{command__test_8c_a932afa8fb63c9b8ba551d030886ce491}{test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a3ba7658db8aa069706b344d42ceabfaa}{test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ae2d4b758fa9767317795c822b7334dec}{test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a87e1a266b9beb6b31dd8e626694d5dd6}{test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a3b7a4bfd103971720b0daef936b9251c}{test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a85a9509e4435960ab89a0968666c2588}{test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ab3a94f10959f43dca5f3a1254d2455a4}{test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a96e8d3216af1419e01aaa68052a4ed26}{test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ad9250b3696fed0b765bc703ecfa06066}{test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a5a8b71fe0575431c76639d1a1703dd56}{test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ada1f2861adf1a95726d5d08ecf6c015a}{test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a01d0cd8d45e24b2b1a455a4ab50654cd}{test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a274781536f1262b9c22ee97c1a57af18}{test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a8f9bd7fc5112b6851b4e77a785984858}{test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ae901b403f53f05148d2183d8205f968c}{test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a9acb10b7ed10138a24190b90358e0583}{test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a46ab7fb8f1c83596debe331b2c7bfbe0}{test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a4db087cfa5bf22f248747b748745379f}{test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a340bc65a10e7f7bdcddcef019bbd5aa7}{test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a92cce7477f40656ebebe28d56142b528}{test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_aaf02a6c7423e84f000c00b8218a8a9a1}{test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_ac1ff85e1d54f46eccdbdaffec062d5c0}{test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\item 
+void \hyperlink{command__test_8c_a618f500cde2987b4f746357b2a990b69}{test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+test to see if dice works correctly 
+
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10-\/06-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{command__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{command__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}}
+\index{M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+E\+S\+TS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~45}
+
+
+
+maximum number of test 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{command__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{command__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!main@{main}}
+\index{main@{main}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+the main function of dice\+\_\+test main 
+
+\begin{DoxyDate}{Date}
+10-\/06-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{command__test_8c_a5a8b71fe0575431c76639d1a1703dd56}\label{command__test_8c_a5a8b71fe0575431c76639d1a1703dd56}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test10\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test10\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000034}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is m n (move and the argument is n) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be move and the argument must be n 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_aba7be3a0f6ef3e6717088a21d32e9a21}\label{command__test_8c_aba7be3a0f6ef3e6717088a21d32e9a21}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test10\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test10\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000014}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be B\+A\+CK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ada1f2861adf1a95726d5d08ecf6c015a}\label{command__test_8c_ada1f2861adf1a95726d5d08ecf6c015a}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test11\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test11\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000035}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is move south (move and the argument is south) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be move and the argument must be south 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ae492f21ffdf46fc9380339f397f12675}\label{command__test_8c_ae492f21ffdf46fc9380339f397f12675}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test11\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test11\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000015}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be R\+I\+G\+HT 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a01d0cd8d45e24b2b1a455a4ab50654cd}\label{command__test_8c_a01d0cd8d45e24b2b1a455a4ab50654cd}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test12\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test12\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000036}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is n next (next) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be next and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ab42210ac5001729f927be902384c51c6}\label{command__test_8c_ab42210ac5001729f927be902384c51c6}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test12\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test12\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000016}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be L\+E\+FT 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a274781536f1262b9c22ee97c1a57af18}\label{command__test_8c_a274781536f1262b9c22ee97c1a57af18}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test13\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test13\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000037}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is next (next) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be next and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a8f9bd7fc5112b6851b4e77a785984858}\label{command__test_8c_a8f9bd7fc5112b6851b4e77a785984858}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test14\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test14\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000038}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is b (back) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be back and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ae901b403f53f05148d2183d8205f968c}\label{command__test_8c_ae901b403f53f05148d2183d8205f968c}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test15\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test15\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000039}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is back (back) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be back and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a9acb10b7ed10138a24190b90358e0583}\label{command__test_8c_a9acb10b7ed10138a24190b90358e0583}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test16\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test16\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000040}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is r (right) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be right and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a46ab7fb8f1c83596debe331b2c7bfbe0}\label{command__test_8c_a46ab7fb8f1c83596debe331b2c7bfbe0}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test17\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test17\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000041}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is right (right) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be right and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a4db087cfa5bf22f248747b748745379f}\label{command__test_8c_a4db087cfa5bf22f248747b748745379f}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test18\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test18\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000042}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is l (left) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be left and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a340bc65a10e7f7bdcddcef019bbd5aa7}\label{command__test_8c_a340bc65a10e7f7bdcddcef019bbd5aa7}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test19\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test19\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000043}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is left da igual (left) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be left and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}\label{command__test_8c_aadf731a98e5122e70ede7cdc68ba621f}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+destroy@{test1\+\_\+command\+\_\+destroy}}
+\index{test1\+\_\+command\+\_\+destroy@{test1\+\_\+command\+\_\+destroy}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+destroy()}{test1\_command\_destroy()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000023}{Test}]Test the command destroy function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+No problems destroying the command 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a932afa8fb63c9b8ba551d030886ce491}\label{command__test_8c_a932afa8fb63c9b8ba551d030886ce491}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test1\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000025}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is \char`\"{}no se que estoy poniendo\char`\"{} (unknown command) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be unknow 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_af91aeb3bc73f994f5214b8954f3c4797}\label{command__test_8c_af91aeb3bc73f994f5214b8954f3c4797}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+init@{test1\+\_\+command\+\_\+init}}
+\index{test1\+\_\+command\+\_\+init@{test1\+\_\+command\+\_\+init}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+init()}{test1\_command\_init()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000001}{Test}]Test the command creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An identifier as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+A non-\/null pointer to the created space 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a88a8e8dddaca55194bd73c4d6796ec9b}\label{command__test_8c_a88a8e8dddaca55194bd73c4d6796ec9b}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+set\+\_\+argument@{test1\+\_\+command\+\_\+set\+\_\+argument}}
+\index{test1\+\_\+command\+\_\+set\+\_\+argument@{test1\+\_\+command\+\_\+set\+\_\+argument}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+set\+\_\+argument()}{test1\_command\_set\_argument()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+set\+\_\+argument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000020}{Test}]Test the command set argument function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The argument of the cmd is argument 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a4e6817b2faaa57ed732eb9a68e671ef1}\label{command__test_8c_a4e6817b2faaa57ed732eb9a68e671ef1}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test1\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000005}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An identifier as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd is the one entered 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a86c724b0ce8b1a19b138fb1cb5dd84e3}\label{command__test_8c_a86c724b0ce8b1a19b138fb1cb5dd84e3}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test1\+\_\+command\+\_\+set\+\_\+status@{test1\+\_\+command\+\_\+set\+\_\+status}}
+\index{test1\+\_\+command\+\_\+set\+\_\+status@{test1\+\_\+command\+\_\+set\+\_\+status}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+command\+\_\+set\+\_\+status()}{test1\_command\_set\_status()}}
+{\footnotesize\ttfamily void test1\+\_\+command\+\_\+set\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000017}{Test}]Test the command set status function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The status is OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a92cce7477f40656ebebe28d56142b528}\label{command__test_8c_a92cce7477f40656ebebe28d56142b528}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test20\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test20\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000044}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is rl (roll) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be roll and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_aaf02a6c7423e84f000c00b8218a8a9a1}\label{command__test_8c_aaf02a6c7423e84f000c00b8218a8a9a1}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test21\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test21\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000045}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is roll (roll) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be roll and the argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ac1ff85e1d54f46eccdbdaffec062d5c0}\label{command__test_8c_ac1ff85e1d54f46eccdbdaffec062d5c0}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test22\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test22\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000046}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is d Pep (drop with Pep as argument) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be drop and the argument must be Pep 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a618f500cde2987b4f746357b2a990b69}\label{command__test_8c_a618f500cde2987b4f746357b2a990b69}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test23\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test23\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000047}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is drop Pep (drop with Pep as argument) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be drop and the argument must be Pep 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}\label{command__test_8c_ad445f3e81035d4ab32ebc1526eb83fcb}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+destroy@{test2\+\_\+command\+\_\+destroy}}
+\index{test2\+\_\+command\+\_\+destroy@{test2\+\_\+command\+\_\+destroy}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+destroy()}{test2\_command\_destroy()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000024}{Test}]Test the command destroy function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The cmd to destroy is a N\+U\+LL pointer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+It should be an E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a3ba7658db8aa069706b344d42ceabfaa}\label{command__test_8c_a3ba7658db8aa069706b344d42ceabfaa}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test2\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000026}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is \char`\"{}\textbackslash{}n\char`\"{} (unknown) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The argument must be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a084363877b09c47c4167fb675ba0a6c5}\label{command__test_8c_a084363877b09c47c4167fb675ba0a6c5}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+init@{test2\+\_\+command\+\_\+init}}
+\index{test2\+\_\+command\+\_\+init@{test2\+\_\+command\+\_\+init}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+init()}{test2\_command\_init()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000002}{Test}]Test the command creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An identifier as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the argument must be \textquotesingle{}\textbackslash{}0\textquotesingle{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a66f78c148ff91ffcbaa521f00d208a75}\label{command__test_8c_a66f78c148ff91ffcbaa521f00d208a75}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+set\+\_\+argument@{test2\+\_\+command\+\_\+set\+\_\+argument}}
+\index{test2\+\_\+command\+\_\+set\+\_\+argument@{test2\+\_\+command\+\_\+set\+\_\+argument}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+set\+\_\+argument()}{test2\_command\_set\_argument()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+set\+\_\+argument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000021}{Test}]Test the command set argument function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd N\+U\+LL as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+It should be an E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a2f897a338775789b9e1b0b8a8647fd85}\label{command__test_8c_a2f897a338775789b9e1b0b8a8647fd85}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test2\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000006}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The command to set the principal cmd to is a pointer to N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The output must be E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a67ea36686a450269ef95eace71e78867}\label{command__test_8c_a67ea36686a450269ef95eace71e78867}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test2\+\_\+command\+\_\+set\+\_\+status@{test2\+\_\+command\+\_\+set\+\_\+status}}
+\index{test2\+\_\+command\+\_\+set\+\_\+status@{test2\+\_\+command\+\_\+set\+\_\+status}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+command\+\_\+set\+\_\+status()}{test2\_command\_set\_status()}}
+{\footnotesize\ttfamily void test2\+\_\+command\+\_\+set\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000018}{Test}]Test the command set status function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The cmd to set the status is N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+It should return E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ae2d4b758fa9767317795c822b7334dec}\label{command__test_8c_ae2d4b758fa9767317795c822b7334dec}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test3\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test3\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000027}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is e (exit) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be exit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a1d44a3ed59cc78359d6c8c0d720347e1}\label{command__test_8c_a1d44a3ed59cc78359d6c8c0d720347e1}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test3\+\_\+command\+\_\+init@{test3\+\_\+command\+\_\+init}}
+\index{test3\+\_\+command\+\_\+init@{test3\+\_\+command\+\_\+init}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+command\+\_\+init()}{test3\_command\_init()}}
+{\footnotesize\ttfamily void test3\+\_\+command\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000003}{Test}]Test the command creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An identifier as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The status must ne E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a69324b158668120d802451ce7c951d9e}\label{command__test_8c_a69324b158668120d802451ce7c951d9e}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test3\+\_\+command\+\_\+set\+\_\+argument@{test3\+\_\+command\+\_\+set\+\_\+argument}}
+\index{test3\+\_\+command\+\_\+set\+\_\+argument@{test3\+\_\+command\+\_\+set\+\_\+argument}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+command\+\_\+set\+\_\+argument()}{test3\_command\_set\_argument()}}
+{\footnotesize\ttfamily void test3\+\_\+command\+\_\+set\+\_\+argument (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000022}{Test}]Test the command set argument function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The argument is N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+It should be an E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a7e2613ae40c77091d31e9dd549c5d848}\label{command__test_8c_a7e2613ae40c77091d31e9dd549c5d848}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test3\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test3\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000007}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be E\+X\+IT 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a5c554b37bf888c3077aa310982cedf14}\label{command__test_8c_a5c554b37bf888c3077aa310982cedf14}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test3\+\_\+command\+\_\+set\+\_\+status@{test3\+\_\+command\+\_\+set\+\_\+status}}
+\index{test3\+\_\+command\+\_\+set\+\_\+status@{test3\+\_\+command\+\_\+set\+\_\+status}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+command\+\_\+set\+\_\+status()}{test3\_command\_set\_status()}}
+{\footnotesize\ttfamily void test3\+\_\+command\+\_\+set\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000019}{Test}]Test the command set status function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+The status is N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+It should return E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a87e1a266b9beb6b31dd8e626694d5dd6}\label{command__test_8c_a87e1a266b9beb6b31dd8e626694d5dd6}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test4\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test4\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000028}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is e (exit) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be exit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a6367528b38336d716e765ea2d57f6d8c}\label{command__test_8c_a6367528b38336d716e765ea2d57f6d8c}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test4\+\_\+command\+\_\+init@{test4\+\_\+command\+\_\+init}}
+\index{test4\+\_\+command\+\_\+init@{test4\+\_\+command\+\_\+init}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test4\+\_\+command\+\_\+init()}{test4\_command\_init()}}
+{\footnotesize\ttfamily void test4\+\_\+command\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000004}{Test}]Test the command creation function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An identifier as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be N\+O\+\_\+\+C\+MD 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a0485be612e6f281fe6e5b4dc778e2b72}\label{command__test_8c_a0485be612e6f281fe6e5b4dc778e2b72}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test4\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test4\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000008}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be T\+A\+KE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a3b7a4bfd103971720b0daef936b9251c}\label{command__test_8c_a3b7a4bfd103971720b0daef936b9251c}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test5\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test5\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000029}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is t (take without argument) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The argument should be \char`\"{}\textbackslash{}0\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_aa9706a5391086cfb6daf56613b55b351}\label{command__test_8c_aa9706a5391086cfb6daf56613b55b351}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test5\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test5\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000009}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be D\+R\+OP 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a85a9509e4435960ab89a0968666c2588}\label{command__test_8c_a85a9509e4435960ab89a0968666c2588}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test6\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test6\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000030}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is take 2 (take and the argument is 2) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be take 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a1fd80f6afee487d3aa0386b22e85ac38}\label{command__test_8c_a1fd80f6afee487d3aa0386b22e85ac38}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test6\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test6\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000010}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be R\+O\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ab3a94f10959f43dca5f3a1254d2455a4}\label{command__test_8c_ab3a94f10959f43dca5f3a1254d2455a4}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test7\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test7\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000031}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is take 2 (take and the argument is 2) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be take and the argument must be 2 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_aaacb4bcd77193d1e88615373040ea9a5}\label{command__test_8c_aaacb4bcd77193d1e88615373040ea9a5}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test7\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test7\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000011}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be M\+O\+VE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a96e8d3216af1419e01aaa68052a4ed26}\label{command__test_8c_a96e8d3216af1419e01aaa68052a4ed26}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test8\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test8\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000032}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is i space (inspect and the argument is space) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be inspect and the argument must be space 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_a3c00c13f79566dca26966f011cdcb9b5}\label{command__test_8c_a3c00c13f79566dca26966f011cdcb9b5}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test8\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test8\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000012}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be I\+N\+S\+P\+E\+CT 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_ad9250b3696fed0b765bc703ecfa06066}\label{command__test_8c_ad9250b3696fed0b765bc703ecfa06066}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input}}
+\index{test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input@{test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input()}{test9\_command\_get\_user\_input()}}
+{\footnotesize\ttfamily void test9\+\_\+command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000033}{Test}]Test the command get user input function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Use the text file with the instructions, in this case, the instruction is inspect object (inspect and the argument is object) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be inspect and the argument must be object 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{command__test_8c_af037a9eb46fd5e7700ec1f0760a5b9ec}\label{command__test_8c_af037a9eb46fd5e7700ec1f0760a5b9ec}} 
+\index{command\+\_\+test.\+c@{command\+\_\+test.\+c}!test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}}
+\index{test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd@{test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd}!command\+\_\+test.\+c@{command\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd()}{test9\_command\_set\_principal\_cmd()}}
+{\footnotesize\ttfamily void test9\+\_\+command\+\_\+set\+\_\+principal\+\_\+cmd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000013}{Test}]Test the command set principal cmd function \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+An cmd as a parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The principal cmd must be N\+E\+XT 
+\end{DoxyPostcond}

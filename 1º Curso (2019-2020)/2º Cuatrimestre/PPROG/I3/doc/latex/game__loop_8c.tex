@@ -1,0 +1,160 @@
+\hypertarget{game__loop_8c}{}\section{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.0/src/game\+\_\+loop.c File Reference}
+\label{game__loop_8c}\index{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/game\+\_\+loop.\+c@{/home/dgr/\+Escritorio/universidad/pprog/iteraciones\+\_\+corregidas/\+I3-\/seguro\+\_\+v21.\+0/src/game\+\_\+loop.\+c}}
+
+
+It defines the game loop.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/graphic\+\_\+engine.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+loop.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__loop_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{game__loop_8c_a1c78d6052c905d10401d2424b6979772}{game\+\_\+loop\+\_\+init} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$$\ast$game, \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$$\ast$gengine, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initialize the game. \end{DoxyCompactList}\item 
+void \hyperlink{game__loop_8c_a76688d2905e74fa21d28c336d07bbfa0}{game\+\_\+loop\+\_\+run} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$gengine, F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Initialize the game loop. \end{DoxyCompactList}\item 
+void \hyperlink{game__loop_8c_a429afd8cca77ea73176d774c77bd5a69}{game\+\_\+loop\+\_\+cleanup} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$gengine, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Initialize the Initializes the release of dynamic memory. \end{DoxyCompactList}\item 
+int \hyperlink{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em the main function of game\+\_\+loop main \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the game loop. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game__loop_8c_a429afd8cca77ea73176d774c77bd5a69}\label{game__loop_8c_a429afd8cca77ea73176d774c77bd5a69}} 
+\index{game\+\_\+loop.\+c@{game\+\_\+loop.\+c}!game\+\_\+loop\+\_\+cleanup@{game\+\_\+loop\+\_\+cleanup}}
+\index{game\+\_\+loop\+\_\+cleanup@{game\+\_\+loop\+\_\+cleanup}!game\+\_\+loop.\+c@{game\+\_\+loop.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+loop\+\_\+cleanup()}{game\_loop\_cleanup()}}
+{\footnotesize\ttfamily void game\+\_\+loop\+\_\+cleanup (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{gengine,  }\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Initialize the Initializes the release of dynamic memory. 
+
+\begin{DoxyDate}{Date}
+10/02/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Profesores P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & game address \\
+\hline
+{\em gengine} & $\ast$gengine address \\
+\hline
+{\em f} & pointer to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__loop_8c_a1c78d6052c905d10401d2424b6979772}\label{game__loop_8c_a1c78d6052c905d10401d2424b6979772}} 
+\index{game\+\_\+loop.\+c@{game\+\_\+loop.\+c}!game\+\_\+loop\+\_\+init@{game\+\_\+loop\+\_\+init}}
+\index{game\+\_\+loop\+\_\+init@{game\+\_\+loop\+\_\+init}!game\+\_\+loop.\+c@{game\+\_\+loop.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+loop\+\_\+init()}{game\_loop\_init()}}
+{\footnotesize\ttfamily int game\+\_\+loop\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$$\ast$}]{game,  }\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$$\ast$}]{gengine,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Initialize the game. 
+
+\begin{DoxyDate}{Date}
+10/02/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Profesores P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & game address \\
+\hline
+{\em gengine} & $\ast$gengine address \\
+\hline
+{\em file\+\_\+name} & file name addres \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 or 1 in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__loop_8c_a76688d2905e74fa21d28c336d07bbfa0}\label{game__loop_8c_a76688d2905e74fa21d28c336d07bbfa0}} 
+\index{game\+\_\+loop.\+c@{game\+\_\+loop.\+c}!game\+\_\+loop\+\_\+run@{game\+\_\+loop\+\_\+run}}
+\index{game\+\_\+loop\+\_\+run@{game\+\_\+loop\+\_\+run}!game\+\_\+loop.\+c@{game\+\_\+loop.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+loop\+\_\+run()}{game\_loop\_run()}}
+{\footnotesize\ttfamily void game\+\_\+loop\+\_\+run (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{gengine,  }\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Initialize the game loop. 
+
+\begin{DoxyDate}{Date}
+10/02/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Profesores P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & game address \\
+\hline
+{\em gengine} & gengine address \\
+\hline
+{\em file} & file address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{game__loop_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{game\+\_\+loop.\+c@{game\+\_\+loop.\+c}!main@{main}}
+\index{main@{main}!game\+\_\+loop.\+c@{game\+\_\+loop.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+the main function of game\+\_\+loop main 
+
+\begin{DoxyDate}{Date}
+06-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Instructor of P\+P\+R\+OG 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number received at start of run \\
+\hline
+{\em argv} & array of strings received at start of run \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
