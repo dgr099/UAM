@@ -1,0 +1,4 @@
+<map id="include/game_managment.h" name="include/game_managment.h">
+<area shape="rect" id="node2" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="5,80,117,107"/>
+<area shape="rect" id="node3" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="142,80,229,107"/>
+</map>

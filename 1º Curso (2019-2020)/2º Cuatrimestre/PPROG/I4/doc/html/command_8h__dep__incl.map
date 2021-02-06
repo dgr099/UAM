@@ -1,0 +1,10 @@
+<map id="include/command.h" name="include/command.h">
+<area shape="rect" id="node2" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="235,80,346,107"/>
+<area shape="rect" id="node4" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="5,229,117,256"/>
+<area shape="rect" id="node5" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="170,229,257,256"/>
+<area shape="rect" id="node9" href="$command__test_8c.html" title="test to see if dice works correctly " alt="" coords="371,80,512,107"/>
+<area shape="rect" id="node3" href="$game__managment_8h.html" title="Library to manage the load os spaces. " alt="" coords="121,155,306,181"/>
+<area shape="rect" id="node6" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="480,155,645,181"/>
+<area shape="rect" id="node8" href="$link_8c.html" title="It implements the link interface. " alt="" coords="331,155,405,181"/>
+<area shape="rect" id="node7" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="503,229,622,256"/>
+</map>
