@@ -1,0 +1,21 @@
+next: OK
+back: OK
+back: OK
+back: OK
+take O2: OK
+drop O2: OK
+next: OK
+next: OK
+roll: OK
+right: OK
+back: OK
+right: OK
+next: OK
+right: OK
+next: OK
+right: OK
+next: OK
+take O1: OK
+next: OK
+drop O1: OK
+exit

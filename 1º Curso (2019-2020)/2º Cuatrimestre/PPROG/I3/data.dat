@@ -1,0 +1,60 @@
+#s:1|Casilla 1|-1|-1|1|-1|       |       |       |desc of s1|
+#s:2|Casilla 2|1|-1|2|-1|       |       |       |desc of s2|
+#s:3|Casilla 3|2|-1|3|-1|       |       |       |desc of s3| 
+#s:4|Casilla 4|3|-1|4|-1|       |       |       |desc of s4|  
+#s:5|Casilla 5|4|25|5|-1|       |<O)__/ | \_-/  |desc of s5|       
+#s:6|Casilla 6|5|-1|6|-1|       |       |       |desc of s6|        
+#s:7|Casilla 7|6|-1|7|-1|       |       |       |desc of s7| 
+#s:8|Casilla 8|7|30|8|-1|  ___  | / _ \ |/ / \ \|desc of s8|                        
+#s:9|Casilla 9|8|26|9|-1|       |<O)__/ | \_-/  |desc of s9|
+#s:10|Casilla 10|9|-1|10|-1|       |       |       |desc of s10|   
+#s:11|Casilla 11|10|-1|11|-1|       |       |       |desc of s11|
+#s:12|Casilla 12|11|-1|12|-1|       |       |       |desc of s12| 
+#s:13|Casilla 13|12|27|13|-1|       |<O)__/ | \_-/  |desc of s13| 
+#s:14|Casilla 14|13|-1|14|-1|       |       |       |desc of s14| 
+#s:15|Casilla 15|14|-1|15|-1|       |       |       |desc of s15|		
+#s:16|Casilla 16|15|-1|16|30|  ___  | / _ \ |/ / \ \|desc of s16|
+#s:17|Casilla 17|16|28|17|-1|       |<O)__/ | \_-/  |desc of s17|    
+#s:18|Casilla 18|17|-1|18|-1|       |       |       |desc of s18|
+#s:19|Casilla 19|18|-1|19|-1|       |       |       |desc of s19|
+#s:20|Casilla 20|19|-1|20|-1|       |       |       |desc of s20|
+#s:21|Casilla 21|20|29|21|-1|       |<O)__/ | \_-/  |desc of s21| 
+#s:22|Casilla 22|21|31|22|31| ___     |(O O)  | \m/   |desc of s22|
+#s:23|Casilla 23|22|-1|23|-1|       |       |       |desc of s23|
+#s:24|Casilla 24|23|-1|24|-1|       |       |       |desc of s24|
+#s:25|Casilla 25|24|-1|-1|-1|       |<O)__/ | \_-/  |desc of s25|
+#o:1|O1|2|desc of O1|
+#o:2|O2|3|desc of O2| 
+#o:3|O3|3|desc of O3| 
+#p:1|ply1|5|1|
+#l:1|Lnk 1|1|2|0|
+#l:2|Lnk 2|2|3|0|
+#l:3|Lnk 3|3|4|0|
+#l:4|Lnk 4|4|5|0|
+#l:5|Lnk 5|5|6|0|
+#l:6|Lnk 6|6|7|0|
+#l:7|Lnk 7|7|8|0|
+#l:8|Lnk 8|8|9|0|
+#l:9|Lnk 9|9|10|0|
+#l:10|Lnk 10|10|11|0|
+#l:11|Lnk 11|11|12|0|
+#l:12|Lnk 12|12|13|0|
+#l:13|Lnk 13|13|14|0|
+#l:14|Lnk 14|14|15|0|
+#l:15|Lnk 15|15|16|0|
+#l:16|Lnk 16|16|17|0|
+#l:17|Lnk 17|17|18|0|
+#l:18|Lnk 18|18|19|0|
+#l:19|Lnk 19|19|20|0|
+#l:20|Lnk 20|20|21|0|
+#l:21|Lnk 21|21|22|0|
+#l:22|Lnk 22|22|23|0|
+#l:23|Lnk 23|23|24|0|
+#l:24|Lnk 24|24|25|0|
+#l:25|link_esp1|5|9|0|
+#l:26|link_esp3|9|13|0|
+#l:27|link_esp4|13|17|0|
+#l:28|link_esp5|17|21|0|
+#l:29|link_esp6|21|25|0|
+#l:30|link_esp2|8|16|0|
+#l:31|link_esp7|22|1|0|

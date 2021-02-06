@@ -1,0 +1,21 @@
+move south
+move north
+move north
+move north
+take O2
+drop O2
+move south
+move south
+roll
+move east
+move north
+move east
+move south
+move east
+move south
+move east
+move south
+take O1
+move south
+drop O1
+exit
