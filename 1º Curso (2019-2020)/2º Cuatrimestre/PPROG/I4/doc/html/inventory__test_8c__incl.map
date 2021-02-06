@@ -1,0 +1,8 @@
+<map id="src/inventory_test.c" name="src/inventory_test.c">
+<area shape="rect" id="node5" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="210,87,352,114"/>
+<area shape="rect" id="node9" href="$test_8h_source.html" title="../include/test.h" alt="" coords="377,87,489,114"/>
+<area shape="rect" id="node10" href="$inventory__test_8h.html" title="It declares the tests for the inventory module. " alt="" coords="514,80,646,121"/>
+<area shape="rect" id="node6" href="$types_8h.html" title="It defines common types. " alt="" coords="169,244,292,271"/>
+<area shape="rect" id="node7" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="84,169,192,196"/>
+<area shape="rect" id="node8" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="268,169,393,196"/>
+</map>

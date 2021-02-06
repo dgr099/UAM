@@ -1,0 +1,6 @@
+<map id="src/inventory.c" name="src/inventory.c">
+<area shape="rect" id="node4" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="125,80,267,107"/>
+<area shape="rect" id="node5" href="$types_8h.html" title="It defines common types. " alt="" coords="128,229,251,256"/>
+<area shape="rect" id="node6" href="$set_8h.html" title="It defines the set interface for each command. " alt="" coords="43,155,151,181"/>
+<area shape="rect" id="node7" href="$object_8h.html" title="It defines the object interface for each command. " alt="" coords="227,155,352,181"/>
+</map>
