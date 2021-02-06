@@ -1,0 +1,8 @@
+No command: ERROR
+Next: OK
+take O1: OK
+drop: OK
+take O1: OK
+Next: OK
+take O2: ERROR
+drop: OK
