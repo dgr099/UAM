@@ -1,0 +1,16 @@
+<map id="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/object.h" name="/home/dgr/Escritorio/universidad/pprog/iteraciones_corregidas/I3&#45;seguro_v21.0/include/object.h">
+<area shape="rect" id="node2" href="$inventory_8h.html" title="It defines the inventory interface for each command. " alt="" coords="443,124,637,195"/>
+<area shape="rect" id="node4" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="872,361,1067,432"/>
+<area shape="rect" id="node7" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="628,599,823,669"/>
+<area shape="rect" id="node14" href="$object_8c.html" title="add, load, and get spaces " alt="" coords="1469,124,1664,195"/>
+<area shape="rect" id="node15" href="$object__test_8c.html" title="test to see if object works correctly " alt="" coords="1688,124,1883,195"/>
+<area shape="rect" id="node3" href="$player_8h.html" title="It defines the player interface for each command. " alt="" coords="443,243,637,313"/>
+<area shape="rect" id="node12" href="$inventory_8c.html" title="It implements the inventory interpreter. " alt="" coords="5,243,200,313"/>
+<area shape="rect" id="node13" href="$inventory__test_8c.html" title="test to see if inventory works correctly " alt="" coords="224,243,419,313"/>
+<area shape="rect" id="node11" href="$player__test_8c.html" title="test to see if player works correctly " alt="" coords="443,361,637,432"/>
+<area shape="rect" id="node5" href="$game__reader_8h.html" title="Library to manage the load os spaces. " alt="" coords="981,480,1176,551"/>
+<area shape="rect" id="node8" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="1200,480,1395,551"/>
+<area shape="rect" id="node10" href="$link_8c.html" title="It implements the link interface. " alt="" coords="763,480,957,551"/>
+<area shape="rect" id="node6" href="$command_8c.html" title="It implements the command interpreter. " alt="" coords="981,599,1176,669"/>
+<area shape="rect" id="node9" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="1200,599,1395,669"/>
+</map>
