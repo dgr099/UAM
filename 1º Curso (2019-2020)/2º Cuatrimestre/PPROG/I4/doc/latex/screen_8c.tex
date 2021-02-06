@@ -1,0 +1,409 @@
+\hypertarget{screen_8c}{}\section{src/screen.c File Reference}
+\label{screen_8c}\index{src/screen.\+c@{src/screen.\+c}}
+
+
+is responsible for drawing the background of the game, also eliminates distractions from the thermianal, cleaning the screen  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/screen.\+h\char`\"{}}\newline
+Include dependency graph for screen.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{screen_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Area}{\+\_\+\+Area}
+\begin{DoxyCompactList}\small\item\em The Area structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{screen_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}~35
+\begin{DoxyCompactList}\small\item\em A macro that stores the number of rows. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}~100
+\begin{DoxyCompactList}\small\item\em A macro that stores the number of columns. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_afba5c5b9f73273ce653f890bb64740b0}{T\+O\+T\+A\+L\+\_\+\+D\+A\+TA}~(\hyperlink{screen_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS} $\ast$ \hyperlink{screen_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}) + 1
+\begin{DoxyCompactList}\small\item\em A macro that stores R\+O\+W\+S$\ast$\+C\+O\+L\+U\+M\+N\+S+1. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_a5e7c78a2c827b39d4464f2fc84058f87}{B\+G\+\_\+\+C\+H\+AR}~\textquotesingle{}$\sim$\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em B\+G\+\_\+\+C\+H\+AR. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_a0bbf43d51e6cd6f7119cf1d0063a3a94}{F\+G\+\_\+\+C\+H\+AR}~\textquotesingle{} \textquotesingle{}
+\begin{DoxyCompactList}\small\item\em F\+G\+\_\+\+C\+H\+AR. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_accdbea14ea06c15e271784368bd993e8}{P\+R\+O\+M\+PT}~\char`\"{} prompt\+:$>$ \char`\"{}
+\begin{DoxyCompactList}\small\item\em Prompt. \end{DoxyCompactList}\item 
+\#define \hyperlink{screen_8c_a28b37557462b06fbb08e707dc0ba2136}{A\+C\+C\+E\+SS}(d,  x,  y)~(d + ((y)$\ast$\hyperlink{screen_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}) + (x))
+\begin{DoxyCompactList}\small\item\em acces \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{screen_8c_ad1b32d3d54fea228f1ef0c73de4a3929}{screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em Prevents errors from occurring when the cursor is out of bounds. \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a110e0b378730322f5a2f1dc91e65e2aa}{screen\+\_\+area\+\_\+scroll\+\_\+up} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em scroll up the area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a55dedaa3b402fef825ceb6c3a957781d}{screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em replace special chars \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a9dbb6c251337c03c078dc330caee48d2}{screen\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em create the background \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}{screen\+\_\+destroy} ()
+\begin{DoxyCompactList}\small\item\em free the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}{screen\+\_\+paint} ()
+\begin{DoxyCompactList}\small\item\em print in the terminal the background with the data \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a57b2f852be623dca59255306c1482eb2}{screen\+\_\+gets} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em get the information on the screen \end{DoxyCompactList}\item 
+\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$ \hyperlink{screen_8c_a194528bec3ed3b57618a8f2df9bea743}{screen\+\_\+area\+\_\+init} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em create the area of the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}{screen\+\_\+area\+\_\+destroy} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em free the area of the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a0950dc68cba3d491b909a8abaac1c666}{screen\+\_\+area\+\_\+clear} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em clear the area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}{screen\+\_\+area\+\_\+reset\+\_\+cursor} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em reset the cursor \end{DoxyCompactList}\item 
+void \hyperlink{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}{screen\+\_\+area\+\_\+puts} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em puts the area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{screen_8c_af05fac436b4ecde6c2a3f5af98124b51}{\+\_\+\+\_\+data}
+\begin{DoxyCompactList}\small\item\em \+\_\+\+\_\+data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+is responsible for drawing the background of the game, also eliminates distractions from the thermianal, cleaning the screen 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{screen_8c_a28b37557462b06fbb08e707dc0ba2136}\label{screen_8c_a28b37557462b06fbb08e707dc0ba2136}} 
+\index{screen.\+c@{screen.\+c}!A\+C\+C\+E\+SS@{A\+C\+C\+E\+SS}}
+\index{A\+C\+C\+E\+SS@{A\+C\+C\+E\+SS}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+E\+SS}{ACCESS}}
+{\footnotesize\ttfamily \#define A\+C\+C\+E\+SS(\begin{DoxyParamCaption}\item[{}]{d,  }\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(d + ((y)$\ast$\hyperlink{screen_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}) + (x))}
+
+
+
+acces 
+
+Details. \mbox{\Hypertarget{screen_8c_a5e7c78a2c827b39d4464f2fc84058f87}\label{screen_8c_a5e7c78a2c827b39d4464f2fc84058f87}} 
+\index{screen.\+c@{screen.\+c}!B\+G\+\_\+\+C\+H\+AR@{B\+G\+\_\+\+C\+H\+AR}}
+\index{B\+G\+\_\+\+C\+H\+AR@{B\+G\+\_\+\+C\+H\+AR}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{B\+G\+\_\+\+C\+H\+AR}{BG\_CHAR}}
+{\footnotesize\ttfamily \#define B\+G\+\_\+\+C\+H\+AR~\textquotesingle{}$\sim$\textquotesingle{}}
+
+
+
+B\+G\+\_\+\+C\+H\+AR. 
+
+Details. \mbox{\Hypertarget{screen_8c_a06c6c391fc11d106e9909f0401b255b1}\label{screen_8c_a06c6c391fc11d106e9909f0401b255b1}} 
+\index{screen.\+c@{screen.\+c}!C\+O\+L\+U\+M\+NS@{C\+O\+L\+U\+M\+NS}}
+\index{C\+O\+L\+U\+M\+NS@{C\+O\+L\+U\+M\+NS}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+NS}{COLUMNS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+NS~100}
+
+
+
+A macro that stores the number of columns. 
+
+Details. \mbox{\Hypertarget{screen_8c_a0bbf43d51e6cd6f7119cf1d0063a3a94}\label{screen_8c_a0bbf43d51e6cd6f7119cf1d0063a3a94}} 
+\index{screen.\+c@{screen.\+c}!F\+G\+\_\+\+C\+H\+AR@{F\+G\+\_\+\+C\+H\+AR}}
+\index{F\+G\+\_\+\+C\+H\+AR@{F\+G\+\_\+\+C\+H\+AR}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{F\+G\+\_\+\+C\+H\+AR}{FG\_CHAR}}
+{\footnotesize\ttfamily \#define F\+G\+\_\+\+C\+H\+AR~\textquotesingle{} \textquotesingle{}}
+
+
+
+F\+G\+\_\+\+C\+H\+AR. 
+
+Details. \mbox{\Hypertarget{screen_8c_accdbea14ea06c15e271784368bd993e8}\label{screen_8c_accdbea14ea06c15e271784368bd993e8}} 
+\index{screen.\+c@{screen.\+c}!P\+R\+O\+M\+PT@{P\+R\+O\+M\+PT}}
+\index{P\+R\+O\+M\+PT@{P\+R\+O\+M\+PT}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+O\+M\+PT}{PROMPT}}
+{\footnotesize\ttfamily \#define P\+R\+O\+M\+PT~\char`\"{} prompt\+:$>$ \char`\"{}}
+
+
+
+Prompt. 
+
+Details. \mbox{\Hypertarget{screen_8c_a3cfd3aa62338d12609f6d65bce97e9cd}\label{screen_8c_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{screen.\+c@{screen.\+c}!R\+O\+WS@{R\+O\+WS}}
+\index{R\+O\+WS@{R\+O\+WS}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{R\+O\+WS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~35}
+
+
+
+A macro that stores the number of rows. 
+
+Details. \mbox{\Hypertarget{screen_8c_afba5c5b9f73273ce653f890bb64740b0}\label{screen_8c_afba5c5b9f73273ce653f890bb64740b0}} 
+\index{screen.\+c@{screen.\+c}!T\+O\+T\+A\+L\+\_\+\+D\+A\+TA@{T\+O\+T\+A\+L\+\_\+\+D\+A\+TA}}
+\index{T\+O\+T\+A\+L\+\_\+\+D\+A\+TA@{T\+O\+T\+A\+L\+\_\+\+D\+A\+TA}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{T\+O\+T\+A\+L\+\_\+\+D\+A\+TA}{TOTAL\_DATA}}
+{\footnotesize\ttfamily \#define T\+O\+T\+A\+L\+\_\+\+D\+A\+TA~(\hyperlink{screen_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS} $\ast$ \hyperlink{screen_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}) + 1}
+
+
+
+A macro that stores R\+O\+W\+S$\ast$\+C\+O\+L\+U\+M\+N\+S+1. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{screen_8c_a0950dc68cba3d491b909a8abaac1c666}\label{screen_8c_a0950dc68cba3d491b909a8abaac1c666}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}}
+\index{screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+clear()}{screen\_area\_clear()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+clear the area 
+
+screen\+\_\+area\+\_\+clear
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified \mbox{\Hypertarget{screen_8c_ad1b32d3d54fea228f1ef0c73de4a3929}\label{screen_8c_ad1b32d3d54fea228f1ef0c73de4a3929}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds@{screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds}}
+\index{screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds@{screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds()}{screen\_area\_cursor\_is\_out\_of\_bounds()}}
+{\footnotesize\ttfamily int screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+Prevents errors from occurring when the cursor is out of bounds. 
+
+screen\+\_\+area\+\_\+cursor\+\_\+is\+\_\+out\+\_\+of\+\_\+bounds
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified return area-\/$>$cursor the cursor we have modified \mbox{\Hypertarget{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}\label{screen_8c_aca5123ed5a7afb75e79c0001e5d1df4f}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}}
+\index{screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+destroy()}{screen\_area\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+free the area of the screen 
+
+screen\+\_\+destroy free a especific space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want free \mbox{\Hypertarget{screen_8c_a194528bec3ed3b57618a8f2df9bea743}\label{screen_8c_a194528bec3ed3b57618a8f2df9bea743}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}}
+\index{screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+init()}{screen\_area\_init()}}
+{\footnotesize\ttfamily \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}$\ast$ screen\+\_\+area\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+create the area of the screen 
+
+screen\+\_\+area\+\_\+init
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate x \\
+\hline
+{\em y} & coordinate y \\
+\hline
+{\em width} & coordinate width \\
+\hline
+{\em height} & coordinate height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+area the area that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}\label{screen_8c_a4f4cd4c7899c096d6c90cc33de9a9814}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}}
+\index{screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+puts()}{screen\_area\_puts()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+puts (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+puts the area 
+
+screen\+\_\+area\+\_\+puts
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified param str the string we will use \mbox{\Hypertarget{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}\label{screen_8c_af77fa9df4f7170e1e3bf1c6209b7f0c2}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}}
+\index{screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+reset\+\_\+cursor()}{screen\_area\_reset\_cursor()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+reset\+\_\+cursor (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+reset the cursor 
+
+screen\+\_\+area\+\_\+reset\+\_\+cursor
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified \mbox{\Hypertarget{screen_8c_a110e0b378730322f5a2f1dc91e65e2aa}\label{screen_8c_a110e0b378730322f5a2f1dc91e65e2aa}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+area\+\_\+scroll\+\_\+up@{screen\+\_\+area\+\_\+scroll\+\_\+up}}
+\index{screen\+\_\+area\+\_\+scroll\+\_\+up@{screen\+\_\+area\+\_\+scroll\+\_\+up}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+scroll\+\_\+up()}{screen\_area\_scroll\_up()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+scroll\+\_\+up (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+scroll up the area 
+
+screen\+\_\+area\+\_\+scroll\+\_\+up
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified \mbox{\Hypertarget{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}\label{screen_8c_a3d6d82dde2bb4f3ddc4d276dabe313ef}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+destroy@{screen\+\_\+destroy}}
+\index{screen\+\_\+destroy@{screen\+\_\+destroy}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+destroy()}{screen\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+free the screen 
+
+screen\+\_\+destroy free a especific space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8c_a57b2f852be623dca59255306c1482eb2}\label{screen_8c_a57b2f852be623dca59255306c1482eb2}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+gets@{screen\+\_\+gets}}
+\index{screen\+\_\+gets@{screen\+\_\+gets}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+gets()}{screen\_gets()}}
+{\footnotesize\ttfamily void screen\+\_\+gets (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+get the information on the screen 
+
+screen\+\_\+gets
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8c_a9dbb6c251337c03c078dc330caee48d2}\label{screen_8c_a9dbb6c251337c03c078dc330caee48d2}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+init@{screen\+\_\+init}}
+\index{screen\+\_\+init@{screen\+\_\+init}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+init()}{screen\_init()}}
+{\footnotesize\ttfamily void screen\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create the background 
+
+screen\+\_\+init
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}\label{screen_8c_a3eaa0547a956d39b6c55c9593524e0d1}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+paint@{screen\+\_\+paint}}
+\index{screen\+\_\+paint@{screen\+\_\+paint}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+paint()}{screen\_paint()}}
+{\footnotesize\ttfamily void screen\+\_\+paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print in the terminal the background with the data 
+
+screen\+\_\+paint
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8c_a55dedaa3b402fef825ceb6c3a957781d}\label{screen_8c_a55dedaa3b402fef825ceb6c3a957781d}} 
+\index{screen.\+c@{screen.\+c}!screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars@{screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars}}
+\index{screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars@{screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars()}{screen\_utils\_replaces\_special\_chars()}}
+{\footnotesize\ttfamily void screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+replace special chars 
+
+screen\+\_\+utils\+\_\+replaces\+\_\+special\+\_\+chars
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param str the string with the special characters 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{screen_8c_af05fac436b4ecde6c2a3f5af98124b51}\label{screen_8c_af05fac436b4ecde6c2a3f5af98124b51}} 
+\index{screen.\+c@{screen.\+c}!\+\_\+\+\_\+data@{\+\_\+\+\_\+data}}
+\index{\+\_\+\+\_\+data@{\+\_\+\+\_\+data}!screen.\+c@{screen.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+data}{\_\_data}}
+{\footnotesize\ttfamily \+\_\+\+\_\+data}
+
+
+
+\+\_\+\+\_\+data 
+
+Details. 

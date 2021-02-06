@@ -1,0 +1,267 @@
+\hypertarget{screen_8h}{}\section{include/screen.h File Reference}
+\label{screen_8h}\index{include/screen.\+h@{include/screen.\+h}}
+
+
+It defines a screen.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{screen_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{screen_8h_aab63df3ae7b979d59ea0188055ea0763}{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}~80
+\begin{DoxyCompactList}\small\item\em A macro to storage the max number of strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Area}{\+\_\+\+Area} \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}
+\begin{DoxyCompactList}\small\item\em A type definition for a area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{screen_8h_a9dbb6c251337c03c078dc330caee48d2}{screen\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em create the background \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}{screen\+\_\+destroy} ()
+\begin{DoxyCompactList}\small\item\em free the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}{screen\+\_\+paint} ()
+\begin{DoxyCompactList}\small\item\em print in the terminal the background with the data \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a57b2f852be623dca59255306c1482eb2}{screen\+\_\+gets} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em get the information on the screen \end{DoxyCompactList}\item 
+\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$ \hyperlink{screen_8h_a194528bec3ed3b57618a8f2df9bea743}{screen\+\_\+area\+\_\+init} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em create the area of the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}{screen\+\_\+area\+\_\+destroy} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em free the area of the screen \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a0950dc68cba3d491b909a8abaac1c666}{screen\+\_\+area\+\_\+clear} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em clear the area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}{screen\+\_\+area\+\_\+reset\+\_\+cursor} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em reset the cursor \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}{screen\+\_\+area\+\_\+puts} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em puts the area \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a screen. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11-\/01-\/2017 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{screen_8h_aab63df3ae7b979d59ea0188055ea0763}\label{screen_8h_aab63df3ae7b979d59ea0188055ea0763}} 
+\index{screen.\+h@{screen.\+h}!S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR@{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}}
+\index{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR@{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}{SCREEN\_MAX\_STR}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR~80}
+
+
+
+A macro to storage the max number of strings. 
+
+Details. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{screen_8h_acfdfc42f6522d75fa3c16713afde8127}\label{screen_8h_acfdfc42f6522d75fa3c16713afde8127}} 
+\index{screen.\+h@{screen.\+h}!Area@{Area}}
+\index{Area@{Area}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{Area}{Area}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Area}{\+\_\+\+Area} \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}}
+
+
+
+A type definition for a area. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{screen_8h_a0950dc68cba3d491b909a8abaac1c666}\label{screen_8h_a0950dc68cba3d491b909a8abaac1c666}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}}
+\index{screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+clear()}{screen\_area\_clear()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+clear the area 
+
+screen\+\_\+area\+\_\+clear
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified \mbox{\Hypertarget{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}\label{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}}
+\index{screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+destroy()}{screen\_area\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+free the area of the screen 
+
+screen\+\_\+destroy free a especific space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want free \mbox{\Hypertarget{screen_8h_a194528bec3ed3b57618a8f2df9bea743}\label{screen_8h_a194528bec3ed3b57618a8f2df9bea743}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}}
+\index{screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+init()}{screen\_area\_init()}}
+{\footnotesize\ttfamily \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}$\ast$ screen\+\_\+area\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+create the area of the screen 
+
+screen\+\_\+area\+\_\+init
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinate x \\
+\hline
+{\em y} & coordinate y \\
+\hline
+{\em width} & coordinate width \\
+\hline
+{\em height} & coordinate height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+area the area that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}\label{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}}
+\index{screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+puts()}{screen\_area\_puts()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+puts (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+puts the area 
+
+screen\+\_\+area\+\_\+puts
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified param str the string we will use \mbox{\Hypertarget{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}\label{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}}
+\index{screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+reset\+\_\+cursor()}{screen\_area\_reset\_cursor()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+reset\+\_\+cursor (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+reset the cursor 
+
+screen\+\_\+area\+\_\+reset\+\_\+cursor
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+param area the area we want to modified \mbox{\Hypertarget{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}\label{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+destroy@{screen\+\_\+destroy}}
+\index{screen\+\_\+destroy@{screen\+\_\+destroy}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+destroy()}{screen\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+free the screen 
+
+screen\+\_\+destroy free a especific space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a57b2f852be623dca59255306c1482eb2}\label{screen_8h_a57b2f852be623dca59255306c1482eb2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+gets@{screen\+\_\+gets}}
+\index{screen\+\_\+gets@{screen\+\_\+gets}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+gets()}{screen\_gets()}}
+{\footnotesize\ttfamily void screen\+\_\+gets (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+get the information on the screen 
+
+screen\+\_\+gets
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a9dbb6c251337c03c078dc330caee48d2}\label{screen_8h_a9dbb6c251337c03c078dc330caee48d2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+init@{screen\+\_\+init}}
+\index{screen\+\_\+init@{screen\+\_\+init}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+init()}{screen\_init()}}
+{\footnotesize\ttfamily void screen\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create the background 
+
+screen\+\_\+init
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}\label{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+paint@{screen\+\_\+paint}}
+\index{screen\+\_\+paint@{screen\+\_\+paint}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+paint()}{screen\_paint()}}
+{\footnotesize\ttfamily void screen\+\_\+paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print in the terminal the background with the data 
+
+screen\+\_\+paint
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG 
+\end{DoxyAuthor}

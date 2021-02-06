@@ -1,0 +1,412 @@
+\hypertarget{player_8h}{}\section{include/player.h File Reference}
+\label{player_8h}\index{include/player.\+h@{include/player.\+h}}
+
+
+It defines the player interface for each command.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/inventory.\+h\char`\"{}}\newline
+Include dependency graph for player.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{player_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Player}{\+\_\+\+Player} \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}
+\begin{DoxyCompactList}\small\item\em A type definition for a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8h_afe0bc1b421efb64a67fba4755b621209}{player\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id, int max)
+\begin{DoxyCompactList}\small\item\em Create the player. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}{player\+\_\+destroy} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em free a player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em name the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_aedae4866660857664b09dadbc6a164da}{player\+\_\+set\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, int id)
+\begin{DoxyCompactList}\small\item\em set the id of the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a054e92b126f556153279b569f8987674}{player\+\_\+set\+\_\+location} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} location)
+\begin{DoxyCompactList}\small\item\em set the location of the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_a61ee43524b370147d5d9b5ccb3738048}{player\+\_\+add\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$objeto)
+\begin{DoxyCompactList}\small\item\em set the object that have the player \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{player_8h_a6622c02be2fe230a5c0df66385a13ece}{player\+\_\+get\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em get the name of the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_af5a101ec91427951c5875569a8709956}{player\+\_\+get\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em get the id of the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8h_aa50ce77ab79af7166d749619fd60acfe}{player\+\_\+get\+\_\+location} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em get the location of the player \end{DoxyCompactList}\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{player_8h_a270da6469a85e0c2b7f9f4088d290051}{player\+\_\+get\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em get the inventory that have the player \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}{player\+\_\+print} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em print the information of the player on the screen \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8h_af3f162227798a79e835c659e9d2349e9}{player\+\_\+dell\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$objeto)
+\begin{DoxyCompactList}\small\item\em remove of an object that have the player \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the player interface for each command. 
+
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero y José Manuel García Giráldez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+5-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{player_8h_af30e2030635a69690f85e48bc6ef202f}\label{player_8h_af30e2030635a69690f85e48bc6ef202f}} 
+\index{player.\+h@{player.\+h}!Player@{Player}}
+\index{Player@{Player}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Player}{\+\_\+\+Player} \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}}
+
+
+
+A type definition for a player. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{player_8h_a61ee43524b370147d5d9b5ccb3738048}\label{player_8h_a61ee43524b370147d5d9b5ccb3738048}} 
+\index{player.\+h@{player.\+h}!player\+\_\+add\+\_\+object@{player\+\_\+add\+\_\+object}}
+\index{player\+\_\+add\+\_\+object@{player\+\_\+add\+\_\+object}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+add\+\_\+object()}{player\_add\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{objeto }\end{DoxyParamCaption})}
+
+
+
+set the object that have the player 
+
+player\+\_\+add\+\_\+object
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+{\em objeto} & a object that will be having by the player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_afe0bc1b421efb64a67fba4755b621209}\label{player_8h_afe0bc1b421efb64a67fba4755b621209}} 
+\index{player.\+h@{player.\+h}!player\+\_\+create@{player\+\_\+create}}
+\index{player\+\_\+create@{player\+\_\+create}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+create()}{player\_create()}}
+{\footnotesize\ttfamily \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}$\ast$ player\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Create the player. 
+
+player\+\_\+create Create a player with a specific Id
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the new player \\
+\hline
+{\em max} & the maximum number of objects that he can store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new player that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_af3f162227798a79e835c659e9d2349e9}\label{player_8h_af3f162227798a79e835c659e9d2349e9}} 
+\index{player.\+h@{player.\+h}!player\+\_\+dell\+\_\+object@{player\+\_\+dell\+\_\+object}}
+\index{player\+\_\+dell\+\_\+object@{player\+\_\+dell\+\_\+object}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+dell\+\_\+object()}{player\_dell\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+dell\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{objeto }\end{DoxyParamCaption})}
+
+
+
+remove of an object that have the player 
+
+player\+\_\+dell\+\_\+object
+
+\begin{DoxyDate}{Date}
+10-\/3-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player that have the object \\
+\hline
+{\em objeto} & the object that we want to delete from player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}\label{player_8h_a68e324aa5064e27d0a2f38aafb6809ad}} 
+\index{player.\+h@{player.\+h}!player\+\_\+destroy@{player\+\_\+destroy}}
+\index{player\+\_\+destroy@{player\+\_\+destroy}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+destroy()}{player\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+free a player 
+
+player\+\_\+destroy free a especific player
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_af5a101ec91427951c5875569a8709956}\label{player_8h_af5a101ec91427951c5875569a8709956}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}}
+\index{player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+id()}{player\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+get the id of the player 
+
+player\+\_\+get\+\_\+id
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player you want to get their id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player-\/$>$id the id of the player we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a270da6469a85e0c2b7f9f4088d290051}\label{player_8h_a270da6469a85e0c2b7f9f4088d290051}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}}
+\index{player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+inventory()}{player\_get\_inventory()}}
+{\footnotesize\ttfamily \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}$\ast$ player\+\_\+get\+\_\+inventory (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+get the inventory that have the player 
+
+player\+\_\+get\+\_\+inventory
+
+\begin{DoxyDate}{Date}
+14-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & one player that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the inventory of the player we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_aa50ce77ab79af7166d749619fd60acfe}\label{player_8h_aa50ce77ab79af7166d749619fd60acfe}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+location@{player\+\_\+get\+\_\+location}}
+\index{player\+\_\+get\+\_\+location@{player\+\_\+get\+\_\+location}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+location()}{player\_get\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+get the location of the player 
+
+player\+\_\+get\+\_\+location
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player-\/$>$location the location of the object we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a6622c02be2fe230a5c0df66385a13ece}\label{player_8h_a6622c02be2fe230a5c0df66385a13ece}} 
+\index{player.\+h@{player.\+h}!player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}}
+\index{player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+name()}{player\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ player\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+get the name of the player 
+
+player\+\_\+get\+\_\+name
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player-\/$>$name the name of the object we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}\label{player_8h_aa0f2f8b4d1b63a60ef927d47aa45dbd1}} 
+\index{player.\+h@{player.\+h}!player\+\_\+print@{player\+\_\+print}}
+\index{player\+\_\+print@{player\+\_\+print}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+print()}{player\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+print the information of the player on the screen 
+
+player\+\_\+print
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player whose info you wnat to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_aedae4866660857664b09dadbc6a164da}\label{player_8h_aedae4866660857664b09dadbc6a164da}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+id@{player\+\_\+set\+\_\+id}}
+\index{player\+\_\+set\+\_\+id@{player\+\_\+set\+\_\+id}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+id()}{player\_set\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+set the id of the player 
+
+player\+\_\+set\+\_\+id
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the player you want to set id \\
+\hline
+{\em id} & the id that the object will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a054e92b126f556153279b569f8987674}\label{player_8h_a054e92b126f556153279b569f8987674}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+location@{player\+\_\+set\+\_\+location}}
+\index{player\+\_\+set\+\_\+location@{player\+\_\+set\+\_\+location}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+location()}{player\_set\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{location }\end{DoxyParamCaption})}
+
+
+
+set the location of the player 
+
+player\+\_\+set\+\_\+location
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+{\em location} & the location that the player will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a6a30809f7775f5c2d3bef47d92769e59}\label{player_8h_a6a30809f7775f5c2d3bef47d92769e59}} 
+\index{player.\+h@{player.\+h}!player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}}
+\index{player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}!player.\+h@{player.\+h}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+name()}{player\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+name the player 
+
+player\+\_\+set-\/name
+
+\begin{DoxyDate}{Date}
+07-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & a player that has been created before \\
+\hline
+{\em name} & the name that the player will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}

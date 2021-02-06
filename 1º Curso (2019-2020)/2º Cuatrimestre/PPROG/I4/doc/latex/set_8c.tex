@@ -1,0 +1,323 @@
+\hypertarget{set_8c}{}\section{src/set.c File Reference}
+\label{set_8c}\index{src/set.\+c@{src/set.\+c}}
+
+
+It implements the set interface.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{set_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Set}{\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em The set structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{set_8c_a1cdef4472847c938fc165b7d2737c4e4}{M\+A\+X\+\_\+\+ID}~50
+\begin{DoxyCompactList}\small\item\em maimum number of id of the set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{set\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Create the set. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}{set\+\_\+destroy} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Destroy the set. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a214235069ee276ad9bceb2c66e56bfe1}{set\+\_\+add} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Add element to the set. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a7132be7ebdf9b2d3b1f23895a59a25df}{set\+\_\+dell} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em remove or delete an id in a set \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_a62a3c1e0de34be5b9b2f5161a430f090}{set\+\_\+get\+\_\+num} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em return the namber of id allocated in a set \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_a565a873b0d50133d4c48319e8b6b13d9}{set\+\_\+find\+\_\+index} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em return the index of and id \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{set_8c_a37b5d27dabd419279fe1eddc40cec0fa}{set\+\_\+get\+\_\+id\+\_\+at\+\_\+position} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, int position)
+\begin{DoxyCompactList}\small\item\em returns the id of the indicated position \end{DoxyCompactList}\item 
+void \hyperlink{set_8c_ab7cd9162335d346f5457eef63692a96b}{set\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em print the elements of the set \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_ac996936009c685a89fdc26c27a9b1874}{set\+\_\+update} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$original, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$final)
+\begin{DoxyCompactList}\small\item\em update a set with a new set \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the set interface. 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{set_8c_a1cdef4472847c938fc165b7d2737c4e4}\label{set_8c_a1cdef4472847c938fc165b7d2737c4e4}} 
+\index{set.\+c@{set.\+c}!M\+A\+X\+\_\+\+ID@{M\+A\+X\+\_\+\+ID}}
+\index{M\+A\+X\+\_\+\+ID@{M\+A\+X\+\_\+\+ID}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+ID}{MAX\_ID}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+ID~50}
+
+
+
+maimum number of id of the set 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{set_8c_a214235069ee276ad9bceb2c66e56bfe1}\label{set_8c_a214235069ee276ad9bceb2c66e56bfe1}} 
+\index{set.\+c@{set.\+c}!set\+\_\+add@{set\+\_\+add}}
+\index{set\+\_\+add@{set\+\_\+add}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+add()}{set\_add()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Add element to the set. 
+
+set\+\_\+add add an element to the set
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the addres os the set in which you want to add an element \\
+\hline
+{\em id} & the id of the element that you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there was no problem, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}\label{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}} 
+\index{set.\+c@{set.\+c}!set\+\_\+create@{set\+\_\+create}}
+\index{set\+\_\+create@{set\+\_\+create}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+create()}{set\_create()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the set. 
+
+set\+\_\+create Create a new set
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the new set that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a7132be7ebdf9b2d3b1f23895a59a25df}\label{set_8c_a7132be7ebdf9b2d3b1f23895a59a25df}} 
+\index{set.\+c@{set.\+c}!set\+\_\+dell@{set\+\_\+dell}}
+\index{set\+\_\+dell@{set\+\_\+dell}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+dell()}{set\_dell()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+dell (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+remove or delete an id in a set 
+
+set\+\_\+dell
+
+\begin{DoxyDate}{Date}
+22-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the set which contains the id \\
+\hline
+{\em id} & the id that you want to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}\label{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}} 
+\index{set.\+c@{set.\+c}!set\+\_\+destroy@{set\+\_\+destroy}}
+\index{set\+\_\+destroy@{set\+\_\+destroy}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+destroy()}{set\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+Destroy the set. 
+
+set\+\_\+destroy a set
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the addres of the set which you want to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there was no problem, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a565a873b0d50133d4c48319e8b6b13d9}\label{set_8c_a565a873b0d50133d4c48319e8b6b13d9}} 
+\index{set.\+c@{set.\+c}!set\+\_\+find\+\_\+index@{set\+\_\+find\+\_\+index}}
+\index{set\+\_\+find\+\_\+index@{set\+\_\+find\+\_\+index}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+find\+\_\+index()}{set\_find\_index()}}
+{\footnotesize\ttfamily int set\+\_\+find\+\_\+index (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+return the index of and id 
+
+set\+\_\+find\+\_\+index
+
+\begin{DoxyDate}{Date}
+26-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the set which contains the id \\
+\hline
+{\em id} & the id that you want to know their position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a37b5d27dabd419279fe1eddc40cec0fa}\label{set_8c_a37b5d27dabd419279fe1eddc40cec0fa}} 
+\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+id\+\_\+at\+\_\+position@{set\+\_\+get\+\_\+id\+\_\+at\+\_\+position}}
+\index{set\+\_\+get\+\_\+id\+\_\+at\+\_\+position@{set\+\_\+get\+\_\+id\+\_\+at\+\_\+position}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+get\+\_\+id\+\_\+at\+\_\+position()}{set\_get\_id\_at\_position()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} set\+\_\+get\+\_\+id\+\_\+at\+\_\+position (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+returns the id of the indicated position 
+
+set\+\_\+get\+\_\+id\+\_\+at\+\_\+position
+
+\begin{DoxyDate}{Date}
+26-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the set which contains the id \\
+\hline
+{\em position} & the position of the id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a62a3c1e0de34be5b9b2f5161a430f090}\label{set_8c_a62a3c1e0de34be5b9b2f5161a430f090}} 
+\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+num@{set\+\_\+get\+\_\+num}}
+\index{set\+\_\+get\+\_\+num@{set\+\_\+get\+\_\+num}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+get\+\_\+num()}{set\_get\_num()}}
+{\footnotesize\ttfamily int set\+\_\+get\+\_\+num (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+return the namber of id allocated in a set 
+
+set\+\_\+get\+\_\+num
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the set that you want to know their number of ids \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_ab7cd9162335d346f5457eef63692a96b}\label{set_8c_ab7cd9162335d346f5457eef63692a96b}} 
+\index{set.\+c@{set.\+c}!set\+\_\+print@{set\+\_\+print}}
+\index{set\+\_\+print@{set\+\_\+print}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+print()}{set\_print()}}
+{\footnotesize\ttfamily void set\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+print the elements of the set 
+
+set\+\_\+print
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & the set you want to print \\
+\hline
+{\em f} & in which you want to print and set which have the elements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_ac996936009c685a89fdc26c27a9b1874}\label{set_8c_ac996936009c685a89fdc26c27a9b1874}} 
+\index{set.\+c@{set.\+c}!set\+\_\+update@{set\+\_\+update}}
+\index{set\+\_\+update@{set\+\_\+update}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+update()}{set\_update()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{original,  }\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{final }\end{DoxyParamCaption})}
+
+
+
+update a set with a new set 
+
+set\+\_\+update
+
+\begin{DoxyDate}{Date}
+26-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the set which you want to update \\
+\hline
+{\em final} & the set with the new info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

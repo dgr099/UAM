@@ -1,0 +1,964 @@
+\hypertarget{space_8h}{}\section{include/space.h File Reference}
+\label{space_8h}\index{include/space.\+h@{include/space.\+h}}
+
+
+It defines a space.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/set.\+h\char`\"{}}\newline
+Include dependency graph for space.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{space_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}~100
+\begin{DoxyCompactList}\small\item\em A macro that stores the maximum number of spaces. \end{DoxyCompactList}\item 
+\#define \hyperlink{space_8h_a088cbe7c6f78264d46c2624194c5c680}{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}~1
+\begin{DoxyCompactList}\small\item\em A macro that stores the id of the first id. \end{DoxyCompactList}\item 
+\#define \hyperlink{space_8h_a9c6419e7f541d4daf14f5ccd56e03f17}{N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS}~3
+\begin{DoxyCompactList}\small\item\em the number of strings of a gdesc \end{DoxyCompactList}\item 
+\#define \hyperlink{space_8h_a4f7414c5a72de21b6b45d462410dfc97}{N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS}~7
+\begin{DoxyCompactList}\small\item\em A macro that stores the number of chars per string of a gdesc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Space}{\+\_\+\+Space} \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}
+\begin{DoxyCompactList}\small\item\em A type definition for a space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{space_8h_a162866fcea156b800fd546d0ffd271c9}{space\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Create the space. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}{space\+\_\+destroy} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em free a space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}{space\+\_\+get\+\_\+id} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the id of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_aab5b468f9822ab78dbe16d1321870d93}{space\+\_\+set\+\_\+name} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em name the space \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{space_8h_a310c540cd6e11073f7328add1f927001}{space\+\_\+get\+\_\+name} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the name of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}{space\+\_\+set\+\_\+north} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the north \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ad331fba774897900f615d9d2e8d81a90}{space\+\_\+get\+\_\+north} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the north of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a422ab9f220b4c471c44256a27377de1a}{space\+\_\+set\+\_\+south} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the south \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}{space\+\_\+get\+\_\+south} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the south of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}{space\+\_\+set\+\_\+east} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the east \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a978a22b77f74bb2dab68a00571abbe0b}{space\+\_\+get\+\_\+east} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the east of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ad44b14cb38902cf31fa1f341beaab0db}{space\+\_\+set\+\_\+west} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the west \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_af495ebfd5d13eba1a48cebd10992a17f}{space\+\_\+get\+\_\+west} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the west of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ae5b9fef52456ffccffbd73f882a56d23}{space\+\_\+set\+\_\+down} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the down \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ab269eab72b9ea7254044b34b1c177602}{space\+\_\+get\+\_\+down} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the down of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}{space\+\_\+set\+\_\+up} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the up \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a174a988b899d5a0db889a31b70763c9c}{space\+\_\+get\+\_\+up} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the up of the space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a3c7f18ed5814b6014f994a6bd268ed93}{space\+\_\+add\+\_\+object} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object)
+\begin{DoxyCompactList}\small\item\em set the object \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{space_8h_afc0e3f36d3bdf0105c5d25c256c9cfbd}{space\+\_\+get\+\_\+objects} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em get the object of this space \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a18eca058da6cdf20ae5eda9d122d992e}{space\+\_\+print} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em printf the space on the screen \end{DoxyCompactList}\item 
+char \hyperlink{space_8h_a83a81b50900122edbcad7de9ad7a12ab}{space\+\_\+get\+\_\+gdesc\+\_\+at} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, int position1, int position2)
+\begin{DoxyCompactList}\small\item\em get an especific element of the array of string \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_aa0946c480abf293fe9a7bb208037da5c}{space\+\_\+set\+\_\+gdesc\+\_\+at} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, int position1, int position2, char element)
+\begin{DoxyCompactList}\small\item\em get an especific element of the array of string \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{space_8h_aa7e388700d59402e9222d2f19af46ad1}{space\+\_\+is\+\_\+object} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object)
+\begin{DoxyCompactList}\small\item\em used to know if an object is in a space or not \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_afa6c76219b25bc0d25827cd27f8464fe}{space\+\_\+dell\+\_\+object} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object)
+\begin{DoxyCompactList}\small\item\em used to dell an object in an space \end{DoxyCompactList}\item 
+int \hyperlink{space_8h_a1f6b218608de895d9b82e53e992b3175}{space\+\_\+get\+\_\+num} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em used to know the amount of obects in the space \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{space_8h_ae4e07e1125da9f7096eb5eba116cea7e}{space\+\_\+get\+\_\+description1} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em used to know the description of an space no matter if the space is lit or not \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{space_8h_a209cf4c49f15e49cdd77863ca5a415e3}{space\+\_\+get\+\_\+description2} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em used to know the description of an space if the space is lit \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a2800febfcfd5d519c2f937d85d69c2d4}{space\+\_\+set\+\_\+description1} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em used to set the description which you can see no matter if the space is lit or not \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ad206f89335e1ca729bef9909c654f153}{space\+\_\+set\+\_\+description2} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em used to set the description which you can see no matter if the space is lit \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{space_8h_a2dea60f1cac073e20256df7a47a0d07d}{space\+\_\+is\+\_\+iluminated} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em used to see if an space is iluminated or not \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_af92c62ffae0b7dc4dc703210e032dc48}{space\+\_\+set\+\_\+ilumination} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} bool)
+\begin{DoxyCompactList}\small\item\em used to set the ilumination of an space \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a space. 
+
+\begin{DoxyAuthor}{Author}
+Profesores P\+P\+R\+OG, David Teófilo Garitagoitia Romero, José Manuel García Giráldez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{space_8h_a088cbe7c6f78264d46c2624194c5c680}\label{space_8h_a088cbe7c6f78264d46c2624194c5c680}} 
+\index{space.\+h@{space.\+h}!F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE@{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}}
+\index{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE@{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}{FIRST\_SPACE}}
+{\footnotesize\ttfamily \#define F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE~1}
+
+
+
+A macro that stores the id of the first id. 
+
+Details. \mbox{\Hypertarget{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}\label{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}} 
+\index{space.\+h@{space.\+h}!M\+A\+X\+\_\+\+S\+P\+A\+C\+ES@{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}}
+\index{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES@{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}{MAX\_SPACES}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+P\+A\+C\+ES~100}
+
+
+
+A macro that stores the maximum number of spaces. 
+
+Details. \mbox{\Hypertarget{space_8h_a4f7414c5a72de21b6b45d462410dfc97}\label{space_8h_a4f7414c5a72de21b6b45d462410dfc97}} 
+\index{space.\+h@{space.\+h}!N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS@{N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS}}
+\index{N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS@{N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS}{NUM\_CHARACTS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+C\+H\+A\+R\+A\+C\+TS~7}
+
+
+
+A macro that stores the number of chars per string of a gdesc. 
+
+Details. \mbox{\Hypertarget{space_8h_a9c6419e7f541d4daf14f5ccd56e03f17}\label{space_8h_a9c6419e7f541d4daf14f5ccd56e03f17}} 
+\index{space.\+h@{space.\+h}!N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS@{N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS}}
+\index{N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS@{N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS}{NUM\_STRINGS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+S\+T\+R\+I\+N\+GS~3}
+
+
+
+the number of strings of a gdesc 
+
+Details. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{space_8h_a67533ffc2b70463baecc38fb0629bbfc}\label{space_8h_a67533ffc2b70463baecc38fb0629bbfc}} 
+\index{space.\+h@{space.\+h}!Space@{Space}}
+\index{Space@{Space}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{Space}{Space}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Space}{\+\_\+\+Space} \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}}
+
+
+
+A type definition for a space. 
+
+Details. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{space_8h_a3c7f18ed5814b6014f994a6bd268ed93}\label{space_8h_a3c7f18ed5814b6014f994a6bd268ed93}} 
+\index{space.\+h@{space.\+h}!space\+\_\+add\+\_\+object@{space\+\_\+add\+\_\+object}}
+\index{space\+\_\+add\+\_\+object@{space\+\_\+add\+\_\+object}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+add\+\_\+object()}{space\_add\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{object }\end{DoxyParamCaption})}
+
+
+
+set the object 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em object} & the id that the object will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a162866fcea156b800fd546d0ffd271c9}\label{space_8h_a162866fcea156b800fd546d0ffd271c9}} 
+\index{space.\+h@{space.\+h}!space\+\_\+create@{space\+\_\+create}}
+\index{space\+\_\+create@{space\+\_\+create}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+create()}{space\_create()}}
+{\footnotesize\ttfamily \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}$\ast$ space\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Create the space. 
+
+space\+\_\+create Create a space with a specific Id
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the new space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new space that has been created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_afa6c76219b25bc0d25827cd27f8464fe}\label{space_8h_afa6c76219b25bc0d25827cd27f8464fe}} 
+\index{space.\+h@{space.\+h}!space\+\_\+dell\+\_\+object@{space\+\_\+dell\+\_\+object}}
+\index{space\+\_\+dell\+\_\+object@{space\+\_\+dell\+\_\+object}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+dell\+\_\+object()}{space\_dell\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+dell\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{object }\end{DoxyParamCaption})}
+
+
+
+used to dell an object in an space 
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em object} & the object that you want to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}\label{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}} 
+\index{space.\+h@{space.\+h}!space\+\_\+destroy@{space\+\_\+destroy}}
+\index{space\+\_\+destroy@{space\+\_\+destroy}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+destroy()}{space\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+free a space 
+
+space\+\_\+destroy free a especific space
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ae4e07e1125da9f7096eb5eba116cea7e}\label{space_8h_ae4e07e1125da9f7096eb5eba116cea7e}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+description1@{space\+\_\+get\+\_\+description1}}
+\index{space\+\_\+get\+\_\+description1@{space\+\_\+get\+\_\+description1}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+description1()}{space\_get\_description1()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+description1 (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+used to know the description of an space no matter if the space is lit or not 
+
+\begin{DoxyDate}{Date}
+10-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the description 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a209cf4c49f15e49cdd77863ca5a415e3}\label{space_8h_a209cf4c49f15e49cdd77863ca5a415e3}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+description2@{space\+\_\+get\+\_\+description2}}
+\index{space\+\_\+get\+\_\+description2@{space\+\_\+get\+\_\+description2}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+description2()}{space\_get\_description2()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+description2 (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+used to know the description of an space if the space is lit 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the most exact description 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ab269eab72b9ea7254044b34b1c177602}\label{space_8h_ab269eab72b9ea7254044b34b1c177602}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+down@{space\+\_\+get\+\_\+down}}
+\index{space\+\_\+get\+\_\+down@{space\+\_\+get\+\_\+down}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+down()}{space\_get\_down()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+down (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the down of the space 
+
+\begin{DoxyDate}{Date}
+11-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$down the down of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a978a22b77f74bb2dab68a00571abbe0b}\label{space_8h_a978a22b77f74bb2dab68a00571abbe0b}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+east@{space\+\_\+get\+\_\+east}}
+\index{space\+\_\+get\+\_\+east@{space\+\_\+get\+\_\+east}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+east()}{space\_get\_east()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+east (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the east of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$east the east of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a83a81b50900122edbcad7de9ad7a12ab}\label{space_8h_a83a81b50900122edbcad7de9ad7a12ab}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+gdesc\+\_\+at@{space\+\_\+get\+\_\+gdesc\+\_\+at}}
+\index{space\+\_\+get\+\_\+gdesc\+\_\+at@{space\+\_\+get\+\_\+gdesc\+\_\+at}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+gdesc\+\_\+at()}{space\_get\_gdesc\_at()}}
+{\footnotesize\ttfamily char space\+\_\+get\+\_\+gdesc\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{int}]{position1,  }\item[{int}]{position2 }\end{DoxyParamCaption})}
+
+
+
+get an especific element of the array of string 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em position1} & select the string we want \\
+\hline
+{\em position2} & select the element of the string we want \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element we search for 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}\label{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+id@{space\+\_\+get\+\_\+id}}
+\index{space\+\_\+get\+\_\+id@{space\+\_\+get\+\_\+id}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+id()}{space\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the id of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$id the id of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a310c540cd6e11073f7328add1f927001}\label{space_8h_a310c540cd6e11073f7328add1f927001}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+name@{space\+\_\+get\+\_\+name}}
+\index{space\+\_\+get\+\_\+name@{space\+\_\+get\+\_\+name}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+name()}{space\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the name of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$name the name of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad331fba774897900f615d9d2e8d81a90}\label{space_8h_ad331fba774897900f615d9d2e8d81a90}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+north@{space\+\_\+get\+\_\+north}}
+\index{space\+\_\+get\+\_\+north@{space\+\_\+get\+\_\+north}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+north()}{space\_get\_north()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+north (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the north of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$north the north of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a1f6b218608de895d9b82e53e992b3175}\label{space_8h_a1f6b218608de895d9b82e53e992b3175}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+num@{space\+\_\+get\+\_\+num}}
+\index{space\+\_\+get\+\_\+num@{space\+\_\+get\+\_\+num}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+num()}{space\_get\_num()}}
+{\footnotesize\ttfamily int space\+\_\+get\+\_\+num (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+used to know the amount of obects in the space 
+
+\begin{DoxyDate}{Date}
+2-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the amount of objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_afc0e3f36d3bdf0105c5d25c256c9cfbd}\label{space_8h_afc0e3f36d3bdf0105c5d25c256c9cfbd}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+objects@{space\+\_\+get\+\_\+objects}}
+\index{space\+\_\+get\+\_\+objects@{space\+\_\+get\+\_\+objects}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+objects()}{space\_get\_objects()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ space\+\_\+get\+\_\+objects (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the object of this space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$object the object int the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}\label{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+south@{space\+\_\+get\+\_\+south}}
+\index{space\+\_\+get\+\_\+south@{space\+\_\+get\+\_\+south}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+south()}{space\_get\_south()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+south (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the south of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$south the south of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a174a988b899d5a0db889a31b70763c9c}\label{space_8h_a174a988b899d5a0db889a31b70763c9c}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+up@{space\+\_\+get\+\_\+up}}
+\index{space\+\_\+get\+\_\+up@{space\+\_\+get\+\_\+up}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+up()}{space\_get\_up()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+up (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the up of the space 
+
+\begin{DoxyDate}{Date}
+11-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$up the up of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af495ebfd5d13eba1a48cebd10992a17f}\label{space_8h_af495ebfd5d13eba1a48cebd10992a17f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+west@{space\+\_\+get\+\_\+west}}
+\index{space\+\_\+get\+\_\+west@{space\+\_\+get\+\_\+west}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+west()}{space\_get\_west()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+west (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+get the west of the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sapace-\/$>$west the west of the space we enter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a2dea60f1cac073e20256df7a47a0d07d}\label{space_8h_a2dea60f1cac073e20256df7a47a0d07d}} 
+\index{space.\+h@{space.\+h}!space\+\_\+is\+\_\+iluminated@{space\+\_\+is\+\_\+iluminated}}
+\index{space\+\_\+is\+\_\+iluminated@{space\+\_\+is\+\_\+iluminated}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+is\+\_\+iluminated()}{space\_is\_iluminated()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} space\+\_\+is\+\_\+iluminated (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+used to see if an space is iluminated or not 
+
+\begin{DoxyDate}{Date}
+20-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if its iluminate, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aa7e388700d59402e9222d2f19af46ad1}\label{space_8h_aa7e388700d59402e9222d2f19af46ad1}} 
+\index{space.\+h@{space.\+h}!space\+\_\+is\+\_\+object@{space\+\_\+is\+\_\+object}}
+\index{space\+\_\+is\+\_\+object@{space\+\_\+is\+\_\+object}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+is\+\_\+object()}{space\_is\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} space\+\_\+is\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{object }\end{DoxyParamCaption})}
+
+
+
+used to know if an object is in a space or not 
+
+\begin{DoxyDate}{Date}
+20-\/02-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em object} & the object that you want to know if is in the space or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a18eca058da6cdf20ae5eda9d122d992e}\label{space_8h_a18eca058da6cdf20ae5eda9d122d992e}} 
+\index{space.\+h@{space.\+h}!space\+\_\+print@{space\+\_\+print}}
+\index{space\+\_\+print@{space\+\_\+print}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+print()}{space\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+printf the space on the screen 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a2800febfcfd5d519c2f937d85d69c2d4}\label{space_8h_a2800febfcfd5d519c2f937d85d69c2d4}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+description1@{space\+\_\+set\+\_\+description1}}
+\index{space\+\_\+set\+\_\+description1@{space\+\_\+set\+\_\+description1}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+description1()}{space\_set\_description1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+description1 (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+used to set the description which you can see no matter if the space is lit or not 
+
+\begin{DoxyDate}{Date}
+10-\/03-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em description} & the description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad206f89335e1ca729bef9909c654f153}\label{space_8h_ad206f89335e1ca729bef9909c654f153}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+description2@{space\+\_\+set\+\_\+description2}}
+\index{space\+\_\+set\+\_\+description2@{space\+\_\+set\+\_\+description2}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+description2()}{space\_set\_description2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+description2 (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+used to set the description which you can see no matter if the space is lit 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em description} & the description \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ae5b9fef52456ffccffbd73f882a56d23}\label{space_8h_ae5b9fef52456ffccffbd73f882a56d23}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+down@{space\+\_\+set\+\_\+down}}
+\index{space\+\_\+set\+\_\+down@{space\+\_\+set\+\_\+down}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+down()}{space\_set\_down()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+down (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the down 
+
+\begin{DoxyDate}{Date}
+11-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that down will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}\label{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+east@{space\+\_\+set\+\_\+east}}
+\index{space\+\_\+set\+\_\+east@{space\+\_\+set\+\_\+east}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+east()}{space\_set\_east()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+east (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the east 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that east will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aa0946c480abf293fe9a7bb208037da5c}\label{space_8h_aa0946c480abf293fe9a7bb208037da5c}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+gdesc\+\_\+at@{space\+\_\+set\+\_\+gdesc\+\_\+at}}
+\index{space\+\_\+set\+\_\+gdesc\+\_\+at@{space\+\_\+set\+\_\+gdesc\+\_\+at}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+gdesc\+\_\+at()}{space\_set\_gdesc\_at()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+gdesc\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{int}]{position1,  }\item[{int}]{position2,  }\item[{char}]{element }\end{DoxyParamCaption})}
+
+
+
+get an especific element of the array of string 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: José Manuel García Giráldez
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em position1} & select the string we want \\
+\hline
+{\em position2} & select the element of the string we want \\
+\hline
+{\em element} & the element that we want in an especific position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af92c62ffae0b7dc4dc703210e032dc48}\label{space_8h_af92c62ffae0b7dc4dc703210e032dc48}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+ilumination@{space\+\_\+set\+\_\+ilumination}}
+\index{space\+\_\+set\+\_\+ilumination@{space\+\_\+set\+\_\+ilumination}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+ilumination()}{space\_set\_ilumination()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+ilumination (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{bool }\end{DoxyParamCaption})}
+
+
+
+used to set the ilumination of an space 
+
+\begin{DoxyDate}{Date}
+10-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em bool} & true or false \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok if there is no error, error otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aab5b468f9822ab78dbe16d1321870d93}\label{space_8h_aab5b468f9822ab78dbe16d1321870d93}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+name@{space\+\_\+set\+\_\+name}}
+\index{space\+\_\+set\+\_\+name@{space\+\_\+set\+\_\+name}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+name()}{space\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+name the space 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em name} & the name that space will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}\label{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+north@{space\+\_\+set\+\_\+north}}
+\index{space\+\_\+set\+\_\+north@{space\+\_\+set\+\_\+north}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+north()}{space\_set\_north()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+north (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the north 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that north will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a422ab9f220b4c471c44256a27377de1a}\label{space_8h_a422ab9f220b4c471c44256a27377de1a}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+south@{space\+\_\+set\+\_\+south}}
+\index{space\+\_\+set\+\_\+south@{space\+\_\+set\+\_\+south}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+south()}{space\_set\_south()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+south (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the south 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that south will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}\label{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+up@{space\+\_\+set\+\_\+up}}
+\index{space\+\_\+set\+\_\+up@{space\+\_\+set\+\_\+up}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+up()}{space\_set\_up()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+up (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the up 
+
+\begin{DoxyDate}{Date}
+11-\/04-\/2020 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: David Teófilo Garitagoitia Romero
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that up will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad44b14cb38902cf31fa1f341beaab0db}\label{space_8h_ad44b14cb38902cf31fa1f341beaab0db}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+west@{space\+\_\+set\+\_\+west}}
+\index{space\+\_\+set\+\_\+west@{space\+\_\+set\+\_\+west}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+west()}{space\_set\_west()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+west (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the west 
+
+\begin{DoxyDate}{Date}
+13-\/01-\/2015 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Instructors of P\+P\+R\+OG
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & one space that has been created before \\
+\hline
+{\em id} & the id that west will have \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+OR if there is an error, otherwise return OK 
+\end{DoxyReturn}
