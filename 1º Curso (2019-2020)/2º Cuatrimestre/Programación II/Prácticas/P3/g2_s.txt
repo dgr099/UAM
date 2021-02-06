@@ -1,0 +1,443 @@
+124
+1 nuevos_ministerios 0
+2 republica_argentina 0
+3 avenida_de_america 0
+4 nunez_de_balboa 0
+5 diego_de_leon 0
+6 manuel_becerra 0
+7 goya 0
+8 el_carmen 0
+9 principe_de_vergara 0
+10 retiro 0
+11 banco_de_espana 0
+12 sevilla 0
+13 sol 0
+14 opera 0
+15 santo_domingo 0
+16 noviciado 0
+17 san_bernardo 0
+18 quevedo 0
+19 canal 0
+20 rios_rosas 0
+21 iglesia 0
+22 bilbao 0
+23 tribunal 0
+24 gran_via 0
+25 callao 0
+26 chueca 0
+27 alonso_martinez 0
+28 colon 0
+29 serrano 0
+30 velazquez 0
+31 ruben_dario 0
+32 lista 0
+33 gregorio_maranon 0
+34 alonso_cano 0
+35 cuatro_caminos 0
+36 guzman_el_bueno 0
+37 colombia 0
+38 santiago_bernabeu 0
+39 prosperidad 0
+40 cartagena 0
+41 cruz_del_rayo 0
+42 ventas 0
+43 odonnell 0
+44 quintana 0
+45 ibiza 0
+46 tirso_de_molina 0
+47 lavapies 0
+48 principe_pio 0
+49 la_latina 0
+50 plaza_de_espana 0
+51 arguelles 0
+52 islas_filipinas 0
+53 alvarado 0
+54 francos_rodriguez 0
+55 metropolitano 0
+56 pio_xii 0
+57 concha_espina 0
+58 pinar_del_rey 0
+59 cuzco 0
+60 alfonso_xiii 0
+61 parque_de_las_avenidas 0
+62 la_elipa 0
+63 sainz_de_baranda 0
+64 pueblo_nuevo 0
+65 anton_martin 0
+66 embajadores 0
+67 lago 0
+68 puerta_de_toledo 0
+69 ventura_rodriguez 0
+70 moncloa 0
+71 estrecho 0
+72 valdezarza 0
+73 ciudad_universitaria 0
+74 duque_de_pastrana 0
+75 mar_de_cristal 0
+76 plaza_de_castilla 0
+77 avenida_de_la_paz 0
+78 barrio_de_la_concepcion 0
+79 conde_de_casal 0
+80 atocha 0
+81 palos_de_la_frontera 0
+82 acacias 0
+83 batan 0
+84 tetuan 0
+85 san_lorenzo 0
+86 chamartin 0
+87 valdeacederas 0
+88 ventilla 0
+89 arturo_soria 0
+90 pacifico 0
+91 atocha_renfe 0
+92 delicias 0
+93 piramides 0
+94 casa_de_campo 0
+95 parque_de_santa_maria 0
+96 begona 0
+97 bambu 0
+98 barrio_del_pilar 0
+99 esperanza 0
+100 menendez_pelayo 0
+101 mendez_alvaro 0
+102 legazpi 0
+103 marques_de_vadillo 0
+104 campamento 0
+105 hortaleza 0
+106 pinar_de_chamartin 0
+107 canillas 0
+108 arganzuela_planetario 0
+109 usera 0
+110 urgel 0
+111 empalme 0
+112 manoteras 0
+113 plaza_eliptica 0
+114 oporto 0
+115 aluche 0
+116 eugenia_de_montijo 0
+117 carabanchel 0
+118 vista_alegre 0
+119 opanel 0
+120 carpetana 0
+121 laguna 0
+122 lucero 0
+123 alto_de_extremadura 0
+124 puerta_del_angel 0
+1 37
+1 38
+1 33
+1 2
+1 35
+2 1
+2 3
+3 2
+3 39
+3 40
+3 5
+3 4
+3 33
+3 41
+4 3
+4 9
+4 5
+4 31
+5 3
+5 4
+5 6
+5 32
+5 42
+6 5
+6 42
+6 7
+6 43
+7 6
+7 9
+7 32
+7 30
+8 42
+8 44
+9 4
+9 7
+9 10
+9 45
+10 9
+10 11
+11 10
+11 12
+12 11
+12 13
+13 12
+13 24
+13 14
+13 25
+13 46
+13 47
+14 13
+14 25
+14 15
+14 48
+14 49
+15 14
+15 16
+16 15
+16 50
+16 17
+17 16
+17 51
+17 22
+17 18
+18 17
+18 19
+19 18
+19 52
+19 35
+19 34
+20 35
+20 21
+21 20
+21 22
+22 17
+22 21
+22 23
+22 27
+23 22
+23 50
+23 27
+23 24
+24 13
+24 23
+24 26
+24 25
+25 13
+25 14
+25 24
+25 50
+26 24
+26 27
+27 22
+27 23
+27 26
+27 33
+27 28
+27 31
+28 27
+28 29
+29 28
+29 30
+30 7
+30 29
+31 4
+31 27
+32 5
+32 7
+33 1
+33 3
+33 27
+33 34
+34 19
+34 33
+35 1
+35 19
+35 20
+35 36
+35 53
+36 35
+36 54
+36 55
+36 52
+37 1
+37 56
+37 57
+37 58
+38 1
+38 59
+39 3
+39 60
+40 3
+40 61
+41 3
+41 57
+42 5
+42 6
+42 8
+42 62
+43 6
+43 63
+44 8
+44 64
+45 9
+45 63
+46 13
+46 65
+47 13
+47 66
+48 14
+48 51
+48 67
+48 50
+48 124
+49 14
+49 68
+50 16
+50 23
+50 25
+50 48
+50 69
+51 17
+51 48
+51 69
+51 70
+52 19
+52 36
+53 35
+53 71
+54 36
+54 72
+55 36
+55 73
+56 37
+56 74
+57 37
+57 41
+58 37
+58 75
+59 38
+59 76
+60 39
+60 77
+61 40
+61 78
+62 42
+63 43
+63 45
+63 79
+64 44
+64 78
+65 46
+65 80
+66 47
+66 81
+66 82
+67 48
+67 83
+68 49
+68 82
+69 50
+69 51
+70 51
+70 73
+71 53
+71 84
+72 54
+73 55
+73 70
+74 56
+74 76
+75 58
+75 85
+75 107
+76 59
+76 74
+76 86
+76 87
+76 88
+77 60
+77 89
+78 61
+78 64
+79 63
+79 90
+80 65
+80 91
+81 66
+81 92
+82 66
+82 68
+82 93
+83 67
+83 94
+84 71
+84 87
+85 75
+85 95
+86 76
+86 96
+86 97
+87 76
+87 84
+88 76
+88 98
+89 77
+89 99
+90 79
+90 100
+90 101
+91 80
+91 100
+92 81
+92 102
+93 82
+93 103
+94 83
+94 104
+95 85
+95 105
+96 86
+97 86
+97 106
+98 88
+99 89
+99 107
+100 90
+100 91
+101 90
+101 108
+102 92
+102 108
+102 109
+103 93
+103 110
+104 94
+104 111
+105 95
+105 112
+106 97
+106 112
+107 75
+107 99
+108 101
+108 102
+109 102
+109 113
+110 103
+110 114
+111 104
+111 115
+112 105
+112 106
+113 109
+113 119
+114 110
+114 118 
+114 119
+114 120
+115 111
+115 116
+116 115
+116 117
+117 116
+117 118
+118 114
+118 117
+119 113
+119 114
+120 114
+120 121
+121 120
+121 122
+122 121
+122 123
+123 122
+123 124
+124 48
+124 123
