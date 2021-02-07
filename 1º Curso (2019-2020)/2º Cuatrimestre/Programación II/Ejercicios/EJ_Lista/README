@@ -1,0 +1,27 @@
+Contenido del directorio / Content of folder:
+
+* types.h:
+  Header file con la definición de los tipos Boolean y Status. 
+  Header file with the definition of types Boolean and Status.
+  
+* list.h:
+  Header file con la definición del tipo List, la definición de los
+  tipos puntero a función y las cabeceras de las funciones públicas
+  junto con su documentación.
+  Header file with the definition of type List, the definition of
+  types pointer to function and the headers of public functions and
+  their documentation.
+
+* liblist-linux.a, liblist-mac.a, liblist-win.a
+  Librería compilada en linux, mac y windows (64 bits).
+  Library compiled for linux, mac and windows (64 bits).
+
+* main_list.c:
+  Fichero de ejemplo con un main de prueba.
+  Example file with a main program.
+
+* Makefile: 
+  Fichero para compilar el código usando make.
+  File for compiling the code using the make utility.
+  
+
