@@ -11,7 +11,7 @@ DATOS SEGMENT
 	APELLIDO1	DB 	80 DUP (0) ;Para guardar el apellido 1
 	APELLIDO2	DB 	80 DUP (0) ;Para guardar el apellido 2
 	TEXTO 		DB 	1BH,"[22;1fDON ","$"
-	TEXTO2 		DB 	" ES ALUMNO DE 2o CURSO DE " ;2o porque lo de antes que imprimía salia raro
+	TEXTO2 		DB 	" ES ALUMNO DE 2o CURSO DE "
 			DB 	"INGENIERIA INFORMATICA",13,10,"$"
 DATOS ENDS
 ;_______________________________________________________________
