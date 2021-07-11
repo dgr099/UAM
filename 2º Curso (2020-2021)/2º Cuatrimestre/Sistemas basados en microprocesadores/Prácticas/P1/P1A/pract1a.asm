@@ -68,7 +68,7 @@ MOV SP, 64 ; CARGA EL PUNTERO DE PILA CON EL VALOR MAS ALTO
     MOV DS, AX ;Direccionamiento por registro, para cargar 01001001b (que corresponde con el valor de AX guardado en la linea anterior) en DS 
 
 
-    MOV AX, [SI] ;Direccionamiento directo, cargar en AX el contenido de la dirección de memoria apuntada por SI
+    MOV AX, [SI] ;Direccionamiento indirecto por registro, cargar en AX el contenido de la dirección de memoria apuntada por SI
     
     MOV BX, [BP] + 10 ;Direccionamiento relativo a base, para cargar en BX el contenido de la dirección de memoria que está 10 bytes por encima de la dirección apuntada por BP
     
