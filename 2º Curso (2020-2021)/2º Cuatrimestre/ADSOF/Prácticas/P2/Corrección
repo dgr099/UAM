@@ -1,0 +1,28 @@
+APARTADO 1:
+
+ 
+
+OUTPUT:
+    -0.0 Bien. Mismo formato de salida que el pedido.
+
+ 
+
+CÓDIGO:
+    -0.0 Bien
+
+ 
+
+DOCUMENTACIÓN:
+    -0.0 Bien
+
+ 
+
+DIAGRAMA UML:
+    -0.0 Bien
+
+ 
+
+-----------
+APARTADO 3
+    - el método 1 es redundante, podríais poner sólamente
+        return !usuariosBloqueados.contains(user);
