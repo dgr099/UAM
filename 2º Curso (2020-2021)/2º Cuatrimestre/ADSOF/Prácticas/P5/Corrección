@@ -1,1 +1,14 @@
+- Respuesta a la pregunta del ej3: Se mejoraría la usabilidad del framework haciendo subclases de Field (FieldInt, FieldBool, ...) en las que la expresión lambda que formatea de String a T estuviera por defecto, o bien implementada en forma de método
 
+ 
+
+Comentarios sobre mejoras:
+- Debería haber más coherencia en el idioma (si está todo en inglés, escribid las variables/métodos/excepciones en inglés)
+- No hace falta <T extends java.lang.Comparable<T>, basta con <T extends Comparable<T>
+- ¿¿¿  ? super String  ??? ¿por qué no String?
+- El mapa no debería guardar excepciones, sino strings que pasarle a las excepciones
+- validations debería ser un LinkedHashMap, un mapa (pares) que se ordena según la introducción y no guarda duplicados. No hacía falta Pair. ¡¡Estudiad esto para el examen de teoría!!
+- Ídem para campos. No hace falta Three
+- Evitad == true, == false
+- El número de personas no se ordena de acuerdo al orden de las direcciones
+- No hace falta ese toString, el Map se hubiera impreso en el formato que pedía
