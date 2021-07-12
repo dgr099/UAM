@@ -1,0 +1,5 @@
+all: pra2a.exe
+pra2a.exe: pra2a.obj
+    tlink /v pra2a
+pra2a.obj: pra2a.asm
+    tasm /zi pra2a.asm,,pra2a.lisy
