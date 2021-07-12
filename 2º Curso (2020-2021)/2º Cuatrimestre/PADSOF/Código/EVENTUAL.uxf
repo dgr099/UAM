@@ -1,0 +1,470 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>860</x><y>1191</y><w>280</w><h>580</h></coordinates><panel_attributes>Usuario
+--
+- nombre: String
+- contraseña: String
+- notificaciones: String[1..n]
+- nReservas: Map&lt;Representacion, int&gt;
+--
++ salirListaEspera(r: Representacion)
++ confirmarReserva(codT: String, r: Reserva): 
+Boolean
++ confirmarReserva(a: AbonoUsuario, r: Reserva):
+Boolean
++ addTarjetas(t: TarjetaBancaria)
++ seleccionarTarjeta(numT: String)
++ addEntrada(e: Entrada)
++ añadirComentario(e: Entrada, s: String)
++ comprarEntrada(e: Entrada, tb: TarjetaBancaria):
+Boolean
++ addAbono(a: AbonoUsuario)
++ comprarAbono(a: Abono, t: TarjetaBancaria):
+Boolean
++ entrarListaEspera(r: Representacion)
++ reservarButaca(r: Representacion, b: Butaca):
+Boolean
++ comprarEntrada(e: Entrada, a: AbonoUsuario):
+Boolean
++ mostrarReservas()
++ seleccionarReserva(o: int): Reserva
++ cancelarReserva(r: Reserva): Boolean
++ crearClave(clave: String): SecretKeySpec
++ encriptar(contra: String, clave: String): String
++ desencriptar(contra: String, clave: String): String
++ aprobarComentario(c: Comentario, e: Evento)
++ addNotificacion(m: String)
++ solicitarCambio(c: Comentario)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>1241</y><w>350</w><h>450</h></coordinates><panel_attributes>/Evento/
+--
+- descripcion: String
+- duracion: double
+- titulo: String
+- autor: String
+- precioZonas: Map&lt;Zona, Double&gt;
+- comentariosNoVisibles: String[0..*]
+- comentariosEnEsperaDeAprobación: String[0..*]
+- puntuaciones: Int[0..*]
+- sumPuntuaciones: int
+--
++ addComentario(c: Comentario)
++ addValoracion(val: int): Boolean
++ getValoracion(): Double
++ getValorString(): String
++ updateComentariosVisibles()
++ getPrecio(z: Zona): Double
++ addRepresentacion(r: Representacion): Boolean
++ mostrarEvento()
++ mostrarPantallaCompra()
++ getEstadisticas(): Double[5]
++ mostrarPantallaAdmin()
++ addPrecioZona(z: Zona, precio: Double): Boolean
++ mostrarRepresentaciones()
++ borrarComentario(c: Comentario)
++ /getStatString()/: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>421</y><w>370</w><h>300</h></coordinates><panel_attributes>Representacion
+--
+- fechaYHora: Calendar
+- asistencia: int
+- aforo: int
+- ocupacion: Map&lt;Zona, Int&gt;
+--
++ addLista(u: Usuario)
++ cancelarRepresentacion()
++ cambiarFecha(fecha: Calendar)
++ sacarLista(u: Usuario)
++ getEstadisticas(): Double[5]
++ addEntrada(e: Entrada): Boolean
++ mostrarRepresentacion()
++ comprobarValidezEntrada(e: Entrada): Boolean
++ comprobarDisponibilidad(z: Zona): Boolean
++ addComentario(c: Comentario)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>711</y><w>120</w><h>550</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+representaciones
+m2=0..n
+</panel_attributes><additional_attributes>10;530;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1011</y><w>290</w><h>170</h></coordinates><panel_attributes>Concierto
+--
+- orquesta: String
+- director: String
+- solista: String
+- piezas: String[1..*]
+--
++ addPieza(p: String)
++ mostrarEvento()
++ getStatString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1241</y><w>290</w><h>210</h></coordinates><panel_attributes>Danza
+--
+- bailarines: String[1..*]
+- director: String
+- orquesta: String
+--
++ addBailarin(b: String): Boolean
++ mostrarEvento()
++ getStatString(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1521</y><w>290</w><h>150</h></coordinates><panel_attributes>ObraTeatro
+--
+- orquesta: String
+- director: String
+- compañia: String
+--
++ addActor(act: String): Boolean
++ mostrarEvento()
++ getStatString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>1111</y><w>140</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;200;60;200;60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>1341</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>1381</y><w>140</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;60;10;60;230;10;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>591</y><w>290</w><h>280</h></coordinates><panel_attributes>/Entrada/
+--
+- codigo: String
+- abono: Boolean
+- nEntrada: int
+- valoracion int
+--
++ comprobarValidez(r: Representacion): Boolean
++ getPosicion(): String
++ isAbono(): Boolean
++ getPrecio(): Double
++ getTheaterName(): String
++ getEventName(): String
++ getEventDate(): String
++ generarPDF()
++ borrarComentario()
++ addValoracion(n: int): Boolean
++ getFechaRepresentacion(): Calendar
++ addComentario(m: String)
+ 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1100</x><y>2151</y><w>270</w><h>230</h></coordinates><panel_attributes>/Abono/
+--
+- codigo: String
+- precio: double
+--
++ /comprobarValidez(e: Entrada)/: Boolean
++ /comprobarValidez(e: Evento)/: Boolean
++ /generarCodigo()/: String
++ mostrarAbono(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>861</y><w>80</w><h>350</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+entradas
+m2=0..n
+</panel_attributes><additional_attributes>10;330;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>1761</y><w>70</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+abonos
+m2= 0..n
+bg=black
+</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>611</y><w>280</w><h>170</h></coordinates><panel_attributes>lt=&lt;-&gt;
+
+m1=1 representacion
+
+m2=0..n entradas</panel_attributes><additional_attributes>10;10;180;10;180;140;260;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>2261</y><w>380</w><h>170</h></coordinates><panel_attributes>Abono de ciclo
+--
+-descuento: double
+--
++ comprobarValidez(e: Entrada): Boolean
++ comprobarValidez(e: Evento): Boolean
++ generarCodigo(): String
++ calcularPrecio(descuento: Double, eventos: Evento[1..*], z: Zona): 
+Double
++ delEvento(e: Evento)
++ mostrarAbono()
++ generarCodigo(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>2101</y><w>300</w><h>130</h></coordinates><panel_attributes>Abono anual
+--
+
+--
++ addEntrada(e: Entrada): Boolean
++ comprobarValidez(e: Entrada): Boolean
++ comprobarValidez(e: Evento): Boolean
++ generarCodigo(): String
++ mostrarAbono()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>2341</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>1681</y><w>130</w><h>660</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1..*
+eventosIncluidos</panel_attributes><additional_attributes>110;630;10;630;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>2221</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;30;10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1280</x><y>1891</y><w>210</w><h>180</h></coordinates><panel_attributes>Teatro
+--
+- nombre:String
+- limitaciones:double
+--
++ addZona(z: Zona): Boolean
++ quitarZona(z: Zona)
++ mostrarTeatro()
++ seleccionarZona(o: int): Zona
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1750</x><y>951</y><w>330</w><h>200</h></coordinates><panel_attributes>Butaca
+--
+- id: long
+- activa: Boolean
+- fila:int
+- columna:int
+- zonaButaca: ZonaNumerada 
+--
++ isActiva(): Boolean
++ mostrarButaca()
++ reservarButaca()
++ ocuparButaca()
++ liberarButaca()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>1921</y><w>210</w><h>220</h></coordinates><panel_attributes>/Zona/
+--
+- nombre: String
+--
++ /getMax()/: Int
++ /mostrarZona()/
++ setLimitacion(l: Double)
++ /actLimitaciones()/
++ /factoryEntrada()/: Entrada</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1480</x><y>1941</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+zonas
+m1=1..n
+bg=black</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>1101</y><w>430</w><h>1420</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+butacas
+m1=1..n</panel_attributes><additional_attributes>10;1390;380;1390;350;10;320;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>881</y><w>530</w><h>540</h></coordinates><panel_attributes>Sistema
+--
+- instancia: Sistema
+--
++ getInstancia(): Sistema
++ addEvento(e: Evento): Boolean
++ addUsuario(u: Usuario)
++ addAbono(a: Abono)
++ login(nombre: String, contr: String): Boolean
++ registro(nombre: String, contr: String): Boolean
+- validUser(u: Usuario): Boolean
+- validEvent(e: Evento): Boolean
++ cerrarSesion()
++ comprobarAdmin(): Boolean
++ mostrarCartelera()
++ seleccionarEvento(i: int): Evento
++ busqueda(s: String): Evento[0..*]
++ filtrarEvento(tipo: int): Evento[0..*]
++ seleccionarZona(nombre: String): Zona
++ comprarEntrada(r: Representacion, z: Zona, tb: TarjetaBancaria): Boolean
++ comprarEntrada(r: Representacion, z: ZonaNumerada, f: int, c: int): Boolean
++ comprarEntrada(r: Representacion, z: ZonaNumerada, tb: TarjetaBancaria, b: Butaca): Boolean
++ mostrarButacasDisponibles(r: Representacion, z: Zona) 
++ mostrarAbonos()
++ seleccionarAbono(cod: String): Abono
++ comprarAbono(a: Abono, numT: String): Boolean
++ usarAbono(e: Entrada, a: AbonoUsuario): Boolean
++ notificarUsuarios()
++ saveSistema(): Boolean
++ loadSistema(): Boolean
++ removeEvent(e: Evento)
++ removeAbono(a: Abono)
++ addCiclo(c: Ciclo)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1210</x><y>331</y><w>230</w><h>120</h></coordinates><panel_attributes>Reserva
+--
+-codigo: String
+-caducidad: Date
+--
++ liberarButaca(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>271</y><w>210</w><h>190</h></coordinates><panel_attributes>PoliticaReserva
+--
+- max:int
+- limite: int
+- duracion: int
+--
++ getDuar(): int
++ setDur(dur: int)
++ getMax(): int
++ setMax(max: int)
++ getLim(): int
++ setLim(lim: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1430</x><y>361</y><w>480</w><h>610</h></coordinates><panel_attributes>lt=&lt;-
+butaca
+m1=1</panel_attributes><additional_attributes>430;590;430;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1520</x><y>2431</y><w>250</w><h>340</h></coordinates><panel_attributes>ZonaNumerada
+--
+- fillas:int
+- columnas: Int
+- nButaca: Int
+- distButacas: Int
+--
++ addButaca(f: int, c: int): Boolean
++ addButaca(b : Butaca): Boolean
++ actDimensiones(f: int, c: int)
++ addFila()
++ quitarFila()
++ addColumna()
++ quitarColumna()
++ quitarButaca(f: int, c: int): Boolean
++ mostrarButacas()
++ mostrarButacasAux(f: int, c: int)
++ searchButaca(f: int, c: int): Butaca
++ mostrarZona()
++ getMax()
++ factoryEntrada(): Entrada
++ actLimitaciones()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1550</x><y>1621</y><w>210</w><h>180</h></coordinates><panel_attributes>ZonaNoNumerada
+--
+- aforo: int
+--
++ mostrarZona()
++ getMax(): int
++ factoryEntrada(): Entrada
++ actLimitaciones()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>2131</y><w>30</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>1650</x><y>1791</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1190</x><y>2041</y><w>380</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+zona</panel_attributes><additional_attributes>360;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>451</y><w>250</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+politicaReserva</panel_attributes><additional_attributes>150;10;150;70;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>581</y><w>230</w><h>390</h></coordinates><panel_attributes>lt=&lt;-
+butaca
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>180;370;180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1690</x><y>851</y><w>130</w><h>790</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..1
+zonaNoNumerada
+</panel_attributes><additional_attributes>10;770;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>761</y><w>100</w><h>1360</h></coordinates><panel_attributes>lt=&lt;-
+Usado</panel_attributes><additional_attributes>80;20;10;20;10;1340</additional_attributes></element><element><id>Relation</id><coordinates><x>1030</x><y>981</y><w>140</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..n
+usuarios
+</panel_attributes><additional_attributes>120;20;10;20;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>1411</y><w>60</w><h>500</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+teatro
+</panel_attributes><additional_attributes>10;10;10;480</additional_attributes></element><element><id>UMLNote</id><coordinates><x>2270</x><y>791</y><w>250</w><h>50</h></coordinates><panel_attributes>Se omiten Setters y Getters para facilitar la
+legibilidad del diagrama
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>670</x><y>1601</y><w>150</w><h>90</h></coordinates><panel_attributes>0-&gt; entradas vendidas
+1-&gt; asistencia
+2-&gt; abonos
+3-&gt; recaudacion
+4-&gt; valoracion
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>1681</y><w>1060</w><h>790</h></coordinates><panel_attributes>lt=&lt;-
+precio</panel_attributes><additional_attributes>1040;440;910;440;910;770;10;770;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>931</y><w>400</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+eventos
+m2=0..n</panel_attributes><additional_attributes>380;20;10;20;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>711</y><w>60</w><h>550</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+evento
+m2=1</panel_attributes><additional_attributes>10;530;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>491</y><w>350</w><h>150</h></coordinates><panel_attributes>EntradaButaca
+--
+--
++ comprobarValidez(Representacion r): Boolean
++ getSeatNumber(): String
++ getPosicion(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>701</y><w>460</w><h>160</h></coordinates><panel_attributes>EntradaZonaNoNumerada
+--
+
+--
++ comprobarValidez(r: Representacion): Boolean
++ getSeatNumbre(): String
++ getPosicion(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1190</x><y>581</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1190</x><y>811</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>711</y><w>300</w><h>500</h></coordinates><panel_attributes>lt=&lt;-
+listaDeEspera
+m1=0..*</panel_attributes><additional_attributes>260;480;260;110;10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>1911</y><w>160</w><h>100</h></coordinates><panel_attributes>TarjetaBancaria
+--
+- numTarjeta: long
+- fechaCad: Date
+- codigo: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>1761</y><w>70</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m2=1
+tarjetas
+m1=1..n</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1060</x><y>1081</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+m2=1
+usuarioEnUso</panel_attributes><additional_attributes>10;110;10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1130</x><y>1411</y><w>160</w><h>340</h></coordinates><panel_attributes>admin
+lt=&lt;-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;310;130;310;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1250</x><y>1411</y><w>80</w><h>760</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+abonos
+m1=1
+m2= 0..n
+bg=black
+</panel_attributes><additional_attributes>50;10;50;400;10;400;10;740</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1050</x><y>1921</y><w>200</w><h>130</h></coordinates><panel_attributes>AbonoUsuario
+--
+- caducidad: Calendar
+- codigo_last: int
+- codigo: String
+--
++ comprobarCaducidad(): Boolean
++ mostrarAbono()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>2041</y><w>70</w><h>140</h></coordinates><panel_attributes>abono
+lt=&lt;-
+m1=1..n
+m2=1
+</panel_attributes><additional_attributes>50;110;10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>191</y><w>690</w><h>250</h></coordinates><panel_attributes>lt=&lt;-
+reserva</panel_attributes><additional_attributes>10;230;10;20;570;20;570;180;670;180</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>91</y><w>1080</w><h>1120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=0..n
+reservas</panel_attributes><additional_attributes>730;1100;730;920;310;920;310;720;10;720;10;10;1040;10;1040;240</additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>1071</y><w>470</w><h>1500</h></coordinates><panel_attributes>lt=&lt;-
+zona
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;1470;440;1470;420;10;320;10</additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>0</y><w>2010</w><h>970</h></coordinates><panel_attributes>lt=&lt;-
+butacasOcupadas
+m1=0..*</panel_attributes><additional_attributes>1970;950;1970;30;10;20;10;610;290;610</additional_attributes></element><element><id>Relation</id><coordinates><x>1480</x><y>1990</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+teatro</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1750</x><y>2041</y><w>380</w><h>570</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+zonas
+m1=1..n</panel_attributes><additional_attributes>330;550;320;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1680</x><y>2301</y><w>250</w><h>110</h></coordinates><panel_attributes>Patrón composite:
+Zona = Component
+ZonaNoNumerada = Leaf
+ZonaNumerada = Leaf
+ZonaMixta = Composite
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>2501</y><w>210</w><h>150</h></coordinates><panel_attributes>Ciclo
+--
+- codigo: String
+--
++ getValoracion(): double
++ getEventos(): Evento[1..*]
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>2380</y><w>240</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+Ciclo
+1..*
+1</panel_attributes><additional_attributes>130;10;190;10;190;210;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>20</x><y>1680</y><w>690</w><h>940</h></coordinates><panel_attributes>lt=&lt;-
+1,,*
+eventos
+0..*</panel_attributes><additional_attributes>480;11;480;150;10;150;10;910;670;920</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>911</y><w>780</w><h>1670</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+bg=black
+cicclos
+m2=0..n</panel_attributes><additional_attributes>760;10;10;10;10;1640;300;1640</additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>2131</y><w>260</w><h>150</h></coordinates><panel_attributes>zona
+lt=&lt;-
+m1=1..n
+m2=0..n
+</panel_attributes><additional_attributes>220;10;220;120;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1340</x><y>41</y><w>430</w><h>210</h></coordinates><panel_attributes>Comentario
+--
+- mensaje; String
+- fecha: Calendar
+- num: Int
+- mode: Int
+--
++ modificarComentario()
++ aprobarComentario()
++ rechazarComentario()
++ solicitarModificacion()
++ setNotVisible()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1010</x><y>141</y><w>350</w><h>470</h></coordinates><panel_attributes>lt=&lt;-
+Comentario
+m1=1
+m2=1
+</panel_attributes><additional_attributes>330;20;10;20;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>650</y><w>220</w><h>570</h></coordinates><panel_attributes>lt=&lt;-
+0..*
+Usuario
+1</panel_attributes><additional_attributes>150;550;10;550;10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>51</y><w>1240</w><h>1210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m2=0..n
+ComentariosEnEsperaDeAprobación
+m1=1
+</panel_attributes><additional_attributes>410;1190;410;800;10;800;10;10;1220;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1490</x><y>171</y><w>280</w><h>80</h></coordinates><panel_attributes> 0 indica que está a espera de aprobarse
+1 que se aprobó
+2 que fue rechazado
+3 solicitó modificacion
+4 que ya no está visible
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>71</y><w>1270</w><h>1190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m2=0..n
+ComentariosVisibles
+m1=1
+</panel_attributes><additional_attributes>420;1170;420;810;10;810;10;10;1250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>121</y><w>1290</w><h>1140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m2=0..n
+ComentariosNoVisibles
+m1=1
+</panel_attributes><additional_attributes>420;1120;420;790;10;790;10;10;1270;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1510</x><y>1381</y><w>170</w><h>40</h></coordinates><panel_attributes>Patrón de diseño Singleton</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1940</x><y>2591</y><w>230</w><h>160</h></coordinates><panel_attributes>ZonaMixta
+--
+
+--
++ getMax(): int
++ mostrarZona()
++ factoryEntrada(): Entrada
++ actLimitaciones()
++ addZona(z: Zona)
++ removeZonas(z: Zona)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>1781</y><w>220</w><h>110</h></coordinates><panel_attributes>Notificacion
+--
+- mensaje: String
+- fecha: Calendar
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>1761</y><w>200</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1= 1
+
+
+notificaciones
+m2=0..*
+bg=black
+</panel_attributes><additional_attributes>110;10;110;100;10;100</additional_attributes></element></diagram>
