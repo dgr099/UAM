@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"prac2.trafico","l":"Camion"},{"p":"prac2.trafico","l":"Coche"},{"p":"prac2.trafico","l":"IndiceContaminacion"},{"p":"prac2.trafico","l":"Motocicleta"},{"p":"prac2.trafico","l":"prueba2"},{"p":"prac2.trafico","l":"Vehiculo"}]

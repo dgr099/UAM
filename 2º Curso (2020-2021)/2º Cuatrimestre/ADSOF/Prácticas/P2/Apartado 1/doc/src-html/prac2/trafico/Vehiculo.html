@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<main role="main">
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span><a id="line.1">package prac2.trafico;</a>
+<span class="sourceLineNo">002</span><a id="line.2"></a>
+<span class="sourceLineNo">003</span><a id="line.3">/**</a>
+<span class="sourceLineNo">004</span><a id="line.4"> * Clase que contiene los datos de un vehiculo con métodos para obtener su</a>
+<span class="sourceLineNo">005</span><a id="line.5"> * número de ruedas (método abstracto), su índice de contaminación y para</a>
+<span class="sourceLineNo">006</span><a id="line.6"> * imprimir su información</a>
+<span class="sourceLineNo">007</span><a id="line.7"> *</a>
+<span class="sourceLineNo">008</span><a id="line.8"> * @version 1.0 25 Feb 21</a>
+<span class="sourceLineNo">009</span><a id="line.9"> * @author David Teófilo Garitagoitia Romero</a>
+<span class="sourceLineNo">010</span><a id="line.10"> * @author Javier Fernandez de Alarcon Gervas</a>
+<span class="sourceLineNo">011</span><a id="line.11"> */</a>
+<span class="sourceLineNo">012</span><a id="line.12">public abstract class Vehiculo {</a>
+<span class="sourceLineNo">013</span><a id="line.13">        private String modelo; // String que guarda el nombre del modelo del vehículo</a>
+<span class="sourceLineNo">014</span><a id="line.14">        private int anyoCompra; // Entero que contiene el año en el que fue adquirido el vehículo</a>
+<span class="sourceLineNo">015</span><a id="line.15">        private String matricula; // String que contiene la mátricula del vehículo</a>
+<span class="sourceLineNo">016</span><a id="line.16"></a>
+<span class="sourceLineNo">017</span><a id="line.17">        /**</a>
+<span class="sourceLineNo">018</span><a id="line.18">         * Constructor de la clase vehículo, con el modelo, el anyo de compra y la</a>
+<span class="sourceLineNo">019</span><a id="line.19">         * mátricula</a>
+<span class="sourceLineNo">020</span><a id="line.20">         * </a>
+<span class="sourceLineNo">021</span><a id="line.21">         * @param mod       modelo del vehículo</a>
+<span class="sourceLineNo">022</span><a id="line.22">         * @param a         anyo de compra del vehículo</a>
+<span class="sourceLineNo">023</span><a id="line.23">         * @param matricula matrícula del vehículp</a>
+<span class="sourceLineNo">024</span><a id="line.24">         */</a>
+<span class="sourceLineNo">025</span><a id="line.25">        public Vehiculo(String mod, int a, String matricula) {</a>
+<span class="sourceLineNo">026</span><a id="line.26">                this.modelo = mod;</a>
+<span class="sourceLineNo">027</span><a id="line.27">                this.anyoCompra = a;</a>
+<span class="sourceLineNo">028</span><a id="line.28">                this.matricula = matricula;</a>
+<span class="sourceLineNo">029</span><a id="line.29">        }</a>
+<span class="sourceLineNo">030</span><a id="line.30"></a>
+<span class="sourceLineNo">031</span><a id="line.31">        /**</a>
+<span class="sourceLineNo">032</span><a id="line.32">         * Método para imprimir la clase vehículo (modelo, matricula, año, ruedas e</a>
+<span class="sourceLineNo">033</span><a id="line.33">         * índice de contaminación)</a>
+<span class="sourceLineNo">034</span><a id="line.34">         * </a>
+<span class="sourceLineNo">035</span><a id="line.35">         * @return String descriprivo del vehículo</a>
+<span class="sourceLineNo">036</span><a id="line.36">         */</a>
+<span class="sourceLineNo">037</span><a id="line.37">        public String toString() {</a>
+<span class="sourceLineNo">038</span><a id="line.38">                return "modelo " + this.modelo + ", " + "matrícula: " + this.getMatricula() + ", fecha compra "</a>
+<span class="sourceLineNo">039</span><a id="line.39">                                + this.anyoCompra + ", con " + this.numeroRuedas() + " ruedas, índice:" + this.getIndiceContaminacion();</a>
+<span class="sourceLineNo">040</span><a id="line.40">        }</a>
+<span class="sourceLineNo">041</span><a id="line.41"></a>
+<span class="sourceLineNo">042</span><a id="line.42">        /**</a>
+<span class="sourceLineNo">043</span><a id="line.43">         * Método para conocer la matrícula del vehículo</a>
+<span class="sourceLineNo">044</span><a id="line.44">         * </a>
+<span class="sourceLineNo">045</span><a id="line.45">         * @return el string con la matrícula del vehículo</a>
+<span class="sourceLineNo">046</span><a id="line.46">         */</a>
+<span class="sourceLineNo">047</span><a id="line.47">        public String getMatricula() {</a>
+<span class="sourceLineNo">048</span><a id="line.48">                return this.matricula;</a>
+<span class="sourceLineNo">049</span><a id="line.49">        }</a>
+<span class="sourceLineNo">050</span><a id="line.50"></a>
+<span class="sourceLineNo">051</span><a id="line.51">        /**</a>
+<span class="sourceLineNo">052</span><a id="line.52">         * Método abstracto para obtener el número de ruedas del vehículo</a>
+<span class="sourceLineNo">053</span><a id="line.53">         * </a>
+<span class="sourceLineNo">054</span><a id="line.54">         * @return el número de ruedas del vehículo</a>
+<span class="sourceLineNo">055</span><a id="line.55">         */</a>
+<span class="sourceLineNo">056</span><a id="line.56">        public abstract int numeroRuedas();</a>
+<span class="sourceLineNo">057</span><a id="line.57"></a>
+<span class="sourceLineNo">058</span><a id="line.58">        /**</a>
+<span class="sourceLineNo">059</span><a id="line.59">         * Método para conocer el índice de contaminación del vehículo</a>
+<span class="sourceLineNo">060</span><a id="line.60">         * </a>
+<span class="sourceLineNo">061</span><a id="line.61">         * @return el índice de contaminación del vehículo</a>
+<span class="sourceLineNo">062</span><a id="line.62">         */</a>
+<span class="sourceLineNo">063</span><a id="line.63">        public IndiceContaminacion getIndiceContaminacion() {</a>
+<span class="sourceLineNo">064</span><a id="line.64">                return IndiceContaminacion.getIndiceContaminacion(this.anyoCompra);</a>
+<span class="sourceLineNo">065</span><a id="line.65">        }</a>
+<span class="sourceLineNo">066</span><a id="line.66">}</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</main>
+</body>
+</html>
