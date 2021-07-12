@@ -1,1 +1,49 @@
+- Respuesta a la pregunta: la velocidad máxima del coche debe ser > 10. El razonamiento es el siguiente: para que ganen siempre a las motos, nos ponemos en el peor escenario posible, en el que van siempre al 90% de su velocidad (v * 0.9). Para que v * 0.9 > 9, v > 10. 
 
+ 
+
+- ¿¿¿¿¿pr3.trafico????? ¿¿itv?? ¿¿carnets?? ¿POR QUÉ? Esto es una práctica distinta, dije que no tenía nada que ver con las anteriores. Es mucho más difícil de leer
+
+ 
+
+- txts???
+
+ 
+
+- Diseño mejorable de RaceReader.read. Deberíais haber dividido el método en métodos más pequeños (uno para añadir vehículos y otro para añadir componentes)
+
+ 
+
+- RaceException debería tener clases hijas que se especializaran en lanzar mensajes concretos en vez de ponérselos a mano.
+
+ 
+
+- Debería haber más coherencia en el idioma (si está todo en inglés, escribid las variables/métodos/excepciones en inglés)
+
+ 
+
+- MUY GRAVE. Todos los métodos de los vehículos podrían haberse programado en una clase abstracta Vehicle para evitar repetir código, pero los habéis hecho todos copia pega en cada clase hija Car, Motorcycle, Truck.
+
+ 
+
+- Probabilidad y porcentaje tendrían que estar como macros en las clases hijas, que éstas se lo pasaran a la clase Vehicle, y que ésta tuviera el método correspondiente para que todos los vehículos tuvieran la misma mecánica de calcular la velocidad de cada turno.
+
+ 
+
+- Evitad == true, == false
+
+ 
+
+- Los números que se imprimen por pantalla deberían estar formateados y en valor absoluto
+
+ 
+
+- Mejor separar en clases diferentes Componentes Críticos y No Críticos (incluso subpaquetes diferentes)
+
+ 
+
+- Bien los power ups, limpios y sencillos
+
+ 
+
+- Mala implementación activatePowerUp, mejor haber hecho una lista al principio de Race, y haber hecho un .get de un random
