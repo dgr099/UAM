@@ -1,0 +1,188 @@
+\documentclass[12pt,a4]{report}
+
+%\pagestyle{plain}
+
+%%%%%%%%%%%%%
+% LAS MACROS
+%%%%%%%%%%%%%
+
+%\setlength{\parindent}{-3em} \setlength{\topmargin}{-1cm}
+
+\newcommand{\arc}{\,{\rm arc}}
+\newcommand{\cc}{{\bf C}}
+\newcommand{\rr}{{\bf R}}
+\newcommand{\qq}{{\bf Q}}
+\newcommand{\zz}{{\bf Z}}
+\newcommand{\nn}{{\bf N}}
+\newcommand{\mm}{{\bf M}}
+\font\go=eufm10 scaled\magstep1
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{enumerate,enumitem}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsopn,amstext,amscd}
+\usepackage{enumerate}
+%\usepackage[copylabelkey]{refcheckl}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+%\usepackage[font=footnotesize]{caption}
+%\usepackage{setspace}%Para el interlineado
+\usepackage{enumitem}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\allowdisplaybreaks
+
+
+%%%%%%%%%% Margins %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\topmargin}{-0.5cm} \setlength{\headsep}{0cm}
+\setlength{\textwidth}{16cm} \setlength{\textheight}{22.5cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm} \setlength{\footskip}{1.5cm}
+
+%\renewcommand{\ni}{\noindent}
+
+\newcounter{problem}
+\newcommand{\prob}{
+{{\stepcounter{problem}\vspace{2ex}{\bf \theproblem.\ }}}}
+
+\newcounter{letra}[problem]
+\renewcommand{\theletra}{\alph{letra}}
+\newcommand{\letra}{{\addtocounter{letra}{1}{\bf \theletra.\ }}}
+
+
+%%%%%%%%%%%
+% FIN MACROS
+%%%%%%%%%%%%
+
+\usepackage[latin1]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{ejercicio}\def\theejercicio{\arabic{ejercicio}.}
+\newenvironment{ejer}[1]{\noindent{\stepcounter{ejercicio}\textbf{Exercise \theejercicio}}\hskip0.2cm{
+%\em
+#1}}{\vskip0.2cm}
+
+\newenvironment{mylisting}[1] {\begin{list}{}{\setlength{\leftmargin}{#1}}\item\scriptsize\bfseries} {\end{list}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\begin{flushleft}
+\scalebox{0.9}{\includegraphics[width=160pt,height=80pt]{logomatuam.jpg}}
+
+
+ \vspace{-2.45cm}
+ \hfill
+\parbox{10.0cm}{
+$\phantom{}$\hrulefill$\phantom{}$ \vspace{1ex}\\
+{\bf Statistics and Probability - 2020-2021}\\
+
+{Bachelor degree in Computer Sciences and Engineering}\\
+%Nombre:\dotfill$\phantom{}$\vspace{2ex}\\
+%Apellidos:\dotfill$\phantom{}$\\
+$\phantom{}$\hrulefill$\phantom{}$ \vspace{1cm} }
+\end{flushleft}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\Large \textbf{Assignment 1}}\\
+\vspace{1ex}
+\end{center}
+
+
+%
+%{\sc Bachelor degree in Computer Sciences and Engineering\hfill}
+%
+%{\sc Statistics and Probability \hfill}
+%
+%{\sc Academic year 2019-2020 \hfill }
+%
+%\vspace{1cm}
+%
+%
+%\centerline{\sc Assignment 1}
+%
+
+\vspace{1cm}
+
+\begin{ejer}
+As part of their course assessment, a number of Computer Engineering students were asked to complete six simple programming tasks in two hours. The number of successfully completed programming tasks for these students were recorded and they are available in the file \texttt{tasks\_data.txt}. 
+\begin{enumerate}[label=(\alph*),ref=\emph{(\alph*)}]
+\item How many students were asked to complete the tasks?
+\item Construct the frequency table of the dataset considered.\label{freq1}
+\item Display the bar graph of this dataset.\label{bar1}
+\item Describe the results that you obtained in \ref{freq1} and \ref{bar1}.
+\item How many students were able to finish three tasks?
+\item How many students completed at least four tasks?
+\item Find the proportion of students who only managed to finish one task.
+\item What is the percentage of students who completed the six tasks?
+\end{enumerate}
+\end{ejer}
+
+
+\vspace{1cm}
+
+
+
+\begin{ejer}
+A group of computer scientists working in a certain research institute is interested in comparing the performance of two laptops with similar technical specifications, one manufactured by Asus and the other by Msi: both having Core i7 chips and 16Gb of RAM. To compare the performance of the two laptops, they install a program written to perform certain simulation-based calculations and record the times, in CPU seconds, needed to complete the calculations starting from 100 different initial values chosen at random. The times obtained for the 100 runs of the program are collected in the file \texttt{laptots\_data.txt}.
+\begin{enumerate}[label=(\alph*),ref=\emph{(\alph*)}]
+\item Draw a scatter diagram of these datasets and describe the relationship that you observe between them. 
+\item Find the value of the sample (linear) correlation coefficient and interpret it.
+\item Determine the regression line for predicting the time required with an Asus laptop from the time required with a Msi laptop.
+\item Find the value of the sample linear coefficient of determination.
+\item What can we say about the accuracy of the predictions made by using the regression line?
+\end{enumerate}
+\end{ejer}
+
+\vspace{3cm}
+
+
+{\large \textbf{Assignment rules:}}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item Solve the previous exercises using \texttt{R} (\textcolor{red}{strongly recommended}), \texttt{Calc} or \texttt{Excel}.
+
+\item You can solve the exercises in groups of no more than 3 people.
+
+\item All answers must be explained. 
+
+\item Only a compressed folder must be sent. This folder must contain:
+\begin{itemize}
+\item A \textsf{pdf} file with all the solutions. Please, indicate the full names clearly in this file. 
+\item When using \texttt{R}, the \texttt{.RData} file where you ran the commands to obtain the solutions that you provide in the \textsf{pdf} file.
+\item When using \texttt{R}, the \texttt{.Rhistory} file with the commands you have run to obtain the solutions that you provide in the \textsf{pdf} file.
+\item If you use \texttt{Calc} or \texttt{Excel}, the \texttt{Calc sheet} or \texttt{Excel sheet}.
+\end{itemize}
+
+\item The \textsf{pdf} file must be submitted in Times New Roman font in 12 point type, single-space with 2.5cm margins. 
+
+\item The \textsf{pdf} file length is limited to 4 pages maximum.
+
+\item The assignments must be sent via the on-line campus \textsf{Moodle}.
+
+\item The name of the compressed file folder must contain authors' names. For example, if the author is a single student:
+\begin{center}
+\begin{verbatim}
+Assignment1_FamilyName1_FamilyName2_Name
+\end{verbatim}
+\end{center}
+
+\item Deadline: \textcolor{red}{\textbf{7th March 2021}}.
+%\item Maximum extension: 
+\end{itemize}
+\end{document}
