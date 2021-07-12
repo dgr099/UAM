@@ -1,0 +1,8 @@
+Cuestiones:
+    -Ejercicio 3:
+		Si se ejecuta sin parámetro te pide que introduzcas dos al menos debido a la sentencia del if de la linea 54 dentro del método main.
+		Si se ejecuta con un parámetro no numérico salta una excepción NumberFormatException.
+		Si se ejecuta con números negativos como parámetro, funciona correctamente al no tener excepciones de formato.
+	Como mejora se podría implementar una sentencia try que sirva como comprobación de si el string es numérico o no y de esa forma, el programa siga su ejecución con los parámetros válidos sin interrumpirse.
+	-Ejercicio 4:
+		Si se quitan los paréntesis en el print, en lugar de realizar la suma de ambos valores y luego llamar a la funcion toString de la clase int; lo que ocurre, es que se llama a la funcion toString para la suma de los pares y también para la suma de los impares y el operador + en lugar de sumar los valores concatena ambos strings.
