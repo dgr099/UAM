@@ -1,0 +1,6 @@
+1245 HYN;Exceso de velocidad;2
+5643 KOI;Aparcamiento indebido;1
+0987 ETG;Conduccion en direccion contraria;12
+1245 HYN;Adelantamiento en linea continua;2
+0987 ETG;Aparcamiento indebido;1
+1234 XYZ;Exceso de velocidad;3

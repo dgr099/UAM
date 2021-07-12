@@ -1,0 +1,3 @@
+5643 KOI;Aparcamiento indebido;2
+0987 ETG;Conduccion en direccion contraria;13
+0987 ETG;Aparcamiento indebido;2

@@ -1,0 +1,18 @@
+Luisa puede conducir una Harley? false
+Coche diesel, modelo Fiat 500x, matrícula: 1245 HYN, fecha compra 2019, con 4 ruedas, índice:C propietario: Ana Soler conductor: Ana Soler
+------------------------
+Camión de 2 ejes, modelo IvecoDaily, matrícula: 5643 KOI, fecha compra 2010, con 4 ruedas, índice:B propietario: Entregas a Domicilio S.A. conductor: Ana Soler
+------------------------
+Motocicleta, modelo Harley Davidson, matrícula: 0987 ETG, fecha compra 2003, con 2 ruedas, índice:C propietario: Ana Soler conductor: Ana Soler
+------------------------
+Motocicleta, modelo Harley Davidson, matrícula: 0987 ETG, fecha compra 2003, con 2 ruedas, índice:C propietario: Ana Soler conductor: Andres Molina
+Personas:
+Andres Molina
+---
+Ana Soler propietario de:
+Coche diesel, modelo Fiat 500x, matrícula: 1245 HYN, fecha compra 2019, con 4 ruedas, índice:C propietario: Ana Soler conductor: Ana Soler
+Motocicleta, modelo Harley Davidson, matrícula: 0987 ETG, fecha compra 2003, con 2 ruedas, índice:C propietario: Ana Soler conductor: Andres Molina
+---
+Sociedad:
+Entregas a Domicilio S.A. (responsable: Ana Soler) propietario de:
+Camión de 2 ejes, modelo IvecoDaily, matrícula: 5643 KOI, fecha compra 2010, con 4 ruedas, índice:B propietario: Entregas a Domicilio S.A. conductor: Ana Soler
