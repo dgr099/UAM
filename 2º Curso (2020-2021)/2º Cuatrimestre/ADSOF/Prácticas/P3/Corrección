@@ -1,0 +1,46 @@
+- En Sociedad, setResponsable, una implementación muy rara. Mejor:
+    public void setResponsable(Persona responsable) {
+        if(! responsable==null){
+            this.responsable = responsable;
+        }
+    }
+
+ 
+
+- Lo normal es poner el constructor lo primero, no en medio del resto de métodos (error en Sociedad, Vehiculo... )
+
+ 
+
+- Nombre de método poco indicativo: vVehiculo
+
+ 
+
+- Mejor implementación de vVehiculo:
+      return (L == TipoLicencia.X);
+
+ 
+
+- Bien carnet en paquete aparte
+
+ 
+
+- En addLicencia() de Carnet hacéis lo mismo que en el constructor, ¿por qué no despejar el constructor y llamar a addLicencia?
+
+ 
+
+- La idea detrás de validoPersona en TipoLicencia está bien, pero a lo mejor podríais quitar los casos, los ifs, poniendo campos que acompañen a cada elemento del enumerado (A {18})
+
+ 
+
+- Distintas pruebas (pruebo si puede conducir cierto vehículo, antes y después de añadirle un carnet a una persona), en algunos casos da malos resultados
+ 
+
+- No se restan bien los puntos para otros casos que no sean el tester de la práctica
+
+ 
+
+- cadITV y nextITV son demasiado largas y parecidas entre todas las subclases de vehiculos para que sólo se diferencien en el número de años. ¿No hay mejor forma de guardar la perioricidad de las itvs en algún lado, y que fuera Vehiculo la que hiciera todo este cálculo de próxima itv y tal?
+
+ 
+
+- El tester de ITV no es nada indicativo, ¿cómo se supone que sabéis de ese resultado si está funcionando?
