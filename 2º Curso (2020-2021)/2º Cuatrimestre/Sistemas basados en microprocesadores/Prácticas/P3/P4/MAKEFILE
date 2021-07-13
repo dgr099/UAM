@@ -1,0 +1,14 @@
+all: snake.exe p4a.com#ej2.exe
+
+snake.exe: snake.obj
+    tlink /v snake
+snake.obj: snake.asm
+    tasm /zi snake.asm,,snake.lisy
+
+#instalador
+p4a.com: p4a.obj
+    tlink /t p4a
+p4a.obj: p4a.asm
+    tasm /zi p4a.asm,,p4a.lisy
+p4a.exe: p4a.obj #para debug
+    tlink /v p4a
