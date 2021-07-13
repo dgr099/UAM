@@ -1,0 +1,2 @@
+Ejercicio 1: No soporta espacios.
+Ejercicio 2: Cuando se introduce una tarjeta con demasiados dígitos (>15) el programa termina de forma incorrecta.
