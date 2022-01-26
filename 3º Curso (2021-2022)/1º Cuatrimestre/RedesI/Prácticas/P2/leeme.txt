@@ -1,0 +1,19 @@
+Autores
+  -David Teófilo Garitagoitia Romero
+  -Daniel Cerrato Sánchez
+
++Entrega:
+  junto con los ficheros de código necesarios para la ejecución del programa se encuentra una carpeta ("Capturas") que contiene evidencias del correcto funcionamiento de la práctica
+
++Validación:
+	->Normativa de entrega cumplida en su totalidad: Realizado, se ha leido satisfactoriamente la normativa de entrega en su totalidad
+	->Fichero leeme.txt bien explicado: Realizado, fichero leeme.txt creado y rellenado completamente
+	->Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior: Realizado, comprobado satisfactoriamente el recibimiento de tramas de nivel de enlace
+	->Enviar tramas Ethernet  correctamente: Realizado, el programa además de recibir, también es capaz de enviar tramas Ethernet
+	->Enviar correctamente peticiones ARP: Realizado, el programa consigue enviar las peticiones ARP
+	->Procesar correctamente peticiones ARP recibidas: Realizado, se ha comprobado que el programa es capaz de procesar las peticiones ARP identificando su cabecera y campos
+	->Enviar correctamente respuestas ARP: Realizado, al identificar una petición ARP, si la ip por la que se pregunta es la del host ejecutando el código, este es capaz de enviar una respuesta satisfactoriamente
+	->Procesar correctamente respuestas ARP: Realizado, las respuestas son procesadas cambiando las variables globales, devolviendo la dirección MAC de la IP preguntada y actualizando la cache
+	->Manejo correcto de la caché ARP: Realizado, se comprueba si la IP solicitada se encuentra en la cache además de escribir satisfactoriamente en ella tras la resolución ARP
+	->Uso correcto de Locks: Realizado, los semáforos funcionan satisfactoriamente para evitar problemas con las variables globales
+	->Realiza correctamente el ARP gratuito: Realizado, se ha comprobado la devolución de error si al inicializar ARP encuentra otra MAC con misma dirección IP
