@@ -1,0 +1,9 @@
+David Teófilo Garitagoitia Romero & Daniel Cerrato Sánchez
+Se han adjuntado capturas con los resultados en la carpeta capturas;
+Normativa de entrega cumplida en su totalidad: Realizado, se ha leido varias veces la normativa de entrega y cumplido la misma en su totalidad.
+Fichero leeme.txt bien explicado: Realizado, se ha redactado satisfactoriamente el fichero leeme.txt
+Recibir y enviar datagramas UDP sin opciones IP ni fragmentación: Realizado correctamente, se envía y reciben satisfactoriamente 
+Enviar y recibir correctamente mensajes ICMP con opciones IP: Realizado, se envían correctamente mensajes ICMP con opciones IP
+Enviar Datagramas UDP con fragmentación: Realizado, se envían y reciben correctamente
+Enviar datagramas UDP con fragmentación y opciones IP: Realizado
+Enviar datagramas UDP fuera de la subred actual: Realizado, en caso de eviar a un host fuera de la subred, el paquete se envía a la dirección MAC del gateway 
