@@ -1,0 +1,28 @@
+main
+{
+int a,b,c;
+scanf a;
+scanf b;
+scanf c;
+compare a with b
+{
+less
+printf(a-b);
+printf(-1);
+compare a+b with c
+{
+less
+printf(-1000);
+equal
+printf(0);
+greater
+printf(1000);
+}
+equal
+printf(a-b);
+printf(0);
+greater
+printf(a-b);
+printf(1);
+}
+}

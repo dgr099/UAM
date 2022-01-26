@@ -1,0 +1,219 @@
+;D:	main
+;D:	{
+;D:	int
+;R10:	<tipo> ::= int
+;R9:	<clase_escalar> ::= <tipo>
+;R5:	<clase> ::= <clase_escalar>
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	,
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	,
+;D:	c
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	;
+;R18:	<identificadores> ::= <identificador>
+;R19:	<identificadores> ::= <identificador> , <identificadores>
+;R19:	<identificadores> ::= <identificador> , <identificadores>
+;R4:	<declaracion> ::= <clase> <identificadores> ;
+;D:	scanf
+;R2:	<declaraciones> ::= <declaracion>
+;R21:	<funciones> ::=
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;R54:	<lectura> ::= scanf identificador
+;R35:	<sentencia_simple> ::= <lectura>
+;D:	;
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	scanf
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;R54:	<lectura> ::= scanf identificador
+;R35:	<sentencia_simple> ::= <lectura>
+;D:	;
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	scanf
+;D:	c
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;R54:	<lectura> ::= scanf identificador
+;R35:	<sentencia_simple> ::= <lectura>
+;D:	;
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	compare
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	with
+;R80:	<exp> ::= identificador
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	{
+;R80:	<exp> ::= identificador
+;D:	less
+;D:	printf
+;D:	(
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	-
+;R80:	<exp> ::= identificador
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	)
+;R80:	<exp> ::= identificador
+;R73:	<exp> ::= <exp> - <exp>
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	(
+;D:	-
+;D:	1
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;R76:	<exp> ::= - <exp>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	compare
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	+
+;R80:	<exp> ::= identificador
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	with
+;R80:	<exp> ::= identificador
+;R72:	<exp> ::= <exp> + <exp>
+;D:	c
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	{
+;R80:	<exp> ::= identificador
+;D:	less
+;D:	printf
+;D:	(
+;D:	-
+;D:	1000
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;R76:	<exp> ::= - <exp>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	equal
+;R30:	<sentencias> ::= <sentencia>
+;D:	printf
+;D:	(
+;D:	0
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	greater
+;R30:	<sentencias> ::= <sentencia>
+;D:	printf
+;D:	(
+;D:	1000
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	}
+;R30:	<sentencias> ::= <sentencia>
+;R51:	<condicional>::= compare <exp> with <exp>
+;R40:	<bloque> ::= <condicional>
+;R33:	<sentencia> ::= <bloque>
+;D:	equal
+;R30:	<sentencias> ::= <sentencia>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;D:	printf
+;D:	(
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	-
+;R80:	<exp> ::= identificador
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	)
+;R80:	<exp> ::= identificador
+;R73:	<exp> ::= <exp> - <exp>
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	(
+;D:	0
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	greater
+;R30:	<sentencias> ::= <sentencia>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;D:	printf
+;D:	(
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	-
+;R80:	<exp> ::= identificador
+;D:	b
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	)
+;R80:	<exp> ::= identificador
+;R73:	<exp> ::= <exp> - <exp>
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	(
+;D:	1
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	)
+;R82:	<exp> ::= ( <exp> )
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	}
+;R30:	<sentencias> ::= <sentencia>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R51:	<condicional>::= compare <exp> with <exp>
+;R40:	<bloque> ::= <condicional>
+;R33:	<sentencia> ::= <bloque>
+;D:	}
+;R30:	<sentencias> ::= <sentencia>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R1:	<programa> ::= main { <declaraciones> <funciones> <sentencias> }
