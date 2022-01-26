@@ -1,0 +1,16 @@
+digraph {
+  rankdir=LR;
+
+  node [shape = point]; __start_point__
+  Trash[shape=circle]
+  0[shape=circle]
+  1[shape=doublecircle]
+
+  __start_point__ -> 0
+  Trash -> Trash[label="1"]
+  0 -> Trash[label="1"]
+  0 -> 1[label="0"]
+  Trash -> Trash[label="0"]
+  1 -> Trash[label="0"]
+  1 -> Trash[label="1"]
+}

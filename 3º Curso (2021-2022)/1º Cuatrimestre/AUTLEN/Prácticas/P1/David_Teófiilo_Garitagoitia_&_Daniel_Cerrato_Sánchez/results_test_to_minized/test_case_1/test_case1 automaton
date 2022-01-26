@@ -1,0 +1,31 @@
+digraph {
+  rankdir=LR;
+
+  node [shape = point]; __start_point__
+  a[shape=circle]
+  b[shape=circle]
+  c[shape=doublecircle]
+  d[shape=circle]
+  e[shape=circle]
+  f[shape=circle]
+  g[shape=circle]
+  h[shape=circle]
+
+  __start_point__ -> a
+  h -> g[label="0"]
+  b -> c[label="1"]
+  d -> g[label="1"]
+  h -> c[label="1"]
+  e -> f[label="1"]
+  g -> e[label="1"]
+  a -> f[label="1"]
+  g -> g[label="0"]
+  d -> c[label="0"]
+  f -> c[label="0"]
+  c -> a[label="0"]
+  f -> g[label="1"]
+  e -> h[label="0"]
+  c -> c[label="1"]
+  b -> g[label="0"]
+  a -> b[label="0"]
+}

@@ -1,0 +1,22 @@
+digraph {
+  rankdir=LR;
+
+  node [shape = point]; __start_point__
+  a[shape=circle]
+  b[shape=circle]
+  ac[shape=doublecircle]
+  bd[shape=circle]
+  Trash[shape=circle]
+
+  __start_point__ -> a
+  Trash -> Trash[label="1"]
+  bd -> ac[label="1"]
+  ac -> b[label="0"]
+  a -> Trash[label="0"]
+  b -> ac[label="1"]
+  a -> b[label="1"]
+  ac -> b[label="1"]
+  Trash -> Trash[label="0"]
+  b -> bd[label="0"]
+  bd -> bd[label="0"]
+}

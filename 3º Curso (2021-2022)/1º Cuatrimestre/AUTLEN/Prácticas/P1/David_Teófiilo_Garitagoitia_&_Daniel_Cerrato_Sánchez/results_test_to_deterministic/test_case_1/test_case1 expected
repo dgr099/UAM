@@ -1,0 +1,16 @@
+digraph {
+  rankdir=LR;
+
+  node [shape = point]; __start_point__
+  q0[shape=circle]
+  qf[shape=doublecircle]
+  empty[shape=circle]
+
+  __start_point__ -> q0
+  empty -> empty[label="0"]
+  empty -> empty[label="1"]
+  qf -> empty[label="0"]
+  q0 -> empty[label="1"]
+  q0 -> qf[label="0"]
+  qf -> empty[label="1"]
+}
