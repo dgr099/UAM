@@ -1,0 +1,20 @@
+main
+{
+    boolean resultado;
+	array boolean[3] vector; 
+
+	function boolean or (boolean b1; boolean b2; boolean b3)
+	{
+	    boolean a;
+        a  = b1 || b2 || b3;
+		return a;
+	}
+
+	vector[0] =  false;
+	vector[1] = true;
+	vector[2] = false;
+	
+	resultado = or (vector[0], vector [1], vector [2]);
+	printf resultado;
+	
+}

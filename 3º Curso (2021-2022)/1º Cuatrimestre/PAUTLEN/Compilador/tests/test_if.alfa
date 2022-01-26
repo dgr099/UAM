@@ -1,0 +1,15 @@
+main {
+    int x, y;
+    x = 1;
+    y = 0;
+    if ((x > y)){
+        printf x;
+    }
+
+    if (false) {
+        printf y;
+    } else {
+        printf x;
+    }
+    printf y;
+}

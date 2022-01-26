@@ -1,0 +1,37 @@
+;D:	main
+;D:	{
+;D:	array
+;D:	int
+;R10:	<tipo> ::= int
+;D:	[
+;D:	3
+;D:	]
+;R15:	<clase_vector> ::= array <tipo> [ constante_entera ]
+;R7:	<clase> ::= <clase_vector>
+;D:	vector
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	;
+;R18:	<identificadores> ::= <identificador>
+;R4:	<declaracion> ::= <clase> <identificadores> ;
+;D:	int
+;R10:	<tipo> ::= int
+;R9:	<clase_escalar> ::= <tipo>
+;R5:	<clase> ::= <clase_escalar>
+;D:	a
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	;
+;R18:	<identificadores> ::= <identificador>
+;R4:	<declaracion> ::= <clase> <identificadores> ;
+;D:	a
+;R2:	<declaraciones> ::= <declaracion>
+;R3:	<declaraciones> ::= <declaracion> <declaraciones>
+;R21:	<funciones> ::=
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	=
+;D:	1
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	vector
+;R43:	<asignacion> ::= identificador = <exp>
+;R34:	<sentencia_simple> ::= <asignacion>

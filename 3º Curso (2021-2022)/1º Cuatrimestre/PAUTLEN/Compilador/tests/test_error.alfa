@@ -1,0 +1,8 @@
+main
+{
+    array boolean[2] a;
+
+    a[1] = 1;
+
+    printf a[1];
+}
