@@ -1,0 +1,88 @@
+/usr/bin/virtualenv -ppython3 env #crear el entorno
+
+source /env/bin/activate #activar el entorno
+
+pip3 install django~=3.1  #instalar django
+
+django-admin startproject nombreProject #para crear el proyecto
+
+python3 manage.py startapp nombreApp #para crear la aplicación
+
+deactivate #para salir del entorno
+
+sudo systemctl restart postgresql
+
+pip install -r requirements.txt #para instalar el requirements.txt
+
+dropdb -U alumnodb -h localhost psi #1º borramos la base de datos
+
+createdb -U alumnodb -h localhost psi #2º creamos la base de datos
+
+python3 manage.py makemigrations/migrate
+
+python3 manage.py runserver 8001 #para ejecutar el server en el puerto 8001
+
+http://127.0.0.1:8001/
+
+python3 manage.py test catalog.tests.test_first_week --verbosity 2
+
+poner el allowlocalhost url de heroku
+
+python manage.py createsuperuser
+
+coverage erase
+coverage run --omit="*/test*" --source=catalog ./manage.py test \
+catalog.tests_models
+coverage report -m -i
+
+rm -rf */migrations
+make reset_db 
+make test_catalog_datamodel
+
+pip3 freeze > requirements.txt
+
+. / manage . py runserver −−insecure 8001 ejecucion local y django debug a false
+
+PGPASSWORD=alumnodb pg_dump -h localhost -p 5432 -U alumnodb psi --no-owner --no-acl -f psi.dump
+
+zip -r ../assign3_final.zip .git
+
+unzip assign3_final.zip
+
+heroku pg:psql DATABASE_URL --app psipr3 < psi.dump
+
+heroku create --stack heroku-18
+
+git clone . tmpDir
+
+#para borrar la base de datos de test
+dropdb -U alumnodb -h localhost test_psi
+
+
+Cosas del heroku:
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+
+val = int(os.environ.get('DJANGO_DEBUG', '1'))
+DEBUG = bool(val)
+DBUG=false
+
+Procfile:
+web: gunicorn locallibrary.wsgi --log-file -
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+
+poner en el middleware
+   'whitenoise.middleware.WhiteNoiseMiddleware',
