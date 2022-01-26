@@ -1,0 +1,18 @@
+main
+{
+int x, y;
+x=2;
+y=3;
+    if((x>=2)){
+        do{
+            printf x;
+            printf y;
+            if((y>0)){
+                x = x+1;
+                y = y-1;
+            } else{
+                x = x-1;
+            }
+        }while((x>0));
+    }
+}

@@ -1,0 +1,8 @@
+main
+{
+ int x;
+ x = 4;
+ do{
+     printf x;
+ }while((x-1));
+}

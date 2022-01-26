@@ -1,0 +1,12 @@
+main {
+    array int[3] vector;
+    int a;
+    a = 1;
+    vector[0] = 1;
+    vector[2] = 3;
+    printf vector[2];
+    vector[(1+                  1)] = 2;
+    printf vector[0];
+    printf vector[a];
+    printf vector[2];
+}

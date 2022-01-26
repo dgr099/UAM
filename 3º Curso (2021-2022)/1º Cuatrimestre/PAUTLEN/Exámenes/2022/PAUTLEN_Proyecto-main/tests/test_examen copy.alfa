@@ -1,0 +1,15 @@
+main
+{
+ int x;
+ x = 4;
+ do {
+ printf(x);
+ do {
+ printf(true);
+ x = x + 1;
+ }
+ while ((x <= 5));
+ x = x + 1;
+ }
+ while ((x <= 6));
+}

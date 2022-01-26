@@ -1,0 +1,16 @@
+main
+{
+ int x, resultado;
+function int pow (int num1; int num2)
+    {
+    int num3;
+    num3 = num1;
+		do{
+            num3 = num3*num1;
+            num2 = num2 -1;
+        }while((num2>1));
+    return num3;
+    }
+    resultado = pow (2,8);
+	printf resultado;
+}
