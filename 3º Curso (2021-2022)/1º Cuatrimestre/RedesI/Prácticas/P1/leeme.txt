@@ -1,0 +1,10 @@
+David Teófilo Garitagoitia Romero
+Daniel Cerrato Sánchez
+
+Normativa de entrega cumplida en su totalidad: Realizado: Varias relecturas del enunciado.
+Contar paquetes de una traza: Realizado: Se ha comprobado que el número de paquete que muestra nuestro programa coincide con el que indica Wireshark.
+Contar paquetes de la interfaz de red: Realizado: Comprobada la captura de paquetes desde la interfaz de red
+Almacenar en una traza el tráfico capturado en vivo: Realizado: Se ha comprobado que todos los bytes de la traza capturado coincide con lo que indica Wireshark en un conjunto diverso de paquetes.
+Modificar fecha correctamente: Realizado: El programa modifica el tiempo de captura del paquete satisfactoriamente añadiendo 30 minutos al tiempo de captura.
+Imprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura de pantalla en fichero Captura_ws_VS_PR1.png): Realizado: Se muestra correctamente los datos coincidiendo con los de Wireshark.
+Cuestionario "Ejercicios de captura de tráfico": Realizado: Se han realizado todos los ejercicios de captura de tráfico de wireshark, pdf completo
