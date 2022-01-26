@@ -1,0 +1,98 @@
+;D:	main
+;D:	{
+;D:	array
+;D:	boolean
+;R11:	<tipo> ::= boolean
+;D:	[
+;D:	4
+;D:	]
+;R15:	<clase_vector> ::= array <tipo> [ constante_entera ]
+;R7:	<clase> ::= <clase_vector>
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	;
+;R18:	<identificadores> ::= <identificador>
+;R4:	<declaracion> ::= <clase> <identificadores> ;
+;D:	init
+;R2:	<declaraciones> ::= <declaracion>
+;R21:	<funciones> ::=
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	{
+;D:	true
+;R102:	<constante_logica> ::= true
+;R99:	<constante> ::= <constante_logica>
+;R81:	<exp> ::= <constante>
+;D:	}
+;R38:	<valores_vector> ::= <exp>
+;R38:	<init_vector> ::= <identificador_use> '{' <valores_vector> '}' ';'>
+;R38:	<sentencia_simple> ::= <init_vector>
+;D:	;
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	[
+;D:	0
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	]
+;R48:	<elemento_vector> ::= identificador [ <exp> ]
+;R85:	<exp> ::= <elemento_vector>
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	[
+;D:	1
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	]
+;R48:	<elemento_vector> ::= identificador [ <exp> ]
+;R85:	<exp> ::= <elemento_vector>
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	[
+;D:	2
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	]
+;R48:	<elemento_vector> ::= identificador [ <exp> ]
+;R85:	<exp> ::= <elemento_vector>
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	printf
+;D:	v
+;R108:	<identificador> ::= TOK_IDENTIFICADOR
+;D:	[
+;D:	3
+;R104:	<constante_entera> ::= TOK_CONSTANTE_ENTERA
+;R100:	<comparacion> ::= <constante_entera>
+;R81:	<exp> ::= <constante>
+;D:	]
+;R48:	<elemento_vector> ::= identificador [ <exp> ]
+;R85:	<exp> ::= <elemento_vector>
+;D:	;
+;R56:	<escritura> ::= printf <exp>
+;R36:	<sentencia_simple> ::= <escritura>
+;R32:	<sentencia> ::= <sentencia_simple> ;
+;D:	}
+;R30:	<sentencias> ::= <sentencia>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R31:	<sentencias> ::= <sentencia> <sentencias>
+;R1:	<programa> ::= main { <declaraciones> <funciones> <sentencias> }
