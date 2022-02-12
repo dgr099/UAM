@@ -1,0 +1,87 @@
+   1              	.data 0
+   2 0000 00000001 	num0:  .word 1  # posic 0
+   3 0004 00000002 	num1:  .word 2  # posic 4
+   4 0008 00000004 	num2:  .word 4  # posic 8 
+   5 000c 00000008 	num3:  .word 8  # posic 12 
+   6 0010 00000010 	num4:  .word 16 # posic 16 
+   7 0014 00000020 	num5:  .word 32 # posic 20
+   8 0018 00000000 	num6:  .word 0  # posic 24
+   9 001c 00000000 	num7:  .word 0  # posic 28
+  10 0020 00000000 	num8:  .word 0  # posic 32
+  11 0024 00000000 	num9:  .word 0  # posic 36
+  12 0028 00000000 	num10: .word 0  # posic 40
+  13 002c 00000000 	num11: .word 0  # posic 44
+  14              	
+  15              	.text 0
+  16              	main:
+  17              	  # carga num0 a num5 en los registros 9 a 14
+  18 0000 8C090000 	  lw $t1, 0($zero)  # lw $r9,  0($r0)  -> r9  = 1
+  19 0004 8C0A0004 	  lw $t2, 4($zero)  # lw $r10, 4($r0)  -> r10 = 2
+  20 0008 8C0B0008 	  lw $t3, 8($zero)  # lw $r11, 8($r0)  -> r11 = 4 
+  21 000c 8C0C000C 	  lw $t4, 12($zero) # lw $r12, 12($r0) -> r12 = 8 
+  22 0010 8C0D0010 	  lw $t5, 16($zero) # lw $r13, 16($r0) -> r13 = 16
+  23 0014 8C0E0014 	  lw $t6, 20($zero) # lw $r14, 20($r0) -> r14 = 32
+  24              	  # copia num0 a num5 sobre num6 a num11
+  25 0018 AC090018 	  sw $t1, 24($zero) # sw $r9,  24($r0) -> data[24] =  1
+  26 001c AC0A001C 	  sw $t2, 28($zero) # sw $r10, 28($r0) -> data[28] =  2
+  27 0020 AC0B0020 	  sw $t3, 32($zero) # sw $r11, 32($r0) -> data[32] =  4 
+  28 0024 AC0C0024 	  sw $t4, 36($zero) # sw $r12, 36($r0) -> data[36] =  8 
+  29 0028 AC0D0028 	  sw $t5, 40($zero) # sw $r13, 40($r0) -> data[40] =  16
+  30 002c AC0E002C 	  sw $t6, 44($zero) # sw $r14, 44($r0) -> data[44] =  32
+  31              	  # carga num6 a num11 en los registros 9 a 14, deberia ser lo mismo
+  32 0030 8C090018 	  lw $t1, 24($zero) # lw $r9, 24($r0)  -> r9  no cambia
+  33 0034 8C0A001C 	  lw $t2, 28($zero) # lw $r10, 28($r0) -> r10 no cambia
+  34 0038 8C0B0020 	  lw $t3, 32($zero) # lw $r11, 32($r0) -> r11 no cambia
+  35 003c 8C0C0024 	  lw $t4, 36($zero) # lw $r12, 36($r0) -> r12 no cambia
+  36 0040 8C0D0028 	  lw $t5, 40($zero) # lw $r13, 40($r0) -> r13 no cambia
+  37 0044 8C0E002C 	  lw $t6, 44($zero) # lw $r14, 44($r0) -> r14 no cambia
+  38              	  
+  39              	  # realiza operaciones
+  40 0048 012A7820 	  add $t7, $t1, $t2 # add $r15, $r9, $r10  -> r15=r9+r10      = 3
+  41 004c 016C8020 	  add $s0, $t3, $t4 # add $r16, $r11, $r12 -> r16=r11+r12     = 12
+  42 0050 012A8826 	  xor $s1, $t1, $t2 # xor $r17, $r9, $r10  -> r17=r9 xor r10  = 3
+  43 0054 01EA9026 	  xor $s2, $t7, $t2 # xor $r18, $r15, $r10 -> r18=r15 xor r10 = ERROR del micro: deberia ser 1, per
+  44 0058 01699022 	  sub $s2, $t3, $t1 # sub $r18, $r11, $r9  -> r18=r11-r9      = 3
+  45 005c 012A9824 	  and $s3, $t1, $t2 # and $r19, $r9, $r10  -> r19=r9 and r10  = 0, no cambia
+  46 0060 01EAA024 	  and $s4, $t7, $t2 # and $r20, $r15, $r10 -> r20=r15 and r10 = 2
+  47 0064 012AA825 	  or $s5, $t1, $t2  # or $r21, $r9, $r10   -> r21=r9 or r10   = 3
+  48 0068 020AB025 	  or $s6, $s0, $t2  # or $r22, $r16, $r10  -> r22=r16 or r10  = 14
+  49 006c 012AB82A 	  slt $s7, $t1, $t2 # slt $r23, $r9, $r10  -> r23=1 si r9 < r10 else 0  = 1
+  50 0070 020AC02A 	  slt $t8, $s0, $t2 # slt $r24, $r16, $r10 -> r24=1 si r16 < r10 else 0 = 0
+  51              	  
+  52              	  # carga datos inmediatos en la parte alta de registros
+  53 0074 3C090001 	  lui $t1, 1 # lui $r9, 1  -> queda a 65536  (0x00010000)
+  54 0078 3C0A0002 	  lui $t2, 2 # lui $r10, 2 -> queda a 131072 (0x00020000)
+  55              	  
+  56              	  # salto condicional: solo comprobamos por ahora que salte o no y la direccion 
+  57              	  # de salto, pero el procesador ejecutara incorrectamente varias de las 
+  58              	  # instrucciones tras el beq:
+  59              	  #     (nota: tras cada beq el ensamblador insertara un NOP -instruccion 0x000000000-
+  60              	  #     debido al "delayed branching" de MIPS)
+  61 007c 12320004 	  beq $s1, $s2, salto # beq $r17, $r18, salto -> como $r17=$r18=3, salta
+  61      00000000 
+  62 0084 02114020 	  add $t0, $s0, $s1   # add $r8,  $r16, $r17  -> se ejecuta, r8  = 15
+  63 0088 02534820 	  add $t1, $s2, $s3   # add $r9,  $r18, $r19  -> se ejecuta, r9  = 3
+  64 008c 02955020 	  add $t2, $s4, $s5   # add $r10, $r20, $r21  -> no se ejecuta, r10 no cambia
+  65              	salto:
+  66 0090 020F6022 	  sub $t4, $s0, $t7     # sub $r12, $r16, $r15    -> r12 = 9
+  67 0094 12740007 	  beq $s3, $s4, nosalto # beq $r19, $r20, nosalto -> este branch NO debe ejecutarse
+  67      00000000 
+  68              	final:
+  69 009c 1000FFFF 	  beq $zero, $zero, final # -> bucle infinito, volvera aqui tras varios NOPs.
+  69      00000000 
+  70 00a4 00000000 	  nop
+  71 00a8 00000000 	  nop
+  72 00ac 00000000 	  nop
+  73 00b0 00000000 	  nop
+  74              	nosalto:
+  75 00b4 3C0AFFFF 	  lui $t2, 0xFFFF  # lui $r10, 0xFFFF -> no debe ejecutarse
+  76 00b8 1000FFF8 	  beq $zero, $zero, final
+  76      00000000 
+  77 00c0 00000000 	  nop
+  78 00c4 00000000 	  nop
+  79 00c8 00000000 	  nop
+  80 00cc 00000000 	  nop
+  81              	  
+  82              	  
+  83              	

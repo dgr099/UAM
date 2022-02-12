@@ -1,0 +1,167 @@
+# //  Questa Sim-64
+# //  Version 10.6c linux_x86_64 Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do runsim_arq.do
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:18 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_bank
+# -- Compiling architecture rtl of reg_bank
+# End time: 06:57:18 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:18 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity alu
+# ** Error: ../rtl/alu.vhd(22): (vcom-1136) Unknown identifier "ZFlag".
+# ** Error: ../rtl/alu.vhd(22): Bad resolution function (STD_LOGIC) for type (error).
+# ** Error: ../rtl/alu.vhd(22): near ":": (vcom-1576) expecting ';' or ')'.
+# End time: 06:57:18 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /opt/questasim/linux_x86_64/vcom failed.
+# Error in macro ./runsim_arq.do line 13
+# /opt/questasim/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -work work -2002 -explicit -check_synthesis ../rtl/alu.vhd"
+do runsim_arq.do
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_bank
+# -- Compiling architecture rtl of reg_bank
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity alu
+# -- Compiling architecture rtl of alu
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity alu_control
+# -- Compiling architecture rtl of alu_control
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity control_unit
+# -- Compiling architecture rtl of control_unit
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit -check_synthesis ../rtl/processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity processor
+# -- Compiling architecture rtl of processor
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory
+# -- Compiling architecture Behavioral of memory
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.6c Compiler 2017.07 Jul 25 2017
+# Start time: 06:57:56 on Sep 08,2021
+# vcom -reportprogress 300 -work work -2002 -explicit processor_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity processor_tb
+# -- Compiling architecture tb of processor_tb
+# End time: 06:57:56 on Sep 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt processor_tb -gN_CYCLES=100 -gINIT_FILENAME_DATA="datos" -gINIT_FILENAME_INST="instrucciones" 
+# Start time: 06:57:56 on Sep 08,2021
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.processor_tb(tb)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.processor_tb(tb)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.processor(rtl)
+# Loading work.processor(rtl)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.reg_bank(rtl)
+# Loading work.reg_bank(rtl)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.control_unit(rtl)
+# Loading work.control_unit(rtl)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.alu_control(rtl)
+# Loading work.alu_control(rtl)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.alu(rtl)
+# Loading work.alu(rtl)
+# Refreshing /home/arqo/arqo2021/arq0_p1/sim/work.memory(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading work.memory(behavioral)
+# 1
+# ** Note: COMIENZA LA SIMULACION
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb
+# ** Note: Se ha cargado la memoria 'datos'
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/i_data_mem
+# ** Note: Se ha cargado la memoria 'instrucciones'
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/i_inst_mem
+# 0
+# ** Note: SIMULACION FINALIZADA. COMPROBAR ONDAS.
+#    Time: 1055 ns  Iteration: 1  Instance: /processor_tb
+# End time: 06:58:08 on Sep 08,2021, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 1

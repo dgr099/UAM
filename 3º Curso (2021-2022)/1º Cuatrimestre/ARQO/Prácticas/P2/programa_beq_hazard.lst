@@ -1,0 +1,115 @@
+
+/tmp/tmpk4n9_4vk/program.o:     file format elf32-tradbigmips
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+##  num11: .word 0  # posic 44
+##  
+##  .text 0
+##  main:
+##    # carga num0 a num5 en los registros 9 a 14
+##    lw $t1, 0($zero)  # lw $r9,  0($r0)  -> r9  = 1
+   0:	8c090000 	lw	t1,0(zero)
+##    lw $t2, 4($zero)  # lw $r10, 4($r0)  -> r10 = 2
+   4:	8c0a0004 	lw	t2,4(zero)
+##    lw $t3, 8($zero)  # lw $r11, 8($r0)  -> r11 = 4 
+   8:	8c0b0008 	lw	t3,8(zero)
+##    lw $t4, 12($zero) # lw $r12, 12($r0) -> r12 = 8 
+   c:	8c0c000c 	lw	t4,12(zero)
+##    lw $t5, 16($zero) # lw $r13, 16($r0) -> r13 = 16
+  10:	8c0d0010 	lw	t5,16(zero)
+##    lw $t6, 20($zero) # lw $r14, 20($r0) -> r14 = 32
+  14:	8c0e0014 	lw	t6,20(zero)
+##  
+##    add $s0, $t1, $t1 # r16 = 2
+  18:	01298020 	add	s0,t1,t1
+##    beq $s0, $s0, efectiva_r
+  1c:	12100006 	beq	s0,s0,38 <efectiva_r>
+  20:	00000000 	nop
+##    add $s0, $t1, $t2 # no deberia terminar (r16 != 3)
+  24:	012a8020 	add	s0,t1,t2
+##    add $s0, $t1, $t3 # no deberia terminar (r16 != 5)
+  28:	012b8020 	add	s0,t1,t3
+##    add $s0, $t1, $t4 # no deberia terminar (r16 != 9)
+  2c:	012c8020 	add	s0,t1,t4
+	...
+
+00000038 <efectiva_r>:
+##    nop
+##    nop
+##    
+##  efectiva_r:
+##    add $s0, $t1, $t5 # r16 = 17
+  38:	012d8020 	add	s0,t1,t5
+##    beq $s0, $t1, no_efectiva
+  3c:	1209001f 	beq	s0,t1,bc <no_efectiva>
+  40:	00000000 	nop
+##  
+##    add $s0, $t1, $t2 # r16 = 3
+  44:	012a8020 	add	s0,t1,t2
+##    add $s0, $t1, $t3 # r16 = 5
+  48:	012b8020 	add	s0,t1,t3
+##    add $s0, $t1, $t4 # r16 = 9
+  4c:	012c8020 	add	s0,t1,t4
+##    add $s0, $t1, $t5 # r16 = 17
+  50:	012d8020 	add	s0,t1,t5
+	...
+##    nop
+##    nop
+##  
+##    lw $s0, 16($zero) # r16 = 16
+  5c:	8c100010 	lw	s0,16(zero)
+##    beq $s0, $s0, efectiva_lw
+  60:	12100006 	beq	s0,s0,7c <efectiva_lw>
+  64:	00000000 	nop
+##    add $s0, $t1, $t2 # no deberia terminar (r16 != 3)
+  68:	012a8020 	add	s0,t1,t2
+##    add $s0, $t1, $t3 # no deberia terminar (r16 != 5)
+  6c:	012b8020 	add	s0,t1,t3
+##    add $s0, $t1, $t4 # no deberia terminar (r16 != 9)
+  70:	012c8020 	add	s0,t1,t4
+	...
+
+0000007c <efectiva_lw>:
+##    nop
+##    nop
+##  
+##  efectiva_lw:
+##    lw $s0, 20($zero) # r16 = 32
+  7c:	8c100014 	lw	s0,20(zero)
+##    beq $s0, $t1, no_efectiva
+  80:	1209000e 	beq	s0,t1,bc <no_efectiva>
+  84:	00000000 	nop
+##  
+##    add $s0, $t1, $t2 # r16 = 3
+  88:	012a8020 	add	s0,t1,t2
+##    add $s0, $t1, $t3 # r16 = 5
+  8c:	012b8020 	add	s0,t1,t3
+##    add $s0, $t1, $t4 # r16 = 9
+  90:	012c8020 	add	s0,t1,t4
+##    add $s0, $t1, $t5 # r16 = 17
+  94:	012d8020 	add	s0,t1,t5
+	...
+##    nop
+##    nop
+##  
+##    beq $t1, $t1, no_efectiva # deberia saltar sin parar pipeline
+  a0:	11290006 	beq	t1,t1,bc <no_efectiva>
+  a4:	00000000 	nop
+##    lw $s0, 12($zero) # no deberia terminar (r16 != 8)
+  a8:	8c10000c 	lw	s0,12(zero)
+##    add $s0, $t1, $t2 # no deberia terminar (r16 != 3)
+  ac:	012a8020 	add	s0,t1,t2
+##    add $s0, $t1, $t3 # no deberia terminar (r16 != 5)
+  b0:	012b8020 	add	s0,t1,t3
+	...
+
+000000bc <no_efectiva>:
+##    nop
+##    nop
+##  
+##  no_efectiva:  
+  bc:	02108026 	xor	s0,s0,s0
+

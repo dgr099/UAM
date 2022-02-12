@@ -1,0 +1,313 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alumnos/e420617/Practica2/Ejercicio2/sim
+Ealu
+Z1 w1635234702
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8../rtl/alu.vhd
+Z7 F../rtl/alu.vhd
+l0
+L15
+V80egAHWmFeN4G74UU_jHJ1
+!s100 g`o1IGWPGBYfE:DS4U^Zk0
+Z8 OL;C;10.6c;65
+32
+Z9 !s110 1638272907
+!i10b 1
+Z10 !s108 1638272907.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-check_synthesis|../rtl/alu.vhd|
+Z12 !s107 ../rtl/alu.vhd|
+!i113 0
+Z13 o-work work -2002 -explicit -check_synthesis
+Z14 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 80egAHWmFeN4G74UU_jHJ1
+32
+R9
+l45
+L26
+Vi0:]dk8oITlcnn[Y7D1h00
+!s100 6L_Z[Sh[d:99jkBOZ0=G_2
+R8
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Ealu_control
+R1
+R2
+R3
+R4
+R5
+R0
+Z15 8../rtl/alu_control.vhd
+Z16 F../rtl/alu_control.vhd
+l0
+L13
+V@ho>>jKi6]VQgg7`?^Hi^3
+!s100 [=oa`cnn?:?_DY4Y5;an@1
+R8
+32
+R9
+!i10b 1
+R10
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-check_synthesis|../rtl/alu_control.vhd|
+Z18 !s107 ../rtl/alu_control.vhd|
+!i113 0
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 11 alu_control 0 22 @ho>>jKi6]VQgg7`?^Hi^3
+32
+R9
+l36
+L23
+V0>=T?X2?]fbALl0ij^U352
+!s100 X_kh?8Y9V[lVZToCFIfKV2
+R8
+!i10b 1
+R10
+R17
+R18
+!i113 0
+R13
+R14
+Econtrol_unit
+R1
+R2
+R3
+R4
+R5
+R0
+Z19 8../rtl/control_unit.vhd
+Z20 F../rtl/control_unit.vhd
+l0
+L13
+V^dzdTI=UY8>j`llM;hA=H3
+!s100 =_n4k=hzihD>gb3`7XXMh2
+R8
+32
+R9
+!i10b 1
+R10
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-check_synthesis|../rtl/control_unit.vhd|
+Z22 !s107 ../rtl/control_unit.vhd|
+!i113 0
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 12 control_unit 0 22 ^dzdTI=UY8>j`llM;hA=H3
+32
+R9
+l47
+L33
+ViZ@MTcAM]KGd7=V0^k`:B3
+!s100 BalOdUTPF3L8R35a`^TNJ0
+R8
+!i10b 1
+R10
+R21
+R22
+!i113 0
+R13
+R14
+Ememory
+R1
+Z23 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R3
+R2
+R5
+R4
+R0
+Z24 8memory.vhd
+Z25 Fmemory.vhd
+l0
+L18
+V]YhW>BF5M?16JPO:IjS;F2
+!s100 DWj_g:Oh1NEB9L?NJ3>S33
+R8
+32
+R9
+!i10b 1
+R10
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|memory.vhd|
+Z27 !s107 memory.vhd|
+!i113 0
+Z28 o-work work -2002 -explicit
+R14
+Abehavioral
+R23
+R3
+R2
+R5
+R4
+DEx4 work 6 memory 0 22 ]YhW>BF5M?16JPO:IjS;F2
+32
+R9
+l40
+L33
+Vj11BKgXej7U4k_dh7cPUY1
+!s100 YaS_m8K5SeB=1=lOb5eXb1
+R8
+!i10b 1
+R10
+R26
+R27
+!i113 0
+R28
+R14
+Eprocessor
+R1
+R2
+R3
+R4
+R5
+R0
+Z29 8../rtl/processor.vhd
+Z30 F../rtl/processor.vhd
+l0
+L13
+V1bXQa8N0jQl?_8lQI1R;j3
+!s100 DeFRMge0?[BK<NAlFPVJ93
+R8
+32
+R9
+!i10b 1
+R10
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-check_synthesis|../rtl/processor.vhd|
+Z32 !s107 ../rtl/processor.vhd|
+!i113 0
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 9 processor 0 22 1bXQa8N0jQl?_8lQI1R;j3
+32
+R9
+l174
+L29
+Vd:Fme]YYNMI0ae^c0VinQ0
+!s100 H>;X9MVnE[ODSADW5ggZC1
+R8
+!i10b 1
+R10
+R31
+R32
+!i113 0
+R13
+R14
+Eprocessor_tb
+R1
+R3
+R2
+R4
+R5
+R0
+Z33 8processor_tb.vhd
+Z34 Fprocessor_tb.vhd
+l0
+L14
+Vn`iYfnL@@TOSm@niYeVzi1
+!s100 TP3]zWZd=AR;5i]B7@Jo^2
+R8
+32
+R9
+!i10b 1
+R10
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|processor_tb.vhd|
+Z36 !s107 processor_tb.vhd|
+!i113 0
+R28
+R14
+Atb
+R3
+R2
+R4
+R5
+DEx4 work 12 processor_tb 0 22 n`iYfnL@@TOSm@niYeVzi1
+32
+R9
+l77
+L22
+V>c[]<cE4hi^?:bE;6]72n2
+!s100 i:aj2kRb9jKhzma@k;3Q81
+R8
+!i10b 1
+R10
+R35
+R36
+!i113 0
+R28
+R14
+Ereg_bank
+R1
+R2
+R3
+R4
+R5
+R0
+Z37 8../rtl/reg_bank.vhd
+Z38 F../rtl/reg_bank.vhd
+l0
+L19
+VMDR:OcCMh2_K6I9zB[?]g2
+!s100 XTR>4O6IW:9HPGAgCWPUz2
+R8
+32
+R9
+!i10b 1
+R10
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-check_synthesis|../rtl/reg_bank.vhd|
+Z40 !s107 ../rtl/reg_bank.vhd|
+!i113 0
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 8 reg_bank 0 22 MDR:OcCMh2_K6I9zB[?]g2
+32
+R9
+l39
+L33
+VR>1JM<_Uz<IzPCl9W:zg`1
+!s100 ?[42@AJ73=RoT1CAUD0[P1
+R8
+!i10b 1
+R10
+R39
+R40
+!i113 0
+R13
+R14
