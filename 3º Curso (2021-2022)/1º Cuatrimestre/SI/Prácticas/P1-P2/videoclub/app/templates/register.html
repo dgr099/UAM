@@ -1,0 +1,135 @@
+o{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock%}
+
+{% block content %}
+<script src="{{url_for('static', filename =  'jquery-3.6.0.min.js')}}"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<script>
+    i=0
+    $(document).ready(function()
+    {
+        $("#progreso > div").css('width', '0px')
+        //cada vez que se pulse algo en la password se comprueba si debe actualizar el nivel de fortaleza
+        $("#passwordRegister").keyup(function() {
+            var value = 0
+            var letras="abcdefghyjklmnñopqrstuvwxyz";
+            var digits="0123456789";
+            var specials="\\ªº!|\"@$%¬&/()=?¿'¡-+_.:;,ç}{][^`><";
+            var password = document.getElementById("passwordRegister").value
+            if (password.length > 10){
+                value++;
+
+            }
+
+            for(i = 0 ,letra_min = 0, letra_may = 0, digit = 0, special = 0; i < password.length; i++){
+                    if(letra_min == 0){
+                        if (letras.indexOf(password.charAt(i),0) != -1){
+                                letra_min++;
+                                value++;
+                            }
+                    }
+
+                    if(letra_may == 0){
+                        if (letras.toUpperCase().indexOf(password.charAt(i),0) != -1){
+                            
+                                letra_may++;
+                                value++;
+                            }
+                    }
+
+                    if(digit == 0){
+                        if (digits.indexOf(password.charAt(i),0) != -1){
+                                digit++;
+                                value++;
+                        }
+                    }
+
+                    if(special == 0){
+                        if (specials.indexOf(password.charAt(i),0) != -1){
+                                special++;
+                                value++;
+                        }
+                    }
+
+                    if(letra_may == 1 && letra_min == 1 && special == 1 && digit == 1)
+                        break;
+            }
+            value = (value)/5*100
+            $("#progreso > div").css('width', value + '%')
+        })
+    });
+</script>
+
+<script>
+    function checkPasswordConfirm() {
+        var password = document.getElementById("passwordRegister"),
+            confirm_password = document.getElementById("passwordRegisterConfirm");
+        if (password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+</script>
+<form action="" method="post" class="formRegister">
+    <div class="camposForm">
+    <div>
+    <label class=labelRegister><b>Username</b></label>
+    <input name="username" type="text" placeholder="Enter username" minlength=6 pattern=[a-zA-Z0-9]+ required
+        title="6 characters without spaces or special keys required">
+    
+    <label class=labelRegister><b>Email</b></label>
+    <input name="email" type="text" placeholder="Enter email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        title="Must use a valid mail">
+    
+    <label class=labelRegister><b>Password</b></label>
+    <input name="password" id="passwordRegister" type="password" placeholder="Enter password" required pattern="{8,}"
+        title="At least 8 characters">
+
+    <div id="progreso"><div></div></div>
+    
+    <label class=labelRegister><b>Confirm Password</b></label>
+    <input name="confirm" id="passwordRegisterConfirm" type="password" placeholder="Enter password" required
+        onchange="checkPasswordConfirm()" onkeyup="checkPasswordConfirm()">
+    
+    <label class=labelRegister><b>Credit card</b></label>
+    <input name="creditcard" type="text" placeholder="Enter credit card" minlength="16" maxlength="16" required pattern="{16}[0-9]+"
+        title="Credit card must have 16 digits">
+    
+    <label class=labelRegister><b>Address</b></label>
+    <input name="address1" type="text" placeholder="Enter address" required maxlength=50>
+    
+    </div>
+
+    <div>
+    {% for columna in columnasNecesarias %}
+        <label class="labelRegister"><b>{{columna[0][0]|upper}}{{columna[0][1:]}}</b></label>
+        <input id={{columna[0]}} name={{columna[0][0]|upper}}{{columna[0][1:]}} type="text" placeholder="Enter {{columna[0]}}" maxlength={{columna[2]}} required>
+        
+    {% endfor %}
+</div>
+    <!--{% for columna in columnasNoNecesarias %}
+        <label class="labelRegister"><b>{{columna[0][0]|upper}}{{columna[0][1:]}}</b></label>
+        <input id={{columna[0]}} name={{columna[0][0]|upper}}{{columna[0][1:]}} type="text" placeholder="Enter {{columna[0]}}" maxlength={{columna[2]}} required>
+        
+    {% endfor %}-->
+    </div>
+    <div class="enviarFormRegister">
+        <input type="submit" value="Confirm">
+        <br>
+        <a href="{{ url_for('index') }}">Cancelar</a>
+    </div>
+</form>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% endblock %}

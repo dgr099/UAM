@@ -1,0 +1,11 @@
+sudo systemctl restart postgresql;
+dropdb -U alumnodb si1;
+createdb -U alumnodb si1;
+gunzip -c *.gz | psql -U alumnodb si1;
+psql -U alumnodb si1 -a -f ./actualiza.sql;
+psql -U alumnodb si1 -a -f ./setPrice.sql;
+psql -U alumnodb si1 -a -f ./setOrderAmount.sql;
+psql -U alumnodb si1 -a -f ./getTopSales.sql;
+psql -U alumnodb si1 -a -f ./setTopActors.sql;
+psql -U alumnodb si1 -a -f ./updOrders.sql;
+psql -U alumnodb si1;

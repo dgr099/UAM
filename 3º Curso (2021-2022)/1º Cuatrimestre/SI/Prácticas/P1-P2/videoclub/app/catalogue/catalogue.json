@@ -1,0 +1,856 @@
+{ "peliculas": 
+  [ 
+    { 
+			"id": 1,
+			"titulo": "La guerra de las galaxias: Episodio 1-La amenaza fantasma",
+      "descripcion" : "La Federación de Comercio ha bloqueado el pequeño planeta de Naboo, gobernado por la joven Reina Amidala; se trata de un plan ideado por Sith Darth Sidious, que, manteniéndose en el anonimato, dirige a los neimoidianos, que están al mando de la Federación. El Jedi Qui-Gon Jinn y su aprendiz Obi-Wan Kenobi convencen a Amidala para que vaya a Coruscant, la capital de la República y sede del Consejo Jedi, y trate de neutralizar esta amenaza. Pero, al intentar esquivar el bloqueo, la nave real resulta averiada, viéndose así obligada la tripulación a aterrizar en el desértico y remoto planeta de Tatooine.",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1999,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Jake Lloyd",
+          "personaje": "Anakin Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ewan McGregor",
+          "personaje": "Obi-Wan Kenobi",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Natalie Portman",
+          "personaje": "Padmé Amidala",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Liam Neeson",
+          "personaje": "Qui-Gon Jinn",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ray Park",
+          "personaje": "Darth Maul",
+          "foto": "imagenes/anakin.jpg"
+        }
+
+      ]
+    },
+    { 
+			"id": 2,
+			"titulo": "La guerra de las galaxias: Episodio 2-El ataque de los clones",
+      "descripcion": "Una década despúes de los eventos de La Amenaza Fantasma, la República esta en crisis. Un movimiento separatista (secretamente dirigido por el Conde Dooku, un antiguo Maestro Jedi) amenaza la paz. La senadora Padmé Amidala, anterior Reina de Naboo, vuelve al Senado Galáctico para ofrecer su voto en la creación de un Gran Ejército de la República, aunque no haya suficientes Jedi para mantener la paz y el orden en la Galaxia.",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2002,
+      "trailer": "gYbW1F_c9eM",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Hayden Christensen",
+          "personaje": "Anakin Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ewan McGregor",
+          "personaje": "Obi-Wan Kenobi",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Natalie Portman",
+          "personaje": "Padmé Amidala",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Samuel L. Jackson",
+          "personaje": "Mace Windu",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ian McDiarmid",
+          "personaje": "Dark sidious",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 3,
+			"titulo": "La guerra de las galaxias: Episodio 3-La venganza de los sith",
+      "descripcion": "Las Guerras Clon han comenzado en la galaxia y, como una de sus consecuencias, el canciller Palpatine ha sido secuestrado por el líder separatista de la Confederación de Sistemas Independientes, el General Grievous. El maestro Jedi Obi-Wan Kenobi, junto a su aprendiz Anakin Skywalker, encabeza una misión para rescatar al canciller y detener a Grievous.",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2005,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Hayden Christensen",
+          "personaje": "Anakin Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ewan McGregor",
+          "personaje": "Obi-Wan Kenobi",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Natalie Portman",
+          "personaje": "Padmé Amidala",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Samuel L. Jackson",
+          "personaje": "Mace Windu",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ian McDiarmid",
+          "personaje": "Dark sidious",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 4,
+			"titulo": "La guerra de las galaxias: Episodio 4-Una nueva esperanza",
+      "descripcion": "Hace mucho tiempo en una galaxia muy, muy lejana ... Son tiempos de guerra civil. Naves rebeldes han atacado desde una base secreta y han obtenido su primera victoria contra el malvado Imperio Galáctico. Durante la batalla, espías rebeldes lograron robar los planos secretos del arma más extrema del Imperio, la Estrella de la Muerte, una estación espacial blindada con suficiente potencia para destruir un planeta entero. Perseguida por los siniestros agentes del Imperio, la Princesa Leia se dirige velozmente a casa en su nave espacial, mientras resguarda los planos que pueden salvar a su pueblo y restaurar la libertad en la galaxia",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1977,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Mark Hamill",
+          "personaje": "Luke Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Alec Guinness",
+          "personaje": "Obi-Wan Kenobi",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Carrie Fisher",
+          "personaje": "Leia Organa",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Harrison Ford",
+          "personaje": "Han Solo",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "David Prowse",
+          "personaje": "Darth Vader",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 5,
+			"titulo": "La guerra de las galaxias: Episodio 5-El imperio contraataca",
+      "descripcion": "La Batalla de Yavin fue una victoria temporal para la Rebelión ya que a pesar de tener éxito en la destrucción del arma secreta del Imperio, el ejército imperial contaba con más poder armamentístico y militar para resistir la ofensiva rebelde y en consecuencia lanzaron un devastador contraataque decididos a terminar con la insurgencia de una vez por todas destruyendo sus principales bases y forzando a los rebeldes a ocultarse en los puntos más alejados de la Galaxia. A tres años de la ofensiva imperial, los rebeldes logran encontrar y establecer una nueva base donde puedan estar seguros y poder reorganizar sus tropas, encontrando un escondite seguro en el remoto mundo gélido de Hoth.",
+      "director": "Irvin Kershner",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1980,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Mark Hamill",
+          "personaje": "Luke Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Billy Dee Williams",
+          "personaje": "Lando Calrissian",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Carrie Fisher",
+          "personaje": "Leia Organa",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Harrison Ford",
+          "personaje": "Han Solo",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "David Prowse",
+          "personaje": "Darth Vader",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 6,
+			"titulo": "La guerra de las galaxias: Episodio 6-El retorno del jedi",
+      "descripcion": "Luke Skywalker ha regresado a Tatooine, su planeta de origen, para intentar rescatar a su amigo Han Solo de las garras del malvado Jabba, el Hutt. Pero Luke ignora que el IMPERIO GALÁCTICO ha comenzado en secreto la construcción de una nueva estación espacial armada, más poderosa que la temida Estrella de la Muerte.",
+      "director": "Richard Marquand",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1983,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Mark Hamill",
+          "personaje": "Luke Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Billy Dee Williams",
+          "personaje": "Lando Calrissian",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Carrie Fisher",
+          "personaje": "Leia Organa",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Harrison Ford",
+          "personaje": "Han Solo",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "David Prowse",
+          "personaje": "Darth Vader",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 7,
+			"titulo": "La guerra de las galaxias: Episodio 7-El despertar de la fuerza",
+      "descripcion": "Treinta años después de la destrucción de la segunda Estrella de la Muerte, Luke Skywalker, el último Maestro Jedi sobreviviente conocido, ha desaparecido. Tanto la Primera Orden, sucesora del caído Imperio Galáctico, como la Resistencia, una fuerza militar respaldada por la Nueva República y dirigida por la hermana gemela de Luke, la General Leia Organa, recorren la galaxia en un intento por encontrarlo.",
+      "director": "J.J. Abrams",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2015,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Daisy Ridley",
+          "personaje": "Rey",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "John Boyega",
+          "personaje": "Finn",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Adam Driver",
+          "personaje": "Kylo Ren",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Harrison Ford",
+          "personaje": "Han Solo",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Carrie Fisher",
+          "personaje": "Leia Organa",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 8,
+			"titulo": "La guerra de las galaxias: Episodio 8-Los últimos Jedi",
+      "descripcion": "Tras su exitosa operación para destruir la Base Starkiller, los combatientes de la Resistencia evacuan su base principal en el planeta D'Qar hacia su flota. Antes de que puedan completar su evacuación, llegan las naves estelares de la Primera Orden bajo el mando del General Armitage Hux. Buscando destruir a la Resistencia de una vez por todas, Hux le ordena al Capitán Moden Canady que destruya la flota y la base de la Resistencia con su acorazado Fulminatrix.",
+      "director": "Rian Johnson",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2017,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Daisy Ridley",
+          "personaje": "Rey",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "John Boyega",
+          "personaje": "Finn",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Adam Driver",
+          "personaje": "Kylo Ren",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Kelly Marie Tran",
+          "personaje": "Rose Tico",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Gwendoline Christie",
+          "personaje": "Phasma",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 9,
+			"titulo": "La guerra de las galaxias: Episodio 9-El ascenso de Skywalker",
+      "descripcion": "Luke Skywalker ha regresado a Tatooine, su planeta de origen, para intentar rescatar a su amigo Han Solo de las garras del malvado Jabba, el Hutt. Pero Luke ignora que el IMPERIO GALÁCTICO ha comenzado en secreto la construcción de una nueva estación espacial armada, más poderosa que la temida Estrella de la Muerte.",
+      "director": "J.J. Abrams",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2019,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Daisy Ridley",
+          "personaje": "Rey",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "John Boyega",
+          "personaje": "Finn",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Adam Driver",
+          "personaje": "Kylo Ren",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Billy Dee Williams",
+          "personaje": "Lando Calrissian",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Mark Hamill",
+          "personaje": "Luke Skywalker",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 10,
+			"titulo": "Rogue One",
+      "descripcion": "Narra la historia de un grupo de insólitos héroes que se unen para realizar la arriesgada y aparentemente imposible misión de robar los planos de la Estrella de la Muerte.",
+      "director": "Gareth Edwards",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2016,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Felicity Jones",
+          "personaje": "Jyn Erso",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Diego Luna",
+          "personaje": "Cassian Andor",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Donnie Yen",
+          "personaje": "Chirrut",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Mads Mikkelsen",
+          "personaje": "Galen Erso",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Forest Whitaker",
+          "personaje": "Saw Gerrera",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 11,
+      "titulo": "Los cazafantasmas",
+      "descripcion": "res parapsicólogos expulsados de una universidad de la Ciudad de New York, debido a sus estudios y prácticas poco ortodoxos, y que comienzan su propio negocio trabajando como cazafantasmas, e investigando fenómenos paranormales",
+      "director": "Ivan Reitman",
+      "precio": 18.99,
+      "categoria": "Fantasía",
+      "año": 1983,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Bill Murray",
+          "personaje": "Peter Venk",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Dan Aykroyd",
+          "personaje": "Ray Stantz",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Sigourney Weaver",
+          "personaje": "Dana Barret",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ernie Hudson",
+          "personaje": "Winston",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Rick Moranis",
+          "personaje": "Louis Tully",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 12,
+      "titulo": "James Bond contra el Dr. No",
+      "descripcion": "James Bond llega a Jamaica con la misión de investigar los asesinatos cometidos por un agente especial británico y su secretaria. Pero, al mismo tiempo, descubre la existencia de una siniestra organización en la isla Crab Key.",
+      "director": "Terence Young",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1962,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Sean Connerty",
+          "personaje": "James Bond",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ursula Andress",
+          "personaje": "Honey Rider",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Joseph Wiseman",
+          "personaje": "Dr. No",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Jack Lord",
+          "personaje": "Felix Leiter",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Zena Marshall",
+          "personaje": "Miss Taro",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 13,
+      "titulo": "Agente 007 The Living Daylights",
+      "descripcion": "El agente 007 deberá de averiguar el paradero del general soviético Koskov que ha sido secuestrado después de que el propio Bond le ayudara a desertar y a cruzar el telón de acero.",
+      "director": "Jhon Glen",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1987,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Timothy Dalton",
+          "personaje": "James Bond",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Andreas Wisniewski",
+          "personaje": "Necros",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Maryam d'Abo",
+          "personaje": "Kara Millovy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Virginia Hey",
+          "personaje": "Rubavitch",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Joe Don Baker",
+          "personaje": "Brad Whitaker",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 14,
+      "titulo": "Uno de los nuestros",
+      "descripcion": "Henry Hill, hijo de padre irlandés y madre siciliana, vive en Brooklyn y se siente fascinado por la vida que llevan los gángsters de su barrio, donde la mayoría de los vecinos son inmigrantes. Paul Cicero, el patriarca de la familia Pauline, es el protector del barrio. A los trece años, Henry decide abandonar la escuela y entrar a formar parte de la organización mafiosa como chico de los recados; muy pronto se gana la confianza de sus jefes, gracias a lo cual irá subiendo de categoría.",
+      "director": "Martin Scorsese",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1990,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Ray Liotta",
+          "personaje": "Henry Hill",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Robert De Niro",
+          "personaje": "Jimmy Conway",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Deby Mazar",
+          "personaje": "Sandy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Joe Pesci",
+          "personaje": "Tommy DeVito",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Lorraine Bracco",
+          "personaje": "Karen Hill",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 15,
+      "titulo": "Terminator",
+      "descripcion": "En un futuro en el que la Humanidad está esclavizada por las máquinas, John Connor, nacido en los años 80, lidera la resistencia. Para vencer a los rebeldes, las máquinas envían al androide Terminator al pasado para asesinar a la madre de John Connor e impedir así su nacimiento.",
+      "director": "James Cameron",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1984,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Arnold Schwarzenegger",
+          "personaje": "Terminator",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Linda Hamilton",
+          "personaje": "Sarah Connor",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Michael Biehn",
+          "personaje": "Kyle Resee",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Lance Henriksen",
+          "personaje": "Hal Vucovich",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Bess Motta",
+          "personaje": "Ginger Ventura",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 16,
+      "titulo": "Titanic",
+      "descripcion": "Jack Dawson y Rose DeWitt Bukater, dos jóvenes que se conocen y se enamoran a bordo del transatlántico RMS Titanic en su viaje inaugural desde Southampton, Inglaterra a Nueva York, EE. UU., en abril de 1912.",
+      "director": "James Cameron",
+      "precio": 18.99,
+      "categoria": "Romance",
+      "año": 1997,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Leonardo DiCarpio",
+          "personaje": "Jack Dawson",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "kate Winslet",
+          "personaje": "Rose DeWitt",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Frances Fisher",
+          "personaje": "Rutt DeWitt",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "David Warner",
+          "personaje": "Spicer Lovejoy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Brnard Hill",
+          "personaje": "Capitan Smith",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 17,
+      "titulo": "Casablanca",
+      "descripcion": "Durante la II Guerra Mundial (1939-1945), Casablanca era una ciudad a la que llegaban huyendo del nazismo gentes de todas partes: llegar era fácil, pero salir era casi imposible, especialmente si el nombre del fugitivo figuraba en las listas de la Gestapo.",
+      "director": "Michael Curtiz",
+      "precio": 18.99,
+      "categoria": "Drama",
+      "año": 1946,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Humphrey Bogart",
+          "personaje": "Rick Blaine",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ingrid Bergman",
+          "personaje": "Ilsa Lund",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Claude Rains",
+          "personaje": "Capitan Louis Renault",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Paul Henreid",
+          "personaje": "Victor Laszlo",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Madeleine LeBeau",
+          "personaje": "Yvonne",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 18,
+      "titulo": "Only Angels have wings",
+      "descripcion": "Bonnie conoce a un grupo de pilotos que se arriesgan haciendo entregas entre la neblina y las montañas en América del Sur. Geoff, el frío y apuesto líder de los aviadores, llama especialmente su atención, pero para conquistarlo, Bonnie tendrá antes que alejar a Judy.",
+      "director": "Howard Hawks",
+      "precio": 18.99,
+      "categoria": "Romance",
+      "año": 1939,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Cary Grant",
+          "personaje": "Geoff Carter",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Jean Arthur",
+          "personaje": "Bonnie Lee",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Rita Hayworth",
+          "personaje": "Judy MacPherson",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Thomas Mitchell",
+          "personaje": "Kid Dabb",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Richard Barthelmess",
+          "personaje": "Bat MacPherson",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 19,
+      "titulo": "Parque Jurásico",
+      "descripcion": "El multimillonario John Hammond hace realidad su sueño de clonar dinosaurios del Jurásico y crear con ellos un parque temático en una isla. Antes de abrir el parque al público general, Hammond invita a una pareja de científicos y a un matemático para que comprueben la viabilidad del proyecto.",
+      "director": "Steven Spielberg",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1993,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Laura Dern",
+          "personaje": "Elie Sattler",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Jeff Goldblum",
+          "personaje": "Dr. Ian Malcom",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Ariana Richards",
+          "personaje": "Lex Murphy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Richard Attenborough",
+          "personaje": "John Hammond",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Joseph Mazzello",
+          "personaje": "Tim Murphy",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 20,
+      "titulo": "Baly Driver",
+      "descripcion": "Baby es un chofer especializado en fugas que, enamorado, pretende dejar la vida criminal y empezar de cero con la mujer que ama. Cuando el jefe de una banda de gánsters le obliga a trabajar para él y la operación fracasa, su vida y la de su chica pasan a estar en peligro.",
+      "director": "Edgar Wright",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 2017,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Ansel Elgort",
+          "personaje": "Baby",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Lily James",
+          "personaje": "Debora",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Jon Hamm",
+          "personaje": "Buddy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Sky Ferreira",
+          "personaje": "Baby's Mom",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Eiza González",
+          "personaje": "Darling",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 21,
+      "titulo": "Bus Stop",
+      "descripcion": "Un joven vaquero se enamora de una cantante de dudosa reputación. Él quiere casarse con la mujer, que sueña con una exitosa carrera en Hollywood. A pesar de ser bien intencionado, el vaquero es muy grosero con su nuevo amor.",
+      "director": "Joshua Logan",
+      "precio": 18.99,
+      "categoria": "Romance",
+      "año": 1958,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Marilyn Monroe",
+          "personaje": "Marilyn Monroe",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Don Murray",
+          "personaje": "Beauregard'Bo'Becker",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Hope Lange",
+          "personaje": "Elma Duckworth",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Betty Field",
+          "personaje": "Grace",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Arthur O'Connell",
+          "personaje": "Virgil Blessing",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 22,
+      "titulo": "Superman II",
+      "descripcion": "El superhéroe continua ocultando su identidad tras el tímido reportero Clark Kent. Su compañera Lois Lane empieza a sospechar quién es en realidad. Al mismo tiempo, tres criminales, procedentes del planeta Krypton, se dirigen a la Tierra para enfrentarse con él.",
+      "director": "Richard Lester",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1981,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Christopher Reeve",
+          "personaje": "Superman",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Margot Kidder",
+          "personaje": "Louis Lane",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Gene Hackman",
+          "personaje": "Lex Luthor",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Terence Stamp",
+          "personaje": "General Zod",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Valerie Perrine",
+          "personaje": "Eva Teschmacher",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 23,
+      "titulo": "Batman and Robin",
+      "descripcion": "Batman y su compañero Robin deben enfrentarse a un nuevo villano, el Sr. Frío, que intentará congelar a todos los habitantes de Gotham.",
+      "director": "Joel Schumacher",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1997,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "George Clooney",
+          "personaje": "Batman",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Chris O'Donnell",
+          "personaje": "Dick Grayson",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Uma Thurman",
+          "personaje": "Hiedra",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Alicia Silverstone",
+          "personaje": "Batgirl",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Arnold Schwarzenegger",
+          "personaje": "Sr. Frío",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 24,
+      "titulo": "Airplane",
+      "descripcion": "Es una parodia de las cintas del género de cine catástrofe que estuvieron de moda a finales de la década de 1970, entre ellas Aeropuerto 75, pero especialmente de la película Zero Hour! (1957), a la que se parodia casi palabra por palabra.",
+      "director": "David Zucker",
+      "precio": 18.99,
+      "categoria": "Romance",
+      "año": 1980,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Leslie Nielsen",
+          "personaje": "Dr. Barry Rumack",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Julie Hagerty",
+          "personaje": "Elaine Dickinson",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Robert Stack",
+          "personaje": "Cap. Rex Kramer",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Lorna Patterson",
+          "personaje": "Randy",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Lloyd Bridges",
+          "personaje": "Steve McCroskey",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    },
+    { 
+			"id": 25,
+      "titulo": "Pulp Fiction",
+      "descripcion": "La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.",
+      "director": "Quentin Tarantino",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 1994,
+      "trailer": "bD7bpG-zDJQ",
+      "soundtrack": "19UroqpzEZcvNfoSu1xxHe",
+      "actores": 
+      [
+        { "nombre": "Uma Thurman",
+          "personaje": "Mia Wallace",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Quentin Tarantino",
+          "personaje": "Jimmie Dimmick",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "John Travolta",
+          "personaje": "Vincent Vega",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Maria de Medeiros",
+          "personaje": "Fabienne",
+          "foto": "imagenes/anakin.jpg"
+        },
+        { "nombre": "Samuel L. Jackson",
+          "personaje": "Jules Winnfield",
+          "foto": "imagenes/anakin.jpg"
+        }
+      ]
+    }
+  
+  ]
+}

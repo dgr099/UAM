@@ -1,0 +1,43 @@
+En la carpeta SQL existe un Makefile que acepta los siguientes comandos:
+
+make all o make:
+    reinicia postgresql
+    elimina la base de datos si existe
+    crea una nueva base de datos
+    inicializa la base de datos con el .gz
+    ejecuta todos los .sql creados en la practica
+    ejecuta la funcion setorderamount() para hacer una carga inicial
+    entra en la terminal de la base de datos
+
+restart:
+	reinicia la base de datos
+
+drop:
+	elimina la base de datos si existe
+
+create:
+	crea una nueva base de datos
+
+inicializar:
+    inicializa la base de datos con el .gz
+    ejecuta todos los .sql creados en la practica
+    ejecuta la funcion setorderamount() para hacer una carga inicial
+    entra en la terminal de la base de datos
+
+starting:
+    inicializa la base de datos con el .gz
+	
+actualiza:
+	ejecuta actualiza.sql
+
+sets:
+	ejecuta todos los sets.sql y ejecuta la funcion setorderamount
+
+gets:
+	ejecuta todos los gets.sql
+
+upds:
+	ejecuta todos los upds.sql
+
+entrar:
+	entra en la terminal de la base de datos

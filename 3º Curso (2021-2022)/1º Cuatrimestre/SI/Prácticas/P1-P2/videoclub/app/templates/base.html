@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %} {% endblock %}- VideoClub</title>
+    <!-- Uso de url_for para obtener la ruta de elementos de la página -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'estilo.css' )}}"/>
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+    <script>
+        (uppdateUsers)()
+        var prueba =  setInterval(function(){uppdateUsers()}, 3000);
+        function uppdateUsers(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("banner").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "/updateUsers", true);
+                xhttp.send()    
+        }
+    </script>
+    <header>
+        <nav class="menuNavegacion Contenedor">
+            <div class="logo">
+                <img src="" alt="Logo" onclick="uppdateUsers()">
+            </div>
+            <div class="loginInfoUser">
+                <li><span>Online users:</span>    
+                <span id="banner"></span></li>
+                <li>
+                    <a href="{{ url_for('shoppingCart') }}">Shopping cart</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('reset_pagination') }}">Home</a>
+                </li>
+                {% if not session['usuario'] %}
+                <li>
+                    <span>Usuario: Anónimo</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}">Sign In</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('register') }}">Register</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{{ url_for('userDetail') }}">Usuario: {{ session['usuario']['username'] }}</a>
+                </li>
+                <li>
+                    <span>Dinero: {{ "$%.3f"|format(session['usuario']['balance'])}}</span>
+                </li>
+                <li>
+                    <a href="{{ url_for('logout') }}">Log out</a>
+                </li>
+                {% endif%}
+            </div>
+        </nav>
+    </header>
+
+    <section class="inicio">
+        <nav class="menuLateral">
+            {% block menuLateral %}
+            {% endblock %}
+        </nav>
+        <main class="main">
+            {% block content%} {% endblock %}
+        </main>
+    </section>
+    <footer>
+        <p>Copyright &copy 2021 David T. Garitagoitia romero & Daniel Cerrato Sanchez. All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

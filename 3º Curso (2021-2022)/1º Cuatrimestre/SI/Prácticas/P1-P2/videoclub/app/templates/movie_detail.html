@@ -1,0 +1,28 @@
+{% extends "movie_detail_sin_actores.html" %}
+{% block actores %}
+<section class="Trailer" id="Trailer">
+    <iframe class="TrailerVideo"
+    src="https://www.youtube.com/embed/bD7bpG-zDJQ" title="YouTube Trailer" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+</section>
+{% set image_path = 'images/actors/default' + ".jpg" %}
+<div class="Actores" id="Actors">
+    {% for actor in actors %}
+         <a href="https://es.wikipedia.org/wiki/{{actor.actorname}}" target="_blank" class="Actor">
+            <div class="ActorImg">
+            <img src="{{url_for('static', filename = image_path )}}"
+                        alt={{actor.actorname}} class="crop" />
+            <div class="ActorInfo">
+                <span>Name: </span><span>{{actor.actorname}}</span><br>
+                <span>Character: </span><span>{{actor.character}}</span>
+            </div>
+        </div>
+        </a>
+    {% endfor%}
+</div>
+<div class="SoundTrack" id="SoundTrack">
+    <iframe src="https://open.spotify.com/embed?uri=spotify:album:19UroqpzEZcvNfoSu1xxHe" 
+    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+{% endblock %}

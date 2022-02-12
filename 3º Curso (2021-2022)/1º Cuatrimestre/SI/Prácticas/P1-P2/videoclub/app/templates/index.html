@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock%}
+
+{% block menuLateral %}
+<form name="search", method="POST">
+    <span>Film Name:</span>
+    {% if not search %}
+        <input type="text" name="search" class="searchBar" id="searchBar" placeholder="Enter film name">
+    {% else %}
+        <input type="text" name="search" class="searchBar" id="searchBar" placeholder="Enter film name" value={{search}}>
+    {% endif %}
+    <label for="quantity"># Actors:</label>
+    <input type="number" id="quantity" class="searchBar" name="limitActors" min="0" value={{limitActors}}>
+    <input type="submit">
+</form>
+<ul class="IGenres">
+<li>
+<a href="{{ url_for('reset_pagination') }}"><span>All</span></a>
+</li>
+{% for genre in genres%}
+<li>
+<a href="{{ url_for('filter', genre_1=genre['genre']) }}"><span>{{genre['genre']}}</span></a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Actor</th>
+        <th>Num</th>
+        <th>Debut</th>
+        <th>Film</th>
+        <th>Director</th>
+    </tr>
+    {% for actor in actors %}
+    <!--formulario para pasar el nombre de la película-->
+    <tr>
+                <td class="tElement">
+                    {{actor['actor']}}
+                </td>
+                <td class="tElement">
+                    {{actor['num']}}
+                </td>
+                <td class="tElement">
+                    {{actor['debut']}}
+                </td>
+                <td class="tElement">
+                    {{actor['film']}}
+                </td>
+                <td class="tElement">
+                    {{actor['director']}}
+                </td>
+        </tr>
+{% endfor %}
+</table>
+<div class="Peliculas">
+    <!--bucle con cada una de la pelis-->
+    {% set default = 'images/posters/' + 'default' + '.jpg' %}        
+    {% for item in movies %}
+    <a href="{{ url_for('movie_detail', id=item.movieid) }}">
+        <div id="{{item.movietitle}}" class="Pelicula Pelicula{{item.categoria}}"
+            onclick="{{ url_for('movie_detail', id=item.movieid) }}">
+            <a class="Enlace_Pelicula" href="{{url_for('movie_detail', id = item.movieid)}}"> 
+            <!--{% set image_path = 'images/posters/' + item.movietitle|replace("/", "-") + '.jpg' %}        
+            <img class="Image__img" src="{{url_for('static', filename = image_path )}}" alt={{item.movietitle}} />-->
+            <img class="Image__img" src="{{url_for('static', filename = default )}}" alt={{item.movietitle}} />
+            <div class="Image__overlay">
+                <div class="Image__tittle">{{item.movietitle}}</div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+    <div class="pagination">
+        <span class="page-links">
+            {% if has_prev %}
+            <a class="PaginationIndicators" href="{{ url_for('previous_movies') }}">PREV</a>
+            {% endif %}
+            {% if has_next %}
+            <a class="PaginationIndicators" href="{{ url_for('next_movies') }}">NEXT</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}
+{{ title }}
+{% endblock%}
+{% block menuLateral %}
+<input type="text" class="searchBar" id="searchBar" placeholder="Enter film name" onkeyup="filtrarPeliculaNombre()">
+<ul class="IGenres">
+<li>
+<input name="category-css" id="Todas" type="radio" checked onclick="filtrarPelicula('All')"><label for="Todas">All</label>
+</li>
+{% for genre in genres%}
+<li>
+<input name="category-css" id="{{genre['genre']}}" type="radio" onclick="filtrarPelicula('{{genre['genre']}}')"><label for="{{genre['genre']}}">{{genre['genre']}}</label>
+</li>
+{% endfor %}
+{% endblock %}
+{% block content %}
+<script type="text/javascript">
+    function filtrarPeliculaNombre() {
+        var nombre = document.getElementById("searchBar");
+        var pelis = document.getElementsByClassName("Pelicula_tabla"); //1º obtengo todas las pelis
+        var tipo = "All"
+        if (document.getElementById('{{genres[0]['genre']}}').checked == true){
+            tipo = "{{genres[0]['genre']}}"
+        }
+
+        {% for genre in genres[1:]%}
+        else if (document.getElementById('{{genre['genre']}}').checked == true){
+            tipo = "{{genre['genre']}}"
+        }
+        {% endfor %}
+
+        if (tipo != "All")
+            for (var i = 0; i < pelis.length; i++) {
+                if (pelis[i].classList.contains("Pelicula_tabla_" + tipo)) //si se estaba mostrando
+                    if (!pelis[i].id.toUpperCase().includes(nombre.value.toUpperCase())) { //y no contiene el nombre buscado
+                        pelis[i].style.display = 'none'; //ocultar
+                    }
+                    else {
+                        pelis[i].style.display = 'table-row';
+                    }
+            }
+        else {
+            for (var i = 0; i < pelis.length; i++) {
+                if (!pelis[i].id.toUpperCase().includes(nombre.value.toUpperCase())) { //y no contiene el nombre buscado
+                    pelis[i].style.display = 'none'; //ocultar
+                }
+                else {
+                    pelis[i].style.display = 'table-row';
+                }
+            }
+        }
+    }
+</script>
+<form action="" method="post" class="formRegister formMoney">
+    <input type="text" name="money" placeholder="Inserte el dinero a añadir">
+    <input type="submit" value="Add Money">
+</form>
+<div class="Peliculas">
+    <script type="text/javascript">
+    function filtrarPelicula(tipo){
+            var pelis = document.getElementsByClassName("Pelicula_tabla"); //1º obtengo todas las pelis
+            if(tipo == "All"){ //si quiere mostrar todas mostramos todas
+                for (var i=0; i<pelis.length; i++){
+                    pelis[i].style.display = 'table-row';
+                }
+            }
+            else{
+                for (var i=0; i<pelis.length; i++){
+                    if(!pelis[i].classList.contains("Pelicula_tabla_" + tipo)){
+                        pelis[i].style.display = 'none';
+                    } else{
+                            pelis[i].style.display = 'table-row';
+                        }
+                }
+            }
+        }
+    </script>
+
+    
+    <!--bucle con cada una de la pelis-->
+    <table>
+        <tr>
+            <th>Film</th>
+            <th>Title</th>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+    {% set image_path = 'images/posters/' + 'default' + '.jpg' %}
+    {% for product in products %}
+    <!--formulario para pasar el nombre de la película-->
+    <tr id="Pelicua_tabla_{{films[product['movieid']][0]['movietitle']}}_{{product['prod_id']}}" class="Pelicula_tabla {% for tipo in films[product['movieid']][1] %}Pelicula_tabla_{{tipo['genre']}} {% endfor %}
+    ">
+                <td class="td_img">
+                    <a href="{{url_for('movie_detail', id = product['movieid'])}}"">
+                    <img class="Img_tabla" src="{{url_for('static', filename = image_path )}}"
+                    alt={{films[product['movieid']][0]['movietitle']}} />
+                    </a>
+                </td>
+                <td class="tElement">
+                    {{films[product['movieid']][0]['movietitle']}}
+                </td>
+                <td class="tElement">
+                    {{product['description']}}
+                </td>
+                <td class="tElement">
+                    {{product['price']}}€
+                </td>
+
+        </tr>
+{% endfor %}
+</table>
+
+    
+{% endblock %}
+

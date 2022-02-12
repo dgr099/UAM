@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock%}
+{% block menuLateral %}
+<ul class="menuDesplazamiento">
+    <li><a href="#comprar">Buy</a></li>
+    <li><p>Points: {{puntos}}</p></li>
+</ul>
+{% endblock %}
+{% block content %}
+{% set ns = namespace() %}
+{% set ns.totalPrice = 0%}
+{% set image_path = 'images/posters/' + 'default' + '.jpg' %}
+<script src="{{url_for('static', filename =  'jquery-3.6.0.min.js')}}"></script>
+<script>
+    $(document).ready(function(){
+      $(".optionPay").change(function(){
+            if($(this).find(":selected").val()=="Puntos"){
+                $('#inserta_puntos').css("display", "block");
+            }
+      });
+    });
+    </script>
+<div class="PeliculasShopping">
+    {% for product in products%}
+    
+        <div class="PeliculaShopping" id = {{product['prod_id']}}>
+            <a href="{{url_for('movie_detail', id = product['movieid'])}}"><img class="Image__img Pelicula" src="{{url_for('static', filename = image_path )}}"
+                            alt="{{films[product['movieid']]['movietitle']}}"/>
+            </a>
+            <div>
+                {% if not session['usuario'] %}
+                <span>{{session['shop'][product['prod_id']|string]}}*</span>
+                    {%set partialPrice = product['price']|float * session['shop'][product['prod_id']|string]|float %}
+                {% else %}
+                    <span>{{times[product['prod_id']]}}*</span>
+                    {%set partialPrice =  product['price']|float * times[product['prod_id']]|float %}
+                {% endif %}
+                <span>{{films[product['movieid']]['movietitle']}}</span>
+                <span>{{product['description']}}</span>
+                <span>{{product['price']}}€</span>
+            </div>
+            <p>Price: {{ "$%.2f"|format(partialPrice) }}€ </h2>
+            <div>
+                <a name="Add" class="button" href="{{ url_for('addId', id=product['prod_id']) }}">ADD</a>
+                <a name="Remove" class="button" href="{{ url_for('delId', id=product['prod_id']) }}">DEL</a>
+            </div>
+        </div>
+        {%set ns.totalPrice = partialPrice + ns.totalPrice%}
+        {% endfor %}
+        <h2>Precio total: </h2>
+        {% if not session['usuario'] %}
+            <h2 id="TotalPrice">{{ "$%.2f"|format(ns.totalPrice) }} </h2>
+        {% else %}
+            {% if total_price is not none%}
+                <h2 id="TotalPrice">{{ "$%.2f"|format(total_price) }} </h2>
+            {% endif %}
+        {% endif %}
+        <script src="{{url_for('static', filename =  'metodo_pago.js')}}"></script>
+        <script>
+            $(document).ready(function(){
+                $("#metodo_pago").click(function(){
+                    $("#inserta_puntos").slideToggle(100);
+                });
+            });
+        </script>
+    <div id="comprar">
+        {% if session['usuario'] %}
+        <form action="{{ url_for('buy') }}" method="POST">
+			<p>
+				Choose a way to pay: 
+				<select name="select" class="optionPay">
+					<option value="">...</option>
+					<option value="Saldo">Pay with money</option>
+					<option value="Puntos" id="metodo_pago">Pay with points</option>
+				</select>
+                <div id="inserta_puntos" style="display: none;">
+                    <p>Recuerda: 100 puntos equivalen a 1€, 50 puntos son 0'5€ de descuento</p>
+                    <input type="text" name="numPuntos" placeholder="Enter number of points">
+                </div>
+				<input type="hidden" name="price" value={{total_price}}>
+				<input type="submit" value="Buy">
+			</p>
+        </form>
+        {% else %}
+        <h1>Login to pay pls</h1>
+        {% endif %}
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+{% endwith %}
+{% endblock %}
+</div>

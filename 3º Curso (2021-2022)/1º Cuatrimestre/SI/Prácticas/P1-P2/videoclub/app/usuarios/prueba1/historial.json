@@ -1,0 +1,15 @@
+{ "peliculas": 
+    { 
+      "1" : {
+          "id" : 1,
+          "vecesComprado" : 3,
+          "precioPagado" : 12
+      },
+
+      "2" : {
+        "id" : 2,
+        "vecesComprado" : 3,
+        "precioPagado" : 12
+    }
+    }
+}

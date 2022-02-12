@@ -1,0 +1,464 @@
+body {
+    background-color: rgb(25,25,25);
+    margin: 0
+}
+
+header {
+    /*background-color: rgba(43, 88, 225, 0.4);*/
+    /*background-image: linear-gradient(rgb(21, 45, 118), rgb(25,25,25));*/
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 70px;
+}
+
+.Contenedor {
+    width: 90%;
+    margin: auto;
+    padding: 60px;
+}
+
+/*menu superior de navegación (logo log out...)*/
+.menuNavegacion {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/*información de usuario y funciones de log out y log in*/
+.loginInfoUser >*{
+    list-style: none;
+    display: inline-block;
+    padding-left: 30px;
+    text-decoration: none;
+    color: white
+}
+
+.loginInfoUser >*>*{
+    text-decoration: none;
+    color: white
+}
+
+.logo {
+    height: 30px;
+}
+
+/*menu lateral para filtrar películas*/
+.menuLateral {
+    overflow: auto;
+    position: fixed;
+    width: 150px;
+    background-image: linear-gradient(rgb(0,0,0), 70%, rgb(25,25,25) 85%);
+    left: 0;
+    top: 70px;
+    bottom: 0;
+    color: white;
+    font-size: 22px;
+    /*background-color: red;*/
+    text-align: left;
+    z-index: 2;
+    padding-bottom: 10px;
+}
+
+
+/*#Todas:checked ~ .listaCategaria label[for="Todas"],
+#Aventura:checked ~ .listaCategaria label[for="Aventura"],
+#Fantasía:checked ~ .listaCategaria label[for="Fantasía"],
+#Acción:checked ~ .listaCategaria label[for="Acción"],
+#Romance:checked ~ .listaCategaria label[for="Romance"],
+#Drama:checked ~ .listaCategaria label[for="Drama"]{
+    color: rgba(43, 88, 225, 0.897)
+}*/
+
+.IGenres > li > input[type='radio']:checked + label{
+    color: rgba(43, 88, 225, 0.897)
+}
+.IGenres{
+    margin-top:5px;
+}
+
+.IGenres > li> a{
+    text-decoration: none;
+    color: white;
+}
+
+.listaCategaria{
+    overflow: auto;
+}
+
+.menuLateral input[type="radio"]{
+    display: none;
+}
+
+.searchBar{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 80%;
+} 
+
+.menuLateral >*{
+    padding-left: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*padding para evitar superposición con el header y footer*/
+.inicio {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.main {
+    margin-left: 150px;
+}
+
+.Peliculas {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Pelicula {
+    margin-top: 10px;
+    margin-right: 15px;
+    position: relative;
+    width: 180px;
+    height: 270px;
+    overflow: hidden;
+    display: block;
+}
+
+.Image__img {
+    margin-right: 22px;
+    height: 100%;
+    /*align-items: middle;*/
+}
+
+.Image__overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgba(43, 88, 225, 0.3);
+    opacity: 0;
+    transition: opacity 0.35s;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.35s;
+}
+
+.Image__overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+    backdrop-filter: blur(1.5px);
+}
+
+.Image__overlay:hover > *{
+    transform: translateY(0px);
+}
+
+
+.Image__tittle {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(200px);
+    transition: transform 0.35s;
+}
+
+.Image__precio {
+    font-size: 15px;
+    transform: translateY(200px);
+    transition: transform 0.35s;
+    background-color: rgb(242, 255, 30);
+    color: black;
+}
+
+.Label_login {
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+.Movie_Detail{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    height: 35vw;
+    min-width: 600px;
+    color: white;
+    text-overflow: Ellipsis;
+    overflow: hidden;
+
+}
+
+.Movie_Info{
+    top: 0;
+    /*height: 90%;*/
+    margin-left: 10px;
+    color: white;
+    overflow: auto;
+    max-height: 75%;
+    margin-bottom: 15px;
+}
+
+.Img_detail{
+    float: left;;
+}
+
+
+.Buy >*{
+    height:  50px;
+}
+.Actores{
+   /* margin-left: 10px;*/
+   padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    overflow-x: auto;
+    z-index: 0;
+    margin-top: 10px;
+    /*background-color: white;*/
+    margin-right: 10px;
+    /*margin-right: 10px;*/
+}
+
+.menuDesplazamiento a{
+    text-decoration: none;
+    color: white
+}
+footer {
+    background-image: linear-gradient(rgb(25,25,25, 0), 38%, rgb(21, 45, 118, 1) 55%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: white;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+}
+
+footer p{
+    transform: translateY(10px);
+}
+
+.Actor{
+
+    flex: none;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.ActorImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*margin: 10px;*/
+    position: relative;
+    align-items: center;
+}
+.ActorImg > .crop {
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.ActorImg > .ActorInfo {
+    width: 100%;
+    bottom: 0px;
+    position:absolute;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.468);
+}
+
+.Trailer{
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    height: 42vw;
+    overflow: hidden;
+}
+
+.TrailerVideo{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.SoundTrack {
+    width: 100%;
+    height: 35vw;
+    margin-top: 20px;
+}
+.SoundTrack >*{
+    width: 100%;
+    height: 100%;
+}
+.formRegister{
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+}
+
+.camposForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.camposForm>div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%
+
+}
+
+.camposForm>*>input{
+    margin-bottom: 10px
+}
+
+.enviarFormRegister{
+    text-align:center;
+    padding-right: 10%
+}
+
+
+.flashes >*{
+    color: red;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.PeliculasShopping{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.PeliculaShopping{
+    max-width: 70%;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 10px;
+}
+.button {
+    background: rgba(43, 88, 225, 0.897);
+    padding: 4px;
+    text-align: center;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 10px;
+}
+
+#progreso{
+    width:160px;
+    height: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#progreso >div{
+    background: green;
+    width: 130px;
+    height: 10px;
+    text-align: center;
+}
+
+.Img_tabla{
+    width: 100%;
+}
+
+.Img_tabla:hover{
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+}
+table, th, td {
+    border:1px solid black;
+}
+
+tr{
+    display: table-row;
+}
+
+td, th{
+    color:white
+}
+.td_img{
+    width: 20%;
+}
+
+.formMoney{
+    display: inline;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 30
+}
+
+.PaginationIndicators{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.Title{
+    color: white;
+}
+
+.selectProduct{
+    height: 50px;
+    font-size: 3vw;
+}
+
+.productOption{
+    font-size: 3vw;
+}
+
+.buyConjunt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.labelRegister{
+    color: white
+}

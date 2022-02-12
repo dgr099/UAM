@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }} {{movie.titulo}}
+{% endblock%}
+{% block menuLateral %}
+<ul class="menuDesplazamiento">
+    <li><a href="#">Buy</a></li>
+    <li><a href="#Trailer">Trailer</a></li>
+    <li><a href="#Actors">Actors</a></li>
+    <li><a href="#SoundTrack">SoundTrack</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<script src="{{url_for('static', filename =  'jquery-3.6.0.min.js')}}"></script>
+<script>
+$(document).ready(function(){
+    str = "Buy movie €" + $(this).find(":selected").val()
+    $(".Buy>input").val(str);
+    id = $(this).find(":selected").data('foo')
+    $("#addToCart input[name=product]").val(id);
+  $(".selectProduct").change(function(){
+      str = "Buy movie €" + $(this).find(":selected").val()
+      $(".Buy>input").val(str);
+      id=$(this).find(":selected").data('foo')
+      $("#addToCart input[name=product]").val(id)
+  });
+});
+</script>
+
+<script type="text/javascript">
+    function enviar_formulario(){
+        var form = document.getElementById("addToCart");
+        alert("{{movie.movietitle}} added to cart");
+        form.submit(); //posteo el formulario
+    }
+    </script>
+
+{% set image_path = 'images/posters/' + 'default' + '.jpg' %}
+<form method=post id="addToCart">
+    <input type="hidden" name="product" value="">
+</form>
+<div class="Movie_Detail">
+    <img class="Image__img Img_detail" src="{{url_for('static', filename = image_path )}}" alt={{movie.movietitle}}/>
+    <div class="Movie_Info">
+        <h1>{{movie.movietitle}}</h1>
+        <p>{{desc}}</p>
+    </div>
+    <div class="buyConjunt">
+        <select name="select" class="selectProduct">
+            {% for product in products %}
+                <option  data-foo="{{product.prod_id}}" value="{{product.price}}" class="productOption">{{product.description}}</option>
+            {% endfor %}
+        </select>
+        <div class="Buy">
+            <input type="button" value="Buy movie €" onclick="enviar_formulario()">
+        </div>
+    </div>
+</div>
+{% block actores %}
+{% endblock %}
+{% endblock %}
