@@ -1,0 +1,94 @@
+<!DOCTYPE HTML> 
+<!--
+ Ejemplo de MongoDB
+-->
+<HTML> 
+  <HEAD> 
+	  <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8"> 
+	  <TITLE>Ejemplo de MongoDB</TITLE>
+  </HEAD> 
+
+  <BODY>
+ 
+    <h2> Ejemplo de MongoDB</h2>
+
+    <hr>
+
+    <h3>Tabla 1: ScienceFiction from 1994 to 1998</h3>
+    <table>
+      <tr>
+          <th>title</th>
+          <th>genres</th>
+          <th>year</th>
+          <th>directors</th>
+          <th>actors</th>
+          <th>most_related_movies</th>
+          <th>related_movies</th>
+      </tr>
+      {% for film in movies[0] %}
+      <tr>
+          <td>{{film['title']}}</td>
+          <td>{{film['genres']}}</td>
+          <td>{{film['year']}}</td>
+          <td>{{film['directors']}}</td>
+          <td>{{film['actors']}}</td>
+          <td>{{film['most_related_movies']}}</td>
+          <td>{{film['related_movies']}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <hr>
+
+    <h3>Tabla 2: "THE" 98's Dramas</h3>
+    <table>
+      <tr>
+          <th>title</th>
+          <th>genres</th>
+          <th>year</th>
+          <th>directors</th>
+          <th>actors</th>
+          <th>most_related_movies</th>
+          <th>related_movies</th>
+      </tr>
+      {% for film in movies[1] %}
+      <tr>
+          <td>{{film['title']}}</td>
+          <td>{{film['genres']}}</td>
+          <td>{{film['year']}}</td>
+          <td>{{film['directors']}}</td>
+          <td>{{film['actors']}}</td>
+          <td>{{film['most_related_movies']}}</td>
+          <td>{{film['related_movies']}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <hr>
+
+    <h3>Tabla 3: Julia Roberts and Alec Baldwin films</h3>
+    <table>
+      <tr>
+          <th>title</th>
+          <th>genres</th>
+          <th>year</th>
+          <th>directors</th>
+          <th>actors</th>
+          <th>most_related_movies</th>
+          <th>related_movies</th>
+      </tr>
+      {% for film in movies[2] %}
+      <tr>
+          <td>{{film['title']}}</td>
+          <td>{{film['genres']}}</td>
+          <td>{{film['year']}}</td>
+          <td>{{film['directors']}}</td>
+          <td>{{film['actors']}}</td>
+          <td>{{film['most_related_movies']}}</td>
+          <td>{{film['related_movies']}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </BODY>
+</HTML>

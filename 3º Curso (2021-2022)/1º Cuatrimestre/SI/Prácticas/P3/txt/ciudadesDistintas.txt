@@ -1,0 +1,118 @@
+CREATE FUNCTION
+                                                                           QUERY PLAN                                                                            
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=2109.21..2109.22 rows=1 width=8)
+   ->  Unique  (cost=2109.12..2109.15 rows=5 width=118)
+         ->  Sort  (cost=2109.12..2109.13 rows=5 width=118)
+               Sort Key: c.city
+               ->  Nested Loop  (cost=0.42..2109.06 rows=5 width=118)
+                     ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                           Filter: ((creditcardtype)::text = 'VISA'::text)
+                     ->  Index Scan using index_ciudadesdistintas on orders  (cost=0.42..22.52 rows=5 width=4)
+                           Index Cond: ((customerid = c.customerid) AND ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text))
+(9 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                        QUERY PLAN                                                         
+---------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=50393.92..50393.93 rows=1 width=8)
+   ->  Unique  (cost=50393.83..50393.86 rows=5 width=118)
+         ->  Sort  (cost=50393.83..50393.84 rows=5 width=118)
+               Sort Key: c.city
+               ->  Hash Join  (cost=530.04..50393.77 rows=5 width=118)
+                     Hash Cond: (orders.customerid = c.customerid)
+                     ->  Seq Scan on orders  (cost=0.00..49861.35 rows=909 width=4)
+                           Filter: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                     ->  Hash  (cost=529.16..529.16 rows=70 width=122)
+                           ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                                 Filter: ((creditcardtype)::text = 'VISA'::text)
+(11 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                        QUERY PLAN                                                         
+---------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=50393.92..50393.93 rows=1 width=8)
+   ->  Unique  (cost=50393.83..50393.86 rows=5 width=118)
+         ->  Sort  (cost=50393.83..50393.84 rows=5 width=118)
+               Sort Key: c.city
+               ->  Hash Join  (cost=530.04..50393.77 rows=5 width=118)
+                     Hash Cond: (orders.customerid = c.customerid)
+                     ->  Seq Scan on orders  (cost=0.00..49861.35 rows=909 width=4)
+                           Filter: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                     ->  Hash  (cost=529.16..529.16 rows=70 width=122)
+                           ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                                 Filter: ((creditcardtype)::text = 'VISA'::text)
+(11 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                        QUERY PLAN                                                         
+---------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=50044.71..50044.72 rows=1 width=8)
+   ->  Unique  (cost=50044.62..50044.64 rows=5 width=118)
+         ->  Sort  (cost=50044.62..50044.63 rows=5 width=118)
+               Sort Key: c.city
+               ->  Hash Join  (cost=180.82..50044.56 rows=5 width=118)
+                     Hash Cond: (orders.customerid = c.customerid)
+                     ->  Seq Scan on orders  (cost=0.00..49861.35 rows=909 width=4)
+                           Filter: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                     ->  Hash  (cost=179.95..179.95 rows=70 width=122)
+                           ->  Bitmap Heap Scan on customers c  (cost=4.83..179.95 rows=70 width=122)
+                                 Recheck Cond: ((creditcardtype)::text = 'VISA'::text)
+                                 ->  Bitmap Index Scan on index_ciudadesdistintas  (cost=0.00..4.81 rows=70 width=0)
+                                       Index Cond: ((creditcardtype)::text = 'VISA'::text)
+(13 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                        QUERY PLAN                                                         
+---------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=50393.92..50393.93 rows=1 width=8)
+   ->  Unique  (cost=50393.83..50393.86 rows=5 width=118)
+         ->  Sort  (cost=50393.83..50393.84 rows=5 width=118)
+               Sort Key: c.city
+               ->  Hash Join  (cost=530.04..50393.77 rows=5 width=118)
+                     Hash Cond: (orders.customerid = c.customerid)
+                     ->  Seq Scan on orders  (cost=0.00..49861.35 rows=909 width=4)
+                           Filter: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                     ->  Hash  (cost=529.16..529.16 rows=70 width=122)
+                           ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                                 Filter: ((creditcardtype)::text = 'VISA'::text)
+(11 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=2258.61..2258.62 rows=1 width=8)
+   ->  Unique  (cost=2258.53..2258.55 rows=5 width=118)
+         ->  Sort  (cost=2258.53..2258.54 rows=5 width=118)
+               Sort Key: c.city
+               ->  Hash Join  (cost=549.50..2258.47 rows=5 width=118)
+                     Hash Cond: (orders.customerid = c.customerid)
+                     ->  Bitmap Heap Scan on orders  (cost=19.46..1726.04 rows=909 width=4)
+                           Recheck Cond: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                           ->  Bitmap Index Scan on index_ciudadesdistintas  (cost=0.00..19.24 rows=909 width=0)
+                                 Index Cond: ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text)
+                     ->  Hash  (cost=529.16..529.16 rows=70 width=122)
+                           ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                                 Filter: ((creditcardtype)::text = 'VISA'::text)
+(13 filas)
+
+DROP INDEX
+CREATE INDEX
+                                                                           QUERY PLAN                                                                            
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=2109.21..2109.22 rows=1 width=8)
+   ->  Unique  (cost=2109.12..2109.15 rows=5 width=118)
+         ->  Sort  (cost=2109.12..2109.13 rows=5 width=118)
+               Sort Key: c.city
+               ->  Nested Loop  (cost=0.42..2109.06 rows=5 width=118)
+                     ->  Seq Scan on customers c  (cost=0.00..529.16 rows=70 width=122)
+                           Filter: ((creditcardtype)::text = 'VISA'::text)
+                     ->  Index Scan using index_ciudadesdistintas on orders  (cost=0.42..22.52 rows=5 width=4)
+                           Index Cond: ((customerid = c.customerid) AND ((get_date_in_format((orderdate)::timestamp without time zone))::text = '201601'::text))
+(9 filas)
+

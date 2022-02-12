@@ -1,0 +1,142 @@
+DROP INDEX
+                           QUERY PLAN                            
+-----------------------------------------------------------------
+ Aggregate  (cost=3507.17..3507.18 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3504.90 rows=909 width=0)
+         Filter: (status IS NULL)
+(3 filas)
+
+                           QUERY PLAN                            
+-----------------------------------------------------------------
+ Aggregate  (cost=3961.65..3961.66 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3959.38 rows=909 width=0)
+         Filter: ((status)::text = 'Shipped'::text)
+(3 filas)
+
+CREATE INDEX
+                                    QUERY PLAN                                     
+-----------------------------------------------------------------------------------
+ Aggregate  (cost=1496.52..1496.53 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=19.46..1494.25 rows=909 width=0)
+         Recheck Cond: (status IS NULL)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..19.24 rows=909 width=0)
+               Index Cond: (status IS NULL)
+(5 filas)
+
+                                    QUERY PLAN                                     
+-----------------------------------------------------------------------------------
+ Aggregate  (cost=1498.79..1498.80 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=19.46..1496.52 rows=909 width=0)
+         Recheck Cond: ((status)::text = 'Shipped'::text)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..19.24 rows=909 width=0)
+               Index Cond: ((status)::text = 'Shipped'::text)
+(5 filas)
+
+DROP INDEX
+ANALYZE
+                          QUERY PLAN                           
+---------------------------------------------------------------
+ Aggregate  (cost=3504.90..3504.91 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3504.90 rows=1 width=0)
+         Filter: (status IS NULL)
+(3 filas)
+
+                                       QUERY PLAN                                       
+----------------------------------------------------------------------------------------
+ Finalize Aggregate  (cost=4211.34..4211.35 rows=1 width=8)
+   ->  Gather  (cost=4211.23..4211.34 rows=1 width=8)
+         Workers Planned: 1
+         ->  Partial Aggregate  (cost=3211.23..3211.24 rows=1 width=8)
+               ->  Parallel Seq Scan on orders  (cost=0.00..3023.69 rows=75015 width=0)
+                     Filter: ((status)::text = 'Shipped'::text)
+(6 filas)
+
+CREATE INDEX
+ANALYZE
+                                     QUERY PLAN                                      
+-------------------------------------------------------------------------------------
+ Aggregate  (cost=7.27..7.28 rows=1 width=8)
+   ->  Index Only Scan using countstatus on orders  (cost=0.42..7.27 rows=1 width=0)
+         Index Cond: (status IS NULL)
+(3 filas)
+
+                                       QUERY PLAN                                       
+----------------------------------------------------------------------------------------
+ Finalize Aggregate  (cost=4210.91..4210.92 rows=1 width=8)
+   ->  Gather  (cost=4210.80..4210.91 rows=1 width=8)
+         Workers Planned: 1
+         ->  Partial Aggregate  (cost=3210.80..3210.81 rows=1 width=8)
+               ->  Parallel Seq Scan on orders  (cost=0.00..3023.69 rows=74844 width=0)
+                     Filter: ((status)::text = 'Shipped'::text)
+(6 filas)
+
+DROP INDEX
+                            QUERY PLAN                             
+-------------------------------------------------------------------
+ Aggregate  (cost=4004.25..4004.26 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3959.38 rows=17949 width=0)
+         Filter: ((status)::text = 'Paid'::text)
+(3 filas)
+
+                            QUERY PLAN                             
+-------------------------------------------------------------------
+ Aggregate  (cost=4050.89..4050.90 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3959.38 rows=36606 width=0)
+         Filter: ((status)::text = 'Processed'::text)
+(3 filas)
+
+CREATE INDEX
+                                      QUERY PLAN                                      
+--------------------------------------------------------------------------------------
+ Aggregate  (cost=2311.76..2311.77 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=355.52..2266.89 rows=17949 width=0)
+         Recheck Cond: ((status)::text = 'Paid'::text)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..351.04 rows=17949 width=0)
+               Index Cond: ((status)::text = 'Paid'::text)
+(5 filas)
+
+                                      QUERY PLAN                                      
+--------------------------------------------------------------------------------------
+ Aggregate  (cost=2960.21..2960.22 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=724.12..2868.69 rows=36606 width=0)
+         Recheck Cond: ((status)::text = 'Processed'::text)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..714.97 rows=36606 width=0)
+               Index Cond: ((status)::text = 'Processed'::text)
+(5 filas)
+
+DROP INDEX
+ANALYZE
+                            QUERY PLAN                             
+-------------------------------------------------------------------
+ Aggregate  (cost=4003.64..4003.65 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3959.38 rows=17706 width=0)
+         Filter: ((status)::text = 'Paid'::text)
+(3 filas)
+
+                            QUERY PLAN                             
+-------------------------------------------------------------------
+ Aggregate  (cost=4051.84..4051.86 rows=1 width=8)
+   ->  Seq Scan on orders  (cost=0.00..3959.38 rows=36988 width=0)
+         Filter: ((status)::text = 'Processed'::text)
+(3 filas)
+
+CREATE INDEX
+ANALYZE
+                                      QUERY PLAN                                      
+--------------------------------------------------------------------------------------
+ Aggregate  (cost=2314.51..2314.52 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=356.46..2269.34 rows=18070 width=0)
+         Recheck Cond: ((status)::text = 'Paid'::text)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..351.94 rows=18070 width=0)
+               Index Cond: ((status)::text = 'Paid'::text)
+(5 filas)
+
+                                      QUERY PLAN                                      
+--------------------------------------------------------------------------------------
+ Aggregate  (cost=2952.50..2952.51 rows=1 width=8)
+   ->  Bitmap Heap Scan on orders  (cost=718.85..2861.39 rows=36443 width=0)
+         Recheck Cond: ((status)::text = 'Processed'::text)
+         ->  Bitmap Index Scan on countstatus  (cost=0.00..709.74 rows=36443 width=0)
+               Index Cond: ((status)::text = 'Processed'::text)
+(5 filas)
+
