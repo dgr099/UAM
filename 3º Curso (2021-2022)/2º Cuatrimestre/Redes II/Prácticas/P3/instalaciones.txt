@@ -1,0 +1,5 @@
+pip3 --upgrade
+sudo apt install python3-pil.imagetk python3-tk python3-numpy python-imaging-tk
+pip3 install appjar
+sudo apt install python-opencv
+pip3 install opencv-python
