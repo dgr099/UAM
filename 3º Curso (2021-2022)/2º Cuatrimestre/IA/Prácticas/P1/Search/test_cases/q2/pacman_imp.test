@@ -1,0 +1,13 @@
+# This is a basic depth first search test
+class: "PacmanSearchTest"
+algorithm: "breadthFirstSearch"
+
+# The following specifies the layout to be used 
+layoutName: "trapped"
+layout: """
+%%%%%%%%
+%   P  %
+%%%%%%%%
+%.     %
+%%%%%%%%
+"""
