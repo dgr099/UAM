@@ -1,0 +1,48 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLGeneric</id><coordinates><x>220</x><y>27</y><w>100</w><h>30</h></coordinates><panel_attributes>_:Cliente_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>800</x><y>27</y><w>110</w><h>30</h></coordinates><panel_attributes>_:BaseDeDatos_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>47</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>47</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>260</x><y>97</y><w>20</w><h>570</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>97</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+cambiarPestaña("Pedidos activos")</panel_attributes><additional_attributes>290;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>117</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+Mostrar ventana de pedidos activos</panel_attributes><additional_attributes>10;20;290;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>147</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+Select "Finalizar el pedido"</panel_attributes><additional_attributes>290;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>560</x><y>97</y><w>20</w><h>750</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>307</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+OK</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>530</x><y>27</y><w>100</w><h>30</h></coordinates><panel_attributes>_:Sistema_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>387</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+ERROR</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>130</x><y>197</y><w>830</w><h>310</h></coordinates><panel_attributes>loop if ERROR
+--
+
+
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>327</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+OK</panel_attributes><additional_attributes>10;20;290;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>417</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+ERROR</panel_attributes><additional_attributes>10;20;290;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>217</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+actualizarPedido(p: Pedido, s: EstadoPedido)</panel_attributes><additional_attributes>280;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>211</y><w>20</w><h>230</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>51</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>527</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+enviarFormularioSatisfaccion(c: Cliente)</panel_attributes><additional_attributes>290;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>120</x><y>557</y><w>840</w><h>300</h></coordinates><panel_attributes>alt
+--
+*/if cliente responde/*
+
+
+
+
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>597</y><w>310</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+Select "Enviar"</panel_attributes><additional_attributes>290;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>567</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+rellenar formulario</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>587</y><w>310</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+asignarValoracion(idCliente: int, 
+                              idRestaurante: int, 
+                              idRepartidor: int,t, 
+                              idPedido: int,
+                              preguntas: String[1..n]
+                              respuestas: int[1..n])</panel_attributes><additional_attributes>10;60;40;60;40;40;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>431</y><w>30</w><h>290</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;270</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>850</x><y>701</y><w>20</w><h>150</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>697</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+actualizarValoracion(v: Valoracion)</panel_attributes><additional_attributes>280;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>440</x><y>727</y><w>480</w><h>100</h></coordinates><panel_attributes>alt
+--
+*/if actualizado/*
+
+-..
+*/else/*
+
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>180</x><y>287</y><w>730</w><h>190</h></coordinates><panel_attributes>alt
+--
+*/if actualizado/*
+
+
+
+-..
+*/else/*
+
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>727</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+OK</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>787</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+ERROR</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>661</y><w>30</w><h>240</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>841</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>841</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element></diagram>
