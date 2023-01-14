@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: CAP
+    labels:
+        app: CAP
+        role: leader
+        tier: backend
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: CAP
+    template:
+        metadata:
+            labels:
+                app: CAP
+                role: leader
+                tier: backend
+        spec:
+            containers:
+            - name: CAP
+            image: "spark-master"
+            resources:
+                requests:
+                    cpu: 100m
+                    memory: 100Mi
+            ports:
+            - containerPort: 7077

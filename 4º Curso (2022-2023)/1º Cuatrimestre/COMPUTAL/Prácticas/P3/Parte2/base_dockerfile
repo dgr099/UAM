@@ -1,0 +1,20 @@
+FROM ubuntu:22.04
+
+ENV SPARK_VERSION=3.3.1
+ENV HADOOP_VERSION=3.3.4
+ENV JDK_VERSION=11
+
+RUN mkdir -p /opt
+
+RUN apt-get update && apt-get install -y wget
+
+RUN apt-get install -y openjdk-${JDK_VERSION}-jdk
+
+RUN wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop3.tgz 
+RUN tar -xzf spark-${SPARK_VERSION}-bin-hadoop3.tgz --no-same-owner; mv spark-${SPARK_VERSION}-bin-hadoop3 /opt
+
+RUN wget https://dlcdn.apache.org/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}-src.tar.gz
+RUN tar -xzf hadoop-${HADOOP_VERSION}-src.tar.gz; mv hadoop-${HADOOP_VERSION}-src /opt
+
+ENV JAVA_HOME=/usr/lib/jvm/java-${JDK_VERSION}-openjdk-amd64
+ENV SPARK_HOME=/content/spark/spark-{SPARK_VERSION}-bin-hadoop3
