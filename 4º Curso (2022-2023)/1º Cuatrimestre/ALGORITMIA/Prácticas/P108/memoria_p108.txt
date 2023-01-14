@@ -1,0 +1,47 @@
+Daniel Cerrato Sánchez - David T. Garitagoitia Romero (PNN)
+
+I. Python basico
+
+I-A. Midiendo tiempos con %timeit
+    Hemos creado la funcion "matrix_multiplication" donde
+        simplemente se multiplican dos matrices.
+
+    Despues hemos creado un "main" donde se crea una lista
+        de arrays con la dimension de las matrices y el 
+        tiempo de ejecucion de la funcion de multiplicacion
+    
+    Aqui se ha usado la orden magica "%timeit" de IPython.
+        La orden no se ejecutaba tan facil como se indicaba
+        en el enunciado de la practica, parece ser que solo
+        funcionaba asi si se usaba en los cuadernos Jupyter.
+        Para que funcionase correctamente tuvimos que
+        cambiar las siguiente linea:
+
+    timings = %timeit -o -n 10 -r 5 -q matrix_multiplication(
+        m, m)
+
+        por la linea:
+
+    timings = get_ipython().run_line_magic(
+        "timeit", "-o -n 10 -r 5 -q matrix_multiplication(m, m)"
+        )
+
+        y correr el script con la sentencia:
+
+    ipython p1NN.py
+
+    
+I-B. Busqueda binaria
+
+I-C. Cuestiones
+
+
+II. Min Heaps
+
+II-A. Min Heaps sobre arrays de Numpy
+
+II-B. Colas de prioridad sobre Min Heaps
+
+II-C. El problema de la seleccion
+
+II-D. Cuestiones
