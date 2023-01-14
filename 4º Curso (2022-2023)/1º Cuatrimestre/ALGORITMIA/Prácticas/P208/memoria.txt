@@ -1,0 +1,90 @@
+Cuestiones sobre CDs y CCs
+
+1. Sin darnos cuenta, en nuestro algoritmo de encontrar CCs podemos pasar listas con ramas repetidas
+	o donde los vertices coinciden con los de una que ya esta en orden inverso. ¿Afectará esto al resultado
+	del algoritmo? ¿Por qué?
+
+	No, no afectará al resultado porque los conjuntos disjuntos que se forman no guardan la dirección de
+	las ramas, solamente si dos vertices estan unidos o no. Si el algoritmo encuentra una rama que une
+	dos vertices que ya sabe que estan unidos, no hace nada, pasa a la siguiente rama.
+
+2. Argumentar que nuestro algoritmo para encontrar componentes conexas es correcto, esto es, que a su final
+	en los distintos subconjuntos disjuntos, se encuentran los vertices de las distintas componentes
+	del grado dado.
+
+	Es correcto porque construye las componentes conexas desde cero; es decir, parte de la base de que todos
+	los vertices estan separados y va uniendo vertices segun se indica en la lista de ramas.
+	Estas uniones se hacen sobre conjuntos disjuntos, lo que determina qué vertices acaban juntos, aunque
+	no asegura que los conjuntos guarden la topologia exacta del grafo, ya que se realiza compresion de caminos. 
+
+3. El tamaño de un grafo no dirigido viene determinado por el numero 'n' de nodos y la longitud de la lista 'l'
+	de ramas. Estimar razonadamente en funcion de ambos el coste del algoritmo de encontrar las componentes
+	conexas mediante conjuntos disjuntos.
+
+	1. init_cd(n) -> O('n')
+	2. for branch in l -> O('l') en peor caso
+		2.1. find1 -> O(lg('n'/2)) en peor caso
+		2.2. find2 -> O(lg('n'/2)) en peor caso
+		2.3. union -> Cada vez mas posibilidades de tardar mas. O(4) en peor caso
+	3. cd_2_dict -> O(3'n') en caso peor
+
+	Si juntamos todo quedaria como O('n') + O('l' * [2 * lg('n'/2) + 4]) + O(3'n').
+	Si recalculamos un poco queda O('n') + O('l'2lg('n'/2) + 4'l') + O(3'n')
+	Si nos ceñimos al calculo basico del algoritmo, hemos de quitar la inicializacion del array de
+		conjuntos disjuntos y la creacion del diccionario final. Por lo que realmente tiene un coste de
+		O('l'2lg('n'/2) + 4'l').
+
+	Explicacion de los factores de coste:
+		'l' viene dado por el bucle que recorre la lista de ramas
+		2*lg('n'/2) viene dado por el peor caso de los dos find que se realizan para encontrar los
+			representantes de ambos vertices, donde solo hay dos arboles binarios donde buscar
+			y cada uno contiene la mitad de la lista sin haber hecho compresion de caminos.
+		4 es el numero de operaciones que se realizan en la funcion union en el peor caso.
+
+	Extendido es O('l'2[lg('n') - 1] + 4'l') = O('l'2lg('n') - 2'l' + 4'l') = O('l'2lg('n') + 2'l') = 
+		= O('l'2lg(2'n'))
+
+
+Cuestiones sobre la solución greedy de TSP
+
+1. Estimar razonadamente en funcion del numero de nodos del grafo el coste codicioso de resolver el TSP.
+	¿Cuál sería el coste de aplicar la funcion exhaustive_greedy_tsp? ¿Y el de aplicar la funcion
+	repeated_greedy_tsp?
+
+	Supongamos N numero de nodos.
+
+	greedy_tsp:
+		1. Bucle con N-1 iteraciones para visitar todas las ciudades
+			1.1. Ordenar los N costes desde la ultima ciudad visitada. Usa quickSort por defecto.
+				En el caso peor es N²
+			1.2. Recorrer los N costes para escoger el menor hacia una ciudad no visitada
+				En el peor caso, este coste va aumentando de 1 a N, puesto que cada vez
+				hay mas ciudades visitadas.
+
+		Agrupando queda como O(N-1 * [N² + N(N+1)/2]) = O(N³ - N² + (N³ - N)/2) = O(3N³/2 - N² - N/2)
+		Asi que el coste en el peor caso es O(3N³/2) = O(N³)
+
+	repeated_greedy_tsp:
+		1. Bucle con N iteraciones para iniciar los circuitos desde cada nodo
+			1.1. Llamada a greedy_tsp. Peor coste O(N³)
+			1.2. Llamada a len_circuit. Coste O(N)
+
+		Agrupando queda como O(N * [N³ + N]) = O(N⁴ + N²).
+		Asi que el coste en el peor caso es O(N⁴)
+
+	exhaustive_greedy_tsp:
+		1. Bucle que recorre las N! permutaciones
+			1.1. Bucle que recorre los N caminos entre ciudades
+
+		El coste de la funcion es O(N * N!)
+
+2. A partir del codigo desarrollado en la practica, encontrar algun ejemplo de grafo para el que
+	la solucion greedy del problema TSP no sea optima
+
+	   A   B   C   D	
+   A [ 0  624 506 357]
+   B [624  0  995 350]
+   C [506 995  0  653]
+   D [357 350 653  0 ]
+
+   En este grafo, empezando en el nodo A por ejemplo, no se encuentra el circuito optimo
