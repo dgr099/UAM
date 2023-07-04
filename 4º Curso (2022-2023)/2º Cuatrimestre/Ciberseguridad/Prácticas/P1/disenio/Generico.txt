@@ -1,0 +1,147 @@
+##########################################################
+                        Cuestiones
+
+    Revisar client y close_and_finish:
+        Buscar forma de cerrar hilos directamente:
+            - Charly: mensaje fantasma
+
+    Meter variables globales en archivo config/utils
+##########################################################
+
+##########################################################
+                        DISEÑO
+                    Llamada a programa
+
+    Debe llamarse al programa con 2 argumentos:
+        python3 ./ruta_programa [id] [puerto]
+
+
+                Diccionarios de elementos
+
+        Vinculados = {'id': [port, publicKey]}
+        Conectados = {'id': [flying, battery]}
+
+        drone.etConnected y et.baseLinked:
+            (id, port, publicKey)
+
+
+                    Recibir telemetrias
+    Para no tener que abrir y cerrar socket cada vez que
+        un drone quiere enviar una telemetria a una ET,
+        el hilo de server lanzará otro hilo que mantendrá
+        la comunicacion con el drone.
+
+
+                    Ficheros telemetrias
+
+    Cada et tendrá su ruta de telemetrias donde abrirá un
+        fichero por cada drone que le mande telemetrias.
+    Este fichero se abre y se cierra desde el metodo de
+        recv_telemetry
+
+
+                        Fichero status
+
+    La base tendra una ruta de status donde guardará los
+        datos de la red cada vez que se llame a la funcion
+    Solo existira un archivo de status que se abre y cierra
+        desde la funcion get_status
+
+
+                    Escribir por pantalla
+
+    Se escribiran por pantalla todos los mensajes y logs
+
+
+                    Formato de mensajes
+
+    msg = {'ciphered':bool, 'data':mensaje (cifrado o no)}
+        Solo los mensajes de LINK iran en texto plano
+
+    msgData = {'Intruction':str, 'id':int, [+ opcionales]}
+
+
+                    Claves asimetricas
+                
+            Guardadas como string para envios
+                Usar con RSA.importKey(key)
+##########################################################
+
+main:
+    Si existe estado anterior del elemento:
+        + Restaurar estado
+    + Llamar a generar el drone -> init()
+    + Al salir, preguntar si quiere guardar estado del elemento
+
+init:
+    + Abrir socket -> socket()
+    + Abrir puerto -> bind()
+        Si falla:
+            + Salir -> close_and_finish(error)
+    + Guardar e inicializar datos de elemento
+    + Registrarse en el ids.json
+    + Crear claves asimetricas -> RSA
+    + Crear hilo para comunicacion con usuario -> client()
+    + Hacer listen y crear pool de threads -> listen()
+    TRY {
+    + Bucle con accept:
+        + Se acepta cliente -> accept()
+        + Se busca posicion del pool vacia (usar booleano)
+        + Se crea un hilo en el pool y se le da la info del cliente -> server()
+    }
+    Si falla:
+        + Salir -> close_and_finish(error)
+
+server:
+    + Leer todo el mensaje (evita error al enviar sin leer)
+    + Pasamos mensaje a formato json
+    + Descifrar mensaje (si es necesario - Tema LINK)
+        Si descriframos:
+            + Comprobar firma
+                Si error:
+                    + Enviar error
+                    + Finalizar
+    + Pasamos data a formato json
+    + Comprobar si mensaje tiene formato correcto:
+        Si no lo tiene:
+            + Enviar mensaje al emisor de error
+            + Informar al usuario del error
+            + Finalizar
+    + Comprobar si mensaje enviado desde elemento conocido
+        Si quiere TELEMETRY y no esta en conectados o
+            no quiere LINK y no esta en vinculados:
+                + Enviar mensaje al emisor de error
+                + Informar al usuario del error
+                + Finalizar
+    + Comprobamos si instruccion es soportada
+            + Enviar mensaje al emisor de error
+            + Finalizar
+    + Crear respuesta
+    + Seleccionar instruccion con if else:
+        + Realizar funcion
+    Si instruccion no es LINK:
+        + Cifrar-firmar respuesta
+    Si instruccion no es TELEMETRY:
+        + Enviar respuesta al emisor de error o correcto
+    + Poner posicion de hilo en pool a None
+    + Finalizar
+
+
+client:    
+    Bucle pidiendo comandos:
+        + Comandos del elemento:
+            + Llamar a funcion especifica del elemento
+            + Informar de resultado de instruccion
+        + Comando Close:
+            + Preguntar si quiere guardar el estado
+                Si quiere guardar estado:
+                    ----- Ver uso de pikle para guardar estado --------
+            + Salir -> close_and_finish(mensaje apagar)
+        + Comando Help:
+            + Escribir ayuda para el usuario
+
+close_and_finish:
+    + Escribe error
+    + Cierra socket -> close()
+    + Finalizar hilos
+    + Salir del programa

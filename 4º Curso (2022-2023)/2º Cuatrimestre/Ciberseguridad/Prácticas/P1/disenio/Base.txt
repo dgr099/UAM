@@ -1,0 +1,186 @@
+----------------------- Servidor -----------------------
+
+recv_link (msg):
+    + Leer etID, etPort, publicKey
+    + Comprobar si etID y etPort son correctos con el fichero ids.json
+        Si no es correcto:
+            + Finalizar False
+    + Añadir entrada a diccionario de ETs vinculadas con etID:
+        - etPort y publickKey
+    + Envia mensaje con datos de Base
+        -> {'Instruction': 'LINK', 
+            'baseID': self.id,
+            'basePort': self.puerto,
+            'publicKey': self.publicKey}
+    + Finalizar True
+
+recv_unlink (msg):
+    + Leer etID
+    + Borrar entrada de id en diccionario de ETs vinculadas
+    + Finalizar True
+
+recv_msg (msg):
+    + Activar flag de resultado a True
+    + Comprobar destID:
+        Si es de la Base:
+            + Imprimir mensaje con sourceID
+        Si es de una ET vinculada:
+            + Abrir socket -> socket()
+            Try {
+                + Conectarse a ET -> connect()
+                + Cambiar 'etID' por 'baseID' con self.id
+                + Cifrar-firmar y reenviar mensaje a ET
+                + Descifrar respuesta
+                + Informar de respuesta
+            }
+            Si ha fallado:
+                + Informar de error
+                + Poner flag de resultado a False
+            + Cerrar socket -> close()
+        Sino:
+            + Poner flag de resultado a False
+    + Finalizar con flag de resultado
+
+recv_file (msg):
+    + Activar flag de resultado a True
+    + Comprobar destID:
+        Si es de la Base:
+            + Abrir archivo con nombre fileName
+            + Escribir fichero con fileData
+        Si es de una ET vinculada:
+            + Abrir socket -> socket()
+            Try {
+                + Conectarse a ET -> connect()
+                + Cambiar 'etID' por 'baseID' con self.id
+                + Cifrar-firmar y reenviar mensaje a ET
+                + Descifrar respuesta
+                + Informar de respuesta
+            }
+            Si ha fallado:
+                + Informar de error
+                + Poner flag de resultado a False
+            + Cerrar socket -> close()
+        Sino:
+            + Poner flag de resultado a False
+    + Finalizar con flag de resultado
+
+----------------------- Cliente -----------------------
+
+fly (droneID):
+    + Abrir socket -> socket()
+    + Bucle recorriendo diccionario de ETs vinculadas:
+        Try {
+            + Conectarse a ET -> connect()
+            + Cifrar-firmar y enviar mensaje con instruccion
+                -> {'Instruction': 'FLY',
+                    'baseID': self.id,
+                    'droneID': droneID}
+            + Descifrar respuesta
+            + Informar de respuesta
+        }
+        Si ha fallado:
+            + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+land (droneID):
+    + Abrir socket -> socket()
+    + Bucle recorriendo diccionario de ETs vinculadas:
+        Try {
+            + Conectarse a ET -> connect()
+            + Cifrar-firmar y enviar mensaje con instruccion
+                -> {'Instruction': 'LAND',
+                    'baseID': self.id,
+                    'droneID': droneID}
+            + Descifrar respuesta
+            + Informar de respuesta
+        }
+        Si ha fallado:
+            + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+send_msg (etID, msg (str)):
+    + Comprobar si id esta en diccionario de ETs vinculadas
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'SEND_MSG',
+                'baseID': self.id,
+                'sourceID': self.id,
+                'destID': destID,
+                'msg': msg}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+send_file (etID, fileName (str)):
+    + Comprobar si id esta en diccionario de ETs vinculadas
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Intentar abrir fichero:
+        Si falla:
+            + Informar error
+            + Finalizar
+    + Leer fichero en modo binario
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Cifrar-firmar y enviar contenido de fichero con instruccion
+            -> {'Instruction': 'SEND_FILE',
+                'baseID': self.id,
+                'sourceID': self.id,
+                'destID': destID,
+                'fileName': fileName,
+                'data': fileData}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+get_status ():
+    + Abre el archivo de status en modo adicion
+    + Abre socket -> socket()
+    + Bucle recorriendo diccionario de ETs vinculadas:
+        Try {
+            + Conectarse a ET -> connect()
+            + Cifrar-firmar y enviar mensaje con instruccion
+                -> {'Instruction': 'GET_STATUS',
+                    'baseID': self.id}
+            + Descifrar respuesta
+            + Informar de ET activa
+            + Parsear respuesta
+            + Informar de respuesta
+        }
+        Si ha fallado:
+            + Informar de ET no activa
+    + Cerrar socket -> close()
+    + Finalizar
+
+shutdown ():
+    + Abrir socket -> socket()
+    + Bucle recorriendo diccionario de ETs vinculadas:
+        Try {
+            + Conectarse a ET -> connect()
+            + Cifrar-firmar y enviar mensaje con instruccion
+                -> {'Instruction': 'SHUTDOWN',
+                    'baseID': self.id}
+            + Descifrar respuesta
+            + Informar de respuesta
+        }
+        Si ha fallado:
+            + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar

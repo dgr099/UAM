@@ -1,0 +1,257 @@
+---------------------- Servidor ----------------------
+
+        --------------- Drones ---------------
+
+recv_link (msg):
+    + Leer droneID, dronePort, publicKey
+    + Comprobar si droneID y dronePort son correctos con el fichero ids.json
+        Si no es correcto:
+            + Finalizar False
+    + Envia mensaje con datos de ET
+        -> {'Instruction': 'LINK', 
+            'etID': self.id,
+            'etPort': self.puerto,
+            'publicKey': self.publicKey}
+    + Añadir entrada a diccionario de Drones vinculados con droneID:
+        - dronePort y publickKey
+    + Finalizar True
+
+recv_unlink (msg):
+    + Leer droneID
+    + Borrar entrada de id en diccionario de Drones vinculados
+    + Finalizar True
+
+recv_telemetry (msg, clientSocket):
+    + Leer droneID, flying, battery
+    + Abrir fichero telemetrias con nombre droneID
+    + Mientras reciba telemetrias del drone:
+        + Guardar datos en diccionario de Drones conectados
+        + Escribir datos en fichero
+    + Cerrar fichero
+    + Cerrar socket -> close()
+    + Finalizar
+
+recv_connect (msg):
+    + Leer droneID
+    + Añadir entrada a diccionario de Drones conectados con droneID:
+        - flying y battery
+    + Finalizar True
+
+recv_disconnect (msg):
+    + Leer droneID
+    + Borrar entrada de diccionario de Drones conectados
+    + Finalizar True
+
+        ---------------- Base ----------------
+
+recv_fly (msg):
+    + Comprobar si droneID esta en diccionario de Drones conectados:
+        Si no esta:
+            + Finalizar False
+    + Ejecutar metodo "fly()" con droneID
+    + Descifrar respuesta
+    + Finalizar segun respuesta
+
+recv_land (msg):
+    + Comprobar si droneID esta en diccionario de Drones conectados:
+        Si no esta:
+            + Finalizar False
+    + Ejecutar metodo "land()" con droneID
+    + Descifrar respuesta
+    + Finalizar segun respuesta
+
+recv_msg (msg):
+    + Comprobar destID:
+        Si no es el de la ET:
+            + Finalizar False
+    + Imprimir mensaje con sourceID
+    + Finalizar True
+
+recv_file (msg):
+    + Comprobar destID:
+        Si no es el de la ET:
+            + Finalizar False
+    + Abrir archivo con nombre fileName
+    + Escribir fichero con fileData
+    + Imprimir mensaje de fichero recibido con fileName y sourceID
+    + Finalizar True
+
+recv_get_status (msg, baseSocket):
+    Try {
+        + Cifrar-firmar y enviar mensaje de status
+            -> {'Instruction': 'GET_STATUS',
+                'etID': self.id,
+                'connected': diccionario de drones conectados,
+                'linked': diccionario de drones vinculados}
+    }
+    Si falla:
+        + Finalizar con False
+    + Finalizar True
+
+recv_shutdown (msg):
+    + Bucle recorriendo diccionario de Drones vinculados:
+        + Ejecutar metodo "land()" con droneID
+        + Ejecutar metodo "disconnect()" con droneID
+    + Finalizar True
+
+----------------------- Cliente -----------------------
+
+        --------------- Drones ---------------
+
+fly (droneID):
+    + Comprobar si id esta en diccionario de Drones conectados
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Drone -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'FLY', 
+                'etID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Desconectarse de Drone
+            -> Borrar entrada del diccionario de Drones conectados
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+land (droneID):
+    + Comprobar si id esta en diccionario de Drones conectados
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Drone -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'LAND', 
+                'etID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Desconectarse de Drone
+            -> Borrar entrada del diccionario de Drones conectados
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+disconnect (droneID):
+    + Comprobar si id esta en diccionario de Drones conectados
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Drone -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'DISCONNECT', 
+                'etID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Borrar entrada del diccionario de Drones conectados
+    + Cerrar socket -> close()
+    + Finalizar
+
+        ---------------- Base ----------------
+
+link (baseID):
+    + Buscar id en fichero ids.json
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Base -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'LINK', 
+                'droneID': self.id,
+                'dronePort': self.puerto,
+                'publicKey': self.publicKey}
+        + Leer respuesta
+            + Guardar datos de Base en diccionario de ETs vinculadas
+                - baseID, basePort, publicKey
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+unlink (baseID):
+    + Comprobar si id esta en diccionario de Bases vinculadas
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Base -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'UNLINK', 
+                'droneID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+        + Borrar entrada de id en diccionario de Bases vinculadas
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+send_msg (dest (0:base, 1:et), id (base o et), msg (str)):
+    + Comprobar dest:
+        Si es 0 e id no es el de la base vinculada:
+            + Informar error
+            + Finalizar
+        Si es distinto de 0 o 1:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Base -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'SEND_MSG',
+                'etID': self.id,
+                'sourceID': self.id,
+                'destID': destID,
+                'msg': msg}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+        
+send_file (destID (base o et), fileName (str)):
+    + Comprobar si id es de base y es conocida o 
+        si es de otra et:
+            Si no es ninguno de los casos:
+                + Informar error
+                + Finalizar
+    + Intentar abrir fichero:
+        Si falla:
+            + Informar error
+            + Finalizar
+    + Leer fichero en modo binario
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a Base -> connect()
+        + Cifrar-firmar y enviar contenido de fichero con instruccion
+            -> {'Instruction': 'SEND_FILE',
+                'etID': self.id,
+                'sourceID': self.id,
+                'destID': destID,
+                'fileName': fileName,
+                'data': fileData}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar

@@ -1,0 +1,137 @@
+----------------------- Servidor -----------------------
+
+recv_fly (msg):
+    + Poner self.battery a 100%
+    + Poner self.flying a True
+    + Lanzar hilo para descender bateria -> discharge()
+    + Finalizar
+
+discharge ():
+    + Bucle mientras self.flying == True y self.battery > 0.0:
+        + Esperar 60 / 100 segundos
+        + Restar 1 a la bateria
+    + Al salir, poner self.flying a False
+    + Finalizar -> Se termina el hilo
+
+recv_land (msg):
+    + Poner self.flying a False
+    + Finalizar
+
+recv_disconnect (msg):
+    + Poner self.flying a False
+    + Reiniciar la variable etConnected
+    + Finalizar
+
+----------------------- Cliente -----------------------
+
+link (etID):
+    + Comprobar si etID ya esta vinculada:
+        Si esta:
+            + Informar error
+            + Finalizar
+    + Buscar id en fichero ids.json
+    Si no esta:
+        + Informar error
+        + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Enviar mensaje con instruccion
+            -> {'Instruction': 'LINK', 
+                'droneID': self.id,
+                'dronePort': self.puerto,
+                'publicKey': self.publicKey}
+        + Leer respuesta
+        + Añadir entrada a diccionario de ETs vinculados con etID:
+            - etID, etPort, publicKey
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+unlink (etID):
+    + Comprobar si id esta en diccionario de ETs vinculadas
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'UNLINK', 
+                'droneID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+        + Borrar entrada de id en diccionario de ETs vinculadas
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+telemetry ():
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Bucle comprobando valor de la variable etConnected:
+            + Esperar 2 segundos
+            + Cifrar-firmar y enviar mensaje con instruccion
+                -> {'Instruction': 'TELEMETRY', 
+                    'droneID': self.id,
+                    'flying': self.flying,
+                    'battery': self.battery}
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+connect (etID):
+    + Comprobar si no esta conectado a otra ET:
+        Si esta:
+            + Informar error
+            + Finalizar
+    + Comprobar si id esta en diccionario de ETs vinculadas
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'CONNECT', 
+                'droneID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+        Si confirma que todo correcto:
+            + Guardar los datos de la ET en variable etConnected
+            + Lanzar hilo para enviar telemetrias -> telemetry()
+    }
+    Si ha fallado:
+        + Informar de error
+    + Cerrar socket -> close()
+    + Finalizar
+
+disconnect ():
+    + Comprobar si esta conectado a alguna ET:
+        Si no esta:
+            + Informar error
+            + Finalizar
+    + Abrir socket -> socket()
+    Try {
+        + Conectarse a ET -> connect()
+        + Cifrar-firmar y enviar mensaje con instruccion
+            -> {'Instruction': 'DISCONNECT', 
+                'droneID': self.id}
+        + Descifrar respuesta
+        + Informar de respuesta
+    }
+    Si ha fallado:
+        + Informar de error
+    + Poner self.flying a False
+    + Reiniciar la variable etConnected
+    + Cerrar socket -> close()
+    + Finalizar
+    
