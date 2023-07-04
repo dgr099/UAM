@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/study_nav_menu_title">
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="showBoard"
+            app:summaryOff="@string/board_summary_off"
+            app:summaryOn="@string/board_summary_on"
+            app:title="@string/showBoards" />
+        <EditTextPreference
+            app:defaultValue="20"
+            app:key="max_number_cards_study"
+            app:title="@string/maxNumCardsStudy"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="updateSession"
+            app:title="@string/updSession" />
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="limitCards"
+            app:title="@string/noLimitCardsStudy" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/decks_nav_menu_title">"
+        <EditTextPreference
+            app:defaultValue="5"
+            app:key="max_number_decks"
+            app:title="@string/maxNumDecks"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory  app:title="@string/cards_nav_menu_title">
+        <EditTextPreference
+            app:defaultValue="20"
+            app:key="max_number_cards"
+            app:title="@string/maxNumCards"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

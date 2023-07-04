@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="es.uam.eps.dadm.myapplication.TitleFragment"
+        android:label="TitleFragment"
+        tools:layout="@layout/fragment_title"
+        >
+        <action
+            android:id="@+id/action_titleFragment_to_deckListFragment"
+            app:destination="@id/deckListFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cardListFragment"
+        android:name="es.uam.eps.dadm.myapplication.CardListFragment"
+        android:label="CardListFragment"
+        tools:layout="@layout/fragment_card_list"
+        >
+        <action
+            android:id="@+id/action_cardListFragment_to_cardEditFragment"
+            app:destination="@id/cardEditFragment" />
+        <action
+            android:id="@+id/action_cardListFragment_to_emailPasswordFragment"
+            app:destination="@id/emailPasswordFragment" />
+        <action
+            android:id="@+id/action_cardListFragment_to_firebaseFragment"
+            app:destination="@id/firebaseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="es.uam.eps.dadm.myapplication.StudyFragment"
+        android:label="StudyFragment"
+        tools:layout="@layout/fragment_study"
+        />
+
+    <fragment
+        android:id="@+id/firebaseFragment"
+        android:name="es.uam.eps.dadm.myapplication.FirebaseFragment"
+        android:label="FirebaseFragment"
+        tools:layout="@layout/fragment_firebase"
+        />
+    <fragment
+        android:id="@+id/studyDeckFragment"
+        android:name="es.uam.eps.dadm.myapplication.StudyDeckFragment"
+        android:label="StudyDeckFragment"
+        tools:layout="@layout/fragment_study_deck"
+        >
+        <argument
+            android:name="deckId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardEditFragment"
+        android:name="es.uam.eps.dadm.myapplication.CardEditFragment"
+        android:label="CardEditFragment"
+        tools:layout="@layout/fragment_card_edit"
+        >
+        <action
+            android:id="@+id/action_cardEditFragment_to_cardListFragment2"
+            app:destination="@id/cardListFragment"
+            app:popUpTo="@id/cardListFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="cardId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createDeckFragment"
+        android:name="es.uam.eps.dadm.myapplication.CreateDeckFragment"
+        android:label="CreateDeckFragment"
+        tools:layout="@layout/fragment_create_deck">
+        <action
+            android:id="@+id/action_createDeckFragment_to_deckListFragment"
+            app:destination="@id/deckListFragment" />
+        <argument
+            android:name="deckID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/deckListFragment"
+        android:name="es.uam.eps.dadm.myapplication.DeckListFragment"
+        android:label="DeckListFragment"
+        tools:layout="@layout/fragment_deck_list">
+        <action
+            android:id="@+id/action_deckListFragment_to_studyDeckFragment"
+            app:destination="@id/studyDeckFragment" />
+        <action
+            android:id="@+id/action_deckListFragment_to_createDeckFragment"
+            app:destination="@id/createDeckFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/emailPasswordFragment"
+        android:name="es.uam.eps.dadm.myapplication.EmailPasswordFragment"
+        android:label="EmailPasswordFragment"
+        tools:layout="@layout/fragment_email_password_fragment"
+        >
+        <action
+            android:id="@+id/action_emailPasswordFragment_to_cardListFragment"
+            app:destination="@id/cardListFragment" />
+        <action
+            android:id="@+id/action_emailPasswordFragment_to_firebaseFragment"
+            app:destination="@id/firebaseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="es.uam.eps.dadm.myapplication.StatisticsFragment"
+        android:label="StatisticsFragment"
+        tools:layout="@layout/fragment_statistics"/>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="es.uam.eps.dadm.myapplication.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"/>
+
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="es.uam.eps.dadm.myapplication.TutorialFragment"
+        android:label="TutorialFragment"
+        tools:layout="@layout/fragment_tutorial"/>
+
+</navigation>

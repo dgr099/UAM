@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Cards</string>
+    <string name="question_text">Tree</string>
+    <string name="answer_text" translatable="false">Arbol</string>
+    <string name="answer_button_text">Check answer</string>
+    <string name="help_button_text">Help</string>
+    <string name="easy_button_title">Easy</string>
+    <string name="doubt_button_title">Doubt</string>
+    <string name="difficult_button_title">Difficult</string>
+    <string name="info_text_view_message">Number of cards left</string>
+    <string name="due_cards_format">%d cards left</string>
+    <string name="total_cards_format">%d cards reviewed</string>
+    <string name="subtitle_text">Tap to study</string>
+    <string name="no_more_cards_toast_message">No more cards to study</string>
+    <string name="review_cards">Review cards</string>
+    <string name="list_cards">List of cards</string>
+    <string name="easiness">Easiness</string>
+    <string name="interval">Interval</string>
+    <string name="accept_card_edit_button_title">Accept</string>
+    <string name="cancel_card_edit_button_title">Cancel</string>
+    <string name="edit_button_title">Edit</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+    <string name="new_card_fab_description">desc</string>
+    <string name="added_card">Added new Card</string>
+    <string name="card_question_hint">Write the question Text</string>
+    <string name="card_answer_hint">Write the answer text</string>
+    <string name="decks_nav_menu_title">Decks</string>
+    <string name="study_nav_menu_title">Study Cards</string>
+    <string name="statistics_nav_menu_title">Statistics</string>
+    <string name="info_nav_menu_title">About us</string>
+    <string name="deck_number_cards">Number of cards</string>
+    <string name="remove_button_title">Remove</string>
+    <string name="cards_nav_menu_title">Cards</string>
+    <string name="deck_selector">Select Deck</string>
+    <string name="info_about_us">Creator: David Teófilo Garitagoitia Romero\nGithub: dgr099\nEmail: Davidteo.garita@gmail.com\nApp for memorizing cards in decks</string>
+    <string name="create_question">Create Deck</string>
+    <string name="create_deck_hint">Deck name</string>
+    <string name="change_stats">Change stats to visualize</string>
+    <string name="tutorial_nav_menu_title">Tutorial</string>
+    <string name="info_tutorial">Welcome to the card study application.\nFrom the side menu you can access the different sections.\n\n- Study cards: Where you can study your cards.\n\n- Decks: Where you can create, delete and study decks.\n\n- Cards: Where you can see, modify, delete or create new cards and can also add response options. In the top menu you can filter with the three points, connect to firebase with the fire icon to log in or register a new account and download the cards uploaded in the cloud to your local database, upload all the cards or close the session. Finally, from the wrench you can access your settings, to limit cards or decks, show the board, set or remove a maximum limit of study cards per session and decide if to start a new study session it is necessary to close and restart or simply exit and re-enter the study section.\n\n- Statistics: Where you can see the cards that are to be reviewed in the coming days and weeks as well as the total number of cards studied\nAbout : Where you can check my contact information.\n\n- Tutorial: Where you can check this tutorial or add debug cards.</string>
+    <string name="quality">Quality</string>
+    <string name="repetitions">Repetitions</string>
+    <string name="weekReview">Cards to strudy this week</string>
+    <string name="monthReview">Cards to study this month</string>
+    <string name="debug_button">Debug</string>
+    <string name="added_debug_values">Added Debug Values</string>
+    <string name="no_decks">No decks, to create a card, first you must create a deck</string>
+    <string name="settings_menu_title">Settings</string>
+    <string name="logout_menu_title">Log Out</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <string name="maxNumCards">Maximum number of cards</string>
+    <string name="showBoards">Show Boards</string>
+    <string name="board_summary_on">Board on</string>
+    <string name="board_summary_off">Board off</string>
+    <string name="register_text">¿Do not have account? Register</string>
+    <string name="login_text">¿Have account? Log in</string>
+    <string name="firebase" translatable="false">Firebase</string>
+    <string name="passwords_no_coincidence">Passwords do not match</string>
+    <string name="error_register">Error on register</string>
+    <string name="no_eamil_or_pass">Please fill the email and password fields"</string>
+    <string name="error_logIn">Error log in</string>
+    <string name="remove_option">Remove Option</string>
+    <string name="opt_text_hint">Write option</string>
+    <string name="opt">Option</string>
+    <string name="add_opt_text">Add option</string>
+    <string name="maxNumDecks">Max number decks</string>
+    <string name="maxNumCardsReached">Maximum number of cards was reached</string>
+    <string name="maxNumDecksReached">Maximum number of decks was reached</string>
+    <string name="maxNumCardsStudy">Max number of cards to study per session</string>
+    <string name="updSession">Update without clossing the app</string>
+    <string name="noLimitCardsStudy">No limit cards to study</string>
+
+</resources>

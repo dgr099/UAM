@@ -1,0 +1,108 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="es.uam.eps.dadm.myapplication.MainViewModelDeck" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.card==null ? View.INVISIBLE : View.VISIBLE}">
+
+        <TextView
+            android:id="@+id/info_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="80px"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="@{@string/due_cards_format(viewModel.nDueCards)}"
+            tools:text="@string/info_text_view_message" />
+        <FrameLayout
+            android:id="@+id/custom_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_above="@id/question_text_view"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/my_border" />
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:text="@{viewModel.card.question}"
+            tools:text="Question text"/>
+
+        <View
+            android:id="@+id/separator_view"
+            android:layout_below="@id/question_text_view"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_height="1dp"
+            android:visibility="@{!viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
+            android:background="@android:color/darker_gray"/>
+
+
+        <TextView
+            android:id="@+id/answer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator_view"
+            android:layout_centerInParent="true"
+            android:text="@{viewModel.card.answer}"
+            android:textSize="20dp"
+            android:visibility="@{!viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
+            tools:text="Answer text" />
+
+        <Button
+            android:id="@+id/answer_button"
+            android:layout_below="@id/answer_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/answer_button_text"
+            android:visibility="@{viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}"
+            tools:ignore="VisualLintButtonSize" />
+
+        <LinearLayout
+            android:id="@+id/difficultyButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:visibility="@{!viewModel.card.answered ? View.INVISIBLE : View.VISIBLE}">
+            <Button
+                android:id="@+id/easy_button"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/easy_button_title"
+                android:backgroundTint="@android:color/holo_green_light"/>
+            <Button
+                android:id="@+id/doubt_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/doubt_button_title"
+                android:backgroundTint="@android:color/holo_orange_light"/>
+            <Button
+                android:id="@+id/hard_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/difficult_button_title"
+                android:backgroundTint="@android:color/holo_red_light"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,109 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="es.uam.eps.dadm.myapplication.StatisticsViewModel" />
+    </data>
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:id="@+id/lLayoutInfo"
+            android:layout_below="@id/change_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:visibility="@{viewModel.viewGrap1==true ? View.GONE : View.VISIBLE}"
+
+            android:id="@+id/info_text_view"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="80px"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="@{@string/total_cards_format(viewModel.totalReviewCards)}"
+            tools:text="@string/info_text_view_message" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="@{viewModel.viewGrap1==false ? View.GONE : View.VISIBLE}"
+            android:paddingBottom="10dp"
+            android:id="@+id/infoWeekAndDays"
+            android:layout_below="@id/change_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="80px"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="@string/weekReview"
+                tools:text="@string/info_text_view_message" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:visibility="@{viewModel.viewGrap1==false ? View.GONE : View.VISIBLE}"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/change_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="80px"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="@string/monthReview"
+                tools:text="@string/info_text_view_message" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:visibility="@{viewModel.viewGrap1==false ? View.GONE : View.VISIBLE}"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/change_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        </LinearLayout>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:visibility="@{viewModel.viewGrap1==true ? View.GONE : View.VISIBLE}"
+            android:layout_below="@id/lLayoutInfo"
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/change_view"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_stats"/>
+
+    </RelativeLayout>
+
+</layout>

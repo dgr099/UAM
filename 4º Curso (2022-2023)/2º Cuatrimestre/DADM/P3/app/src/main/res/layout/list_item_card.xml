@@ -1,0 +1,333 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="card"
+            type="es.uam.eps.dadm.myapplication.Card" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        app:cardBackgroundColor="@color/cardview_light_background">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:id="@+id/verticalAll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        tools:ignore="RtlHardcoded">
+    <LinearLayout
+        android:id="@+id/infoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        tools:ignore="RtlHardcoded">
+    <LinearLayout
+        android:id="@+id/info_question_awnser"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        tools:ignore="RtlHardcoded">
+
+    <TextView
+        android:id="@+id/list_item_question"
+        android:text="@{card.question}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/list_item_answer"
+        android:text="@{card.answer}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:id="@+id/info_easiness_interval"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        tools:ignore="RtlHardcoded">
+        <LinearLayout
+            android:id="@+id/info_easiness"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded">
+    <TextView
+        android:id="@+id/list_item_easiness_string"
+        android:text=  "@string/easiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:paddingRight="2dp"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/list_item_easiness"
+        android:text='@{String.format("%.2f", card.easiness)}'
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/info_interval"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+
+            tools:ignore="RtlHardcoded">
+            <TextView
+                android:id="@+id/list_item_interval_string"
+                android:text="@string/interval"
+                android:paddingRight="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/list_item_interval"
+
+                android:text="@{Long.toString(card.interval)}"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:paddingRight="1dp"
+            android:paddingLeft="1dp"
+            tools:ignore="RtlHardcoded">
+        <Button
+            android:layout_gravity="right"
+            android:id="@+id/expand_button"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.expanded ? `⬆️` : `⬇️`}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="@{card.expanded ? View.VISIBLE : View.GONE}"
+        android:id="@+id/expanded_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:paddingRight="1dp"
+        android:paddingLeft="1dp"
+        tools:ignore="RtlHardcoded">
+        <LinearLayout
+            android:id="@+id/info_dates"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+
+            tools:ignore="RtlHardcoded">
+        <TextView
+            android:id="@+id/list_item_date"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.date.toString().substring(0,10) + '/'}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="date1 /"/>
+
+        <TextView
+            android:paddingLeft="1dp"
+            android:id="@+id/list_item_next_practice_date"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.nextPracticeDate.toString().substring(0,10)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="date2"
+            tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/id_propia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="left"
+            tools:ignore="RtlHardcoded">
+            <TextView
+                android:paddingLeft="1dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id"
+                tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:paddingLeft="1dp"
+            android:id="@+id/list_item_id"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.id.toString()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="id"
+            tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/id_deck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="left"
+            tools:ignore="RtlHardcoded">
+            <TextView
+                android:paddingLeft="1dp"
+                android:paddingRight="0.5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id"
+                tools:ignore="RtlSymmetry" />
+            <TextView
+                android:paddingLeft="1dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@string/decks_nav_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text=""
+                tools:ignore="RtlSymmetry" />
+            <TextView
+                android:paddingLeft="1dp"
+                android:id="@+id/list_item_id_deck"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@{card.idDeck.toString()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id deck"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/quality_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="left"
+            tools:ignore="RtlHardcoded">
+            <TextView
+                android:paddingLeft="1dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@string/quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:paddingLeft="1dp"
+                android:id="@+id/list_item_quality"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@{Integer.toString(card.quality)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id deck"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/repetitions_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="left"
+            tools:ignore="RtlHardcoded">
+            <TextView
+                android:paddingLeft="1dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@string/repetitions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:paddingLeft="1dp"
+                android:id="@+id/list_item_repetitions"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:text="@{Integer.toString(card.repetitions)}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="id deck"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+       <!-- <TextView
+            android:id="@+id/list_item_date"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.date.toString().substring(0,10) + '/'}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:paddingLeft="1dp"
+            android:id="@+id/list_item_next_practice_date"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:text="@{card.nextPracticeDate.toString().substring(0,10)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlSymmetry" />-->
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
